@@ -44,6 +44,8 @@ def main():
 		from grass.script import raster as grassR
 		from osgeo import ogr
 
+
+
 		#ask for flood info
 		#maxlevel_input = float(input("Please enter the maximum desired water level in meters: "))
 		#interval_input = float(input("Please enter the desired flood intervals in meters: "))
@@ -60,9 +62,9 @@ def main():
 		
 		#y_ocean = 158047
 		
-		x_ocean = -9.5
+		x_ocean = -9
 		
-		y_ocean = 16.772
+		y_ocean = 16
 		
 		create_point(x_ocean, y_ocean)
 
@@ -75,15 +77,15 @@ def main():
 		useroutput = reclassoutput + str(random.randint(1,100)) + '.tif'
 		expressionout = 'out' + str(random.randint(1,100))
 			    
-		gscript.run_command('v.in.ogr',  flags='', input='test.geojson', output='ocean_point')
+		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output='ocean_point')
 			    
 		gscript.run_command('r.in.gdal', flags='', input = 'srtm_35_09.tif', output=outputname)
 	
 		print "Import done"
 		
-		gscript.run_command('g.remove', flags='f', type='vector', pattern='ocean*')
+		#gscript.run_command('g.remove', flags='f', type='vector', pattern='ocean*')
 	
-#		gscript.run_command('r.in.arc', input = 'DTM10_617_68.asc', output=outputname)
+		#gscript.run_command('r.in.arc', input = 'DTM10_617_68.asc', output=outputname)
 	
 		print gscript.run_command('r.info', map=outputname)
 
@@ -107,11 +109,11 @@ def main():
 		
 		#Run cleanup
 		
-		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
+		#gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
 		
-		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
+		#gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
 		
-		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
+		#gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
 	
 		print "Removal done"
 
