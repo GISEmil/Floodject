@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 
-
 import os
 import sys
 import subprocess
 import numpy
 import osgeo
 from osgeo import ogr
-
-
 
 # Linux
 grass7bin_lin = 'grass70'
@@ -33,7 +30,6 @@ os.environ['PATH'] += os.pathsep + os.path.join(gisbase, 'extrabin')
 # define GRASS-Python environment
 gpydir = os.path.join(gisbase, "etc", "python")
 sys.path.append(gpydir)
-
 
 # Set GISDBASE environment variable
 os.environ['GISDBASE'] = gisdb
@@ -60,9 +56,13 @@ def main():
 		#x_ocean = float(input("Please provide with the X coordinate of the ocean point: "))
 		#y_ocean = float(input("Please provide with the Y coordinate of the ocean point: "))
 		
-		x_ocean = -99662
+		#x_ocean = -99662
 		
-		y_ocean = 158047
+		#y_ocean = 158047
+		
+		x_ocean = -9.5
+		
+		y_ocean = 16.772
 		
 		create_point(x_ocean, y_ocean)
 
@@ -75,7 +75,9 @@ def main():
 		useroutput = reclassoutput + str(random.randint(1,100)) + '.tif'
 		expressionout = 'out' + str(random.randint(1,100))
 			    
-		gscript.run_command('r.in.gdal', flags='o', input = 'srtm_35_09.tif', output=outputname)
+		gscript.run_command('v.in.ogr',  flags='', input='test.geojson', output='ocean_point')
+			    
+		gscript.run_command('r.in.gdal', flags='', input = 'srtm_35_09.tif', output=outputname)
 	
 		print "Import done"
 		
@@ -88,8 +90,6 @@ def main():
 		gscript.run_command('r.mapcalc', expression= '%s = if(%s = 162, 0, null())' % (expressionout, outputname))
 		
 		print "Mapcalc done"
-		
-		gscript.run_command('v.select', ainput='ocean_vector2', binput='ocean_point', output='selected ocean') 
 
 		#gscript.run_command('r.out.gdal', input = expressionout , output = useroutput)
 	
@@ -97,11 +97,21 @@ def main():
 		
 		print "Vector conversion done"
 		
+		gscript.run_command('v.select', ainput='ocean_vector2', binput='ocean_point', output='selected_ocean')
+		
+		print "select done"
+		
+		gscript.run_command('v.out.ogr', input='selected_ocean', dsn = 'selected_ocean')
+		
+		gscript.run_command('v.out.ogr', input='ocean_vector2', dsn = 'ocean_vector')
+		
 		#Run cleanup
 		
 		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
 		
 		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
+		
+		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
 	
 		print "Removal done"
 
@@ -109,9 +119,34 @@ def main():
 		print "Something does not work"
 	
 def create_point(x_ocean, y_ocean):
-	ocean_point = ogr.Geometry(ogr.wkbPoint)
-	ocean_point.AddPoint(x_ocean, y_ocean)
-	print ocean_point.ExportToWkt()
+	point = ogr.Geometry(ogr.wkbPoint)
+	point.AddPoint(x_ocean, y_ocean) 
 	
-if __name__ == "__init__":
+	print '%d, %d' % (point.GetX(), point.GetY())
+	
+	#geojson = point.ExportToJson()
+	#print geojson
+	
+	# Create the output Driver
+	outDriver = ogr.GetDriverByName('GeoJSON')
+
+	# Create the output GeoJSON
+	outDataSource = outDriver.CreateDataSource('test.geojson')
+	outLayer = outDataSource.CreateLayer('test.geojson', geom_type=ogr.wkbPoint )
+
+	# Get the output Layer's Feature Definition
+	featureDefn = outLayer.GetLayerDefn()
+
+	# create a new feature
+	outFeature = ogr.Feature(featureDefn)
+
+	# Set new geometry
+	outFeature.SetGeometry(point)
+
+	# Add new feature to output Layer
+	outLayer.CreateFeature(outFeature)
+
+	
+	
+if __name__ == "__main__":
 	main()
