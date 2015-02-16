@@ -76,44 +76,41 @@ def main():
 		reclassoutput = 'out_recl_' + str(random.randint(1,100))
 		useroutput = reclassoutput + str(random.randint(1,100)) + '.tif'
 		expressionout = 'out' + str(random.randint(1,100))
+		ocean_point = 'ocean_point' + str(random.randint(1,100))
+		ocean_vector = 'ocean_vect' + str(random.randint(1,100))
+		selected_ocean = 'selected_ocean' + str(random.randint(1,100))
 			    
-		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output='ocean_point')
+		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
 			    
 		gscript.run_command('r.in.gdal', flags='', input = 'srtm_35_09.tif', output=outputname)
 	
 		print "Import done"
-		
-		#gscript.run_command('g.remove', flags='f', type='vector', pattern='ocean*')
-	
-		#gscript.run_command('r.in.arc', input = 'DTM10_617_68.asc', output=outputname)
-	
-		print gscript.run_command('r.info', map=outputname)
 
 		gscript.run_command('r.mapcalc', expression= '%s = if(%s = 162, 0, null())' % (expressionout, outputname))
 		
 		print "Mapcalc done"
-
-		#gscript.run_command('r.out.gdal', input = expressionout , output = useroutput)
 	
-		gscript.run_command('r.to.vect', input = expressionout, output = 'ocean_vector2', type = 'area')
+		gscript.run_command('r.to.vect', input = expressionout, output = ocean_vector, type = 'area')
 		
 		print "Vector conversion done"
 		
-		gscript.run_command('v.select', ainput='ocean_vector2', binput='ocean_point', output='selected_ocean')
+		gscript.run_command('v.select', ainput=ocean_vector, binput=ocean_point, output=selected_ocean, operator='intersects')
 		
 		print "select done"
 		
-		gscript.run_command('v.out.ogr', input='selected_ocean', dsn = 'selected_ocean')
+		gscript.run_command('v.out.ogr', input=selected_ocean, output = 'selected_ocean')
 		
-		gscript.run_command('v.out.ogr', input='ocean_vector2', dsn = 'ocean_vector')
+		gscript.run_command('v.out.ogr', input=ocean_vector, output = 'ocean_vector')
+		
+		gscript.run_command('v.out.ogr', input=ocean_point, output = 'ocean_point')
 		
 		#Run cleanup
 		
-		#gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
+		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
 		
-		#gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
+		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
 		
-		#gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
+		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
 	
 		print "Removal done"
 
@@ -121,32 +118,35 @@ def main():
 		print "Something does not work"
 	
 def create_point(x_ocean, y_ocean):
-	point = ogr.Geometry(ogr.wkbPoint)
-	point.AddPoint(x_ocean, y_ocean) 
+	try:
+		point = ogr.Geometry(ogr.wkbPoint)
+		point.AddPoint(x_ocean, y_ocean) 
 	
-	print '%d, %d' % (point.GetX(), point.GetY())
+		print '%d, %d' % (point.GetX(), point.GetY())
 	
-	#geojson = point.ExportToJson()
-	#print geojson
+		#geojson = point.ExportToJson()
+		#print geojson
 	
-	# Create the output Driver
-	outDriver = ogr.GetDriverByName('GeoJSON')
+		# Create the output Driver
+		outDriver = ogr.GetDriverByName('GeoJSON')
 
-	# Create the output GeoJSON
-	outDataSource = outDriver.CreateDataSource('test.geojson')
-	outLayer = outDataSource.CreateLayer('test.geojson', geom_type=ogr.wkbPoint )
+		# Create the output GeoJSON
+		outDataSource = outDriver.CreateDataSource('test.geojson')
+		outLayer = outDataSource.CreateLayer('test.geojson', geom_type=ogr.wkbPoint )
 
-	# Get the output Layer's Feature Definition
-	featureDefn = outLayer.GetLayerDefn()
+		# Get the output Layer's Feature Definition
+		featureDefn = outLayer.GetLayerDefn()
 
-	# create a new feature
-	outFeature = ogr.Feature(featureDefn)
+		# create a new feature
+		outFeature = ogr.Feature(featureDefn)
 
-	# Set new geometry
-	outFeature.SetGeometry(point)
+		# Set new geometry
+		outFeature.SetGeometry(point)
 
-	# Add new feature to output Layer
-	outLayer.CreateFeature(outFeature)
+		# Add new feature to output Layer
+		outLayer.CreateFeature(outFeature)
+	except:
+		"Cannot create point"
 
 	
 	
