@@ -16,7 +16,7 @@ gisbase = '/usr/lib/grass70'
 gisdb = os.path.join(os.path.expanduser("~"), "grassdata")
 
 # specify (existing) location and mapset, program has to run once to set these up
-location = "WGS_1984" 
+location = "WGS_1984"
 mapset   = "test"
 
 #gisbase = 'C:\Program Files (x86)\GRASS GIS 6.4.5svn' # query GRASS 7 itself for its GISBASE
@@ -34,96 +34,99 @@ sys.path.append(gpydir)
 # Set GISDBASE environment variable
 os.environ['GISDBASE'] = gisdb
 
+# import GRASS Python bindings (see also pygrass)
+import grass.script as gscript
+import grass.script.setup as gsetup
+import random
+from grass.script import raster as grassR
+from osgeo import ogr
+
 
 def main():
-	try:
-		# import GRASS Python bindings (see also pygrass)
-		import grass.script as gscript
-		import grass.script.setup as gsetup
-		import random
-		from grass.script import raster as grassR
-		from osgeo import ogr
+
 
 
 
 		#ask for flood info
-		#maxlevel_input = float(input("Please enter the maximum desired water level in meters: "))
-		#interval_input = float(input("Please enter the desired flood intervals in meters: "))
+		maxlevel_input = float(input("Please enter the maximum desired water level in meters: "))
+		interval_input = float(input("Please enter the desired flood intervals in meters: "))
 
-		#loop_no = int(maxlevel_input/interval_input)
+		loop_no = int(maxlevel_input/interval_input)
 
 		#print "With the selected maximum water level of %s and flood level increment of %s, the number of loops is %s " % (maxlevel_input,  interval_input, loop_no)
 
 		#ask for coordinates of the ocean point
 		#x_ocean = float(input("Please provide with the X coordinate of the ocean point: "))
 		#y_ocean = float(input("Please provide with the Y coordinate of the ocean point: "))
-		
-		#x_ocean = -99662
-		
-		#y_ocean = 158047
-		
-		x_ocean = -9
-		
-		y_ocean = 16
-		
+
+		y_ocean = 38.322712
+
+		x_ocean = 16.436673
+
+		actual_loop = 0
+
 		create_point(x_ocean, y_ocean)
 
 		print "You have chosen a point with the following coordinates: X %s, Y %s" % (x_ocean, y_ocean)
-	
+
 		gsetup.init(gisbase, gisdb, location, mapset)
 
-		outputname = 'output' + str(random.randint(1,100))
-		reclassoutput = 'out_recl_' + str(random.randint(1,100))
-		useroutput = reclassoutput + str(random.randint(1,100)) + '.tif'
-		expressionout = 'out' + str(random.randint(1,100))
+		#Consider adding time and date to name + maybe random integer
+		original = 'original' + str(random.randint(1,100))
 		ocean_point = 'ocean_point' + str(random.randint(1,100))
-		ocean_vector = 'ocean_vect' + str(random.randint(1,100))
-		selected_ocean = 'selected_ocean' + str(random.randint(1,100))
-			    
+		#ocean_vector = 'ocean_vect' + str(random.randint(1,100))
+		#selected_ocean = 'selected_ocean' + str(random.randint(1,100))
+
 		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
-			    
-		gscript.run_command('r.in.gdal', flags='', input = 'srtm_35_09.tif', output=outputname)
-	
+
+		gscript.run_command('r.in.gdal', flags='', input = 'NEWTIF.tif', output=original)
+
 		print "Import done"
 
-		gscript.run_command('r.mapcalc', expression= '%s = if(%s = 162, 0, null())' % (expressionout, outputname))
-		
-		print "Mapcalc done"
-	
-		gscript.run_command('r.to.vect', input = expressionout, output = ocean_vector, type = 'area')
-		
-		print "Vector conversion done"
-		
-		gscript.run_command('v.select', ainput=ocean_vector, binput=ocean_point, output=selected_ocean, operator='intersects')
-		
-		print "select done"
-		
-		gscript.run_command('v.out.ogr', input=selected_ocean, output = 'selected_ocean')
-		
-		gscript.run_command('v.out.ogr', input=ocean_vector, output = 'ocean_vector')
-		
-		gscript.run_command('v.out.ogr', input=ocean_point, output = 'ocean_point')
-		
-		#Run cleanup
-		
-		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
-		
-		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
-		
-		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
-	
-		print "Removal done"
+		while actual_loop < loop_no:
 
-	except: 
-		print "Something does not work"
-	
+			gscript.run_command('g.region', rast=original)
+
+			expressionout = 'out' + str(random.randint(1,100)) + '_' + str(actual_loop)
+
+			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= %s, 0, null())' % (expressionout, original, actual_loop))
+
+			print "Mapcalc done"
+
+			ocean_vector = 'ocean_vector_' + str(random.randint(1,100)) + str(actual_loop)
+
+			gscript.run_command('r.to.vect', input = expressionout, output = ocean_vector, type = 'area')
+
+			print "Vector conversion done"
+
+			selected_ocean = 'ocean_select_' + str(random.randint(1,100)) + str(actual_loop)
+
+			gscript.run_command('v.select', ainput=ocean_vector, binput=ocean_point, output=selected_ocean, operator='intersects')
+
+			print "select done"
+
+			user_out = expressionout + '_' + str(actual_loop)
+
+			#gscript.run_command('r.out.gdal', input=expressionout, output = user_out)
+
+			#gscript.run_command('v.out.ogr', input=selected_ocean, output = selected_ocean)
+
+			#gscript.run_command('v.out.ogr', input=ocean_vector, output = ocean_vector)
+
+			actual_loop = actual_loop + 1
+
+		print "Here we are"
+
+		#Run cleanup
+		cleanup_data()
+
 def create_point(x_ocean, y_ocean):
 	try:
 		point = ogr.Geometry(ogr.wkbPoint)
-		point.AddPoint(x_ocean, y_ocean) 
-	
+		point.AddPoint(x_ocean, y_ocean)
+
 		print '%d, %d' % (point.GetX(), point.GetY())
-	
+
 		#geojson = point.ExportToJson()
 		#print geojson
 	
@@ -148,7 +151,20 @@ def create_point(x_ocean, y_ocean):
 	except:
 		"Cannot create point"
 
-	
-	
+def cleanup_data():
+	try:
+		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='out*')
+
+		gscript.run_command('g.remove', flags='f', type = 'raster', pattern='original*')
+
+		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='ocean*')
+
+		gscript.run_command('g.remove', flags='f', type = 'vector', pattern='select*')
+
+		print "Cleanup done"
+
+	except:
+		print "Cleanup could not be performed"
+
 if __name__ == "__main__":
 	main()
