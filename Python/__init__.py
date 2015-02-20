@@ -44,9 +44,6 @@ from osgeo import ogr
 
 def main():
 
-
-
-
 		#ask for flood info
 		maxlevel_input = float(input("Please enter the maximum desired water level in meters: "))
 		interval_input = float(input("Please enter the desired flood intervals in meters: "))
@@ -129,7 +126,7 @@ def create_point(x_ocean, y_ocean):
 
 		#geojson = point.ExportToJson()
 		#print geojson
-	
+
 		# Create the output Driver
 		outDriver = ogr.GetDriverByName('GeoJSON')
 
