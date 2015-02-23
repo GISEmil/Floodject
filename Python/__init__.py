@@ -41,7 +41,6 @@ import random
 from grass.script import raster as grassR
 from osgeo import ogr
 
-
 def main():
 
 		#ask for flood info
