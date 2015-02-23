@@ -75,7 +75,7 @@ def main():
 
 		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
 
-		gscript.run_command('r.in.gdal', flags='', input = 'NEWTIF.tif', output=original)
+		gscript.run_command('r.in.gdal', flags='', input = 'assets/NEWTIF.tif', output=original)
 
 		print "Import done"
 

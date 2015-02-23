@@ -23,7 +23,7 @@ The installation directory for the various files roughly looks like this
 # Creating functions
 It is not the name of the python script, but the name of the "Class" defined within that determines the name of the service.
 
-## GRASS installation on server
+# GRASS installation on server
 
 ```
 ~
