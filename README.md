@@ -7,7 +7,7 @@ This is a master's project created by Ioannis Angelidis, David Nagy and Emil Mø
 The installation directory for the various files roughly looks like this
 
 ```
-.
+/
 ├── /usr/local
      ├── /wps/
      |   ├── pywps.cfg
