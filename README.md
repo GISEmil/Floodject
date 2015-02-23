@@ -6,7 +6,7 @@ This is a master's project created by Ioannis Angelidis, David Nagy and Emil Mø
 
 The installation directory for the various files roughly looks like this
 
-``
+```
 .
 +-- _config.yml
 +-- /usr/local/wps/
@@ -26,3 +26,4 @@ The installation directory for the various files roughly looks like this
 |   +-- members.yml
 +-- _site
 +-- index.html
+```
