@@ -9,13 +9,13 @@ The installation directory for the various files roughly looks like this
 ```
 .
 ├── /usr/local
-     └── /wps/
+     ├── /wps/
      |   ├── pywps.cfg
      |   └── /processes/
      |       └── __init__.py
      |       └── process1.py
-      ├── /downloads/
-         └──  PyWPS-installation
+     └── /downloads/
+          └──  PyWPS-installation
 
 ```
 
