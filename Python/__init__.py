@@ -75,7 +75,9 @@ def main():
 
 		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
 
-		gscript.run_command('r.in.gdal', flags='', input = 'assets/NEWTIF.tif', output=original)
+		gscript.run_command('r.in.gdal', flags='', input ='NEWTIF.tif', output=original)
+
+		print gscript.run_command('r.stats', flags='aA', input=original)
 
 		print "Import done"
 
@@ -86,6 +88,10 @@ def main():
 			expressionout = 'out' + str(random.randint(1,100)) + '_' + str(actual_loop)
 
 			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= %s, 0, null())' % (expressionout, original, actual_loop))
+
+			print gscript.run_command('r.surf.area', map=expressionout)
+
+			print gscript.run_command('r.stats', flags='alc', input=expressionout)
 
 			print "Mapcalc done"
 
