@@ -34,3 +34,13 @@ It is not the name of the python script, but the name of the "Class" defined wit
             └── MAPSET
 
 ```
+
+# Various URL strings for accessing the WPS service
+## Get capabilities
+http://54.154.226.176/cgi-bin/pywps.cgi?request=GetCapabilities&service=WPS
+
+## Execute a function
+http://54.154.226.176/cgi-bin/pywps.cgi?service=wps&version=1.0.0&request=Execute&identifier=complexRaster&datainputs=[indata=http://54.154.226.176/clip.tif]
+
+## Describe process
+http://54.154.226.176/cgi-bin/pywps.cgi?service=wps&version=1.0.0&request=DescribeProcess&identifier=geotiff2png
