@@ -19,9 +19,6 @@ gisdb = os.path.join(os.path.expanduser("~"), "grassdata")
 location = "WGS_1984"
 mapset   = "test"
 
-#gisbase = 'C:\Program Files (x86)\GRASS GIS 6.4.5svn' # query GRASS 7 itself for its GISBASE
-gisbase = '/usr/lib/grass70'
-
 # Set GISBASE environment variable
 os.environ['GISBASE'] = gisbase
 # the following not needed with trunk
@@ -89,10 +86,6 @@ def main():
 
 			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= %s, 0, null())' % (expressionout, original, actual_loop))
 
-			print gscript.run_command('r.surf.area', map=expressionout)
-
-			print gscript.run_command('r.stats', flags='alc', input=expressionout)
-
 			print "Mapcalc done"
 
 			ocean_vector = 'ocean_vector_' + str(random.randint(1,100)) + str(actual_loop)
@@ -120,7 +113,7 @@ def main():
 		print "Here we are"
 
 		#Run cleanup
-		cleanup_data()
+		#cleanup_data()
 
 def create_point(x_ocean, y_ocean):
 	try:
@@ -128,9 +121,6 @@ def create_point(x_ocean, y_ocean):
 		point.AddPoint(x_ocean, y_ocean)
 
 		print '%d, %d' % (point.GetX(), point.GetY())
-
-		#geojson = point.ExportToJson()
-		#print geojson
 
 		# Create the output Driver
 		outDriver = ogr.GetDriverByName('GeoJSON')
