@@ -54,6 +54,8 @@ sudo apt-get install apache2
 
 Remember to add the server to a security group!
 
+## File structure of the webserver 
+
 ```
 /
 └── /var/
