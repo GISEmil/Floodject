@@ -48,13 +48,13 @@ http://54.154.226.176/cgi-bin/pywps.cgi?service=wps&version=1.0.0&request=Descri
 
 # Apache2
 
-'''
+```
 sudo apt-get install apache2
-'''
+```
 
 Remember to add the server to a security group!
 
-'''
+```
 /
 └── /var/
     └── /www/
@@ -64,4 +64,4 @@ Remember to add the server to a security group!
             ├── /css/
             ├── / /
             └── /js/
-'''
+```
