@@ -9,15 +9,40 @@ The installation directory for the various files roughly looks like this
 
 ```
 /
-└── /usr/local
-     ├── /wps/
-     |   ├── pywps.cfg
-     |   └── /processes/
-     |       └── __init__.py
-     |       └── process1.py
-     └── /downloads/
-          └──  PyWPS-installation
+└── /usr/
+    ├── /local/
+    |     ├── /wps/
+    |     |   ├── pywps.cfg
+    |     |   └── /processes/
+    |     |       └── __init__.py
+    |     |       └── process1.py
+    |     ├── /downloads/
+    |         └──  PyWPS-folder
+    |
+    └── /lib/
+        └── /cgi-bin/
+            └── pywps.cgi
+```
 
+## CGI-BIN
+
+CGI wrapper
+
+```
+#!/bin/sh
+
+# Author: Jachym Cepicky
+# Purpose: CGI script for wrapping PyWPS script
+# Licence: GNU/GPL
+# Usage: Put this script to your web server cgi-bin directory, e.g.
+# /usr/lib/cgi-bin/ and make it executable (chmod 755 pywps.cgi)
+
+# NOTE: tested on linux/apache
+
+export PYWPS_CFG=/usr/local/wps/pywps.cfg
+export PYWPS_PROCESSES=/usr/local/wps/processes/
+
+/usr/local/pywps-VERSION/wps.py $1
 ```
 
 # Creating functions
@@ -54,7 +79,15 @@ sudo apt-get install apache2
 
 Remember to add the server to a security group!
 
-## File structure of the webserver 
+```
+sudo a2enmod cgi
+```
+
+```
+sudo service apache2 restart
+```
+
+## File structure of the webserver
 
 ```
 /
@@ -66,4 +99,14 @@ Remember to add the server to a security group!
             ├── /css/
             ├── / /
             └── /js/
+```
+
+## Folders with changes
+
+```
+/
+└── /etc/
+    └── /apache2/
+        └── /sites-enabled/
+            └── 000-default.conf
 ```
