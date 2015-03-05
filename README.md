@@ -62,13 +62,13 @@ It is not the name of the python script, but the name of the "Class" defined wit
 
 # Various URL strings for accessing the WPS service
 ## Get capabilities
-http://54.154.226.176/cgi-bin/pywps.cgi?request=GetCapabilities&service=WPS
+http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
 ## Execute a function
-http://54.154.226.176/cgi-bin/pywps.cgi?service=wps&version=1.0.0&request=Execute&identifier=complexRaster&datainputs=[indata=http://54.154.226.176/clip.tif]
+http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=Execute&Identifier=geotiff2png&DataInputs=[input=52.16.38.28/clip.tif]
 
 ## Describe process
-http://54.154.226.176/cgi-bin/pywps.cgi?service=wps&version=1.0.0&request=DescribeProcess&identifier=geotiff2png
+http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=geotiff2png
 
 
 # Apache2

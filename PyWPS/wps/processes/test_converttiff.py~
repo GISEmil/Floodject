@@ -10,7 +10,7 @@ class Geotiff2PNG(WPSProcess):
             identifier = "geotiff2png",
             title="Geotiff to PNG conversion",
             version = "1.0",
-            grassLocation = True,
+            grassLocation = 'WGS_1984',
             storeSupported = True,
             statusSupported = True)
 
@@ -19,9 +19,7 @@ class Geotiff2PNG(WPSProcess):
         self.outputImage=self.addComplexOutput(identifier="output",title="output image",formats=[{'mimeType':'image/png'}])
 
 
-    def execute(self):
-	
-	self.outputImage.setValue(self.inputImage.getValue())        
+    def execute(self):        
 	self.cmd(["r.in.gdal","input=%s" % self.inputImage.getValue(),'output=inputImage','-o'])
         #r.gdal may import things as RBG bands, if so they need to regroupped
         try:

@@ -10,7 +10,7 @@ class Geotiff2PNG(WPSProcess):
             identifier = "geotiff2png",
             title="Geotiff to PNG conversion",
             version = "1.0",
-            grassLocation = True,
+            grassLocation = 'WGS_1984',
             storeSupported = True,
             statusSupported = True)
 
@@ -27,5 +27,5 @@ class Geotiff2PNG(WPSProcess):
         except:
             self.cmd(['g.region',"rast=inputImage.green"])
             self.cmd(["r.composite","red=inputImage.red","green=inputImage.green","blue=inputImage.blue","output=inputImage"])
-        self.cmd(["r.out.png","input=inputImage","output=./tmp.png"])
-        self.outputImage.setValue("./tmp.png")
+        self.cmd(["r.out.png","input=inputImage","output=animage.png"])
+        self.outputImage.setValue("animage.png")
