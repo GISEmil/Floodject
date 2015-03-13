@@ -1,4 +1,4 @@
 LOCATION_NAME: WGS_1984
 GISDBASE: /home/ubuntu/grassdata
-MAPSET: PERMANENT
+MAPSET: test
 GUI: text
