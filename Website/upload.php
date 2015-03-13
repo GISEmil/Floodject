@@ -1,5 +1,10 @@
 <?php
-$target_dir = "C:/xampp/htdocs/";
+
+date_default_timezone_set('GMT');
+$date = new DateTime();
+$datestr = $date->format("zhms");
+$target_dir = "/var/www/html/";
+$target_dir2 = "/var/www/html/uploadpng/";
 $target_file = $target_dir . basename($_FILES["datafile"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
@@ -25,19 +30,29 @@ if($imageFileType != "tif") {
     echo "Sorry, only Tiff files are allowed.";
     $uploadOk = 0;
 }
-// Check if $uploadOk is set to 0 by an error
+//Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
     echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
+//if everything is ok, try to upload file
 } else {
-	imagepng(imagecreatefromstring(file_get_contents($_FILES["datafile"]["name"])), "")
-    if (move_uploaded_file($_FILES["datafile"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["datafile"]["name"]). " has been uploaded.";
-		sleep(1);
-		header("Location: Intro.html");
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
+if (move_uploaded_file($_FILES["datafile"]["tmp_name"], $target_file)) {
+	copy($target_file, $target_dir . "something.tif");
+	rename($target_file, $datestr . ".tif");
+	
+	
+	//imagepng($target_file2);
+		//if ((move_uploaded_file($_FILES["datafile"]["tmp_name"], $target_file)) and (move_uploaded_file($target_file2, $target_dir))) {
+	echo "The file ". basename( $_FILES["datafile"]["name"]). " has been uploaded and has been renamed to". $datestr;
+	
+	//rename($target_file2, $datestr . ".tif");
+	
+	imagepng($target_dir . "something.tif");
+	rename($target_dir . "something.tif", $datestr . ".png");
+	header("Location: second.html");
+		}
+	else {
+		echo "Sorry, there was an error uploading your file.";
+	}
 }
 
 ?>
