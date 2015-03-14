@@ -31,7 +31,7 @@ class Flooding(WPSProcess):
         self.rasterin=self.addComplexInput(identifier='rasterin',maxmegabites=10000,title="input image",minOccurs=1,maxOccurs=1,formats = [{'mimeType': 'image/tiff'}, {'mimeType': 'image/geotiff'}, {'mimeType': 'application/geotiff'}, {'mimeType': 'application/x-geotiff'}])
         #self.maxLevel=self.addLiteralInput(identifier='MaxLevel',title='Max level of water',minOccurs=1, maxOccurs=1)
         #self.interval=self.addLiteralInput(identifier='Interval',title='Interval of flooding',minOccurs=1, maxOccurs=1)
-        self.vectorin = self.addComplexInput(identifier="vectorin",title="Input file")
+        #self.vectorin = self.addComplexInput(identifier="vectorin",title="Input file")
 
         #self.folderin = self.addComplexInput(identifier='folderin',title='Vector folder')
 
@@ -61,7 +61,7 @@ class Flooding(WPSProcess):
 
         #inputtxt = "http://52.16.38.28/geojson/goodtimes.txt"
         #self.cmd(['v.in.ascii','input=%s' % inputtxt, 'output=testascii', 'format=point'])
-        self.cmd(['v.edit','-n','input=-','map=%s' % vectormap,'tool=add', 'layer=good', '--verbose'],stdin="P 1 1\n 5958952.42189184 3400918.23126419\n 1 20'")
+        self.cmd(['v.edit','-n','input=-','map=%s' % vectormap,'tool=add', 'layer=good', '--verbose'],stdin="P 1 1\n 16.436673 38.322712\n 1 20'")
         #self.cmd(['v.in.ogr','input=%s' % self.vectorin.getValue(), 'output=%s' % ocean_point,'-o','-t','--verbose'])
 
         for loops in range(0, loop_no, 1):
@@ -74,11 +74,11 @@ class Flooding(WPSProcess):
 
             #Convert all water to vector
             ocean_vector = 'ocean_vector_' + str(random.randint(1,100)) + str(loops)
-            #self.cmd(['r.to.vect','input=%s' % expressionout,'output=%s' % ocean_vector, 'tye=area'])
+            self.cmd(['r.to.vect','input=%s' % expressionout,'output=%s' % ocean_vector, 'type=area'])
 
             #Select only continuous ocean
             selected_ocean = 'ocean_select_' + str(random.randint(1,100)) + str(loops)
-            #self.cmd(['v.select', 'ainput=%s' % ocean_vector,'binput=%s' % ocean_point,'output=%s' % selected_ocean,'operator=intersects'])
+            self.cmd(['v.select', 'ainput=%s' % ocean_vector,'binput=%s' % vectormap,'output=%s' % selected_ocean,'operator=intersects'])
 
             ##Export the vectors and rasters
 
