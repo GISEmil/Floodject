@@ -1,6 +1,6 @@
 # Floodject
 
-This is a master's project created by Ioannis Angelidis, David Nagy and Emil Møller Rasmussen.  
+This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasmussen.  
 
 ## PyPWS
 
