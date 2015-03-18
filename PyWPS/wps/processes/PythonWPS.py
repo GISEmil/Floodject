@@ -22,7 +22,8 @@ class Flooding(WPSProcess):
             title = "Flooding",
             abstract = "This process is used to flood a DEM with water",
             version = "1.0",
-            grassLocation = '/home/ubuntu/grassdata/WGS_1984',
+            #grassLocation = None,
+            grassLocation = 'WGS_1984',
             statusSupported = True,
             storeSupported = True)
 
@@ -43,15 +44,13 @@ class Flooding(WPSProcess):
 
     def execute(self):
         import random
-
-
     	# Creating variable names for output during the process
         original = 'original' + str(random.randint(1,100))
         ocean_point = 'ocean_point' + str(random.randint(1,100))
     	#ocean_vector = 'ocean_vect' + str(random.randint(1,100))
     	#selected_ocean = 'selected_ocean' + str(random.randint(1,100))
 
-        self.cmd(['g.remove','-f','type=vector','name=OGRGeoJSON'])
+        #self.cmd(['g.remove','-f','type=vector','name=OGRGeoJSON'])
         self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
         #self.cmd(['v.external','input=./', 'layer=%s' % self.vectorin.getValue(), 'output=suckit'])
         #postgresql = "PG:host=postgrefun.cyjgeky5dykt.eu-west-1.rds.amazonaws.com dbname=postgrefun user=piratosthegreat password=PqwurxnX1
@@ -68,13 +67,15 @@ class Flooding(WPSProcess):
             #Set region
             self.cmd(['g.region','raster=%s' % (original)])
 
+            self.cmd(['g.list','type=rast,vect','-f','--verbose'])
+
             #Do mapcalculation to flood area
             expressionout = 'out' + str(random.randint(1,100)) + '_' + str(loops)
-            self.cmd(['r.mapcalc','expression= %s = if(%s <= 1000, 0, null())' % (expressionout, original)])
+            #self.cmd(['r.mapcalc','expression= %s = if(%s <= 1000, 0, null())' % (expressionout, original)])
 
             #Convert all water to vector
             ocean_vector = 'ocean_vector_' + str(random.randint(1,100)) + str(loops)
-            self.cmd(['r.to.vect','input=%s' % expressionout,'output=%s' % ocean_vector, 'type=area'])
+            self.cmd(['r.to.vect', '-b','--verbose','input=%s' % original,'type=area','output=%s' % ocean_vector])
 
             #Select only continuous ocean
             selected_ocean = 'ocean_select_' + str(random.randint(1,100)) + str(loops)
