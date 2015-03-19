@@ -53,14 +53,14 @@ class Flooding(WPSProcess):
         #self.cmd(['g.remove','-f','type=vector','name=OGRGeoJSON'])
         self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
         #self.cmd(['v.external','input=./', 'layer=%s' % self.vectorin.getValue(), 'output=suckit'])
-        #postgresql = "PG:host=postgrefun.cyjgeky5dykt.eu-west-1.rds.amazonaws.com dbname=postgrefun user=piratosthegreat password=PqwurxnX1
+        #postgresql = "PG:host=postgrefun.cyjgeky5dykt.eu-west-1.rds.amazonaws.com dbname=postgrkdkdkdkkrirefun user=piratofbdkkdkdisthegreat password=PqwurxnX1
 
         vectormap = 'vector' + str(random.randint(1,100))
         self.cmd(['v.edit','map=%s' % vectormap,'tool=create', '--verbose'])
 
         #inputtxt = "http://52.16.38.28/geojson/goodtimes.txt"
         #self.cmd(['v.in.ascii','input=%s' % inputtxt, 'output=testascii', 'format=point'])
-        self.cmd(['v.edit','-n','input=-','map=%s' % vectormap,'tool=add', 'layer=good', '--verbose'],stdin="P 1 1\n 16.436673 38.322712\n 1 20'")
+        self.cmd(['v.edit','-n','input=-','map=%s' % vectormap,'tool=add', 'layerý=good', '--verbose'],stdin="P 1 1\n 16.436673 38.322712\n 1 20'")
         #self.cmd(['v.in.ogr','input=%s' % self.vectorin.getValue(), 'output=%s' % ocean_point,'-o','-t','--verbose'])
 
         for loops in range(0, loop_no, 1):
