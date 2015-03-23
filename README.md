@@ -4,6 +4,114 @@ This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasm
 
 ## PyPWS
 
+# Installation
+
+Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, found below:
+
+```
+http://pywps.wald.intevation.org/documentation/installation.html
+```
+
+```
+http://pywps.wald.intevation.org/documentation/course/
+```
+
+One of the developers working on PyWPS gave detailed instructions on how to install PyWPS on Ubuntu 14.04 in the following stackexchange thread:
+
+```
+http://gis.stackexchange.com/questions/83743/how-to-install-pywps-on-ubuntu
+```
+
+The instructions from there are partly used below, but changed to fit with the individual server setup: 
+
+```
+sudo apt-get install apache2 python-setuptools python-magic python-lxml  git-core wget
+
+git clone https://github.com/geopython/PyWPS.git
+
+cd ./PyWPS
+
+sudo python setup.py install
+```
+
+```
+sudo mkdir /var/www/pywps
+
+sudo mkdir /var/www/wpsoutputs
+
+sudo cp -R pywps/processes /var/www/pywps
+```
+
+```
+sudo touch /var/www/pywps/pywps.log
+
+sudo cp pywps/default.cfg /var/www/pywps/pywps.cfg
+
+sudo pico /var/www/pywps/pywps.cfg
+```
+
+```
+  [server]
+  maxoperations=30
+  maxinputparamlength=1024
+  maxfilesize=500mb
+  tempPath=/tmp
+  processesPath=/var/www/pywps/processes
+  outputUrl=http://localhost/wpsoutputs
+  outputPath=/var/www/wpsoutputs
+  debug=true # deprecated since 3.2, use logLevel instead
+  logFile=/var/www/pywps/pywps.log
+```
+
+```
+sudo chown -R www-data:www-data /var/www/pywps /var/www/wpsoutputs
+```
+
+```
+sudo cp webservices/cgi/pywps.cgi /usr/lib/cgi-bin
+
+whereis wps.py
+```
+
+```
+sudo pico /usr/lib/cgi-bin/pywps.cgi
+```
+
+```
+export PYWPS_CFG=/var/www/pywps/pywps.cfg
+export PYWPS_PROCESSES=/var/www/pywps/processes/
+
+/usr/local/bin/wps.py $1
+```
+
+```
+cd /usr/lib/cgi-bin
+
+sudo sh pywps.cgi "request=GetCapabilities&service=WPS"
+```
+
+```
+sudo a2enmod cgid
+```
+
+```
+sudo pico /etc/apache2/sites-available/000-default.conf
+```
+
+```
+ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+<Directory "/usr/lib/cgi-bin">
+    AllowOverride None
+    Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+    Order allow,deny
+    Allow from all
+</Directory>
+```
+
+```
+sudo service apache2 restart
+```
+
 # Installation structure
 The installation directory for the various files roughly looks like this
 
