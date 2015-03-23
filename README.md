@@ -22,7 +22,11 @@ One of the developers working on PyWPS gave detailed instructions on how to inst
 http://gis.stackexchange.com/questions/83743/how-to-install-pywps-on-ubuntu
 ```
 
-The instructions from there are partly used below, but changed to fit with the individual server setup: 
+The instructions from there are partly used below, but changed to fit with the individual server setup:
+
+## Actual installation
+
+Install dependencies, clone the project from GitHub and install it:
 
 ```
 sudo apt-get install apache2 python-setuptools python-magic python-lxml  git-core wget
@@ -34,21 +38,29 @@ cd ./PyWPS
 sudo python setup.py install
 ```
 
-```
-sudo mkdir /var/www/pywps
+## Create folders for PyWPS assets
 
-sudo mkdir /var/www/wpsoutputs
-
-sudo cp -R pywps/processes /var/www/pywps
-```
+For convenience, in this example all PyWPS assets are stored in /var/www/html, a typical setup for a development environment. In a server setup it might be wiser to store processes in /srv and logs in /var/log.
 
 ```
-sudo touch /var/www/pywps/pywps.log
+sudo mkdir /var/www/html/pywps
 
-sudo cp pywps/default.cfg /var/www/pywps/pywps.cfg
+sudo mkdir /var/www/html/wpsoutputs
 
-sudo pico /var/www/pywps/pywps.cfg
+sudo cp -R pywps/processes /var/www/html/pywps
 ```
+
+Create log and configuration files:
+
+```
+sudo touch /var/www/html/pywps/pywps.log
+
+sudo cp pywps/default.cfg /var/www/html/pywps/pywps.cfg
+
+sudo pico /var/www/html/pywps/pywps.cfg
+```
+
+In the configuration file only the Server environment needs to be tweaked, in order to match the asset locations created before. The set up of the GRASS and MapServer environments are left for a later date.
 
 ```
   [server]
@@ -56,16 +68,22 @@ sudo pico /var/www/pywps/pywps.cfg
   maxinputparamlength=1024
   maxfilesize=500mb
   tempPath=/tmp
-  processesPath=/var/www/pywps/processes
+  processesPath=/var/www/html/pywps/processes
   outputUrl=http://localhost/wpsoutputs
-  outputPath=/var/www/wpsoutputs
+  outputPath=/var/www/html/wpsoutputs
   debug=true # deprecated since 3.2, use logLevel instead
   logFile=/var/www/pywps/pywps.log
 ```
 
+Pass ownership to the www-data user (again, in a server setup you might want to be more conservative):
+
 ```
-sudo chown -R www-data:www-data /var/www/pywps /var/www/wpsoutputs
+sudo chown -R www-data:www-data /var/www/html/pywps /var/www/html/wpsoutputs
 ```
+
+## Configure the web service
+
+Copy the PyWPS CGI to /usr/lib/cgi-bin:
 
 ```
 sudo cp webservices/cgi/pywps.cgi /usr/lib/cgi-bin
@@ -73,16 +91,22 @@ sudo cp webservices/cgi/pywps.cgi /usr/lib/cgi-bin
 whereis wps.py
 ```
 
+Copy the path of wps.py to the clipboard.
+
 ```
 sudo pico /usr/lib/cgi-bin/pywps.cgi
 ```
 
+Modify pywps.cgi to match the present setup:
+
 ```
-export PYWPS_CFG=/var/www/pywps/pywps.cfg
-export PYWPS_PROCESSES=/var/www/pywps/processes/
+export PYWPS_CFG=/var/www/pywps/html/pywps.cfg
+export PYWPS_PROCESSES=/var/www/pywps/html/processes/
 
 /usr/local/bin/wps.py $1
 ```
+
+Give it a try:
 
 ```
 cd /usr/lib/cgi-bin
@@ -90,13 +114,19 @@ cd /usr/lib/cgi-bin
 sudo sh pywps.cgi "request=GetCapabilities&service=WPS"
 ```
 
+Make sure Apache is configured to run CGI scripts; the CGI module might need to be explicitly enabled:
+
 ```
 sudo a2enmod cgid
 ```
 
+Edit the default site configuration
+
 ```
 sudo pico /etc/apache2/sites-available/000-default.conf
 ```
+
+Verify that this section is included, add the necessary keywords to make it look like this (in Ubuntu 12.04 this may already be the default configuration):
 
 ```
 ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
@@ -107,6 +137,8 @@ ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
     Allow from all
 </Directory>
 ```
+
+Restart Apache:
 
 ```
 sudo service apache2 restart
