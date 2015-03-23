@@ -34,9 +34,7 @@ class Flooding(WPSProcess):
 
         #self.folderin = self.addComplexInput(identifier='folderin',title='Vector folder')
 
-        # Define output #
-        #################
-
+        # Define output
         self.outputImage=self.addComplexOutput(identifier="output0",title="output image",formats=[{'mimeType':'image/tiff'}])
         self.outputVector=self.addComplexOutput(identifier='vectorout', title='output vector')
 
@@ -69,7 +67,6 @@ class Flooding(WPSProcess):
             self.cmd(['v.select', 'ainput=%s' % ocean_vector,'binput=%s' % ocean_point,'output=%s' % selected_ocean,'operator=intersects'])
 
             ##Export the vectors and rasters
-
             #Export vector
             user_out = 'output' + str(loops) + '.geojson'
             #self.cmd(['v.out.ogr','input=%s' % ocean_vector,'format=GeoJSON','output=%s' % user_out])

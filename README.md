@@ -6,7 +6,7 @@ This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasm
 
 ## Installation
 
-Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, found below:
+Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, as they are old and your server setup might differ. They are found in the links below:
 
 ```
 http://pywps.wald.intevation.org/documentation/installation.html
@@ -16,7 +16,7 @@ http://pywps.wald.intevation.org/documentation/installation.html
 http://pywps.wald.intevation.org/documentation/course/
 ```
 
-One of the developers working on PyWPS gave detailed instructions on how to install PyWPS on Ubuntu 14.04 in the following stackexchange thread:
+Luckily, one of the developers (Luis de Sousa) working on PyWPS gave detailed instructions on how to install PyWPS on Ubuntu 14.04 in the following stackexchange thread:
 
 ```
 http://gis.stackexchange.com/questions/83743/how-to-install-pywps-on-ubuntu
@@ -169,6 +169,23 @@ To give a better overview of where the files on the server have been installed, 
             └── 000-default.conf
 ```
 
+# Debugging
+
+When wanting to debug there are two important file locations, the first one is the pywps.log that we created above, the second one is the general server (apache) error log. These are found in these locations
+
+```
+/
+└── /var/
+    ├── /www/
+    |   └── /html/
+    |       └── /pywps/
+    |           └── pywps.log
+    |
+    └── /log/
+        └── /apache2/
+            └── error.log
+```
+
 ### CGI-BIN
 
 CGI wrapper
@@ -197,23 +214,23 @@ It is not the name of the python script, but the name of the "Class" defined wit
 
 ```
 ~
-├── .grass7
+├── .grass6
 |     └── rc
 └── grassdata
-      └── LOCATION
-            └── MAPSET
+      └── <LOCATION>
+            └── <MAPSET>
 
 ```
 
 ## Various URL strings for accessing the WPS service
 ### Get capabilities
-http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
+http://52.16.202.188/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
 ### Execute a function
-http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=Execute&Identifier=geotiff2png&DataInputs=[input=http://52.16.38.28/clip.tif]
+http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
 
 ### Describe process
-http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=geotiff2png
+http://52.16.202.188/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
 
 ### File structure of the webserver
 
