@@ -4,7 +4,7 @@ This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasm
 
 ## PyPWS
 
-# Installation
+## Installation
 
 Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, found below:
 
@@ -24,7 +24,7 @@ http://gis.stackexchange.com/questions/83743/how-to-install-pywps-on-ubuntu
 
 The instructions from there are partly used below, but changed to fit with the individual server setup:
 
-## Actual installation
+### Actual installation
 
 Install dependencies, clone the project from GitHub and install it:
 
@@ -38,7 +38,7 @@ cd ./PyWPS
 sudo python setup.py install
 ```
 
-## Create folders for PyWPS assets
+### Create folders for PyWPS assets
 
 For convenience, in this example all PyWPS assets are stored in /var/www/html, a typical setup for a development environment. In a server setup it might be wiser to store processes in /srv and logs in /var/log.
 
@@ -81,7 +81,7 @@ Pass ownership to the www-data user (again, in a server setup you might want to 
 sudo chown -R www-data:www-data /var/www/html/pywps /var/www/html/wpsoutputs
 ```
 
-## Configure the web service
+### Configure the web service
 
 Copy the PyWPS CGI to /usr/lib/cgi-bin:
 
@@ -144,7 +144,7 @@ Restart Apache:
 sudo service apache2 restart
 ```
 
-# Installation structure
+## Installation structure
 The installation directory for the various files roughly looks like this
 
 ```
@@ -164,7 +164,7 @@ The installation directory for the various files roughly looks like this
             └── pywps.cgi
 ```
 
-## CGI-BIN
+### CGI-BIN
 
 CGI wrapper
 
@@ -185,10 +185,10 @@ export PYWPS_PROCESSES=/usr/local/wps/processes/
 /usr/local/pywps-VERSION/wps.py $1
 ```
 
-# Creating functions
+## Creating functions
 It is not the name of the python script, but the name of the "Class" defined within that determines the name of the service.
 
-# GRASS installation on server
+## GRASS installation on server
 
 ```
 ~
@@ -200,34 +200,17 @@ It is not the name of the python script, but the name of the "Class" defined wit
 
 ```
 
-# Various URL strings for accessing the WPS service
-## Get capabilities
+## Various URL strings for accessing the WPS service
+### Get capabilities
 http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
-## Execute a function
+### Execute a function
 http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=Execute&Identifier=geotiff2png&DataInputs=[input=http://52.16.38.28/clip.tif]
 
-## Describe process
+### Describe process
 http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=geotiff2png
 
-
-# Apache2
-
-```
-sudo apt-get install apache2
-```
-
-Remember to add the server to a security group!
-
-```
-sudo a2enmod cgi
-```
-
-```
-sudo service apache2 restart
-```
-
-## File structure of the webserver
+### File structure of the webserver
 
 ```
 /
@@ -241,7 +224,7 @@ sudo service apache2 restart
             └── /js/
 ```
 
-## Folders with changes
+### Folders with changes
 
 ```
 /
