@@ -100,8 +100,8 @@ sudo pico /usr/lib/cgi-bin/pywps.cgi
 Modify pywps.cgi to match the present setup:
 
 ```
-export PYWPS_CFG=/var/www/pywps/html/pywps.cfg
-export PYWPS_PROCESSES=/var/www/pywps/html/processes/
+export PYWPS_CFG=/var/www/html/pywps/pywps.cfg
+export PYWPS_PROCESSES=/var/www/html/pywps/processes/
 
 /usr/local/bin/wps.py $1
 ```
@@ -126,7 +126,7 @@ Edit the default site configuration
 sudo pico /etc/apache2/sites-available/000-default.conf
 ```
 
-Verify that this section is included, add the necessary keywords to make it look like this (in Ubuntu 12.04 this may already be the default configuration):
+Add the following to the file:
 
 ```
 ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
@@ -145,23 +145,28 @@ sudo service apache2 restart
 ```
 
 ## Installation structure
-The installation directory for the various files roughly looks like this
+To give a better overview of where the files on the server have been installed, a file-tree of the location of all important files is provided below:
 
 ```
 /
-└── /usr/
-    ├── /local/
-    |     ├── /wps/
-    |     |   ├── pywps.cfg
-    |     |   └── /processes/
-    |     |       └── __init__.py
-    |     |       └── process1.py
-    |     ├── /downloads/
-    |         └──  PyWPS-folder
-    |
-    └── /lib/
-        └── /cgi-bin/
-            └── pywps.cgi
+├── /var/
+|   └── /www/
+|       └── /html/
+|           └──/pywps/
+|               ├── pywps.cfg
+|               ├── pywps.log
+|               ├── /wpsoutputs/
+|               └── /processes/
+|                     └── __init__.py
+|                     └── process1.py
+├── /lib/
+|    └── /cgi-bin/
+|        └── pywps.cgi
+|
+└── /etc/
+    └── /apache2/
+        └── /sites-available/
+            └── 000-default.conf
 ```
 
 ### CGI-BIN
@@ -179,10 +184,10 @@ CGI wrapper
 
 # NOTE: tested on linux/apache
 
-export PYWPS_CFG=/usr/local/wps/pywps.cfg
-export PYWPS_PROCESSES=/usr/local/wps/processes/
+export PYWPS_CFG=/var/www/html/pywps/pywps.cfg
+export PYWPS_PROCESSES=/var/www/html/pywps/processes/
 
-/usr/local/pywps-VERSION/wps.py $1
+/usr/local/bin/wps.py $1
 ```
 
 ## Creating functions
@@ -222,14 +227,4 @@ http://52.16.38.28/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeP
             ├── /css/
             ├── / /
             └── /js/
-```
-
-### Folders with changes
-
-```
-/
-└── /etc/
-    └── /apache2/
-        └── /sites-enabled/
-            └── 000-default.conf
 ```
