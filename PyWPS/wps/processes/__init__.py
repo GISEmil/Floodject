@@ -1,1 +1,1 @@
-__all__=['dummyprocess','test_converttiff','moreInOne','PythonWPS','tests','vecttorast']
+__all__=['PythonWPS']
