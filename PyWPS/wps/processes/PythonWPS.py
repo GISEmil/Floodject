@@ -44,10 +44,8 @@ class Flooding(WPSProcess):
         original = 'original' + str(random.randint(1,100))
         ocean_point = 'ocean_point' + str(random.randint(1,100))
 
-        #self.cmd(['g.remove','-f','type=vector','name=OGRGeoJSON'])
         self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
 
-        #self.cmd(['v.edit','-n','input=-','map=%s' % vectormap,'tool=add', 'layer=good', '--verbose'],stdin="P 1 1\n 16.436673 38.322712\n 1 20'")
         self.cmd(['v.in.ogr','dsn=%s' % self.vectorin.getValue(), 'type=point','output=%s' % ocean_point,'-o','--verbose'])
 
         for loops in range(0, loop_no, 1):
@@ -69,7 +67,6 @@ class Flooding(WPSProcess):
             ##Export the vectors and rasters
             #Export vector
             user_out = 'output' + str(loops) + '.geojson'
-            #self.cmd(['v.out.ogr','input=%s' % ocean_vector,'format=GeoJSON','output=%s' % user_out])
             self.cmd(['v.out.ogr', 'input=%s' % selected_ocean,'format=GeoJSON','type=area','dsn=%s' % (user_out)])
             self.outputVector.setValue(user_out)
 
