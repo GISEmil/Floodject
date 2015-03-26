@@ -71,6 +71,6 @@ class Flooding(WPSProcess):
             self.outputVector.setValue(user_out)
 
             #Export raster
-            output = 'output' + str(loops) + '.tif'
+            output = 'output' + str(loops) + '.png'
             self.cmd(['r.out.gdal','input=%s' % expressionout, 'output=%s' % (output)])
             self.outputImage.setValue(output)

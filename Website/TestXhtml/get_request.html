@@ -2,18 +2,30 @@
 <html>
 <head>
 <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script>
-$.ajax({
-    url: "http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]"
-}).done(function(html) {$("#results").append(html); });
 
-</script>
 </head>
 <body>
 
 <h2>AJAX</h2>
-<button type="button" onclick="loadXMLDoc()">Request data</button>
-<div id="myDiv"></div>
-
+<p>Peepee</p>
+<input type="button" id="button" value="Click Me">
+<div class="div_imagetranscrits0"></div>
+<div class="div_imagetranscrits1"></div>
 </body>
+<script>
+var xmlPath = "http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]";
+var image = new Image();
+
+$("#button").click(function () {
+    $.get(xmlPath, {}, function (xml) {
+        $("wps\\:Data", xml).find("wps\\:ComplexData").each(function (i, value) {
+            /* $("p").append(value);
+            console.log(value);*/
+            $('.div_imagetranscrits' + [i]).html('<img height=640px; width=1024px; src="data:image/png;base64,' + value.textContent + '" />');
+            /*$("body").append("<img height= 100px width= 100px;></img>").attr("src","data:image/png;base64,"+value)*/
+        });
+    },'xml');
+});
+
+</script>
 </html>
