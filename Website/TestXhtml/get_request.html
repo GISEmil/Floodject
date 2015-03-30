@@ -1,31 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/hover-min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/magic.css">
 <script type="text/javascript" src='https://code.jquery.com/jquery-2.1.3.min.js'></script>
-
 </head>
-<body>
+<style>
 
-<h2>AJAX</h2>
-<p>Peepee</p>
-<input type="button" id="button" value="Click Me">
-<div class="div_imagetranscrits0"></div>
-<div class="div_imagetranscrits1"></div>
+.container_for {
+  width: 100%;
+  height: 1024px;
+}
+
+.resultsoutput {
+  height: 200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.returned {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  float:left;
+  -webkit-box-shadow: 10px 10px 30px -4px rgba(136,136,NaN,0.73);
+  -moz-box-shadow: 10px 10px 30px -4px rgba(136,136,NaN,0.73);
+  box-shadow: 10px 10px 30px -4px rgba(136,136,NaN,0.73);
+}
+
+.header {
+  margin-right: auto;
+  margin-left: auto;
+  width: auto;
+}
+
+#center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.splash-box {
+  height: 500px;
+}
+
+.small {
+  width: 25%;
+}
+
+</style>
+<body>
+<div class="container-fluid">
+    <div class="container splash-box">
+        <div class="row">
+          <div class="underline text-center">
+            <h1 class="header">Flooding of raster</h1>
+            <p class="">By clicking the button below, the server will be requested  will send a request flooding a DEM. More text will be filled in this box, maybe also the boxes in which information can be put.</p>
+            <div class="center-block">
+            <form class ="small">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Water depths</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Increment</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          </div>
+          <div id="map">
+          </div>
+        </div>
+    </div>
+  <div class="container text-center">
+    <button type="button" id="button centering" class="btn btn-default btn-lg">Click me for flood</button>
+  </div>
+  <div class="container text-center">
+    <h3 class="centering underline">Results</h3>
+    <div class="container container_for">
+    </div>
+  </div>
+</div>
 </body>
+
 <script>
 var xmlPath = "http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]";
 var image = new Image();
 
-$("#button").click(function () {
+$(".btn").click(function () {
     $.get(xmlPath, {}, function (xml) {
         $("wps\\:Data", xml).find("wps\\:ComplexData").each(function (i, value) {
             /* $("p").append(value);
             console.log(value);*/
-            $('.div_imagetranscrits' + [i]).html('<img height=640px; width=1024px; src="data:image/png;base64,' + value.textContent + '" />');
-            /*$("body").append("<img height= 100px width= 100px;></img>").attr("src","data:image/png;base64,"+value)*/
+            timing = value * 1000
+            $('<div class="resultoutput col-md-3" />').appendTo(".container_for").append('<img class="returned hvr-grow" src="data:image/png;base64,' + value.textContent + '" />');
         });
     },'xml');
 });
 
+/*  */
 </script>
 </html>
