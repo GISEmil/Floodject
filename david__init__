@@ -108,11 +108,9 @@ def main():
 		gscript.run_command('r.in.gdal', flags='', input ='aoi.tif', output=original)
 
 		#Deleting  values keep
-
 		gscript.run_command('r.mapcalc', expression= '%s = if(%s <=0, 0, 0)' % ('b_area', original))
 
 		#converting the original tif into bounding vector polygon
-
 		gscript.run_command('r.to.vect', input = 'b_area', output = 'b_polygon', type = 'area')
 
 		#Extract the land from DEM

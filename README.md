@@ -245,3 +245,8 @@ http://52.16.202.188/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=Describ
             ├── / /
             └── /js/
 ```
+
+
+### Setting up Flask
+
+http://alex.nisnevich.com/blog/2014/10/01/setting_up_flask_on_ec2.html
