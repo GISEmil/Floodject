@@ -18,7 +18,7 @@ gisdb = os.path.join(os.path.expanduser("~"), "grassdata")
 
 # specify (existing) location and mapset, program has to run once to set these up
 location = "newLocation"
-mapset   = "PERMANENT"
+mapset   = "test"
 
 #gisbase = 'C:\Program Files (x86)\GRASS GIS 6.4.5svn' # query GRASS 7 itself for its GISBASE
 gisbase = '/usr/lib/grass70'
@@ -72,9 +72,9 @@ def main():
 		#x_ocean = float(input("Please provide with the X coordinate of the ocean point: "))
 		#y_ocean = float(input("Please provide with the Y coordinate of the ocean point: "))
 
-		y_ocean = 55.758700
+		y_ocean = 55.786290
 
-		x_ocean = 12.074000
+		x_ocean = 12.064200
 
 		#initial loop number
 
@@ -93,24 +93,21 @@ def main():
 		# WGS84/initial grass location/mapset environment
 		gsetup.init(gisbase, gisdb, location, mapset)
 
-		#deleting previous data from WGS84 location/mapset environment
-		delete=raw_input("Do you want to clean up the data(y/n): ")
-		if delete in ['y', 'Y', 'yes', 'Yes', 'YES']:
-			cleanup_data()
-		else:
-			print "data is not deleted"
+		#cleaning up the data
 
-		# create point for the ocean selection
+		cleanup_data()
 
 		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
 
 		#importing the investigated DEM
-		gscript.run_command('r.in.gdal', flags='', input ='aoi.tif', output=original)
+		gscript.run_command('r.in.gdal', flags='', input ='areaflood.tif', output=original)
 
 		#Deleting  values keep
+
 		gscript.run_command('r.mapcalc', expression= '%s = if(%s <=0, 0, 0)' % ('b_area', original))
 
 		#converting the original tif into bounding vector polygon
+
 		gscript.run_command('r.to.vect', input = 'b_area', output = 'b_polygon', type = 'area')
 
 		#Extract the land from DEM
@@ -133,7 +130,7 @@ def main():
 
 			#Extracting ocean from the DEM
 
-			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= %s, 0, null())' % (expressionout, original, actual_loop))
+			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= (%s * %s), 0, null())' % (expressionout, original, interval_input, actual_loop))
 
 			#Surface area statistic
 
@@ -185,18 +182,15 @@ def main():
 
 		print outputnames_vect
 
-		#deleting previous data from WGS84 location/mapset environment
-		watershedQ=raw_input("Do you want to create watershed(y/n): ")
-		if delete in ['y', 'Y', 'yes', 'Yes', 'YES']:
-			watershed()
-		else:
-			print "data is not deleted"
+
+		#creating watershed
+		watershed()
 
 		#projection of the whole dataset to the required projected coordinate system
-		projection()
+		#projection()
 
 		#execute the calculatio in projected environment:
-		projected_calc()
+		#projected_calc()
 
 def projection():
 
@@ -301,23 +295,27 @@ def watershed():
 	filled = 'DEM_filled' + timestr
 	Direction = 'direction' + timestr
 	Accumulation = 'accumulation' + timestr
-	tAccumulation = 'tAccumulation' + timestr
+	label_stat = 'label_stat' + timestr
 	watershed = 'watershed' + timestr
-	s_watershed = 's_watershed' + timestr
-	f_drainage = 'drainage' + timestr
-	statoutput = 'stat' + timestr
+	half_basin = 'half_basin' + timestr
+	drainage = 'drainage' + timestr
+	zonal_stat = 'zonal_stat' + timestr
+	prepour_point = 'prepour_point' + timestr
 	pour_point = 'pour_point' + timestr
-	flow_int=  'flow_int' + timestr
-	stat_int=  'stat_int' + timestr
-	tci=  'tci' + timestr
+	pour_point_vect=  'pour_point_vect' + timestr
+	basin_perimeter = 'basin_perimeter' + timestr
+	stream = 'stream' + timestr
+	focal = 'focal' + timestr
+	Accumulation_int = 'accumulation_int' + timestr
+	stat_int = 'stat_int' + timestr
 
 	gscript.run_command('g.region', rast=original)
 
-	gscript.run_command('r.fill.dir', input = Xland, output = filled, direction = Direction)
+	gscript.run_command('r.fill.dir', input = original, output = filled, direction = Direction)
 
 	#gscript.run_command('r.terraflow', elev = original, filled = filled, direction = Direction, swatershed = s_watershed, accumulation=tAccumulation, tci = tci)
 
-	gscript.run_command('r.watershed', elevation = filled, accumulation = Accumulation)
+	gscript.run_command('r.watershed', flags = '4s', elevation = filled, accumulation = Accumulation)
 
 	accMax = gscript.raster_info(Accumulation)['max']
 
@@ -327,15 +325,45 @@ def watershed():
 
 	print accMax
 
-	gscript.run_command('r.watershed', elevation = filled, threshold = thresHold, basin = watershed)
+	gscript.run_command('r.watershed', flags = '4s', elevation = filled, drainage = drainage, half_basin = half_basin, threshold = thresHold, stream = stream, basin = watershed)
 
-	gscript.run_command('r.stats.zonal', base = watershed, cover = Accumulation, method = 'max', output = statoutput)
+	gscript.run_command('r.neighbors', input = watershed, output = focal, method = 'diversity')
 
-	gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (flow_int, Accumulation))
+	gscript.run_command('r.mapcalc', expression='%s = if(%s >= 2 , %s, null())' % (basin_perimeter, focal, watershed))
 
-	gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (stat_int, statoutput))
+	gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (Accumulation_int, Accumulation))
 
-	gscript.run_command('r.mapcalc', expression='%s = if(%s == %s, 10, null())' % (pour_point, flow_int, stat_int))
+	gscript.run_command('r.statistics', base = basin_perimeter, cover = Accumulation_int, method = 'max', output = label_stat)
+
+	gscript.run_command('r.mapcalc', expression='%s=@%s' % (zonal_stat, label_stat))
+
+	gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (stat_int, zonal_stat))
+
+	gscript.run_command('r.mapcalc', expression='%s = if(%s == %s, 10, null())' % (prepour_point, Accumulation_int, stat_int))
+
+	gscript.run_command('r.mapcalc', expression='%s = if(%s > 0, %s, null())' % (pour_point, original, prepour_point))
+
+	gscript.run_command('r.to.vect', input = pour_point, output = pour_point_vect, feature = 'point')
+
+#second try
+	#gscript.run_command('r.neighbors', input = watershed, output = focal, method = 'diversity')
+
+	#gscript.run_command('r.mapcalc', expression='%s = if(%s >= 2 && %s >= 0, 10, null())' % (prepour_point, focal, stream))
+
+	#gscript.run_command('r.mapcalc', expression='%s = if(%s > 0, %s, null())' % (pour_point, original, prepour_point))
+
+	#gscript.run_command('r.to.vect', input = pour_point, output = pour_point_vect, feature = 'point')
+
+#First try
+	#gscript.run_command('r.stats.zonal', base = watershed, cover = Accumulation, method = 'max', output = statoutput)
+
+	#gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (flow_int, Accumulation))
+
+	#gscript.run_command('r.mapcalc', expression='%s = int(%s)' % (stat_int, statoutput))
+
+	#gscript.run_command('r.mapcalc', expression='%s = if(%s == %s, 10, null())' % (pour_point, flow_int, stat_int))
+
+
 
 def create_point(x_ocean, y_ocean):
 
