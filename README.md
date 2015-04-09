@@ -224,13 +224,13 @@ It is not the name of the python script, but the name of the "Class" defined wit
 
 ## Various URL strings for accessing the WPS service
 ### Get capabilities
-http://52.16.202.188/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
+http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
 ### Execute a function
-http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
+http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
 
 ### Describe process
-http://52.16.202.188/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
+http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
 
 ### File structure of the webserver
 
