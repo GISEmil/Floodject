@@ -1,0 +1,54 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<div class="container-fluid">
+    <div class="container splash-box">
+        <div class="row">
+          <div class="underline text-center">
+            <h1 class="header">Flooding of raster</h1>
+            <p class="">By clicking the button below, the server will be requested  will send a request flooding a DEM. More text will be filled in this box, maybe also the boxes in which information can be put.</p>
+            <div class="center-block">
+            <form class ="small">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Water depths</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Increment</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+          </div>
+          <div id="map">
+          </div>
+        </div>
+    </div>
+  <div class="container text-center">
+    <button type="button" id="button centering" class="btn btn-default btn-lg">Click me for flood</button>
+  </div>
+  <div class="container text-center">
+    <h3 class="centering underline">Results</h3>
+    <div class="container container_for">
+    </div>
+  </div>
+</div>
+<script>
+var xmlPath = "http://52.16.202.188/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]";
+var image = new Image();
+
+$(".btn").click(function () {
+    $.get(xmlPath, {}, function (xml) {
+        $("wps\\:Data", xml).find("wps\\:ComplexData").each(function (i, value) {
+            /* $("p").append(value);
+            console.log(value);*/
+            timing = value * 1000
+            $('<div class="resultoutput col-md-3" />').appendTo(".container_for").append('<img class="returned hvr-grow" src="data:image/png;base64,' + value.textContent + '" />');
+        });
+    },'xml');
+});
+
+/*  */
+</script>
+{% endblock %}

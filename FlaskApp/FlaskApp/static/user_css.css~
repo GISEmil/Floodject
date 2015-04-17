@@ -1,0 +1,12 @@
+.header {
+ height: 10%;
+}
+
+}
+body {
+ height: 80%;
+}
+
+.footer {
+ height: 10%;
+}

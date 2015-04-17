@@ -1,0 +1,23 @@
+<!doctype html>
+<title>{% block title %}Welcome{% endblock %} | Flood management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_css.css') }}">
+<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+<div class="page">
+  <div class="container">
+  	<div class="row">
+  		<h1 class="align-center">Flood management tool</h1>
+  	</div>
+  </div>
+  <div class="body">
+  {% block body %}{% endblock %}
+  </div>
+  <div class="footer">
+    Flood management tool &mdash; A Flask and PyWPS Application
+  </div>
+</div>
