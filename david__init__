@@ -55,6 +55,7 @@ Xland = 'X_land' + timestr
 outputnames_vect=[]
 outputnames_rast=[]
 
+
 #ask for flood info
 maxlevel_input = float(input("Please enter the maximum desired water level in meters: "))
 interval_input = float(input("Please enter the desired flood intervals in meters: "))
@@ -72,9 +73,14 @@ def main():
 		#x_ocean = float(input("Please provide with the X coordinate of the ocean point: "))
 		#y_ocean = float(input("Please provide with the Y coordinate of the ocean point: "))
 
-		y_ocean = 55.786290
+		y_ocean = 43.201712
 
-		x_ocean = 12.064200
+		x_ocean = 4.450673
+
+
+#		y_ocean = 55.786290
+
+#		x_ocean = 12.064200
 
 		#initial loop number
 
@@ -100,10 +106,10 @@ def main():
 		gscript.run_command('v.in.ogr',  flags='o', input='test.geojson', output=ocean_point)
 
 		#importing the investigated DEM
-		gscript.run_command('r.in.gdal', flags='', input ='areaflood.tif', output=original)
+		gscript.run_command('r.in.gdal', flags='', input ='eudem_N43E0041.tif', output=original)
 
 		#Deleting  values keep
-
+		b_area = 'b_area' + timestr
 		gscript.run_command('r.mapcalc', expression= '%s = if(%s <=0, 0, 0)' % ('b_area', original))
 
 		#converting the original tif into bounding vector polygon
@@ -122,7 +128,6 @@ def main():
 		# Flood modeling
 		while actual_loop <= loop_no:
 
-
 			#Defining of the region of the DEM
 			gscript.run_command('g.region', rast=original)
 
@@ -130,13 +135,7 @@ def main():
 
 			#Extracting ocean from the DEM
 
-			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= (%s * %s), 0, null())' % (expressionout, original, interval_input, actual_loop))
-
-			#Surface area statistic
-
-			print gscript.run_command('r.surf.area', map=expressionout)
-
-			print gscript.run_command('r.stats', flags='alc', input=expressionout)
+			gscript.run_command('r.mapcalc', expression= '%s = if(%s <= (%s * %s), 1, null())' % (expressionout, original, interval_input, actual_loop))
 
 			print "Mapcalc done"
 
@@ -154,43 +153,105 @@ def main():
 
 			gscript.run_command('v.select', ainput=ocean_vector, binput=ocean_point, output=selected_ocean, operator='intersects')
 
-			print gscript.run_command('v.to.db', map=selected_ocean, option='area', units='k', columns='value')
+			intermediate = 'intermediate_'+ timestr + "_" + str(actual_loop)
 
 			selected_ocean_rast = 'ocean_select_rast_' + timestr + '_' + str(actual_loop)
 
-			gscript.run_command('v.to.rast', input=selected_ocean, output=selected_ocean_rast, use='val', value='0')
+			gscript.run_command('v.to.rast', input=selected_ocean, output=intermediate, use='val', value=0)
+
+			gscript.run_command('r.mapcalc', expression= '%s = if( %s == 0, (%s * %s) , null())' % (selected_ocean_rast, intermediate, interval_input, actual_loop))
+
+			gscript.run_command('g.remove', flags='f', type = 'raster', pattern='inter*')
 
 			outputnames_rast.append(selected_ocean_rast)
 
 			outputnames_vect.append(selected_ocean)
 
 			print "select done"
+			import os.path
+			if os.path.isfile('temp.txt'):
+				os.remove('temp.txt')
 
-			#user_out = expressionout + '_' + str(actual_loop)
+			gscript.run_command('r.report', map=selected_ocean_rast, units='k', output='temp.txt')
 
-			#gscript.run_command('r.out.gdal', input=expressionout, output = user_out)
+			print selected_ocean_rast
 
-			#gscript.run_command('v.out.ogr', input=selected_ocean, output = selected_ocean)
+			tempTxt = open('temp.txt', 'r')
 
-			#gscript.run_command('v.out.og	r', input=ocean_vector, output = ocean_vector)
+			actual_increment = str(actual_loop*interval_input)
+
+
+			for row in tempTxt:
+				print row
+				if row[1]== actual_increment[0]:
+					AreaOut=row.split('|')
+					areaList.append(AreaOut[3])
+
+			tempTxt.close()
+
+			old_loop = actual_loop - 1
+
+			print areaList
+
+			if float(areaList[actual_loop]) - float(areaList[old_loop]) > 0.02:
+
+					gscript.run_command('v.overlay', ainput = selected_ocean, binput = 'old_flood', operator='not', output='subtructed_flood')
+
+					gscript.run_command('v.to.db', map = 'subtructed_flood', option = 'area', columns = 'a_value')
+
+					gscript.run_command('v.extract', input = 'subtructed_flood' , output = 'subtracted_flood_extract', where='a_value > 1000')
+
+					gscript.run_command('v.to.rast', input = 'subtracted_flood_extract', output = 'subtracted_raster', use = 'cat')
+
+					gscript.run_command('r.mapcalc', expression= '%s = if( isnull(%s), %s, %s)' % ('merged', 'subtracted_raster', 'old_flood_rast', selected_ocean_rast))
+
+					gscript.run_command('r.neighbors', input = 'merged', output = 'diversity', method = 'diversity')
+
+					pourpoint = 'pourpoint'+ "_" + str(actual_loop)
+
+					gscript.run_command('r.mapcalc', expression= '%s = if(%s == 2, %s, null())' % (pourpoint, 'diversity','diversity'))
+
+					gscript.run_command('r.to.vect', input = pourpoint, output = pourpoint, feature = 'point')
+
+					gscript.run_command('g.remove', flags='f', type = 'raster', pattern='sub*')
+
+					gscript.run_command('g.remove', flags='f', type = 'vector', pattern='sub*')
+
+					gscript.run_command('g.remove', flags='f', type = 'raster', pattern='merged*')
+
+					gscript.run_command('g.remove', flags='f', type = 'raster', pattern='diversity*')
+
+			gscript.run_command('g.remove', flags='f', type = 'vector', pattern='old_flood')
+
+			gscript.run_command('g.remove', flags='f', type = 'raster', pattern='old_flood_rast')
+
+			gscript.run_command('g.copy', vect = (selected_ocean, 'old_flood'))
+
+			gscript.run_command('g.copy', rast = (selected_ocean_rast, 'old_flood_rast'))
+
 
 			actual_loop = actual_loop + 1
 
 		print "Here we are"
 
-		print outputnames_rast
 
-		print outputnames_vect
 
 
 		#creating watershed
-		watershed()
+		#watershed()
 
 		#projection of the whole dataset to the required projected coordinate system
 		#projection()
 
 		#execute the calculatio in projected environment:
 		#projected_calc()
+
+#def area_analysis():
+
+
+
+
+
 
 def projection():
 
@@ -280,15 +341,6 @@ def projected_calc():
 	print "Here we are"
 
 	#area_analysis()
-
-#def area_analysis():
-
-#	print areaList
-
-#	for i in areaList:
-#		calc = i/areaList[0]
-#		areaPtg.append(calc)
-#	print areaPtg
 
 def watershed():
 
