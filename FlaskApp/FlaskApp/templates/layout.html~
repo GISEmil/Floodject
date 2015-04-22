@@ -8,16 +8,49 @@
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Flood Modelling</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="/">Introduction</a></li>
+        <li><a href="/upload">Upload</a></li>
+	<li><a href="/ajax">Analysis</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <div class="page">
   <div class="container">
   	<div class="row">
-  		<h1 class="align-center">Flood management tool</h1>
+  		<h1 class="text-center">Flood management tool</h1>
   	</div>
   </div>
-  <div class="body">
+  <div class="body-container">
   {% block body %}{% endblock %}
   </div>
   <div class="footer">
-    Flood management tool &mdash; A Flask and PyWPS Application
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">    	
+			<h5>Flood management tool &mdash; A Flask and PyWPS Application</h5>
+  			</div>
+			<div class="col-md-6">
+			<h5>Ioannis, Emil and David</h5>
+			</div>
+		</div>
+	</div>
   </div>
 </div>

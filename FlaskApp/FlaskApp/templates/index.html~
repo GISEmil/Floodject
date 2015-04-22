@@ -4,13 +4,36 @@
   <div class="container">
   	<div class="row">
   		<div class="col-md-6">
-  		This website does things that we want to kick ass with, bla bla bla
+  		<p> Welcome to our thin client based flood modelling tool. This is part of the Master Thesis of David Nagy, Emil Møller Rasmussen and Ioannis Angelidis.</p>
+  		<p> If you want to know more, click below.
   		</div>
   		<div class="col-md-6">
   		</div>
   	</div>
-  	<div class="row">
-  		<a href="/upload"><button type="submit" class="btn btn-default">Continue</button></a>
-  	</div>
-  </div>
+ </div>
+ <div class="container">
+	<div class="row">
+  		<div class="col-md-10 col-md-offset-5">
+		<a href="/upload"><button type="submit" class="btn btn-default text-center">Continue</button></a>
+		</div>
+	</div> 
+</div>
+ <div class="container">
+	<div class="row">
+		<h2 class="text-center">Description of the project</h2>
+	</div>
+ 	<div class="row">
+		<div class="col-md-4">
+		<p>Something about floods</p>
+		</div>
+		<div class="col-md-4">
+		<p>Something about something else</p>
+		</div>
+		<div class="col-md-4">
+		<p>Moar?</p>
+		</div>
+	</div>
+ </div>
+
+
 {% endblock %}
