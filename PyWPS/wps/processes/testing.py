@@ -1,5 +1,14 @@
 from pywps.Process import WPSProcess
 import os
+import random
+import string
+
+# random folder for checking the input of the raster area
+
+random_file1 = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(8)])
+random_folder1 = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(6)])
+random_file2 = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(8)])
+random_folder2 = ''.join([random.choice(string.ascii_letters + string.digits) for n in xrange(6)])
 
 # Preliminary Settings #
 ########################
@@ -7,8 +16,7 @@ import os
 # Amount of input is fixed, output is dependent on the number of loops.
 
 #Define empty lists for later use
-outputnames_vect=[]
-outputnames_rast=[]
+
 areaList=[]
 
 #Some variables can't be empty when initiating the script
@@ -68,6 +76,23 @@ class Flooding(WPSProcess):
 
     	# Importing the provided raster and and vector data
         self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
+        
+        if os.path.isfile('/tmp/%s/%s' % (random_folder1, random_file1): #This should be a relative path by the way, as several requests will try and read the same file 
+	 
+	    self.cmd(['r.report', 'map=%s' % selected_ocean_rast, 'units=k', 'output=%s' % (random_file])
+	    
+            actual_increment = str(actual_loop*interval_input)
+	    
+  	    tempTxt = open('temp.txt', 'r')
+
+            for row in tempTxt:
+            	if row[1]== actual_increment[0]:
+            		AreaOut=row.split('|')
+            		areaList.append(AreaOut[3]) #This should be explained properly	
+            tempTxt.close()
+        
+        
+        
         ocean_point = 'ocean_point'
         self.cmd(['v.in.ogr','dsn=%s' % self.vectorin.getValue(), 'type=point','output=%s' % ocean_point,'-o','--verbose'])
 
@@ -115,11 +140,6 @@ class Flooding(WPSProcess):
             #Do something ??
             self.cmd(['r.mapcalc', '%s = if( %s == 0, (%s * %s), null())' % (selected_ocean_rast, intermediate, interval_input, actual_loop)])
 
-	    #Export the vectors and rasters
-            outputnames_rast.append(selected_ocean_rast)
-
-            outputnames_vect.append(selected_ocean)
-            
             if os.path.isfile('/tmp/temp.txt'): #This should be a relative path by the way, as several requests will try and read the same file 
             	os.remove('/tmp/temp.txt')
 
