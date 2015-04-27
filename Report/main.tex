@@ -42,7 +42,7 @@
 
 \raggedbottom % Makes all pages the height of the text on that page
 
-\selectlanguage{danish} % Select your default language - e.g. american or ngerman
+\selectlanguage{american} % Select your default language - e.g. american or ngerman
 
 %\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
 %\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
@@ -86,9 +86,10 @@
 
 \ctparttext{Introducing the project and it's various tidbits, have-beens and what-nots.} % Text on the Part 1 page describing  the content in Part 1
 
-\part{Introduction} % First part of the thesis
+\part{The boring stuff} % First part of the thesis
 
 \include{Chapters/Introduction} % Chapter 1
+\include{Chapters/Methodology} % 
 
 \cleardoublepage % Empty page before the start of the next part
 
@@ -96,10 +97,11 @@
 
 \ctparttext{Introducing the various parts of theory used throughout the report.} % Text on the Part 2 page describing the content in Part 2
 
-\part{Theory} % Second part of the thesis
+\part{The good stuff} % Second part of the thesis
 
-\include{Chapters/Chapter02} % Chapter 2
-\include{Chapters/Chapter03} % Chapter 3
+\include{Chapters/Theory} % Chapter 2
+\include{Chapters/Analysis} % Chapter 3
+\include{Chapters/Discussion} % 
 %\include{Chapters/Chapter04} % Chapter 4 - empty template
 
 %----------------------------------------------------------------------------------------

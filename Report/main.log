@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.4.2)  22 APR 2015 16:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.4.2)  22 APR 2015 18:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,17 +518,6 @@ Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 168.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 168.
 Package hyperref Info: Option `hypertexnames' set `true' on input line 168.
 
-! Undefined control sequence.
-\myName ->Emil M\Ã
-                  ¸ller Rasmussen, Ioannis Angelidis and David Nagy\xspace 
-l.168 }
-       
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ) (./classicthesis.sty
@@ -730,9 +719,26 @@ Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 (./FrontBackMatter/Dedication.aux) (./FrontBackMatter/Abstract.aux)
 (./FrontBackMatter/Publication.aux) (./FrontBackMatter/Acknowledgments.aux)
 (./FrontBackMatter/Contents.aux) (./Chapters/Introduction.aux)
-(./Chapters/Chapter02.aux) (./Chapters/Chapter03.aux) (./Chapters/Chapter0A.aux
-) (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux))
+(./Chapters/Methodology.aux) (./Chapters/Theory.aux
+
+LaTeX Warning: Label `ch:theory' multiply defined.
+
+
+LaTeX Warning: Label `sec:options' multiply defined.
+
+
+LaTeX Warning: Label `sec:custom' multiply defined.
+
+) (./Chapters/Analysis.aux
+
+LaTeX Warning: Label `ch:introduction' multiply defined.
+
+) (./Chapters/Discussion.aux
+
+LaTeX Warning: Label `ch:introduction' multiply defined.
+
+) (./Chapters/Chapter0A.aux) (./FrontBackMatter/Bibliography.aux)
+(./FrontBackMatter/Colophon.aux) (./FrontBackMatter/Declaration.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
@@ -805,35 +811,9 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 ABD: EveryShipout initializing macros
-
-! Package babel Error: Unknown language `danish'. Either you have
-(babel)                misspelled its name, it has not been installed,
-(babel)                or you requested it in a previous run. Fix its name,
-(babel)                install it or just rerun the file, respectively.
-
-See the babel package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 \selectlanguage{danish}
-                             % Select your default language - e.g. american ...
-
-You may proceed, but expect unexpected results
-
 \openout2 = `FrontBackMatter/Titlepage.aux'.
 
-(./FrontBackMatter/Titlepage.tex
-! Undefined control sequence.
-\myName ->Emil M\Ã
-                  ¸ller Rasmussen, Ioannis Angelidis and David Nagy\xspace 
-l.16 \spacedlowsmallcaps{\myName}
-                                  % Your name
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+ (./FrontBackMatter/Titlepage.tex
 <gfx/TFZsuperellipse_bw.pdf, id=144, 260.5755pt x 203.14595pt>
 File: gfx/TFZsuperellipse_bw.pdf Graphic file (type pdf)
 
@@ -862,20 +842,10 @@ df>])
 
 
 (./FrontBackMatter/Titleback.tex
-! Undefined control sequence.
-\myName ->Emil M\Ã
-                  ¸ller Rasmussen, Ioannis Angelidis and David Nagy\xspace 
-l.9 \noindent\myName
-                    : \textit{\myTitle,} \mySubtitle, %\myDegree,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 LaTeX Font Info:    Try loading font information for OMS+pplj on input line 10.
 
 LaTeX Font Info:    No file OMSpplj.fd. on input line 10.
+
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead on input line 10.
@@ -999,19 +969,6 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 13
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
-
-! Misplaced alignment tab character &.
-<to be read again> introduction &
-                                  problem statement
-l.4 ...duction & problem statement}}{3}{chapter.1}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 )
 \tf@toc=\write5
 \openout5 = `main.toc'.
@@ -1027,7 +984,8 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 33
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [12
+
+[12
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 46
@@ -1080,267 +1038,67 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <9> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 36.
-[3
+
+Overfull \hbox (0.30602pt too wide) in paragraph at lines 11--12
+\T1/pplj/m/n/10.95 Geographical In-for-ma-tion Sys-tems (GIS) have un-der-gone 
+an im-mense
+ []
+
+) [3
 
 
 
 ]
-Overfull \hbox (9.23082pt too wide) in paragraph at lines 57--58
-[]\T1/fvm/m/n/10.95 eulermath\T1/pplj/m/n/10.95 : loads the awe-some Eu-ler fon
-ts for math. (Palatino
- []
+\openout2 = `Chapters/Methodology.aux'.
 
-
-Overfull \hbox (25.95596pt too wide) in paragraph at lines 61--62
-\T1/pplj/m/n/10.95 cally en-ables the \T1/fvm/m/n/10.95 minionpro \T1/pplj/m/n/
-10.95 op-tion and over-rides the \T1/fvm/m/n/10.95 pdfspacing
- []
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 81.
-
-[4]
-Overfull \hbox (7.53156pt too wide) in paragraph at lines 87--88
-[]\T1/pplj/m/n/10.95 In or-der to make things eas-ier in gen-eral, \T1/fvm/m/n/
-10.95 classicthesis-config.tex
- []
-
-
-Overfull \hbox (11.02849pt too wide) in paragraph at lines 93--94
-\T1/pplj/m/n/10.95 This sec-tion will give you some hints about how to adapt \T
-1/fvm/m/n/10.95 classicthesis
- []
-
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 7.65005pt on input line 98.
-
-Overfull \hbox (2.07549pt too wide) in paragraph at lines 98--98
- \T1/fvm/m/sl/9 thesis-config.tex
- []
-
-
-Overfull \hbox (2.07549pt too wide) in paragraph at lines 98--98
-\T1/fvm/m/sl/9 thesis-config.tex  
- []
-
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 100.
-
-Overfull \hbox (2.07549pt too wide) in paragraph at lines 124--124
- \T1/fvm/m/sl/9 classicthesis.sty
- []
-
-
-Overfull \hbox (2.07549pt too wide) in paragraph at lines 124--124
-\T1/fvm/m/sl/9 classicthesis.sty  
- []
-
-
-Overfull \hbox (5.48045pt too wide) in paragraph at lines 131--132
-[]\T1/pplj/m/n/10.95 Beta ver-sions of \T1/fvm/m/n/10.95 classicthesis \T1/pplj
-/m/n/10.95 can be found at the fol-low-ing Google
- []
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 132.
-
-[5]
-LaTeX Font Info:    Font shape `T1/fvm/m/it' in size <10.95> not available
-(Font)              Font shape `T1/fvm/m/sl' tried instead on input line 138.
-LaTeX Font Info:    Font shape `T1/fvm/m/sl' will be
-(Font)              scaled to size 9.30756pt on input line 138.
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 168.
-
-[6])
-Overfull \hbox (7.80904pt too wide) in paragraph at lines 169--91
-\T1/pplj/m/it/10.95 with-out any war-ranty\T1/pplj/m/n/10.95 ; with-out even th
-e im-plied war-ranty of \T1/pplj/m/it/10.95 mer-chantabil-
- []
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 91.
-
-[7] [8
+ (./Chapters/Methodology.tex [4
 
 
 
-] [9
 
-
-] [10]
-\openout2 = `Chapters/Chapter02.aux'.
-
- (./Chapters/Chapter02.tex
+]
 Chapter 2.
-
-Overfull \hbox (0.39906pt too wide) in paragraph at lines 15--15
-\T1/pplj/m/n/10.95 Nulla ul-lam-cor-per vestibu-lum turpis. Pel-len-tesque cur-
-sus luc-tus mau-
- []
-
-[11
+) [5] [6
 
 
 
-]
-Overfull \hbox (2.94846pt too wide) in paragraph at lines 24--24
-[]\T1/pplj/m/n/10.95 Fusce mau-ris. Vestibu-lum luc-tus nibh at lec-tus. Sed bi
-ben-dum, nulla
- []
+] [7
 
 
-Package natbib Warning: Citation `bentley:1999' on page 12 undefined on input l
-ine 38.
+] [8]
+\openout2 = `Chapters/Theory.aux'.
 
-
-Package natbib Warning: Citation `bentley:1999' on page 12 undefined on input l
-ine 38.
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 39.
-
-[12]
-Overfull \hbox (18.80463pt too wide) in paragraph at lines 41--41
-[]\T1/pplj/m/n/10.95 Pellentesque habi-tant morbi tris-tique senec-
- []
-
-
-Overfull \hbox (10.94551pt too wide) in paragraph at lines 41--41
-\T1/pplj/m/n/10.95 lum fringilla lorem. Sed neque lec-tus, con-sectetuer at, co
-n-sectetuer
- []
-
-
-Overfull \hbox (9.30934pt too wide) in paragraph at lines 42--42
-\T1/pplj/m/n/10.95 quam auc-tor, pede con-se-quat laoreet var-ius, eros tel-lus
- scelerisque
- []
-
-
-Package natbib Warning: Citation `cormen:2001' on page 13 undefined on input li
-ne 45.
-
-
-Package natbib Warning: Citation `cormen:2001' on page 13 undefined on input li
-ne 45.
-
-
-Overfull \hbox (0.77591pt too wide) in paragraph at lines 51--51
-\T1/pplj/m/n/10.95 Morbi ul-tri-ces rutrum lorem. Nam el-e-men-tum ul-lam-cor-p
-er leo. Morbi
- []
-
-
-Overfull \hbox (9.6941pt too wide) in paragraph at lines 54--54
-\T1/pplj/m/n/10.95 Vestibu-lum diam eros, fringilla et, con-sectetuer eu, non-u
-mmy id, sapien.
- []
-
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 54.
-
-[13]
-
-Package natbib Warning: Citation `sommerville:1992' on page 14 undefined on inp
-ut line 63.
-
-
-Package natbib Warning: Citation `sommerville:1992' on page 14 undefined on inp
-ut line 63.
-
-
-Package natbib Warning: Citation `knuth:1976' on page 14 undefined on input lin
-e 75.
-
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 76.
-
-Package natbib Warning: Citation `knuth:1976' on page 14 undefined on input lin
-e 76.
-
-
-Package natbib Warning: Citation `knuth:1976' on page 14 undefined on input lin
-e 76.
-
-<gfx/example_1.jpg, id=342, 240.9pt x 180.675pt>
-File: gfx/example_1.jpg Graphic file (type jpg)
- <use gfx/example_1.jpg>
-Package pdftex.def Info: gfx/example_1.jpg used on input line 92.
-(pdftex.def)             Requested size: 151.19897pt x 113.40128pt.
-
-<gfx/example_2.jpg, id=343, 240.9pt x 180.675pt>
-File: gfx/example_2.jpg Graphic file (type jpg)
- <use gfx/example_2.jpg>
-Package pdftex.def Info: gfx/example_2.jpg used on input line 95.
-(pdftex.def)             Requested size: 151.19897pt x 113.40128pt.
-
-<gfx/example_3.jpg, id=344, 240.9pt x 180.675pt>
-File: gfx/example_3.jpg Graphic file (type jpg)
- <use gfx/example_3.jpg>
-Package pdftex.def Info: gfx/example_3.jpg used on input line 97.
-(pdftex.def)             Requested size: 151.19897pt x 113.40128pt.
-
-<gfx/example_4.jpg, id=345, 240.9pt x 180.675pt>
-File: gfx/example_4.jpg Graphic file (type jpg)
- <use gfx/example_4.jpg>
-Package pdftex.def Info: gfx/example_4.jpg used on input line 99.
-(pdftex.def)             Requested size: 151.19897pt x 113.40128pt.
-)
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 101.
-
-[14]
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 101.
-
-[15 <./gfx/example_1.jpg> <./gfx/example_2.jpg> <./gfx/example_3.jpg> <./gfx/ex
-ample_4.jpg>]
-\openout2 = `Chapters/Chapter03.aux'.
-
- (./Chapters/Chapter03.tex [16
-
-
-
-
-]
+ (./Chapters/Theory.tex
 Chapter 3.
-
-Overfull \hbox (0.973pt too wide) in paragraph at lines 9--9
-\T1/pplj/m/n/10.95 Aliquam lec-tus. Vi-va-mus leo. Quisque ornare tel-lus ul-la
-m-cor-per nulla.
- []
-
-[17])
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 102.
-
-[18] [19
+) [9
 
 
 
-] [20]
+]
+\openout2 = `Chapters/Analysis.aux'.
+
+ (./Chapters/Analysis.tex [10
+
+
+
+
+]
+Chapter 4.
+) [11]
+\openout2 = `Chapters/Discussion.aux'.
+
+ (./Chapters/Discussion.tex [12
+
+
+
+
+]
+Chapter 5.
+) [13] [14
+
+
+
+] [15] [16]
 \openout2 = `Chapters/Chapter0A.aux'.
 
  (./Chapters/Chapter0A.tex
@@ -1357,23 +1115,22 @@ Overfull \hbox (1.97018pt too wide) in paragraph at lines 7--7
 usto et pretium
  []
 
+LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <9> not available
+(Font)              Font shape `T1/pplj/m/it' tried instead on input line 14.
 
 Overfull \hbox (16.78175pt too wide) in paragraph at lines 15--15
 \T1/pplj/m/n/10.95 viverra ali-quam risus. Nul-lam pede justo, mo-lestie non-um
 my, scelerisque
  []
 
-[21
+[17
 
 
 
-])
-
-Package babel Warning: You haven't loaded the language danish yet
-(babel)                I'll proceed, but expect unexpected results.
-(babel)                Reported on input line 113.
-
-[22]
+]
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 39.
+) [18]
 \openout2 = `FrontBackMatter/Bibliography.aux'.
 
  (./FrontBackMatter/Bibliography.tex
@@ -1381,7 +1138,7 @@ No file main.bbl.
 )
 \openout2 = `FrontBackMatter/Colophon.aux'.
 
- (./FrontBackMatter/Colophon.tex) [23
+ (./FrontBackMatter/Colophon.tex) [19
 
 
 
@@ -1390,26 +1147,14 @@ No file main.bbl.
 
 
 
-] [24
+] [20
 
 
 
 ]
 \openout2 = `FrontBackMatter/Declaration.aux'.
 
- (./FrontBackMatter/Declaration.tex
-! Undefined control sequence.
-\myName ->Emil M\Ã
-                  ¸ller Rasmussen, Ioannis Angelidis and David Nagy\xspace 
-l.20 \centering\myName
-                      , \today \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-) [25
+ (./FrontBackMatter/Declaration.tex) [21
 
 
 
@@ -1417,65 +1162,49 @@ and I'll forget about whatever was undefined.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 128.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 128.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
 (./main.aux (./FrontBackMatter/Titlepage.aux) (./FrontBackMatter/Titleback.aux)
 (./FrontBackMatter/Dedication.aux) (./FrontBackMatter/Abstract.aux)
 (./FrontBackMatter/Publication.aux) (./FrontBackMatter/Acknowledgments.aux)
 (./FrontBackMatter/Contents.aux) (./Chapters/Introduction.aux)
-(./Chapters/Chapter02.aux) (./Chapters/Chapter03.aux) (./Chapters/Chapter0A.aux
-) (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux)
+(./Chapters/Methodology.aux) (./Chapters/Theory.aux) (./Chapters/Analysis.aux)
+(./Chapters/Discussion.aux) (./Chapters/Chapter0A.aux)
+(./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
+(./FrontBackMatter/Declaration.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2C3AA7F05697119623D01DD04AF5955C;1986.
 
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 128.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 128.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: ACF02BE57AA2204726F6F07EB7184B7D;2083
-(rerunfilecheck)             After:  3F526FB579F04C9E8EE1D3B35136910A;2084.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 128.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 16959 strings out of 493305
- 257296 string characters out of 6139898
- 550541 words of memory out of 5000000
- 19829 multiletter control sequences out of 15000+600000
- 90100 words of font info for 138 fonts, out of 8000000 for 9000
+ 16826 strings out of 493305
+ 255636 string characters out of 6139898
+ 536356 words of memory out of 5000000
+ 19740 multiletter control sequences out of 15000+600000
+ 80210 words of font info for 109 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 48i,13n,67p,1036b,2286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,13n,67p,651b,2355s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/bera/fvmro8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (41 pages, 265653 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/be
+ra/fvmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (37 pages, 160983 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 431 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
- 18738 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 420 PDF objects out of 1000 (max. 8388607)
+ 367 compressed objects within 4 object streams
+ 99 named destinations out of 1000 (max. 500000)
+ 17182 words of extra memory for PDF output out of 17280 (max. 10000000)
 
