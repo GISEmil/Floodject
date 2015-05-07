@@ -1,103 +1,93 @@
-{% extends "layout.html" %}
-{% block body %}
-    <div class="container">
-        <div id="map" style="width = 100%;height=100%;position=absolute:">
-        </div><script src="http://leafletjs.com/dist/leaflet.js"></script>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-2">
-                <form action="" enctype="multipart/form-data" method="post">
-                    <div class="col-md-6">
-                        <input accept="image/*" class="btn btn-default" id=
-                        "datafile" name="datafile" type="file" value=
-                        "Select image">
-                    </div>
+<body>
+    {% extends "layout.html" %} {% block body %}
 
-                    <div class="col-md-6">
-                        <input class="btn btn-default" name="submit" type=
-                        "submit" value="Upload image">
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    <section class="promo section offset-header" id="promo">
+        <div class="container text-center">
+            <h2 class="title text-center">Step 1</h2>
+        </div><!--//container-->
+    </section>
 
-    <div class="container-fluid">
-        <div class="container splash-box">
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="title text-center">Upload DEM</h2>
+
+            <div id="map" style="height: 250px; width: 250px;"></div>
+
             <div class="row">
-                <div class="underline text-center">
-                    <p class="">By clicking the button below, the server will
-                    be requested will send a request flooding a DEM. More text
-                    will be filled in this box, maybe also the boxes in which
-                    information can be put.</p>
 
-                    <div class="center-block">
-                        <form class="small">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Water
-                                depths</label> <input class="form-control" id=
-                                "exampleInputEmail1" placeholder="Enter value"
-                                type="email">
-                            </div>
 
-                            <div class="form-group">
-                                <label for=
-                                "exampleInputEmail1">Increment</label>
-                                <input class="form-control" id=
-                                "exampleInputEmail1" placeholder="Enter value"
-                                type="email">
-                            </div>
-                        </form>
-                    </div>
+                <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <form action="" enctype="multipart/form-data" method=
+                    "post">
+                        <div class="col-md-6">
+                            <input accept="image/*" class="btn btn-default" id=
+                            "datafile" name="datafile" type="file" value=
+                            "Select image">
+                        </div>
+
+                        <div class="col-md-6">
+                            <input class="btn btn-default" name="submit" type=
+                            "submit" value="Upload image">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--//row-->
+        <!--//container-->
+    </section><!--//about-->
+
+    <section class="promo section offset-header" id="promo">
+        <div class="container text-center">
+            <div class="social-media">
+                <div class="social-media-inner container text-center">
+                    <h2 class="title text-center">Step 2</h2>
+
+                    <p>Select ocean</p>
                 </div>
             </div>
         </div>
+    </section>
 
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="title text-center">What is "Flooding"?</h2>
+
+             <div class="item col-md-4 col-sm-6 col-xs-12">
+                    <div id="map" style="height: 100%;"></div><script src=
+                    "http://leafletjs.com/dist/leaflet.js"></script>
+                </div>
+                <p>Writing words right here</p>
+            </div>
+        </div><!--//row-->
+        <!--//container-->
+    </section><!--//about-->
+
+    <section class="promo section offset-header" id="promo">
         <div class="container text-center">
-            <button class="btn gogo btn-default btn-lg" id="button centering"
-            type="button">Click me for flood</button>
+            <div class="container" id="about">
+                <h2 class="title text-center">Step 3</h2>
+
+                <div class="row"></div><!--//row-->
+            </div><!--//container-->
         </div>
+    </section>
 
-        <div class="container text-center">
-            <h3 class="centering underline">Results</h3>
+    <section class="about section" id="about">
+        <div class="container">
+            <h2 class="title text-center">Get results!</h2>
 
-            <div class="container container_for"></div>
-        </div>
-    </div>
-<script>
-var xmlPath =
-    "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://www.kartograph.dk/test/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]";
-var image = new Image();
-$(".gogo").click(function() {
-    $.get(xmlPath, {}, function(xml) {
-        $("wps\\:Data", xml).find("wps\\:ComplexData").each(
-            function(i, value) {
-                /* $("p").append(value);
-            console.log(value);*/
-                timing = value * 1000
-                $('<div class="resultoutput col-md-3" />').appendTo(
-                    ".container_for").append(
-                    '<img class="returned hvr-grow" src="data:image/png;base64,' +
-                    value.textContent + '" />');
-            });
-    }, 'xml');
-});
+            <div id="map" style="height: 250px; width: 250px;"></div>
 
-var map = L.map('map').setView([52, 13], 13);
-L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18
-}).addTo(map);
-
-
-map.on('click', function(e) {
-    alert(e.latlng);
-    var something = e.latlng;
-    console.log(something)
-});
-</script>
-
-
-{% endblock %}
+            </div>
+        </div><!--//row-->
+        <!--//container-->
+    </section><!--//about-->
+    {% endblock %}
+</body>
+</html>

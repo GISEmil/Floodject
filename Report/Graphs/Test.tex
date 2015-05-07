@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\pgfplotsset{compat=1.5}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[title=Working phases,
+xlabel={$Time$},
+ylabel={$Workload$},
+minor y tick num=1,]
+\addplot
+[blue]table{invcum.dat};
+\end{axis}
+\end{tikzpicture}
+\end{document}

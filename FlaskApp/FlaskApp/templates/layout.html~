@@ -1,56 +1,94 @@
 <!doctype html>
 <title>{% block title %}Welcome{% endblock %} | Flood management</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_css.css') }}">
-<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]--><!--[if !IE]><!-->
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Flood Modelling</a>
-    </div>
+<html lang="en">
+<!--<![endif]-->
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/">Introduction</a></li>
-        <li><a href="/upload">Upload</a></li>
-	<li><a href="/ajax">Analysis</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="/">Home</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<div class="page">
-  <div class="container">
-  	<div class="row">
-  		<h1 class="text-center">Flood management tool</h1>
-  	</div>
-  </div>
-  <div class="body-container">
+<head>
+    <title>Flood management tool</title><!-- Meta -->
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <!--<link href="favicon.ico" rel="shortcut icon">-->
+    <link href=
+    'http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic'
+    rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel=
+    'stylesheet' type='text/css'><!-- Global CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/plugins/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/plugins/font-awesome/css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/plugins/prism/prism.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/styles.css') }}">
+      <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/jquery-1.11.1.min.js') }}"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+
+
   {% block body %}{% endblock %}
-  </div>
-  <div class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">    	
-			<h5>Flood management tool &mdash; A Flask and PyWPS Application</h5>
-  			</div>
-			<div class="col-md-6">
-			<h5>Ioannis, Emil and David</h5>
-			</div>
-		</div>
-	</div>
-  </div>
-</div>
+  
+      <footer class="footer">
+        <div class="container text-center">
+            <small class="copyright">Designed by Ioannsi Angelidis, David Nagy
+            and Emil Møller Rasmussen for water management consultants</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+    <!-- Javascript -->
+    <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/jquery-1.11.1.min.js') }}"></script>
+  <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/jquery-migrate-1.2.1.min.js') }}"></script>
+  <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/jquery.easing.1.3.js') }}"></script>
+  <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js') }}"></script>
+    <script type=text/javascript src="{{
+  url_for('static', filename='assets/plugins/prism/prism.js') }}"></script>
+    <script type=text/javascript src="{{
+  url_for('static', filename='assets/js/main.js') }}"></script>
+
+   <script>
+var xmlPath =
+    "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://www.kartograph.dk/test/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]";
+var image = new Image();
+$(".gogo").click(function() {
+    $.get(xmlPath, {}, function(xml) {
+        $("wps\\:Data", xml).find("wps\\:ComplexData").each(
+            function(i, value) {
+                /* $("p").append(value);
+            console.log(value);*/
+                timing = value * 1000
+                $('<div class="resultoutput col-md-3" />').appendTo(
+                    ".container_for").append(
+                    '<img class="returned hvr-grow" src="data:image/png;base64,' +
+                    value.textContent + '" />');
+            });
+    }, 'xml');
+});
+
+var map = L.map('.map').setView([52, 13], 13);
+L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+    maxZoom: 18
+}).addTo(map);
+
+
+map.on('click', function(e) {
+    alert(e.latlng);
+    var something = e.latlng;
+    console.log(something)
+});
+</script>
+</html>

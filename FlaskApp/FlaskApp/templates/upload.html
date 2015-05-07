@@ -1,103 +1,344 @@
-{% extends "layout.html" %}
-{% block body %}
-    <div class="container">
-        <div id="map" style="width = 100%;height=100%;position=absolute:">
-        </div><script src="http://leafletjs.com/dist/leaflet.js"></script>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 col-lg-offset-2">
-                <form action="" enctype="multipart/form-data" method="post">
-                    <div class="col-md-6">
-                        <input accept="image/*" class="btn btn-default" id=
-                        "datafile" name="datafile" type="file" value=
-                        "Select image">
-                    </div>
+<body>
+    {% extends "layout.html" %} {% block body %}
+    <style>
+    .ui-opacity {
+      background:#FFF;
+      position:absolute;
+      left:10px;
+      top:70px;
+      height:200px;
+      width:28px;
+      border:1px solid rgba(0,0,0,0.4);
+      border-radius:3px;
+      z-index:1000;
+      }
+    .ui-opacity .handle {
+      position:absolute;
+      background:#404040;
+      left:0;
+      top:20px;
+      width:26px;
+      height:10px;
+      border-radius:1px;
+      cursor:pointer;
+      cursor:ns-resize;
+      }
+      .ui-opacity .handle:hover {
+        background:#303030;
+        }
+    </style>
+    <header class="header" id="header">
+        <div class="container">
+            <h1 class="logo pull-left"><a class="scrollto" href=
+            "#promo"><span class="logo-title">flooding</span></a></h1>
+            <!--//logo-->
 
-                    <div class="col-md-6">
-                        <input class="btn btn-default" name="submit" type=
-                        "submit" value="Upload image">
-                    </div>
-                </form>
-            </div>
+            <nav class="main-nav navbar-right" id="main-nav">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-target=
+                    "#navbar-collapse" data-toggle="collapse" type=
+                    "button"><span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span> <span class=
+                    "icon-bar"></span> <span class="icon-bar"></span></button>
+                    <!--//nav-toggle-->
+                </div><!--//navbar-header-->
+
+                <div class="navbar-collapse collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active nav-item">
+                            <a class="scrollto" href="#introd">Intro</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="scrollto" href="#step1">Step 1</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="scrollto" href="#step2">Step 2</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="scrollto" href="#step3">Step 3</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="scrollto" href="#contact">Front page</a>
+                        </li>
+
+                        <li class="nav-item last"></li>
+                    </ul><!--//nav-->
+                </div><!--//navabr-collapse-->
+            </nav><!--//main-nav-->
         </div>
-    </div>
+    </header><!--//header-->
 
-    <div class="container-fluid">
-        <div class="container splash-box">
+    <section class="about section introd" id="about introd" style=
+    "background-color:#17baef">
+        <div class="container">
+            <h2 class="title text-center">How it works</h2>
+
             <div class="row">
-                <div class="underline text-center">
-                    <p class="">By clicking the button below, the server will
-                    be requested will send a request flooding a DEM. More text
-                    will be filled in this box, maybe also the boxes in which
-                    information can be put.</p>
-		    <!-- 
-                    <div class="center-block">
-                        <form class="small">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Water
-                                depths</label> <input class="form-control" id=
-                                "exampleInputEmail1" placeholder="Enter value"
-                                type="email">
-                            </div>
+                <div class="item col-md-6">
+                    <p>In this section we will guide you through the process of
+                    flooding a DEM with water. Overall the process consists of
+                    three steps, which we have outlined to the right. The most
+                    important part is to not panic!</p>
+                </div>
 
-                            <div class="form-group">
-                                <label for=
-                                "exampleInputEmail1">Increment</label>
-                                <input class="form-control" id=
-                                "exampleInputEmail1" placeholder="Enter value"
-                                type="email">
-                            </div>
-                        </form>
-                    </div>
-                    -->
+                <div class="item col-md-6">
+                    <p></p>
+
+                    <ul>
+                        <li>Step 1</li>
+
+                        <li>Step 2</li>
+
+                        <li>Step 3</li>
+                    </ul>
+                    <p>
                 </div>
             </div>
         </div>
-        <div class="container text-center">
-            <button class="btn gogo btn-default btn-lg" id="button centering"
-            type="button">Click me for flood</button>
-        </div>
+    </section>
 
+    <section class="promo section offset-header step1" id="promo step1" style=
+    "padding-top: 10px;">
         <div class="container text-center">
-            <h3 class="centering underline">Results</h3>
+            <h2 class="title text-center">Step 1</h2>
+        </div><!--//container-->
+    </section>
 
-            <div class="container container_for"></div>
+    <section class="about section step1" id="about">
+        <div class="container">
+            <h2 class="title text-center">Upload DEM</h2>
+
+            <div class="row">
+                <div class="item col-md-2">
+                    <span style="font-size: 64px;">1</span>
+                </div>
+
+                <div class="item col-md-5">
+                    <form action="" enctype="multipart/form-data" method=
+                    "post">
+                        <input accept="image/*" class="" id="datafile" name=
+                        "datafile" type="file" value="Select image">
+                        <!-- We must keep this image name -->
+                         <input class="btn btn-default" name="submit" type=
+                        "submit" value="Upload image">
+                    </form>
+                </div>
+
+                <div class="item col-md-5">
+                    <p>The first thing you have to do, is to upload the
+                    <abbr class="initialism" title=
+                    "Digital Elevation Model">DEM</abbr></p>
+                </div>
+            </div>
         </div>
-    </div>
-<script>
-var xmlPath =
-    "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://www.kartograph.dk/test/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]";
-var image = new Image();
-$(".gogo").click(function() {
-    $.get(xmlPath, {}, function(xml) {
-        $("wps\\:Data", xml).find("wps\\:ComplexData").each(
-            function(i, value) {
+    </section>
+
+    <section class="promo section offset-header step2" id="promo step2" style=
+    "padding-top: 10px;">
+        <div class="container text-center">
+            <h2 class="title text-center">Step 2</h2>
+        </div><!--//container-->
+    </section>
+
+    <section class="about section step2" id="about">
+        <div class="container">
+            <h2 class="title text-center">Select ocean</h2>
+
+            <div class="row">
+                <div class="item col-md-2">
+                    <span style="font-size: 64px;">2</span><br />
+                    <button class="btn btn-default" id="gogo" type=
+                    "submit">Flood!</button>
+                </div>
+
+                <div class="item col-md-10">
+                    <script src=
+                    'https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+                    <link href=
+                    'https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css'
+                    rel='stylesheet'>
+
+                    <div class="map" id="map" style="height: 500px">
+                    <div id='control' class='ui-opacity'>
+                    <div id='handle' class='handle'></div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--//row-->
+        <!--//container-->
+    </section><!--//about-->
+
+    <section class="promo section offset-header step3" id="promo step3" style=
+    "padding-top: 10px;">
+        <div class="container text-center">
+            <div class="container" id="about">
+                <h2 class="title text-center">Step 3</h2>
+
+                <div class="row"></div><!--//row-->
+            </div><!--//container-->
+        </div>
+    </section>
+
+    <section class="about section step3" id="about">
+        <div class="container">
+            <h2 class="title text-center">Get results!</h2>
+
+            <div class="row loading">
+                <div class="item col-md-2">
+                    <span style="font-size: 64px;">3</span>
+                </div>
+
+                <div class="item col-md-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+     // Try to keep the value of the input
+    /*
+    $("input").change(function() {
+        var value = $( this ).val()
+        var valueedit = String(value.replace("C:\\fakepath\\", ""));
+        console.log(valueedit)
+    });
+    */
+    // Mapping! We will be "cheating" a lot!
+    L.mapbox.accessToken =
+        'pk.eyJ1IjoicGlyYXRvc3RoZWdyZWF0IiwiYSI6IlV3TC1obGMifQ.TF-I_FTpupoX3IRprOl7iQ';
+
+    var url = window.location.href;
+
+    $(".step2").hide();
+    $(".step3").hide();
+
+    var handle = document.getElementById('handle'),
+    start = false,
+    startTop;
+
+    document.onmousemove = function(e) {
+    if (!start) return;
+    // Adjust control.
+    handle.style.top = Math.max(-5, Math.min(195, startTop + parseInt(e.clientY, 10) - start)) + 'px';
+    // Adjust opacity.
+    overlay.setOpacity(1 - (handle.offsetTop / 200));
+    };
+
+    handle.onmousedown = function(e) {
+    // Record initial positions.
+    start = parseInt(e.clientY, 10);
+    startTop = handle.offsetTop - 5;
+    return false;
+    };
+
+    document.onmouseup = function(e) {
+    start = null;
+    };
+
+    if (url.indexOf("filename") > -1) {
+
+      $(".step1").hide();
+      $(".step2").show();
+      // Initiate map
+
+      var findcorners = url.replace("http://52.17.144.192/upload?");
+      var findcorners2 = findcorners.split("&")
+      var filename = findcorners2[4].split("=")
+
+      var coordinatesforuse = [];
+      var expendable;
+
+      for (var i=0; i<findcorners2.length; i++) {
+          expendable = findcorners2[i].split("=")
+          coordinatesforuse[i] = expendable[1];
+
+      }
+
+      // Get coordinates
+      var south = coordinatesforuse[0];
+      var west = coordinatesforuse[1];
+      var north = coordinatesforuse[2];
+      var east = coordinatesforuse[3];
+
+      var imageuse = filename[1];
+      var imageaspng = imageuse.replace(/\.[^/.]+$/,".png")
+      var variable = 'static/images/' + imageaspng;
+      var imageUrl = variable;
+
+          // Set bounds for uploaded image
+      imageBounds = L.latLngBounds([
+          [west, south], // Southwest
+          [east, north] // Northeast
+      ]); // Northeast
+      var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf').fitBounds(imageBounds);
+      var marker = L.marker([39.5, 37.2], {
+          icon: L.mapbox.marker.icon({
+              'marker-color': '#f86767'
+          })
+      });
+
+      // Append coordinates of the marker to the HTML
+      map.on('click', function(e) {
+          marker.setLatLng(e.latlng).addTo(map);
+          marker = marker.setLatLng(e.latlng);
+          var something = e.latlng;
+          $(".coords").remove().append("<span class='coordinate'>" +
+              something + "<\/span><br>")
+      });
+
+      var overlay = L.imageOverlay(variable, imageBounds).addTo(map);
+      var markercoords = marker.getLatLng()
+      var markergeojson = JSON.stringify(marker.toGeoJSON());
+
+      var geoj = [{"type":"FeatureCollection","features":[{"type":"Feature","properties":{ },"geometry":{"type":"Point","coordinates":[markercoords.lat,markercoords.lng]}}]}
+      ];
+
+      // Async nightmare!
+
+
+      var image = new Image();
+      $("#gogo").click(function () {
+        var preconpath = 'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=testproc&datainputs=[rasterin=http://52.17.144.192/static/images/' + imageaspng + ';vectorin=' + JSON.stringify(geoj[0]) + ']';
+        console.log(preconpath)
+        var xmlPath = preconpath
+        $.get(xmlPath,  function (xml) {
+            $(".step2").hide();
+            $(".step3").show();
+            console.log("ÆD LORT")
+            $("wps\\:Data", xml).find("wps\\:ComplexData").each(function (i, value) {
                 /* $("p").append(value);
-            console.log(value);*/
-                timing = value * 1000
-                $('<div class="resultoutput col-md-3" />').appendTo(
-                    ".container_for").append(
-                    '<img class="returned hvr-grow" src="data:image/png;base64,' +
-                    value.textContent + '" />');
+                console.log(value);*/
+                $('<div class="resultoutput col-md-4" />').appendTo(".loading").append('<img style="width: 100%" class="returned" src="data:image/png;base64,' + value.textContent + '" />');
             });
-    }, 'xml');
-});
-
-var map = L.map('map').setView([52, 13], 13);
-L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-    maxZoom: 18
-}).addTo(map);
+      },'xml');
+      });
+    } else {
+      var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf')
+    }
 
 
-map.on('click', function(e) {
-    alert(e.latlng);
-    var something = e.latlng;
-    console.log(something)
-});
-</script>
+
+    // Flood modelling
+    // var xmlPath = "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=" + ";vectorin=" + + "]";
+    // var xmlPath =
+    //    "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://www.kartograph.dk/test/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]";
+
+    //var xmlPath =
+    //"http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=testproc&datainputs=[rasterin=http://www.52.17.144.192/static/images/"+ filename[1] +";vectorin=http://www.kartograph.dk/test/test.geojson]";
 
 
-{% endblock %}
+    </script>
+    {% endblock %}
+</body>
+</html>

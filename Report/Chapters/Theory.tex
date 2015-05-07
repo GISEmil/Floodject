@@ -11,6 +11,43 @@
 
 \section{Open Source GIS}
 
+The Open Source Definition  is clearly set by the Open Source Initiative (OSI) in order to define which licenses can be defined as "Open Source". In addition to that, OSI provides certification to these licenses to indicate that they follow the open-source principles and comply with the Open Source definition. This definition states the following:
+The license should allow the sale or gifting of the software as a part of software distribution along with programs from several different sources. For such sale no royalty or monetary compensation should be required. (''The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale''.)
+The source code of the software should be included in the software and it must be distributed freely along with the compiled form. In the case where the source code is not distributed with the software, an easily reached alternative must be provided, at most with a minimum reproduction cost.
+Modifications and derived works must be allowed and distributes as freely as the software itself.
+Modification of the source code can be restricted by the license only in the case that the license allows "patch files" distribution along with the source code for program modification. Software built from modified source code must be allowed to be distributed. Works derived from the source code may be required to have a different name or version number.
+Discrimination against persons or groups is not allowed
+All fields of endeavor must be allowed to use the software, unrestricted by its license.
+In the case where the program is redistributed, the same rights must apply without the execution of an additional license from those parties.
+In the case where the program is part of a specific software distribution, parties to whom the program is redistributed should have the same rights with those to  whom the original program is distributed.
+Restrictions on other software, distributed with the licensed software must not be placed under restrictions.
+Access to the license must not be dependable on any individual technology pr interface
+The main reason open software exists is because the US Government, during the 1970ies and 1980ies implemented changes in the patent laws that allowed software and hardware companies to un-bundle software and hardware  and the source code for software was under restricted access. For the reasons stated above the Free Software Foundation (FSF) was created (Grassmuck, 2004).
+Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. The table below can provide with some insight on such categorization (table XXX). 
+
+Table 1: Categorization of GIS software. (Steiniger \& Hunter, 2012)
+Some of the most common desktop GIS Software are the following (table XXX).
+Desktop GIS Software
+Developer
+GRASS GIS
+Neteler \& Mitasova, 2008, Neteler, Bowman, Landa \& Metz 2012
+Quantum GIS
+Hugentobler, 2008
+ILWIS / ILWIS Open
+Valenzuela, 1988, Hengl, Gruber \& Shrestha, 2003
+uDig
+Ramsey, 2006
+SAGA
+Olaya 2004, Conrad 2007
+OpenJUMP
+Steiniger \& Michaud, 2009
+MapWindow GIS
+Ames, Michaelis \& Dunsford, 2007
+gvSIG
+Anguix \& Diaz, 2008
+Table 2: Mature desktop GIS software (Steiniger \& Hunter, 2012).
+
+
 %----------------------------------------------------------------------------------------
 
 \section{GRASS}\label{sec:options}
@@ -33,12 +70,66 @@
 
 \section{Python}\label{sec:issues}
 
+Python is a high level low abstraction level programming language. Python emphasizes code readability. Python is compatible with all major operating systems, and usually comes pre-packaged with these. 
+All python releases are open source. 
+As a language, Python is highly extensible, which means that instead of coming prepackaged with all functionality built in, it has a certain amount built in, and expects the user to download / add necessary libraries as needed. 
+The most commonly used versions of Python are 2.7 and 3.x. These differ for various
+reasons. The 2.7 release is a so-called legacy release, which means that it is not the worked-upon version, and wont see major updates. The 3.x is the newest version, and will be updated regularly. When working with ''older'' software, and libraries, it is most likely best to use version 2.7 as there will likely be compatibility issues when using a newer version of Python.
+Python has become a very popular programming language, and as such the possibility of using it with a variety of software packages has expanded greatly. 
+Standard python syntax looks something like this:
+'' CODE SNIPPET ''
+
+\subsection*{GRASS}
+
+GRASS functions can be used and manipulated by python scripting. Python can easily be used within the main GRASS shell, but it is also possible to create Python scripts that can call GRASS functionality from outside the main shell.
+
+The functions and modules of GRASS, when used outside of an actual GRASS thingy, only work when a series of specific environment variables have been set. 
+
+GRASS session word should be used.
+
+\“ CODE SNIPPET \”
+
 \subsection*{PyWPS}
+
+A Web Processing Service (WPS) is a standard defined by the Open Geospatial Consortium defining how inputs and outputs (also called requests and responses) for geospatial processing services should be standardized. 
+
+WPS Version 1.0 was released in June 2007, and WPS version version 2.0 was approved and released in January 2015.
+
+The idea behind the standard is to standardize how inputs and outputs for geospatial processing services. It defines how a client can request the execution of a process, and how the output from the process is handled. Furthermore, it defines the interface that facilitates the publishing of geospatial processes and clients’ discovery of and binding to those processes. The data required by the WPS can be delivered across a network or they can be available at the server.
+
+In short, this should make it easier for people who want to publish custom geospatial calculations on the internet, using modern standards. 
+
+PyWPS connects the Web Browser, Desktop GIS, command line tools and working tool installed on the server. As working tool, GRASS GIS, GDAL, PROJ, R and other programs can be used.
+
+PyWPS does not process the data by it self.  PyWPS and GRASS can work together, but the setup has to initialize the above-mentioned variables throught some configurations set. 
+
+When requesting data from the server, the URL you send to the server, defines what kind of request you have made. 
+The WPS enables a user to Describe a Process, Execute a Process and to Get Capabilities of the server, and the instances available. Similar to other OGC Web Services (such as WMS, WFS or WCS), WPS has three basic request types. Namely GetCapabilities, DescribeProcess and Execute.
+
+Example strings for the three processes mentioned above:
+
+http://webaddress/pywps/?service=WPS\&request=GetCapablities 
+
+http://webaddress/pywps/?service=WPS\&version=1.0.0\&request=DescribeProcess\&identifier=all
+
+http://webaddress/pywps/?service=WPS\&version=1.0.0\&request=Execute\&identifier=<PROCESS>\&datainputs=[<INPUT1>=<VALUE>;<INPUT2>=<VALUE>]
+
+When an Execute request has been posted to the WPS, it will start processing on the server, and when it is done outputs will be provided encoded in XML. 
+
+The WPS standard actually requires the possibility for a user to keep track of how far along their process is, but as it is PyWPS isn't set up to this yet. 
+
+“CODE SNIPPET”
 
 
 \subsection*{Flask}
 
-\subsection*{GRASS}
+Flask is a web application framework, written in Python and based on Werkzeug and the Jinja2 template engine. The framework is built around the idea of being as simple as possible. As such it only includes the bare-bone necessities, and expects the user to import third-party libraries that provide common functions. 
+
+Basically, this means that it is possible to create a dynamic web environment, by writing it in a combination of Python and HTML. 
+
+“CODE SNIPPET”
+
+MINIMAL APPLICATION
 
 %----------------------------------------------------------------------------------------
 
