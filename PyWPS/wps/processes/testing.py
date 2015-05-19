@@ -30,7 +30,7 @@ maxlevel_input = 3
 interval_input = 3
 
 #Total amount of loops
-loop_no = int((maxlevel_input/interval_input)) 
+loop_no = int((maxlevel_input/interval_input))
 
 class Flooding(WPSProcess):
 
@@ -57,15 +57,15 @@ class Flooding(WPSProcess):
 
         # Define output #
         #################
-       
+
 	'''
         self.outputImage0=self.addComplexOutput(identifier="output0",title="output image")
-	
+
         self.outputImage1=self.addComplexOutput(identifier="output1",title="output image")
 
         self.outputImage2=self.addComplexOutput(identifier="output2",title="output image")
         '''
-        
+
         self.donecheck = self.addLiteralOutput(identifier='Done',title='Output')
 
         # self.outputVector=self.addComplexOutput(identifier='vectorout', title='output vector')
@@ -76,23 +76,23 @@ class Flooding(WPSProcess):
 
     	# Importing the provided raster and and vector data
         self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
-        
-        if os.path.isfile('/tmp/%s/%s' % (random_folder1, random_file1): #This should be a relative path by the way, as several requests will try and read the same file 
-	 
+
+        if os.path.isfile('/tmp/%s/%s' % (random_folder1, random_file1): #This should be a relative path by the way, as several requests will try and read the same file
+
 	    self.cmd(['r.report', 'map=%s' % selected_ocean_rast, 'units=k', 'output=%s' % (random_file])
-	    
+
             actual_increment = str(actual_loop*interval_input)
-	    
+
   	    tempTxt = open('temp.txt', 'r')
 
             for row in tempTxt:
             	if row[1]== actual_increment[0]:
             		AreaOut=row.split('|')
-            		areaList.append(AreaOut[3]) #This should be explained properly	
+            		areaList.append(AreaOut[3]) #This should be explained properly
             tempTxt.close()
-        
-        
-        
+
+
+
         ocean_point = 'ocean_point'
         self.cmd(['v.in.ogr','dsn=%s' % self.vectorin.getValue(), 'type=point','output=%s' % ocean_point,'-o','--verbose'])
 
@@ -136,66 +136,66 @@ class Flooding(WPSProcess):
             selected_ocean_rast = 'selected_ocean_rast_' + str(actual_loop) # ??
             intermediate = 'intermediate_' + str(actual_loop)
             self.cmd(['v.to.rast', 'input=%s' % selected_ocean, 'output=%s' % intermediate, 'use=val', 'value=0'])
-            
+
             #Do something ??
             self.cmd(['r.mapcalc', '%s = if( %s == 0, (%s * %s), null())' % (selected_ocean_rast, intermediate, interval_input, actual_loop)])
 
-            if os.path.isfile('/tmp/temp.txt'): #This should be a relative path by the way, as several requests will try and read the same file 
+            if os.path.isfile('/tmp/temp.txt'): #This should be a relative path by the way, as several requests will try and read the same file
             	os.remove('/tmp/temp.txt')
 
 	    self.cmd(['r.report', 'map=%s' % selected_ocean_rast, 'units=k', 'output=temp.txt'])
-	    
+
             actual_increment = str(actual_loop*interval_input)
-	    
+
   	    tempTxt = open('temp.txt', 'r')
 
             for row in tempTxt:
             	if row[1]== actual_increment[0]:
             		AreaOut=row.split('|')
-            		areaList.append(AreaOut[3]) #This should be explained properly	
+            		areaList.append(AreaOut[3]) #This should be explained properly
             tempTxt.close()
-            
+
             old_loop = actual_loop -1
-            
+
             if float(areaList[actual_loop]) - float(areaList[old_loop]) > 0.02:
-            	
+
 		self.cmd(['v.overlay', 'ainput = %s' % selected_ocean,
             	'binut = old_flood', 'operator=not', 'output=subtructed_flood'])
-            	
+
             	self.cmd(['v.to.db', 'map=subtructed_flood', 'option=area', 'columns=a_value'])
-            	
+
             	self.cmd(['v.extract', 'input=subtracted_flood', 'output=subtracted_flood_extract', 'where=a_value > 1000'])
-            	
+
             	self.cmd(['v.to.rast', 'input=subtracted_flood_extract','output=subtracted_raster','use=cat'])
 
 		self.cmd(['r.mapcalc', '%s=if( isnull(%s), %s, %s)' % ('merged', 'subracted_raster', 'old_flood_rast', selected_ocean_rast)])
-		
+
 		self.cmd(['r.neighbors', 'input=merged', 'output=diversity', 'method=diversity'])
-		
+
 		pourpoint='pourpoint_'+str(actual_loop)
 		pourpoint_vect = 'pourpoint_vect_' + str(actual_loop)
-		
+
 		self.cmd(['r.mapcalc', '%s=if(%s == 2, %s, null())' % (pourpoint, 'diversity', 'diversity')])
-		
+
 		self.cmd(['r.to.vect', 'input=%s' % pourpoint, 'output=%s' % pourpoint_vect, 'feature=point'])
-		
-		self.cmd(['g.remove', '-f', 'rast=sub*']) 
+
+		self.cmd(['g.remove', '-f', 'rast=sub*'])
 		self.cmd(['g.remove', '-f', 'vect=sub*'])
 		self.cmd(['g.remove', '-f', 'rast=merged*'])
 		self.cmd(['g.remove', '-f', 'rast=diversity*'])
-			
+
 	    self.cmd(['g.remove', '-f', 'vect=old_flood'])
-	    
+
 	    self.cmd(['g.remove', '-f', 'rast=old_flood_rast'])
-	    
+
 	    self.cmd(['g.copy', 'vect = %s, %s' % (selected_ocean, 'old_flood')])
-	    
+
 	    self.cmd(['g.copy', 'rast = %s, %s' % (selected_ocean_rast, 'old_flood_rast')])
 
             actual_loop = actual_loop + 1
-            
+
         output = 5
-            
+
 
         ######################################
         ##                                  ##
@@ -204,16 +204,16 @@ class Flooding(WPSProcess):
         ######################################
 
         #Export vector
-        
+
         #outputImage = 'output.png'
-        
+
         #self.cmd(['r.out.gdal','format=PNG','input=%s' % selected_ocean_rast, 'output=%s' % outputImage])
-        
+
         self.donecheck.setValue(output)
 
         '''
         #Kept to not lose the information
-        
+
         #Export vector
         user_out = 'output' + str(loops) + '.geojson'
         #self.cmd(['v.out.ogr','input=%s' % ocean_vector,'format=GeoJSON','output=%s' % user_out])
@@ -234,64 +234,64 @@ class Flooding(WPSProcess):
             outputnames_rast.append(selected_ocean_rast)
 
             outputnames_vect.append(selected_ocean)
-            
-            if os.path.isfile('/tmp/temp.txt'): #This should be a relative path by the way, as several requests will try and read the same file 
+
+            if os.path.isfile('/tmp/temp.txt'): #This should be a relative path by the way, as several requests will try and read the same file
             	os.remove('/tmp/temp.txt')
-            	
+
             self.cmd(['r.report', 'map=%s' %s selected_ocean_rast, 'units=k', 'output=/tmp/temp.txt'])
             tempTxt = open('/tmp/temp.txt', 'r')
-            
+
             for row in TempTxt:
             	print row
             	if row[1]== actual_increment[0]:
             		AreaOut=row.split('|')
             		areaList.append(AreaOUt[3]) #This should be explained properly
-            		
+
             tempTxt.close()
-            
+
             old_loop = actual_loop -1
-            
+
             if float(areaList[actual_loop)) - float(areaList[old_loop]) > 0.02:
-            	
+
 		self.cmd(['v.overlay', 'ainput = %s' % selected_ocean,
             	'binut = old_flood', 'operator=not', 'output=subtructed_flood'])
-            	
+
             	self.cmd(['v.to.db', 'map=subtructed_flood', 'option=area', 'columns=a_value'])
-            	
+
             	self.cmd(['v.extract', 'input=subtracted_flood', 'output=subtracted_flood_extract', 'where=a_value > 1000'])
-            	
+
             	self.cmd(['v.to.rast', 'input=subtracted_flood_extract','output=subtracted_raster','use=cat'])
 
 		self.cmd(['r.mapcalc', '%s=if( isnull(%s), %s, %s') % ('merged', 'subracted_raster', 'old_flood_rast', selected_ocean_rast)])
-		
+
 		self.cmd(['r.neighbors', 'input=merged', 'output=diversity', 'method=diversity'])
-		
+
 		pourpoint='pourpoint_'+str(actual_loop)
 		self.cmd(['r.mapcalc', '%s=if(%s == 2, %s, null())' % (pourpoint, 'diversity', 'diversity')])
-		
+
 		self.cmd(['r.to.vect', 'input=%s' % pourpoint, 'output=%s' % pourpoint, 'feature=point'])
-		
-		self.cmd(['g.remove', '-f', 'type=raster','pattern=sub*']) 
+
+		self.cmd(['g.remove', '-f', 'type=raster','pattern=sub*'])
 		self.cmd(['g.remove', '-f', 'type=vector','pattern=sub*'])
 		self.cmd(['g.remove', '-f', 'type=raster','pattern=merged*'])
 		self.cmd(['g.remove', '-f', 'type=raster','pattern=diversity*'])
-			
+
 	    self.cmd(['g.remove', '-f', 'type=vector','pattern=old_flood'])
-	    
+
 	    self.cmd(['g.remove', '-f', 'type=raster','pattern=old_flood_rast'])
-	    
+
 	    self.cmd(['g.copy', vect = (selected_ocean, 'old_flood'))
-	    
+
 	    self.cmd(['g.copy', rast = (selected_ocean_rast, 'old_flood_rast')])
-	    
+
             actual_loop = actual_loop + 1
-            
+
         ################################
         ##                            ##
         ## Perform watershed analysis ##
         ##                            ##
         ################################
-        
+
         self.cmd(['g.region','rast=original'])
 
         self.cmd(['r.fill.dir','input=Xland','elevation=filled','direction=direction']) # Check to see resouliton at later stage, getting D8 resolution error
@@ -351,7 +351,7 @@ class Flooding(WPSProcess):
         self.cmd(['r.mapcalc', 'expression=%s=if(%s == %s, 10, null())' % (prepour_point, Accumulation_int, stat_int)])
         self.cmd(['r.mapcalc', 'expression=%s=if(%s > 0, %s, null())' % (pour_point, original, prepour_point)])
         self.cmd(['r.to.vect', 'input=%s' % pour_point, 'output=%s' % pour_point_vect, 'feature=point'])
-        
+
         ##############################
         ##                          ##
         ##        Reproject         ##

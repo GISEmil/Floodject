@@ -7,6 +7,141 @@
 <body>
     {% extends "layout.html" %} {% block body %}
     <style>
+
+    /* LOADING SPINNER - from http://tobiasahlin.com/spinkit/ */
+
+    .spinner {
+    margin: 8% auto;
+    width: 60px;
+    height: 60px;
+    position: relative;
+  }
+
+  .container1 > div, .container2 > div, .container3 > div {
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    /* Prevent first frame from flickering when animation starts */
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .spinner .spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container2 {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+  }
+
+  .container3 {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+  }
+
+  .circle1 { top: 0; left: 0; }
+  .circle2 { top: 0; right: 0; }
+  .circle3 { right: 0; bottom: 0; }
+  .circle4 { left: 0; bottom: 0; }
+
+  .container2 .circle1 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+
+  .container3 .circle1 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+
+  .container1 .circle2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+
+  .container2 .circle2 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+
+  .container3 .circle2 {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+  }
+
+  .container1 .circle3 {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+  }
+
+  .container2 .circle3 {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+  }
+
+  .container3 .circle3 {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+  }
+
+  .container1 .circle4 {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+  }
+
+  .container2 .circle4 {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+  }
+
+  .container3 .circle4 {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+  }
+
+  @-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+  }
+
+  @keyframes bouncedelay {
+    0%, 80%, 100% {
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 40% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
+
+  #overlay
+  {
+    position:fixed;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    -moz-opacity: .3;
+    z-index: 101;
+  }
+
+    /* Transparency slider for map */
+
     .ui-opacity {
       background:#FFF;
       position:absolute;
@@ -32,7 +167,41 @@
       .ui-opacity .handle:hover {
         background:#303030;
         }
+
+      .about {
+        padding-top: 70px;
+      }
     </style>
+    <script>
+    $(document).ready(function(){
+        $("body").hide(0).delay(500).fadeIn(3000);
+    });
+
+    var heightofwin = $(window).height();
+    var widthofwin = $(window).width();
+    </script>
+
+    <div id="overlay" style="display:none"><div class="spinner">
+               <div class="spinner-container container1">
+                 <div class="circle1"></div>
+                 <div class="circle2"></div>
+                 <div class="circle3"></div>
+                 <div class="circle4"></div>
+               </div>
+               <div class="spinner-container container2">
+                 <div class="circle1"></div>
+                 <div class="circle2"></div>
+                 <div class="circle3"></div>
+                 <div class="circle4"></div>
+               </div>
+               <div class="spinner-container container3">
+                 <div class="circle1"></div>
+                 <div class="circle2"></div>
+                 <div class="circle3"></div>
+                 <div class="circle4"></div>
+               </div>
+    </div></div>
+
     <header class="header" id="header">
         <div class="container">
             <h1 class="logo pull-left"><a class="scrollto" href=
@@ -79,7 +248,7 @@
     </header><!--//header-->
 
     <section class="about section introd" id="about introd" style=
-    "background-color:#17baef">
+    "background-color:#17baef; min-height: 1024px; height: 100%;">
         <div class="container">
             <h2 class="title text-center">How it works</h2>
 
@@ -89,6 +258,9 @@
                     flooding a DEM with water. Overall the process consists of
                     three steps, which we have outlined to the right. The most
                     important part is to not panic!</p>
+
+                   <input class="btn btn-default" id="introdleave" name="submit" type=
+                  "submit" value="Commence flooding">
                 </div>
 
                 <div class="item col-md-6">
@@ -108,13 +280,13 @@
     </section>
 
     <section class="promo section offset-header step1" id="promo step1" style=
-    "padding-top: 10px;">
+    "padding-top: 70px;">
         <div class="container text-center">
             <h2 class="title text-center">Step 1</h2>
         </div><!--//container-->
     </section>
 
-    <section class="about section step1" id="about">
+    <section class="about section step1" id="about" style="min-height: 1024px;">
         <div class="container">
             <h2 class="title text-center">Upload DEM</h2>
 
@@ -129,36 +301,36 @@
                         <input accept="image/*" class="" id="datafile" name=
                         "datafile" type="file" value="Select image">
                         <!-- We must keep this image name -->
-                         <input class="btn btn-default" name="submit" type=
+                         <input class="btn btn-default" id="spintowin" name="submit" type=
                         "submit" value="Upload image">
                     </form>
                 </div>
 
-                <div class="item col-md-5">
+                <div class="item col-md-5" id="loading">
                     <p>The first thing you have to do, is to upload the
                     <abbr class="initialism" title=
                     "Digital Elevation Model">DEM</abbr></p>
                 </div>
+
+
             </div>
         </div>
     </section>
 
     <section class="promo section offset-header step2" id="promo step2" style=
-    "padding-top: 10px;">
+    "padding-top: 70px;">
         <div class="container text-center">
             <h2 class="title text-center">Step 2</h2>
         </div><!--//container-->
     </section>
 
-    <section class="about section step2" id="about">
+    <section class="about section step2" id="about" style="min-height: 1024px;">
         <div class="container">
             <h2 class="title text-center">Select ocean</h2>
 
             <div class="row">
                 <div class="item col-md-2">
                     <span style="font-size: 64px;">2</span><br />
-                    <button class="btn btn-default" id="gogo" type=
-                    "submit">Flood!</button>
                 </div>
 
                 <div class="item col-md-10">
@@ -176,11 +348,23 @@
 
             </div>
         </div><!--//row-->
+
+        <div class="row">
+              <div class="item col-md-6">
+              <input class="btn btn-default" id="simpleflood" name="submit" type=
+             "submit" value="Simple flood">
+          </div>
+          <div class="item col-md-6">
+          <input class="btn btn-default" id="advancedflood" name="submit" type=
+         "submit" value="Advanced flood">
+        </div>
+
+        </div>
         <!--//container-->
     </section><!--//about-->
 
     <section class="promo section offset-header step3" id="promo step3" style=
-    "padding-top: 10px;">
+    "padding-top: 70px;">
         <div class="container text-center">
             <div class="container" id="about">
                 <h2 class="title text-center">Step 3</h2>
@@ -190,7 +374,7 @@
         </div>
     </section>
 
-    <section class="about section step3" id="about">
+    <section class="about section step3" id="about" style="min-height: 1024px;">
         <div class="container">
             <h2 class="title text-center">Get results!</h2>
 
@@ -205,138 +389,182 @@
         </div>
     </section>
 
+
+
     <script>
-     // Try to keep the value of the input
-    /*
-    $("input").change(function() {
-        var value = $( this ).val()
-        var valueedit = String(value.replace("C:\\fakepath\\", ""));
-        console.log(valueedit)
-    });
-    */
+    // Try to keep the value of the input
     // Mapping! We will be "cheating" a lot!
-    L.mapbox.accessToken =
-        'pk.eyJ1IjoicGlyYXRvc3RoZWdyZWF0IiwiYSI6IlV3TC1obGMifQ.TF-I_FTpupoX3IRprOl7iQ';
-
-    var url = window.location.href;
-
+    $(".step1").hide();
     $(".step2").hide();
     $(".step3").hide();
+    $(".step15").hide();
 
-    var handle = document.getElementById('handle'),
-    start = false,
-    startTop;
-
-    document.onmousemove = function(e) {
-    if (!start) return;
-    // Adjust control.
-    handle.style.top = Math.max(-5, Math.min(195, startTop + parseInt(e.clientY, 10) - start)) + 'px';
-    // Adjust opacity.
-    overlay.setOpacity(1 - (handle.offsetTop / 200));
-    };
-
-    handle.onmousedown = function(e) {
-    // Record initial positions.
-    start = parseInt(e.clientY, 10);
-    startTop = handle.offsetTop - 5;
-    return false;
-    };
-
-    document.onmouseup = function(e) {
-    start = null;
-    };
-
-    if (url.indexOf("filename") > -1) {
-
-      $(".step1").hide();
-      $(".step2").show();
-      // Initiate map
-
-      var findcorners = url.replace("http://52.17.144.192/upload?");
-      var findcorners2 = findcorners.split("&")
-      var filename = findcorners2[4].split("=")
-
-      var coordinatesforuse = [];
-      var expendable;
-
-      for (var i=0; i<findcorners2.length; i++) {
-          expendable = findcorners2[i].split("=")
-          coordinatesforuse[i] = expendable[1];
-
-      }
-
-      // Get coordinates
-      var south = coordinatesforuse[0];
-      var west = coordinatesforuse[1];
-      var north = coordinatesforuse[2];
-      var east = coordinatesforuse[3];
-
-      var imageuse = filename[1];
-      var imageaspng = imageuse.replace(/\.[^/.]+$/,".png")
-      var variable = 'static/images/' + imageaspng;
-      var imageUrl = variable;
-
-          // Set bounds for uploaded image
-      imageBounds = L.latLngBounds([
-          [west, south], // Southwest
-          [east, north] // Northeast
-      ]); // Northeast
-      var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf').fitBounds(imageBounds);
-      var marker = L.marker([39.5, 37.2], {
-          icon: L.mapbox.marker.icon({
-              'marker-color': '#f86767'
-          })
-      });
-
-      // Append coordinates of the marker to the HTML
-      map.on('click', function(e) {
-          marker.setLatLng(e.latlng).addTo(map);
-          marker = marker.setLatLng(e.latlng);
-          var something = e.latlng;
-          $(".coords").remove().append("<span class='coordinate'>" +
-              something + "<\/span><br>")
-      });
-
-      var overlay = L.imageOverlay(variable, imageBounds).addTo(map);
-      var markercoords = marker.getLatLng()
-      var markergeojson = JSON.stringify(marker.toGeoJSON());
-
-      var geoj = [{"type":"FeatureCollection","features":[{"type":"Feature","properties":{ },"geometry":{"type":"Point","coordinates":[markercoords.lat,markercoords.lng]}}]}
-      ];
-
-      // Async nightmare!
+    var outputimagearray = [];
 
 
-      var image = new Image();
-      $("#gogo").click(function () {
-        var preconpath = 'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=testproc&datainputs=[rasterin=http://52.17.144.192/static/images/' + imageaspng + ';vectorin=' + JSON.stringify(geoj[0]) + ']';
-        console.log(preconpath)
-        var xmlPath = preconpath
-        $.get(xmlPath,  function (xml) {
-            $(".step2").hide();
-            $(".step3").show();
-            console.log("ÆD LORT")
-            $("wps\\:Data", xml).find("wps\\:ComplexData").each(function (i, value) {
-                /* $("p").append(value);
-                console.log(value);*/
-                $('<div class="resultoutput col-md-4" />').appendTo(".loading").append('<img style="width: 100%" class="returned" src="data:image/png;base64,' + value.textContent + '" />');
-            });
-      },'xml');
-      });
-    } else {
-      var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf')
-    }
+    L.mapbox.accessToken =
+        'pk.eyJ1IjoicGlyYXRvc3RoZWdyZWF0IiwiYSI6IlV3TC1obGMifQ.TF-I_FTpupoX3IRprOl7iQ';
+    var url = window.location.href;
 
+    $(".introd").show();
 
+    $("#introdleave").click(function() {
+       $(".introd").hide();
 
-    // Flood modelling
-    // var xmlPath = "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=" + ";vectorin=" + + "]";
-    // var xmlPath =
-    //    "http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://www.kartograph.dk/test/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]";
+       $(".step1").show();
 
-    //var xmlPath =
-    //"http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=testproc&datainputs=[rasterin=http://www.52.17.144.192/static/images/"+ filename[1] +";vectorin=http://www.kartograph.dk/test/test.geojson]";
+       $(".step2").hide();
+       $(".step3").hide() ;
 
+       $("#spintowin").click(function() {
+         $("#overlay").show()
+       });
+
+       });
+
+        // "Testing" to see if a DEM has been uploaded
+        if (url.indexOf("filename") > -1) {
+           $(".step1").hide();
+           $(".step2").show();
+           $(".introd").hide();
+
+           // Finding the corners of the uploaded image based on the URL
+           var findcorners = url.replace("http://52.17.144.192/upload?");
+           var findcorners2 = findcorners.split("&")
+           var filename = findcorners2[4].split("=")
+           var coordinatesforuse = [];
+           var expendable;
+           for (var i = 0; i < findcorners2.length; i++) {
+               expendable = findcorners2[i].split("=")
+               coordinatesforuse[i] = expendable[1];
+           }
+           // Get coordinates
+           var south = coordinatesforuse[0];
+           var west = coordinatesforuse[1];
+           var north = coordinatesforuse[2];
+           var east = coordinatesforuse[3];
+           // Get filenames and change extensions for use later
+           var imageuse = filename[1];
+           var imageaspng = imageuse.replace(/\.[^/.]+$/, ".png")
+           var variable = 'static/images/' + imageaspng;
+           var imageUrl = variable;
+           // Set bounds for uploaded image
+           imageBounds = L.latLngBounds([
+               [west, south], // Southwest
+               [east, north] // Northeast
+           ]);
+
+           // This part is used to create the sliding bar for transparency of the DEM overlay
+           var handle = document.getElementById('handle'),
+               start = false,
+               startTop;
+
+           document.onmousemove = function(e) {
+               if (!start) return;
+               // Adjust control.
+               handle.style.top = Math.max(-5, Math.min(195, startTop + parseInt(
+                   e.clientY, 10) - start)) + 'px';
+               // Adjust opacity.
+               overlay.setOpacity(1 - (handle.offsetTop / 200));
+           };
+           handle.onmousedown = function(e) {
+               // Record initial positions.
+               start = parseInt(e.clientY, 10);
+               startTop = handle.offsetTop - 5;
+               return false;
+           };
+           document.onmouseup = function(e) {
+               start = null;
+           };
+           // Initiate map "around" the uploaded DEM
+           var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf').fitBounds(
+               imageBounds);
+           // Add the DEM to the map
+           var overlay = L.imageOverlay(variable, imageBounds).addTo(map);
+           // Define marker
+           var marker = L.marker([16.436673, 38.322712], {
+               icon: L.mapbox.marker.icon({
+                   'marker-color': '#f86767'
+               })
+           });
+           // Add marker on click, on map
+           map.on('click', function(e) {
+               marker.setLatLng(e.latlng).addTo(map);
+           });
+           /*
+         IMPORTANT! Right now we are only getting the original coordinates for the marker, and not the dynamic ones, that should be generated by clicking on map.
+        */
+           // Get latitude and longtitude of marker
+           var markercoords = marker.getLatLng()
+               // Define a geojson point class.
+           var geoj = [{
+               "type": "FeatureCollection",
+               "features": [{
+                   "type": "Feature",
+                   "properties": {},
+                   "geometry": {
+                       "type": "Point",
+                       "coordinates": [markercoords.lat,
+                           markercoords.lng
+                       ]
+                   }
+               }]
+           }];
+           /*
+          IMPORTANT! Right now our flooding can only occur from ONE place.
+        */
+           // Async request!
+           var image = new Image();
+           $("#advancedflood").click(function() {
+               $("#overlay").show();
+               var preconpath =
+                   'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=simpleflood&datainputs=[rasterin=http://52.17.144.192/static/images/' +
+                   imageaspng + ';vectorin=' + JSON.stringify(geoj[0]) +
+                   ']';
+               var xmlPath = preconpath
+               $.get(xmlPath, function(xml) {
+                  console.log(xmlPath);
+                  $("#overlay").hide();
+                   $(".step2").hide();
+                   $(".step3").show();
+                       // Find the elements that contain our data
+                   $("wps\\:Data", xml).find("wps\\:ComplexData")
+                       .each(function(i, value) {
+                           // Append data to HTML
+                           $(
+                               '<div class="resultoutput col-md-4" />'
+                           ).appendTo(".loading").append(
+                               '<img style="width: 100%" class="returned" src="data:image/png;base64,' +
+                               value.textContent + '" />'
+                           );
+                       });
+               }, 'xml');
+           });
+
+           $("#simpleflood").click(function() {
+               $("#overlay").show();
+               var preconpath =
+                   'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=simpleflood&datainputs=[rasterin=http://52.17.144.192/static/images/NEWTIF.tif;vectorin=http://www.kartograph.dk/test/test.geojson]';
+               var xmlPath = preconpath
+               console.log(xmlPath)
+               $.get(xmlPath, function(xml) {
+                  $("#overlay").hide();
+                   $(".step2").hide();
+                   $(".step3").show();
+                       // Find the elements that contain our data
+                   $("wps\\:ProcessOutputs", xml).find("wps\\:Reference")
+                       .each(function(i, value) {
+                          var imagepath = value.getAttribute("href");
+                          var imagepathbroken = imagepath.split("/");
+                          outputimagearray.push(imagepathbroken[5])
+                          /*$(".loading").append('<img style="width: 100%" class="returned" src="http://52.17.144.192/static/outputs/' + imagepathbroken[5] + '" />')*/
+                       });
+               }, 'xml');
+           });
+       } else // If the DEM has not been uploaded, we will show a regular map. In actuality we aren't showing it, but it is a work around to not get an error message.
+        {
+           var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf')
+       }
 
     </script>
     {% endblock %}
