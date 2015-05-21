@@ -75,7 +75,7 @@ class Testproc(WPSProcess):
         self.cmd(['r.colors', 'map=outputPNG', 'color=precipitation'])
 
         outputImage = "outputimage.jpg"
-        self.cmd(['r.out.gdal','format=JPEG','input=outputPNG', 'output=%s' % outputImage])
+        self.cmd(['r.out.gdal','format=JPEG','input=WaterDepth', 'output=%s' % outputImage])
 
         outputImage1 = "outputimage1.tif"
         self.cmd(['r.out.gdal','format=GTiff','input=WaterDepth', 'output=%s' % outputImage1])
