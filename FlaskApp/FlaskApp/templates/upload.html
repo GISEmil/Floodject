@@ -246,7 +246,6 @@
             </nav><!--//main-nav-->
         </div>
     </header><!--//header-->
-
     <section class="about section introd" id="about introd" style=
     "background-color:#17baef; min-height: 1024px; height: 100%;">
         <div class="container">
@@ -477,6 +476,7 @@
            document.onmouseup = function(e) {
                start = null;
            };
+           
            // Initiate map "around" the uploaded DEM
            var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf').fitBounds(
                imageBounds);
@@ -514,28 +514,47 @@
            var image = new Image();
 
            $("#advancedflood").click(function() {
-               $("#overlay").show();
-               var preconpath =
-                   'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=simpleflood&datainputs=[rasterin=http://52.17.144.192/static/images/' +
-                   imageaspng + ';vectorin=' + JSON.stringify(geoj[0]) +
-                   ']';
-               var xmlPath = preconpath
-               $.get(xmlPath, function(xml) {
-                  console.log(xmlPath);
-                  $("#overlay").hide();
-                   $(".step2").hide();
-                   $(".step3").show();
-                       // Find the elements that contain our data
-                   $("wps\\:Data", xml).find("wps\\:ComplexData")
-                       .each(function(i, value) {
-                           // Append data to HTML
-                           var imagepath = value.getAttribute("href");
-                           var imagepathbroken = imagepath.split("/");
-                           outputimagearray.push(imagepathbroken[5])
-                           $(".loading").append("<img style='width: 100%' class='returned' src='http://52.17.144.192/static/outputs/" + imagepathbroken[5] + "' />")
-                         });
-                       });
-               }, 'xml');
+             $("#overlay").show();
+             var preconpath = 'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://52.17.144.192/static/images/' + imageuse + ';vectorin=' + JSON.stringify(geoj[0]) + ']';
+             var xmlPath = preconpath
+
+             $.when(
+
+             $.get(xmlPath, function(xml) {
+                $("#overlay").hide();
+                 $(".step2").hide();
+                 $(".step3").show();
+
+                     // Find the elements in the response XMl that contain our data
+                 $("wps\\:ProcessOutputs", xml).find("wps\\:Reference")
+                     .each(function(i, value) {
+                        var imagepath = value.getAttribute("href");
+                        var imagepathbroken = imagepath.split("/");
+                        outputimagearray.push(imagepathbroken[5])
+
+                     });
+             }, 'xml')
+
+             )
+
+             .done( function() {
+               $(".loading").append('<div class="map" id="map1" style="height: 500px; width: 100%;">')
+               var map = L.mapbox.map('map1', 'piratosthegreat.i7aeacaf')
+               .fitBounds(imageBounds);
+
+               var outputimagesimple = 'static/outputs/' + outputimagearray[1];
+
+               var overlay = L.imageOverlay(outputimagesimple, imageBounds).addTo(map);
+
+               overlay.setOpacity(1.0);
+
+              var featureLayer = L.mapbox.featureLayer()
+              .loadURL('/static/outputs/' + outputimagearray[0])
+              .addTo(map);
+
+               $(".loading").append('<form method="get" action="http://52.17.144.192/static/outputs/' + outputimagearray[2] + '"><button class="btn btn-success btn-lg btn-block" type="submit">Download data !</button></form>')
+             });
+             });
 
            $("#simpleflood").click(function() {
                $("#overlay").show();
