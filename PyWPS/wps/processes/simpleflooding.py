@@ -15,8 +15,7 @@ class Testproc(WPSProcess):
             title = "Flooding a raster in a simple way",
             abstract = "This process is used to quickly and easily flood a DEM with water",
             version = "1.0",
-            #grassLocation = None,
-            grassLocation = True,
+            grassLocation = "/home/ubuntu/grassdata/WGS_1984",
             statusSupported = True,
             storeSupported = True)
 
@@ -53,7 +52,7 @@ class Testproc(WPSProcess):
 
         #Do mapcalculation to flood area
         expressionout = 'expressionout'
-        self.cmd(['r.mapcalc','%s = if(%s <= %s, 3, null())' % (expressionout, original, '30')])
+        self.cmd(['r.mapcalc','%s = if(%s <= %s, 3, null())' % (expressionout, original, '3')])
 
         #Convert all water to vector
         ocean_vector = 'ocean_vector'
@@ -70,12 +69,8 @@ class Testproc(WPSProcess):
         # Create waterdepths
         self.cmd(['r.mapcalc', '%s = %s - %s' % ('WaterDepth', selected_ocean_rast, original)])
 
-        self.cmd(['r.mapcalc', 'outputPNG = WaterDepth * (-1)'])
-
-        self.cmd(['r.colors', 'map=outputPNG', 'color=precipitation'])
-
         outputImage = "outputimage.jpg"
-        self.cmd(['r.out.gdal','format=JPEG','input=WaterDepth', 'output=%s' % outputImage])
+        self.cmd(['r.out.gdal','format=JPEG','input=selected_ocean_rast', 'output=%s' % outputImage])
 
         outputImage1 = "outputimage1.tif"
         self.cmd(['r.out.gdal','format=GTiff','input=WaterDepth', 'output=%s' % outputImage1])

@@ -454,7 +454,7 @@
                [east, north] // Northeast
            ]);
 
-           // This part is used to create the sliding bar for transparency of the DEM overlay
+           // This part is used to create the sliding bar for transparency of the DEM overlay taken from MapBox
            var handle = document.getElementById('handle'),
                start = false,
                startTop;
@@ -476,7 +476,7 @@
            document.onmouseup = function(e) {
                start = null;
            };
-           
+
            // Initiate map "around" the uploaded DEM
            var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf').fitBounds(
                imageBounds);
@@ -517,7 +517,7 @@
              $("#overlay").show();
              var preconpath = 'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=http://52.17.144.192/static/images/' + imageuse + ';vectorin=' + JSON.stringify(geoj[0]) + ']';
              var xmlPath = preconpath
-
+             console.log(xmlPath)
              $.when(
 
              $.get(xmlPath, function(xml) {
@@ -531,6 +531,9 @@
                         var imagepath = value.getAttribute("href");
                         var imagepathbroken = imagepath.split("/");
                         outputimagearray.push(imagepathbroken[5])
+                        console.log(imagepath)
+                        console.log(imagepathbroken)
+                        console.log(outputimagearray)
 
                      });
              }, 'xml')
@@ -546,7 +549,7 @@
 
                var overlay = L.imageOverlay(outputimagesimple, imageBounds).addTo(map);
 
-               overlay.setOpacity(1.0);
+               overlay.setOpacity(0.5);
 
               var featureLayer = L.mapbox.featureLayer()
               .loadURL('/static/outputs/' + outputimagearray[0])
@@ -574,7 +577,6 @@
                           var imagepath = value.getAttribute("href");
                           var imagepathbroken = imagepath.split("/");
                           outputimagearray.push(imagepathbroken[5])
-
                        });
                }, 'xml')
 
@@ -591,7 +593,9 @@
 
                  overlay.setOpacity(0.5);
 
-                 $(".loading").append('<form method="get" action="http://52.17.144.192/static/outputs/' + outputimagearray[2] + '"><button class="btn btn-success btn-lg btn-block" type="submit">Download data !</button></form>')
+                 $(".loading").append('<button class="btn btn-success btn-lg btn-block" id="finaldownload" type="submit">Download data !</button>')
+
+
                });
            });
        } else // If the DEM has not been uploaded, we will show a regular map.
@@ -599,6 +603,11 @@
            var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf')
        }
 
+       $("#finaldownload").click(function(e) {
+         e.preventDefault();
+         window.location.href='static/outputs/' + outputimagearray[2]
+         window.location.href='static/outputs/' + outputimagearray[0]
+       });
     </script>
     {% endblock %}
 </body>

@@ -51,7 +51,6 @@ class Flooding(WPSProcess):
             title = "Flooding",
             abstract = "This process is used to flood a DEM with water",
             version = "1.0",
-            #grassLocation = None,
             grassLocation = "/home/ubuntu/grassdata/WGS_1984",
             statusSupported = True,
             storeSupported = True)
@@ -160,7 +159,7 @@ class Flooding(WPSProcess):
 
                 self.cmd(['r.neighbors', 'input=merged', 'output=diversity', 'method=diversity'])
 
-                self.cmd(['r.mapcalc', '%s=if(%s == 2, %s, null())' % (pourpoint, 'diversity', 'diversity')])
+                self.cmd(['r.mapcalc', '%s=if(%s == 2, 3 - %s, null())' % (pourpoint, 'diversity', original)])
 
                 self.cmd(['r.to.vect', 'input=%s' % pourpoint, 'output=%s' % pourpoint_vect, 'feature=point'])
 
@@ -191,10 +190,10 @@ class Flooding(WPSProcess):
         self.cmd(['r.mapcalc', '%s = %s - %s' % ('WaterDepth', selected_ocean_rast, original)])
 
         outputImage = "outputimage.jpg"
-        self.cmd(['r.out.gdal','format=JPEG','input=%s' % selected_ocean_rast, 'output=%s' % outputImage])
+        self.cmd(['r.out.gdal','format=JPEG','input=%s' % intermediate, 'output=%s' % outputImage])
 
         outputImage1 = "outputimage1.tif"
-        self.cmd(['r.out.gdal','format=GTiff','input=%s' % selected_ocean_rast, 'output=%s' % outputImage1])
+        self.cmd(['r.out.gdal','format=GTiff','input=%s' % 'WaterDepth', 'output=%s' % outputImage1])
 
         outputVector1 = "outputvector.geojson"
         self.cmd(['v.out.ogr','format=GeoJSON','type=point','input=%s' % firstvector,'dsn=%s' % outputVector1])
