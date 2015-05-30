@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  30 MAY 2015 17:59
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  30 MAY 2015 21:46
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -1170,7 +1170,7 @@ l.13 \color{Maroon}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-<gfx/TFZsuperellipse_bw.pdf, id=191, 260.5755pt x 203.14595pt>
+<gfx/TFZsuperellipse_bw.pdf, id=212, 260.5755pt x 203.14595pt>
 File: gfx/TFZsuperellipse_bw.pdf Graphic file (type pdf)
 
 <use gfx/TFZsuperellipse_bw.pdf>
@@ -1391,7 +1391,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 ...on}{\numberline {2.2}Python}{5}{section.2.2}
+l.16 ...on}{\numberline {2.2}Python}{7}{section.2.2}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1403,7 +1403,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 ...ion}{\numberline {2.3}GRASS}{6}{section.2.3}
+l.17 ...ion}{\numberline {2.3}GRASS}{7}{section.2.3}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1415,7 +1415,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.17 ...ion}{\numberline {2.4}PyWPS}{7}{section.2.4}
+l.18 ...ion}{\numberline {2.4}PyWPS}{8}{section.2.4}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1427,7 +1427,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.18 ...ion}{\numberline {2.5}Flask}{8}{section.2.5}
+l.19 ...ion}{\numberline {2.5}Flask}{9}{section.2.5}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1439,7 +1439,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 ...erline {2.6}Open Source GIS}{8}{section.2.6}
+l.20 ...rline {2.6}Open Source GIS}{10}{section.2.6}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1451,7 +1451,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 ...edlowsmallcaps {Methodology}}{11}{chapter.3}
+l.21 ...edlowsmallcaps {Methodology}}{13}{chapter.3}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1463,7 +1463,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.21 ...line {3.1}Previous Project}{12}{section.3.1}
+l.22 ...line {3.1}Previous Project}{14}{section.3.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1475,7 +1475,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.22 ...{\numberline {3.2}Workflow}{13}{section.3.2}
+l.23 ...{\numberline {3.2}Workflow}{15}{section.3.2}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1487,7 +1487,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.23 ...erline {3.2.1}Phase 1}{13}{subsection.3.2.1}
+l.24 ...erline {3.2.1}Phase 1}{15}{subsection.3.2.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1499,7 +1499,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 ...erline {3.2.2}Phase 2}{13}{subsection.3.2.2}
+l.25 ...erline {3.2.2}Phase 2}{15}{subsection.3.2.2}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1511,7 +1511,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 ...erline {3.2.3}Phase 3}{14}{subsection.3.2.3}
+l.26 ...erline {3.2.3}Phase 3}{16}{subsection.3.2.3}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1523,7 +1523,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.26 ...erline {3.2.4}Phase 4}{14}{subsection.3.2.4}
+l.27 ...erline {3.2.4}Phase 4}{16}{subsection.3.2.4}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1535,7 +1535,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 ...erline {3.2.5}Phase 5}{14}{subsection.3.2.5}
+l.28 ...erline {3.2.5}Phase 5}{16}{subsection.3.2.5}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1547,7 +1547,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 ...erline {3.2.6}Testing}{14}{subsection.3.2.6}
+l.29 ...erline {3.2.6}Testing}{16}{subsection.3.2.6}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1559,7 +1559,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 ...erline {3.2.7}Writing}{14}{subsection.3.2.7}
+l.30 ...erline {3.2.7}Writing}{16}{subsection.3.2.7}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1571,7 +1571,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 ...line {3.2.8}Finish up}{15}{subsection.3.2.8}
+l.31 ...line {3.2.8}Finish up}{17}{subsection.3.2.8}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1583,7 +1583,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.31 ...rline {3.2.9}Timeline}{15}{subsection.3.2.9}
+l.32 ...rline {3.2.9}Timeline}{17}{subsection.3.2.9}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1595,7 +1595,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.32 ...owsmallcaps {Implementation}}{17}{chapter.4}
+l.33 ...owsmallcaps {Implementation}}{19}{chapter.4}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1607,7 +1607,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 ...}{\numberline {4.1}Phase 1}{17}{section.4.1}
+l.34 ...}{\numberline {4.1}Phase 1}{19}{section.4.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1619,7 +1619,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.34 ...}Problems encountered}{19}{subsection.4.1.1}
+l.35 ...}Problems encountered}{21}{subsection.4.1.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1631,7 +1631,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 ...}{\numberline {4.2}Phase 2}{20}{section.4.2}
+l.36 ...}{\numberline {4.2}Phase 2}{22}{section.4.2}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1643,7 +1643,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.36 ...}{\numberline {4.3}Phase 3}{21}{section.4.3}
+l.37 ...}{\numberline {4.3}Phase 3}{23}{section.4.3}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1655,7 +1655,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.37 ...pacedlowsmallcaps {Analysis}}{23}{chapter.5}
+l.38 ...}Problems encountered}{25}{subsection.4.3.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1667,7 +1667,67 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 ...cedlowsmallcaps {Discussion}}{25}{chapter.6}
+l.39 ...}{\numberline {4.4}Phase 4}{26}{section.4.4}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.40 ...4.1}Barrier placement}{26}{subsection.4.4.1}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 ...ine {4.4.2}Pour point}{26}{subsection.4.4.2}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...4.4.3}Outlet analysis}{26}{subsection.4.4.3}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 ...pacedlowsmallcaps {Analysis}}{27}{chapter.5}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 ...cedlowsmallcaps {Discussion}}{29}{chapter.6}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1679,7 +1739,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 ...}\spacedlowsmallcaps {Appendix}}{27}{part.1}
+l.45 ...}\spacedlowsmallcaps {Appendix}}{31}{part.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1691,7 +1751,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.39 ...}\spacedlowsmallcaps {Appendix}}{27}{part.1}
+l.45 ...}\spacedlowsmallcaps {Appendix}}{31}{part.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1703,7 +1763,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 ...owsmallcaps {Appendix Test}}{29}{appendix.A}
+l.46 ...owsmallcaps {Appendix Test}}{33}{appendix.A}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1715,7 +1775,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 ...{A.1}Appendix Section Test}{29}{section.A.1}
+l.47 ...{A.1}Appendix Section Test}{33}{section.A.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1727,11 +1787,16 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 ...ther Appendix Section Test}{30}{section.A.2}
+l.48 ...ther Appendix Section Test}{34}{section.A.2}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[7
+
+
+
+]
 
 ! Package xcolor Error: Undefined color `RoyalBlue'.
 
@@ -1739,23 +1804,85 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 ...cedlowsmallcaps {Bibliography}}{31}{dummy.6}
+l.50 ...cedlowsmallcaps {Bibliography}}{35}{dummy.6}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 )
 \tf@toc=\write6
- [7
-
-
-
-]
+ [8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 33.
 
- (./main.lof)
+ (./main.lof
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...rection methods\relax }}{5}{figure.caption.8}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...with watersheds\relax }}{6}{figure.caption.9}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (5.18906pt too wide) in paragraph at lines 7--7
+ [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing im-por-tant con-cepts when work- 
+
+ []
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8 ...distance works\relax }}{7}{figure.caption.10}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (1.26341pt too wide) in paragraph at lines 8--8
+ [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing how cost dis-tance works []  
+ []
+
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ... GIS software\relax }}{12}{figure.caption.11}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (29.06462pt too wide) in paragraph at lines 9--9
+ [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing cat-e-go-riza-tion of GIS soft-wa
+re []  
+ []
+
+)
 \tf@lof=\write7
- [8
+ [9
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 46.
@@ -1768,14 +1895,11 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 ...respaces Autem usu id}}{30}{table.caption.8}
+l.6 ...s GIS software\relax }}{11}{table.caption.12}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-)
-\tf@lot=\write8
- [9] (./main.lol
 
 ! Package xcolor Error: Undefined color `RoyalBlue'.
 
@@ -1783,14 +1907,29 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 ...line {1}A floating example}{30}{lstlisting.1}
+l.12 ...espaces Autem usu id}}{34}{table.caption.13}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
+\tf@lot=\write8
+ [10] (./main.lol
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 ...line {1}A floating example}{34}{lstlisting.1}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 )
 \tf@lol=\write9
- [10]
+ [11]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 76.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
@@ -1799,11 +1938,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [11] [12
-
-
-
-]
+) [12]
 (./Chapters/Introduction.tex
 Chapter 1.
 
@@ -1822,6 +1957,9 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              deprecated \float@addtolist interface .
 
 [1
+
+
+
 
 
 
@@ -1862,14 +2000,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-[4]
-Overfull \hbox (6.46066pt too wide) in paragraph at lines 58--59
+<gfx/SFD_MFD.png, id=361, 762.85pt x 198.7425pt>
+File: gfx/SFD_MFD.png Graphic file (type png)
+ <use gfx/SFD_MFD.png>
+Package pdftex.def Info: gfx/SFD_MFD.png used on input line 46.
+(pdftex.def)             Requested size: 336.0pt x 87.5349pt.
+ [4]
+<gfx/Watershed.png, id=367, 833.1125pt x 370.38374pt>
+File: gfx/Watershed.png Graphic file (type png)
+ <use gfx/Watershed.png>
+Package pdftex.def Info: gfx/Watershed.png used on input line 61.
+(pdftex.def)             Requested size: 336.0pt x 149.37726pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
+ []
+
+[5 <./gfx/SFD_MFD.png>] <gfx/COST.png, id=375, 843.15pt x 253.94875pt>
+File: gfx/COST.png Graphic file (type png)
+
+<use gfx/COST.png>
+Package pdftex.def Info: gfx/COST.png used on input line 77.
+(pdftex.def)             Requested size: 336.0pt x 101.20183pt.
+
+Overfull \hbox (6.46066pt too wide) in paragraph at lines 85--86
 []\T1/pplj/m/n/10.95 Python is a pro-gram-ming lan-guage used ex-ten-sively wit
 hin the geospa-
  []
 
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+[6 <./gfx/Watershed.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
@@ -1877,7 +2037,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--68
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 69.
+(Font)              scaled to size 8.50006pt on input line 96.
 
 
 ! Package xcolor Error: Undefined color `RoyalBlue'.
@@ -1886,7 +2046,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 import 
+l.97 import 
           random
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1898,7 +2058,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 for 
+l.99 for 
        element in randomarray:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1910,7 +2070,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.72 for element in 
+l.99 for element in 
                   randomarray:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1922,8 +2082,21 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.73 	print(
-          element)
+l.100 	print(
+           element)
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[7 <./gfx/COST.png (PNG copy)>]
+
+! Package xcolor Error: Undefined color `RoyalBlue'.
+
+See the xcolor package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.118 import 
+           grass.script as gscript
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1934,8 +2107,8 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 import 
-          grass.script as gscript
+l.119 import 
+           grass.script.setup as gsetup
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1946,21 +2119,8 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.92 import 
-          grass.script.setup as gsetup
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[6]
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.93 gscript.run_command(“r.in.
-                               gdal”,flags=””,input=”input.tif”,ou...
+l.120 gscript.run_command(“r.in.
+                                gdal”,flags=””,input=”input.tif”,o...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1971,7 +2131,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 ..._command(“r.in.gdal”,flags=””,input=
+l.120 ...command(“r.in.gdal”,flags=””,input=
                                                   ”input.tif”,output=”...
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1983,29 +2143,30 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.93 ...“r.in.gdal”,flags=””,input=”input.
+l.120 ...��r.in.gdal”,flags=””,input=”input.
                                                   tif”,output=”output”
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (9.37337pt too wide) in paragraph at lines 99--102
+Overfull \hbox (9.37337pt too wide) in paragraph at lines 126--129
 \T1/pplj/m/n/10.95 called re-quests and re-sponses) for geospa-tial pro-cess-in
 g ser-vices should
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--102
+Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 130--133
 
  []
 
+[8]
 ! Misplaced alignment tab character &.
-l.107 \item http://webaddress/pywps/?service=WPS&
+l.134 \item http://webaddress/pywps/?service=WPS&
                                                request=GetCapablities
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2015,13 +2176,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (13.54536pt too wide) in paragraph at lines 107--108
+Overfull \hbox (13.54536pt too wide) in paragraph at lines 134--135
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WP-Sre-quest=Get-C
 a-pabli-ties 
  []
 
 ! Misplaced alignment tab character &.
-l.108 \item http://webaddress/pywps/?service=WPS&
+l.135 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Describ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2031,7 +2192,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.108 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.135 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=DescribeProcess&id...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2041,7 +2202,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.108 ...=WPS&version=1.0.0&request=DescribeProcess&
+l.135 ...=WPS&version=1.0.0&request=DescribeProcess&
                                                   identifier=all
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2051,13 +2212,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (21.57172pt too wide) in paragraph at lines 108--109
+Overfull \hbox (21.57172pt too wide) in paragraph at lines 135--136
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=De-
  []
 
 ! Misplaced alignment tab character &.
-l.109 \item http://webaddress/pywps/?service=WPS&
+l.136 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Execute...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2067,7 +2228,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.109 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.136 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=Execute&identifier...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2077,7 +2238,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.109 ...?service=WPS&version=1.0.0&request=Execute&
+l.136 ...?service=WPS&version=1.0.0&request=Execute&
                                                   identifier=<PROCESS>&datai...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2087,7 +2248,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.109 ...1.0.0&request=Execute&identifier=<PROCESS>&
+l.136 ...1.0.0&request=Execute&identifier=<PROCESS>&
                                                   datainputs=[<INPUT1>=<VALU...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2097,22 +2258,21 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (20.19202pt too wide) in paragraph at lines 109--110
+Overfull \hbox (20.19202pt too wide) in paragraph at lines 136--137
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=Ex-
  []
 
 
-Overfull \hbox (26.576pt too wide) in paragraph at lines 109--110
+Overfull \hbox (26.576pt too wide) in paragraph at lines 136--137
 \T1/pplj/m/n/10.95 e-cutei-den-ti-fier=<PRO-CESS>datain-puts=[<IN-PUT1>=<VALUE>
 ;<IN-
  []
 
-[7]
 ! Missing $ inserted.
 <inserted text> 
 $
-l.117 \item A function called _
+l.144 \item A function called _
                              _init__:
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2120,7 +2280,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing { inserted.
 <to be read again> 
 _
-l.117 \item A function called __
+l.144 \item A function called __
                               init__:
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -2130,7 +2290,7 @@ If you're confused by all this, try typing `I}' now.
 ! Missing { inserted.
 <to be read again> 
 _
-l.117 \item A function called __init__
+l.144 \item A function called __init__
                                     :
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -2140,7 +2300,7 @@ If you're confused by all this, try typing `I}' now.
 ! Missing { inserted.
 <to be read again> 
 _
-l.118 def __
+l.145 def __
           init__(self):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -2150,7 +2310,7 @@ If you're confused by all this, try typing `I}' now.
 ! Missing { inserted.
 <to be read again> 
 _
-l.118 def __init__
+l.145 def __init__
                 (self):
 A left brace was mandatory here, so I've put one in.
 You might want to delete and/or insert some corrections
@@ -2164,7 +2324,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \item
+l.146 \item
           A function called execute:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2176,7 +2336,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \item A
+l.146 \item A
             function called execute:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2188,7 +2348,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 \item A
+l.146 \item A
             function called execute:
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2200,7 +2360,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2212,7 +2372,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2224,7 +2384,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2232,7 +2392,7 @@ If that doesn't work, type  X <return>  to quit.
 ! Missing } inserted.
 <inserted text> 
 }
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2243,7 +2403,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2254,7 +2414,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2265,7 +2425,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2276,7 +2436,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.121 \end{itemize}
+l.148 \end{itemize}
                   \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2285,12 +2445,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--122
+Underfull \hbox (badness 10000) in paragraph at lines 144--149
 
  []
 
 ! Misplaced alignment tab character &.
-l.134 https://scholar.google.com/scholar?hl=fr&
+l.161 https://scholar.google.com/scholar?hl=fr&
                                              q=flask+microframework&btnG=&lr...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2300,7 +2460,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.134 ...e.com/scholar?hl=fr&q=flask+microframework&
+l.161 ...e.com/scholar?hl=fr&q=flask+microframework&
                                                   btnG=&lr= \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2310,7 +2470,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.134 ...scholar?hl=fr&q=flask+microframework&btnG=&
+l.161 ...scholar?hl=fr&q=flask+microframework&btnG=&
                                                   lr= \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2320,7 +2480,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (13.28711pt too wide) in paragraph at lines 132--137
+Overfull \hbox (13.28711pt too wide) in paragraph at lines 159--164
 \T1/pplj/m/n/10.95 and is easy to use. https://scholar.google.com/scholar?hl=fr
 q=flask+mi-
  []
@@ -2332,7 +2492,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 from 
+l.166 from 
          flask import Flask
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2344,11 +2504,12 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 from flask import 
+l.166 from flask import 
                       Flask
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[9]
 
 ! Package xcolor Error: Undefined color `RoyalBlue'.
 
@@ -2356,7 +2517,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.143 def 
+l.170 def 
         hello():
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2368,7 +2529,7 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.144     return 
+l.171     return 
                "Hello World!"
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2380,18 +2541,28 @@ See the xcolor package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 if 
+l.173 if 
        __name__ == "__main__":
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[8]
-Overfull \hbox (7.21638pt too wide) in paragraph at lines 161--162
+
+Overfull \hbox (7.21638pt too wide) in paragraph at lines 188--189
 [][]\T1/pplj/m/n/10.95 Mod-i-fi-ca-tions and de-rived works must be al-lowed an
 d dis-tributes
  []
 
-[9]) [10] (./Chapters/Methodology.tex
+[10] <gfx/OS.png, id=423, 672.5125pt x 494.84875pt>
+File: gfx/OS.png Graphic file (type png)
+ <use gfx/OS.png>
+Package pdftex.def Info: gfx/OS.png used on input line 204.
+(pdftex.def)             Requested size: 336.0pt x 247.235pt.
+
+Overfull \hbox (43.5189pt too wide) in paragraph at lines 211--231
+[][][] 
+ []
+
+) [11] [12 <./gfx/OS.png>] (./Chapters/Methodology.tex
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
@@ -2428,7 +2599,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--36
 
  []
 
-[11
+[13
 
 
 
@@ -2443,7 +2614,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 
  []
 
-[12] [13] [14]
+[14] [15] [16]
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -2453,12 +2624,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--100
 
  []
 
-[15]
+[17]
 Overfull \hbox (28.98175pt too wide) in paragraph at lines 135--136
 [][][] 
  []
 
-) [16] (./Chapters/Implementation.tex
+) [18] (./Chapters/Implementation.tex
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -2494,7 +2665,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[17
+[19
 
 
 
@@ -2519,7 +2690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-[18]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
@@ -2599,7 +2770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--99
 
  []
 
-[19]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
@@ -2619,7 +2790,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 106--109
 
  []
 
-[20]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 112--117
 
  []
@@ -2652,31 +2823,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
-[21]
+[23]
 Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[22]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-) [23] (./Chapters/Analysis.tex [24
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.168 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
+ []
 
-]
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+) [26] (./Chapters/Analysis.tex
 Chapter 5.
-) [25] (./Chapters/Discussion.tex [26
+) [27
+
+
+
+
+] (./Chapters/Discussion.tex [28
 
 
 
 
 ]
 Chapter 6.
-) [27] [28
+) [29] [30
 
 
 
@@ -2705,7 +2899,7 @@ l.97 \part{Appendix}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[29] [30] (./Chapters/Chapter0A.tex
+[31] [32] (./Chapters/Chapter0A.tex
 Appendix A.
 
 Overfull \hbox (0.973pt too wide) in paragraph at lines 7--7
@@ -2727,16 +2921,16 @@ Overfull \hbox (16.78175pt too wide) in paragraph at lines 15--15
 my, scelerisque
  []
 
-[31
+[33
 
 
 
-]) [32] (./FrontBackMatter/Bibliography.tex
+]) [34] (./FrontBackMatter/Bibliography.tex
 No file main.bbl.
 ) (./FrontBackMatter/Colophon.tex
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 9.30756pt on input line 13.
-) [33
+) [35
 
 
 
@@ -2745,11 +2939,11 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 
 
 
-] [34
+] [36
 
 
 
-] (./FrontBackMatter/Declaration.tex) [35
+] (./FrontBackMatter/Declaration.tex) [37
 
 
 
@@ -2766,16 +2960,11 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
 (./Chapters/Implementation.aux) (./Chapters/Analysis.aux)
 (./Chapters/Discussion.aux) (./Chapters/Chapter0A.aux)
 (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./FrontBackMatter/Declaration.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 23631B9112614631E676E43BCF9894E7;2703.
+(rerunfilecheck)             Checksum: 60E6F0A00EC0D6CCE8DDA75066E736CE;3063.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2787,15 +2976,15 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
  )
 
 Here is how much of LuaTeX's memory you used:
- 28663 strings out of 493803
+ 28710 strings out of 493803
  156355,794899 words of node,token memory allocated
- 1438 words of node memory still in use:
-   21 hlist, 20 vlist, 9 rule, 44 glue, 2 kern, 15 penalty, 20 glyph, 107 glue_s
-pec, 3 write, 8 local_par, 14 pdf_colorstack nodes
-   avail lists: 1:6,2:36,3:583,4:2763,5:3411,6:3831,7:2169,8:43,9:3678,10:307
- 30326 multiletter control sequences out of 65536+600000
+ 1268 words of node memory still in use:
+   17 hlist, 16 vlist, 7 rule, 34 glue, 2 kern, 11 penalty, 18 glyph, 105 glue_s
+pec, 3 write, 6 local_par, 10 pdf_colorstack nodes
+   avail lists: 1:7,2:42,3:590,4:2776,5:3411,6:3835,7:2171,8:47,9:3686,10:307
+ 30348 multiletter control sequences out of 65536+600000
  199 fonts using 7825275 bytes
- 82i,14n,77p,1264b,2016s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 82i,14n,77p,1530b,2016s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/f
@@ -2807,10 +2996,10 @@ lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij
 hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (47 pages, 234364 bytes).
+Output written on main.pdf (49 pages, 434478 bytes).
 
-PDF statistics: 589 PDF objects out of 1000 (max. 8388607)
- 521 compressed objects within 6 object streams
- 189 named destinations out of 1000 (max. 131072)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 642 PDF objects out of 1000 (max. 8388607)
+ 566 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 131072)
+ 424 words of extra memory for PDF output out of 10000 (max. 10000000)
 
