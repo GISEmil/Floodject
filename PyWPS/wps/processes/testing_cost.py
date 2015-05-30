@@ -47,7 +47,7 @@ class Flooding(WPSProcess):
         ##
         # Process Initialization
         WPSProcess.__init__(self,
-            identifier = "flooding",
+            identifier = "flooding_cost",
             title = "Flooding",
             abstract = "This process is used to flood a DEM with water",
             version = "1.0",
@@ -85,6 +85,20 @@ class Flooding(WPSProcess):
         ocean_point = 'ocean_point'
         self.cmd(['v.in.ogr','dsn=%s' % self.vectorin.getValue(), 'type=point','output=%s' % ocean_point,'-o'])
 
+        # Read rasterarea
+
+        #raster_area = 'raster_area'
+        #raster_area_pol = 'raster_area_pol'
+        #simplify raster
+        #self.cmd(['r.mapcalc', '%s = if(%s <=0, 0, 0)' % (raster_area, original)])
+        #self.cmd(['r.to.vect','input=%s' % raster_area,'feature=area','output=%s' % raster_area_pol])
+        #self.cmd(['v.to.db', 'map=%s' % raster_area_pol, 'option=area','columns=value'])
+
+        #number = self.cmd(["v.db.select", '-c', 'map=%s' % raster_area_pol, 'col=value'])
+        #logging.debug("%s" % number)
+        #pp_criteria = (float(number)/1000000)* 0.01
+        pp_criteria = 0.02
+
         ##############################
         ##                          ##
         ## Flood the DEM with water ##
@@ -107,31 +121,44 @@ class Flooding(WPSProcess):
             ocean_vector = 'ocean_vector_' + str(actual_loop)
             self.cmd(['r.to.vect','input=%s' % expressionout,'feature=area','output=%s' % ocean_vector])
 
-            #Select only continuous ocean connected to the ocean point
-            selected_ocean = 'selected_ocean_' + str(actual_loop)
-            self.cmd(['v.select', 'ainput=%s' % ocean_vector,'binput=%s' % ocean_point,'output=%s' % selected_ocean,'operator=intersects'])
+            # Find the reachable flood cells
+            costout = 'costout_' + str(actual_loop)
+            self.cmd(['r.cost', 'input=%s' % expressionout, 'output=%s' % costout,  'start_points=%s' % ocean_point])
 
-            #Convert selected ocean to raster
-            selected_ocean_rast = 'selected_ocean_rast_' + str(actual_loop) # ??
-            intermediate = 'intermediate_' + str(actual_loop)
-            self.cmd(['v.to.rast', 'input=%s' % selected_ocean, 'output=%s' % intermediate, 'use=val', 'value=0'])
+            #Assing the flood level to the flood extent
+            selected_ocean_rast = 'selected_ocean_rast_' + str(actual_loop)
+            self.cmd(['r.mapcalc', '%s = if( %s >= 0, (%s * %s), null())' % (selected_ocean_rast, costout, interval_input, actual_loop)])
 
-            #Do something ??
-            self.cmd(['r.mapcalc', '%s = if( %s == 0, (%s * %s), null())' % (selected_ocean_rast, intermediate, interval_input, actual_loop)])
+            #Convert all water to vector
+            ocean_vector = 'ocean_vector_' + str(actual_loop)
+            self.cmd(['r.to.vect','input=%s' % selected_ocean_rast,'feature=area','output=%s' % ocean_vector])
 
-	        #Export the vectors and rasters
-            outputnames_rast.append(selected_ocean_rast)
+            #Calculate ocean polygon area
 
-            outputnames_vect.append(selected_ocean)
+            self.cmd(['v.to.db', 'map=%s' % ocean_vector, 'option=area','columns=value'])
 
-            self.cmd(['v.to.db', 'map=%s' % selected_ocean, 'option=area','columns=value'])
+            area_select = self.cmd(["v.db.select", '-c', 'map=%s' % ocean_vector, 'col=value'])
 
-            area = self.cmd(["v.db.select", '-c', 'map=%s' % selected_ocean, 'col=value'])
+            #reading all polygon area
+            area_select_split=area_select.split('\n')
+
+            polygon_area=[]
+
+            for i in area_select_split:
+            	if not i =='':
+            	       polygon_area.append(float(i))
+
+            # Summerizing all polygon area
+            area = sum(polygon_area)
+
+
+            #Collection of all flooded area
+            areaList.append(float(area)/1000000)
 
             old_loop = actual_loop -1
 
 
-            if float(areaList[actual_loop]) - float(areaList[old_loop]) > 0.02:
+            if float(areaList[actual_loop]) - float(areaList[old_loop]) > pp_criteria:
 
                 firstrun = firstrun + 1
 
@@ -139,7 +166,7 @@ class Flooding(WPSProcess):
 
                 pourpoint_vect = 'pourpoint_vect_' + str(actual_loop)
 
-                self.cmd(['v.overlay', 'ainput=%s' % selected_ocean, 'binput=old_flood', 'operator=not', 'output=subtructed_flood'])
+                self.cmd(['v.overlay', 'ainput=%s' % ocean_vector, 'binput=old_flood', 'operator=not', 'output=subtructed_flood'])
 
                 self.cmd(['v.to.db', 'map=subtructed_flood', 'option=area', 'columns=a_value'])
 
@@ -172,7 +199,7 @@ class Flooding(WPSProcess):
 
             self.cmd(['g.remove', '-f', 'rast=old_flood_rast'])
 
-            self.cmd(['g.copy', 'vect=%s,%s' % (selected_ocean, 'old_flood')])
+            self.cmd(['g.copy', 'vect=%s,%s' % (ocean_vector, 'old_flood')])
 
             self.cmd(['g.copy', 'rast=%s,%s' % (selected_ocean_rast, 'old_flood_rast')])
 
@@ -182,7 +209,7 @@ class Flooding(WPSProcess):
         self.cmd(['r.mapcalc', '%s = %s - %s' % ('WaterDepth', selected_ocean_rast, original)])
 
         outputImage = "outputimage.jpg"
-        self.cmd(['r.out.gdal','format=JPEG','input=%s' % intermediate, 'output=%s' % outputImage])
+        self.cmd(['r.out.gdal','format=JPEG','input=%s' % selected_ocean_rast, 'output=%s' % outputImage])
 
         outputImage1 = "outputimage1.tif"
         self.cmd(['r.out.gdal','format=GTiff','input=%s' % 'WaterDepth', 'output=%s' % outputImage1])

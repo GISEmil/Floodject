@@ -53,9 +53,6 @@ def upload_file():
 			maxx = gt[0] + width*gt[1] + height*gt[2]
 			maxy = gt[3]
 
-			# We need minx,miny & maxx, maxy
-			southwest = str(minx) + "," + str(miny)
-			northeast = str(maxx) + "," + str(maxy)
 			return redirect(url_for('upload_file',filename=filename,minx=minx,miny=miny,maxx=maxx,maxy=maxy))
 
 	return render_template('upload.html')

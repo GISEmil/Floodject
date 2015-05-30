@@ -1,0 +1,176 @@
+% Chapter 1
+
+\chapter{Implementation} % Chapter title
+
+\label{ch:theory} % For referencing the chapter elsewhere, use \autoref{ch:introduction} 
+
+%----------------------------------------------------------------------------------------
+
+As mentioned previously the work was divided into a series of phases. It is important to note that the majority of the development was performed on machines running Ubuntu. The syntax and explanations will therefore reflect this fact.
+
+\section{Phase 1}
+This phase involved setting up all the necessary preliminary settings, such as our local and server-side GRASS installations, the needed environment variables, and setting up a server. \\
+
+\textsc{\textit{Setting up a local scripting environment}} \\
+
+Instead of working directly on the server, and working with PyWPS we decided to create a local working environment using GRASS with Python, on our own machines. This was done to simplify the workflow and make sure that  we didn't have to update the server whenever changes were made to the code. \\
+The syntax for running GRASS through Python and GRASS through the WPS differ, so it would have to be changed accordingly when porting it online, but this would allow us to get started immediately. \\
+When working with GRASS, but not explicitly starting a GRASS session, a variety of environment variables have to be set. 
+
+\begin{itemize}
+\item \textsc{GISBASE}: This points to the top level directory of the GRASS installation
+\item \textsc{GISDBASE}: GRASS' database location, usually initiated as grassdata.
+\item \textsc{PATH}: The path location of GRASS, usually includes /script/ and /bin/.
+\end{itemize} \\
+
+These settings are set up in the header of the project, and for our set up look like this:
+
+\begin{lstlisting}[language=Python]
+gisbase = '/usr/lib/grass70'
+os.environ['GISBASE'] = gisbase
+os.environ['PATH'] += os.pathsep + os.path.join(gisbase, 'extrabin')
+os.environ['GISDBASE'] = gisdb
+\end{lstlisting}
+
+When running the python script, it now initiates the GRASS environmental variables that are necessary for importing and using GRASS' functions.\\
+
+\textsc{\textit{Setting up the server}} \\
+
+Before being able to set up PyWPS, it is necessary to set up a server, capable of serving the processing service.  
+As PyWPS was created with Linux in mind, and because the creators even specify that it works better on a Linux-based operating system, we wanted to make sure that the server was running this as well. Today there are a variety of different hosting services available, but for this project it was decided to use Amazon Web Services (AWS).\\
+
+The main reason for running the server on this service is because several members of the group have had previous experience with launching minor applications on this platform, but also because it is possible to launch a so-called micro instance, which is free for the first year. The free-tier provides a very basic server, with little processing power and hard drive space – but for a proof-of-concept project such as this, it would suffice. \\
+Initiating a server on Amazon's Elastic Compute Cloud (EC2) is easy, and only takes a couple of minutes. As several members of the group were already using the Linux-based operating system Ubuntu we decided to base the server this.\\
+Connecting to your server is done using SSL, and when using Ubuntu, can be performed with the terminal. The only situation where this would not be so, is when having to upload specific files, for this a FTP client software is used.
+
+\textsc{\textit{Setting up Apache}}\\
+
+Every instance set up with Amazon, is provided with an IP address which can be used to visit the server using a browser. The Ubuntu image installed on the server did not contain a pre-installed web server, so it was necessary to install and configure this first.
+Installing software on a machine running Linux is, and Ubuntu uses the package manager aptitude. Using the following terminal command, the web server is installed:
+
+\begin{lstlisting}[language=Python]
+sudo apt-get install apache2 
+\end{lstlisting}
+
+Now when visiting the IP address provided by Amazon, a standard Apache welcome-page greets the visitor.
+The web server will serve the files that are placed in the following folder:
+
+\begin{lstlisting}
+/var/www/html/
+\end{lstlisting}
+
+So this is where most of our server-side changes would occur during the development of our application.\\
+
+\textsc{\textit{Installing GRASS}}\\
+
+The next step is setting up GRASS on the server. Version 6.4 was installed by using the following command:
+
+\begin{lstlisting}
+Sudo apt-get install grass
+\end{lstlisting}
+
+GRASS depends on a folder with the name grassdata on the computer's home directory. This functions as a database, and where it's input and output will be stored. Instead of setting this up from scratch, our local grassdata folders were copied straight to the server's home drive at
+
+\begin{lstlisting} 
+/home/ubuntu/
+\end{lstlisting}\\
+
+\textsc{\textit{Installing PyWPS}}\\
+
+Now that Apache and GRASS have been installed, it was time to install the backbone of our entire project, PyWPS.
+A thorough walkthrough of the installation of PyWPS can be found on our Github, so installation of PyWPS was performed into the folder of our webserver at the following directory:
+
+\begin{lstlisting}
+/var/www/html/pywps/
+\end{lstlisting}\\
+
+\subsection{Problems encountered}\\
+
+\textsc{\textit{Setting up GRASS scripting to run on a Windows machine}}\\
+
+It turned out that setting up the GRASS environment on a windows machine, was not very easy. This is because the GDAL and OGR bindings depend on a variety of specially created bindings when using them in a Windows environment, so this can cause trouble if you do not download the right ones.\\
+
+\textsc{\textit{Lack of documentation}}\\
+
+As the installation instructions of the PyWPS was not very well documented, and because a wide variety of settings have to be set correctly during installation, it was necessary to reinstall the server several times. This was both time consuming and frustrating, but the steps to install the service have now been documented greatly on our Github, so that hopefully someone else can now do it faster then we were possible at first. 
+\textsc{\textit{GRASS64 vs GRASS7}}\\
+
+We actually started by installing the newest version of GRASS, GRASS7. It turned out that there were some  incompatibility issues when using PyWPS with GRASS7. This meant that we had to downgrade the server-side GRASS package to GRASS64.\\
+
+\section{Phase 2}
+The model of this project is based on our previous project mentioned earlier. Since that project was developed in an ArcGIS environment, each functionality had to be converted to GRASS python modules. Some of the modules are not directly transferable between GRASS and ArcGIS, therefore we needed to find the best fitting functions that would also keep processing time at an acceptable level.\\
+
+IMAGE\\
+\\
+
+As seen on Figure XXX, only one external data source is required, a DEM. According to the LOCATION used within GRASS, every imported DEM has to have a WGS 84 geographical projection. An important factor of the model, is that all web-mapping operations are done on Open Street Map, which uses a slight variant of WGS 84 as well. As is mentioned in theory, GRASS uses GDAL for importing several type of raster maps and OGR for importing vector datasets. Taking the advantage of these modules it is possible for the to use any raster, as long as it is project into WGS 84. Another input of the model is the maximum flood level and the water rise increments of flood. These numbers define the amount of loops necessary before the flooding is complete.\\
+To flood the DEM, the model extracts those areas that are below current level of the iterator (and therefore flood). The first iteration will always be the sea level, where the actual flood level is 0. This extracts every cell with a value of zero. \\
+This method will extract ALL areas that have a value of 0, which usually will generate several disconnected clumps of cells, located in different areas of the DEM. As our model has to generate a flood from one specific area (so as not to simulate that all streams and lakes in an area are filling with water) the model will require that the user interacts further. The user needs to choose from which source he/she would like flood the DEM from. The pre-selected point has a major role in this part of the model, as the flooding will be based on it. \\
+
+After extracting every cell that is below the actual flood level, the process runs a cost distance analysis using the point as a source. The returned raster shows only one continuous area, for that level of the flood. The output cost raster is then converted to a vector with the value of the flood level. Each iteration extracts the land from the raster which is below the current flood level and select the continuous area depicting the actual flood on the land from the preselected source. 
+
+The process is illustrated on Figure XXX. On the left image of the figure, the algorithm identifies every possible cell that is under the current water level, indicated by the pink color. After the r.cost module has finished, the process returns a layer indicating which cells are reachable, as seen on the image to the right.\\
+\\
+IMAGE\\
+\\
+Every complex module from the earlier project has been taken out, and it has been simplified by using basic geoprocessing tools such as rasterizing, vectorizing, raster calculator and cost analysis. After the python - GRASS conversion was done, additional functionality was created, which will be discussed in Phase 5.
+
+\section{Phase 3}
+This section will focus on the back-end of our web server. We begin by initializing Flask on our server. It is important to keep in mind that we earlier installed the Apache web server. After extensive research online, several different sources suggested a universal process on how to install Flask on an Apache 2 server. To go on, before actually installing Flask, we need to initialize mod\_wsgi. Mod\_wsgi is a tool that specializes in serving python applications from Apache servers. Installing mod\_wsgi is quite easy, and only takes a few lines of command line scripting (figure XXX).\\
+
+\begin{lstlisting}
+sudo apt-get install apache2 apache2-base apache2-mpm-prefork apache2-utils libexpat1 -ssl-cert
+sudo apt-get install libapache2-mod-wsgi python-pip git
+pip install flask
+\end{lstlisting}\\
+
+Following this installation we need to create an application.wsgi file. This is basically a file that contains code that initializes the application and comes with the .wsgi file extension. 
+Now that Flask and prerequisites have been set up, it is time to look at what the backbone of the application looks like. At first, it is important to mention that the initial setup of the application will use Flask. To start with, and keeping in mind the way Flask actually works, we need a main Flask script that can initialize the application and connect various functions with its main core. In addition, that main script will also be connected to various html pages depending on where the user wants to navigate in our application.
+The first action we took was to change the default path of our application in the server. Instead of using \textit{/var/www/html}, we started using \textit{/var/www/html/FlaskApp/FlaskApp}. This path will be referred to as the root url. After doing that, we create the script that will perform the functionalities of the application. That script is named \_\_init\_\_.py. Using Flask allows us to connect to various html scripts by using  only one main script. Depending on the URL of the page the user wants to get to, the corresponding HTML script is called and displayed on the user's screen. For example, as shown below (figure XXX), if the user visits our homepage, which is set by the \textit{\@app.route()}, then the \textit{'index.html'} will be initialized and displayed on his screen.\\
+
+\begin{lstlisting}
+@app.route('/')
+def hello_world():
+	return render_template('index.html')
+\end{lstlisting}
+
+The first action the user must perform in order to begin using the application is to upload a DEM. When the user clicks on the FLOOD button on our starting page, they get redirected to the root url/upload  section of the application. The way that section is working is that it expects a file to be posted. When that happens, it saves it to a pre-designated folder on the server. Right after that, we create a copy of the uploaded file and convert it from .tiff to .png. The reason behind that conversion is that we need to display the uploaded elevation model on a map for the user to see, which is vital to the next steps of the application. In order to be able to overlay an object on top of a map using leaflet, then that object has to be of .png or .jpeg format. All the aforementioned functions are included in the script below.\\
+
+\begin{lstlisting}
+def upload_file():
+
+	if request.method == 'POST':
+		file = request.files['datafile']
+		if file:
+			filename = secure_filename(file.filename)
+			file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+			src_ds = gdal.Open( os.path.join(app.config['UPLOAD_FOLDER'], filename) )
+			formatimage = "PNG"
+			driver = gdal.GetDriverByName( formatimage )
+			fileName, fileExtension = os.path.splitext(filename)
+			finalloca = '/var/www/html/FlaskApp/FlaskApp/static/images/' + str(fileName) + '.png'
+			dst_ds = driver.CreateCopy( finalloca, src_ds, 0)
+\end{lstlisting}
+
+When the upload process is complete, a function is initialized allowing us to display that image on the map. Since we are using leaflet as a javascript library, in order to be able to display an image, we need to provide the function with the coordinates of the South-West and North-East corners of the image's display boundaries. To acquire this piece of information, we use gdal. The way we obtain the required coordinates are show below.\\
+
+\begin{lstlisting}
+			width = ds.RasterXSize
+			height = ds.RasterYSize
+			gt = ds.GetGeoTransform()
+			minx = gt[0]
+			miny = gt[3] + width*gt[4] +height*gt[5]
+			maxx = gt[0] + width*gt[1] + height*gt[2]
+			maxy = gt[3]
+
+			return redirect(url_for('upload_file',filename=filename,minx=minx,miny=miny,maxx=maxx,maxy=maxy))
+\end{lstlisting}\\
+
+The final step we need to take before we are able to show the uploaded image, is to pass coordinates back to the html document that is responsible for showing that image so that a javascript function can get and display the image properly. That is achieved by the final line of the script on the image above.
+
+\subsection{Problems encountered}
+Having presented a viable option on how our web-service is structured and what tools we used to achieve successful functionalities, it is time to examine what other alternatives we have explored that did not result in acceptable results.
+As presented above, we use Flask to create the back-end of our application. This decision was not our initial one, since none of the group members  had any particular experience using this framework. That being said, it normally would seem a rather unorthodox approach to start using a tool that no one is familiar with at the middle of our project development, since that is when we introduced Flask to the project. The truth is that our first option was to use an HTML and JavaScript core and PHP to upload the user provided input to the application. To be more specific, we would have an HTML document that allowed the user to upload a file and use PHP to convert that file from .tiff to .png. Then that PHP script would call a python script that calculated the bounding box coordinates of the image and then pass them on to a second HTML document, to be used by a JavaScript function that overlays the image on the map. The reason we considered using that approach is that we were more accustomed to using PHP to perform specific functions such as manipulating and uploading a file. On the other hand, this approach is clearly much more complicated than the one we finally used. Especially, if we keep in mind on how many different programming languages are included in that approach and how many different scripts we need to connect in order for it to work.  In addition, the transition from PHP to python was never achieved up to the point where we decided to change directions.
+What we managed by using Flask instead, was to exclude the use of PHP and thus reduce the complexity of the script by a great deal. Firstly because we do not have to worry about creating extra connections with various other scripts. In fact Flask, and the way it is designed to operate, simplified our development considerably. It allowed to have a central script of python that inherently interconnected with all our HTML scripts and supported other python functions at the same time.
+
+%----------------------------------------------------------------------------------------

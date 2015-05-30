@@ -6,24 +6,170 @@
 
 %----------------------------------------------------------------------------------------
 
+\section{GRASS}
+
+GRASS (Geographical Resources Analysis Support System) is an open source GIS desktop application capable of handling spatial data in both vector and raster formats. 
+GRASS adopted a GNU GPL (General Public License, see http://www.gnu.org) in 1999, which allowed users and developers to have free access to the GRASS source code, resulting in a library of more than 350 freely available modules capable of management, processing, analysis and visualization of geospatial data.\\
+Because Open Source GIS provides full access to its internal structure and algorithms, unlike proprietary GIS software, users can learn from existing modules and create their own GIS modules based on the preexisting ones. GRASS libraries can also be accessed through the built-in API (Application Programming Interface). This enables a more efficient integration of new functionalities into the GRASS environment – Most GIS applications can be written in the Python, making it possible to automate work-flows.
+As mentioned earlier, GRASS contains around 350 modules, which can be accessed using GRASS' graphic interface. The three main module-groups are based on vector, raster, and imagery analysis.\\
+A grass project is located in GRASS' designated database folder grassdata (also known as GRASS' GISBASE). This is the directory where processed or imported data is stored and, unless otherwise designated, where most of the processing will occur. 
+A project in created in GRASS has to have both a LOCATION and a MAPSET.
+The most important of these is the LOCATION. This is where the critical information about the project, such as the projection of the data, is stored. 
+GRASS does not have reprojecting on-the-fly functionality – as ArcGIS or QGIS are capable of. Using the LOCATION folder properly is therefore necessary. 
+The MAPSET is a way of separating different projects, or phases of processes, and a LOCATION can contain several MAPSETS. 
+
+
+GRASS can be operated by a variety of ways. The most commonly used method is by accessing the modules through the GRASS GUI (Graphical User Interface), but it can also be achieved purely through scripting – such as with Python. GRASS is able to handle most of the vector and raster formats which are supported by GDAL (Geospatial Data Abstraction Library), such as GeoTIFF, ArcGRID, ERDAS, USGS SDTS DEM, etc. \\
+The way GRASS handles region and resolution settings differs from most other GIS software. Since different datasets can have different extents, it is possible to set the current processing region allowing the user to run a specific process on a subset of a raster or the location and not necessarily run a process on the entire image. 
+The lack of on-the-fly reprojection makes GRASS less user-friendly than other similar products. Furthermore it does not allow drag and drop import, and most functions must be invoked using the built-in GRASS commandline-like utilities.
+
+\subsection{Hydrology in GIS}
+
+The accurate depiction of hydrological movements and their responses to the land cover has been the objective of hydrological scientists for many decades. As advances in IT have progressed, the calculations and algorithms possible have become more sophisticated, accurate and faster. \\
+
+When investigating hydrological conditions, DEM (Digital Elevation Models) are used. Because of this, the results are dependent on the quality of the model being used. Most major GIS software have some built-in hydrology tools, capable of being incorporated into various workflows. To give an example of the application of hydrology in GRASS, this section will include a description of some of the main hydrology tools from GRASS' libraries.
+
+\subsubsection{Flow direction}
+Flow direction is a core hydrology tool. Flow direction makes it possible to determine which direction water will flow, when moving through a DEM. The computational algorithm can be created in a wide variety of ways, for instance GRASS' “r.terraflow” module has two options: 
+\begin{itemize}
+\item Multiple Flow Direction (MFD) 
+\end{itemize}
+or 
+\begin{itemize}
+\item Single Flow Direction (SFD)
+\end{itemize}
+ 
+Both of these algorithms are based on a so-called Moore-Neighborhood. This neighborhood involves the eight cells surrounding a specific cell on a raster. The basis of the flow direction is that the water flows to a cell with a lower value then the current one, but it is in this regard that MFD and SFD differ from each other. As can be seen from Figure XXX, the SFD method assigns a single flow direction to the lowest downslope neighboring cell, whilst MFD assigns flow direction to all downslope neighboring cell. \\
+
+Both method has the criteria, that the flow direction cannot contribute to cells with the same height as the central cell or cells which have no downslope neighbors.
+Pits or so called depressions or sinks, are areas which are surrounded by higher elevation values. It is also an internal drainage area, although some of the time it is a real natural feature such as a karst (Osmar et al., 2013), but usually it is an imperfection of the digital elevation model.  The GRASS Terraflow module fills the sinks and then assign a Flow Direction on the filled terrain, thereby the flow direction will not be ruined by a DEM full of depressions. 
+
+\subsubsection{Flow accumulation}
+Another important hydrology tool is Flow Accumulation. This tool is capable of calculating the stream conditions of the terrain, such as the accumulation of water. As input, the module needs a raster indicating flow directions. It should be noted that flow accumulation is highly dependent on the previous described phenomenas and computational methods. For example MFD would provide a significantly different flow accumulation than SFD, as MFD provides more accumulation possibilities. Also, a depressionless DEM will have a different accumulation than one with depressions. Analyzing the direction of the flow can give a limited insight about cell behaviors, however flow accumulation allows the investigation of main stream lines, and how they contribute to the stream system, as well as providing the an output of stream lines.
+
+\subsubsection{Watershed}
+A Watershed is an area where all streams end up in a common outlet. This can also be called a basin or a catchment area, however in this paper it will be referred to as watershed.
+Watershed is a relative term, because it cannot be identified by one factor. Since watershed contains streams, where the main stream is the largest stream within the watershed, thus the smaller stream has their on watershed, which is a part of the large watershed and so on. The watershed(r.watershed) module has its basin output which is created by the output of the flow direction and the “intersection “ of the stream lines. The module output
+
+%----------------------------------------------------------------------------------------
+
+\section{Python}\label{sec:issues}
+
+Python is a programming language used extensively within the geospatial world. A lot of GIS packages are either created with Python, or have built-in functionality to inferface with Python. The actual reason for this is generally not known, but it might be because Python is a language that:
+\begin{itemize}
+\item emphasizes code readability.
+\item is compatible with all major operating systems, and usually comes pre-packaged with these. 
+\item Is completely open source. 
+\item is highly extensible. 
+\end{itemize}
+Being extensible, means that it does not come prepackaged with all functionality built in, but expects the user to download / add necessary libraries as they are needed. 
+The most commonly used versions of Python are 2.7 and 3.x, which differ from each other for various reasons. The 2.7 release is a so-called legacy release, which means that it is not the worked-upon version, and wont see major updates. The 3.x is the newest version, and will be updated regularly. When working with “older” software, and libraries, it is most likely best to use version 2.7 as there will likely be compatibility issues when using a newer version of Python. ( https://wiki.python.org/moin/Python2orPython3 )
+Standard python syntax looks something like this:\\
+
+\begin{lstlisting}[language=Python]
+import random
+randomarray = [1,3,5,7,8]
+for element in randomarray:
+	print(element)
+\end{lstlisting}
+
+\section{GRASS}
+
+GRASS functions can be accessed and manipulated by using Python. Python can easily be used within the main GRASS shell, but it is also possible to create Python scripts that can call GRASS functionality without explicitly starting the GRASS software.
+Opening, and chaining, functions within GRASS can become tedious, and if wanting to run the same process a lot of times, it can be relevant to setup a workflow with a Python script.
+The functions and modules of GRASS, when used outside of an actual GRASS session, only work when a series of specific environment variables have been set. 
+These are
+\begin{itemize}
+\item GISBASE needs to be set to the top-level directory of the GRASS installation. 
+\item GISRC needs to contain the absolute path to a file containing settings for GISDBASE, LOCATION and MAPSET 
+\item PATH needs to include \$GISBASE/bin and \$GISBASE/scripts. (DOCUMENTATION)
+\end{itemize}
+
+An example of the syntax of GRASS functions being accessed externally through Python:
+
+\begin{lstlisting}[language=Python]
+import grass.script as gscript
+import grass.script.setup as gsetup
+gscript.run_command(“r.in.gdal”,flags=””,input=”input.tif”,output=”output”
+\end{lstlisting}
+
+
+\section{PyWPS}
+
+A Web Processing Service (WPS) is a standard defined by the Open Geospatial Consortium which describes how inputs and outputs (also called requests and responses) for geospatial processing services should be standardized. 
+WPS Version 1.0 was released in June 2007, and WPS version version 2.0 was approved and released in January 2015. http://www.opengeospatial.org/standards/wps \\
+WPS defines how a client can request the a process is executed, and how the output is supposed to be handled. Furthermore, it defines the setup of the interface that enables publishing of geospatial processes, and the user's access to those processes. Through this implementation, it should become easier for people who want to publish custom geospatial functions on the internet, to do it in a similar and organized way. \\
+
+One implementation of these standards is PyWPS. This service connects the web browser with a variety of tools installed on a server, such as GRASS GIS, GDAL, PROJ and R. PyWPS does not process the data by it self but  it can work with GIS software such as GRASS, enabling the creation of GIS-based analytical web services, based on Python. 
+The WPS enables a user to Describe a Process, Execute a Process and to Get Capabilities of the server, and the instances available. Similar to other OGC Web Services (such as WMS, WFS or WCS), WPS has three basic request types. Namely GetCapabilities, DescribeProcess and Execute.
+When requesting data from the server, the URL you send to the server, defines what kind of request you have made. Example strings for the three processes mentioned above:\\
+\begin{itemize}
+\item http://webaddress/pywps/?service=WPS&request=GetCapablities 
+\item http://webaddress/pywps/?service=WPS&version=1.0.0&request=DescribeProcess&identifier=all
+\item http://webaddress/pywps/?service=WPS&version=1.0.0&request=Execute&identifier=<PROCESS>&datainputs=[<INPUT1>=<VALUE>;<INPUT2>=<VALUE>]
+\end{itemize}
+
+When an Execute request has been posted to the WPS, it will start processing on the server, and when it is done outputs will be provided encoded in a standardized XML document. 
+A PyWPS service must contain the following elements: 
+\begin{itemize}
+\item A class defining the initation of a WPS Process:
+class Flooding(WPSProcess):
+\item A function called __init__:
+def __init__(self):
+\item A function called execute:
+def execute(self):
+\end{itemize} \\
+
+The init function contains a variety of settings relevant to the process being executed. Furthermore the inputs and outputs get defined, whilst the execute contains the code that is to be run. 
+The PyWPS syntax for calling GRASS differs somewhat from when interfacing purely with Python. An example of GRASS accessed with PyWPS is:
+
+\begin{lstlisting}[language=Python]
+self.cmd(['r.in.gdal','input=%s' % self.rasterin.getValue(),'output=%s' % original,'-o'])
+\end{lstlisting}
+
+\section{Flask}
+
+Flask is a web application framework written in Python. The framework is based on a so-called Web Server Gateway Interface (WSGI) called Werkzeug and a website templating engine called Jinja2. The framework is built to be as simple as possible, and only includes the strict necessities- further functionality is expected to be import from third-party libraries. \\
+Several similar frameworks exist, but they either become very advanced, or very specialized. The Flask framework has a simple setup, and is easy to use. 
+https://scholar.google.com/scholar?hl=fr&q=flask+microframework&btnG=&lr= \\
+By using Flask it is possible to quickly create a dynamic web environment, by writing it in a combination of Python and HTML. 
+A simple application using Flask looks something like the following: 
+
+\begin{lstlisting}[language=Python]
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+\end{lstlisting}
+
+A website written in Flask consists of a variety of templates that change content depending on where on a site a user is, or wishes to visit. This is done by defining some general templates, and some blocks of content that get swapped out. 
 
 %----------------------------------------------------------------------------------------
 
 \section{Open Source GIS}
 
-The Open Source Definition  is clearly set by the Open Source Initiative (OSI) in order to define which licenses can be defined as "Open Source". In addition to that, OSI provides certification to these licenses to indicate that they follow the open-source principles and comply with the Open Source definition. This definition states the following:
-The license should allow the sale or gifting of the software as a part of software distribution along with programs from several different sources. For such sale no royalty or monetary compensation should be required. (''The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale''.)
-The source code of the software should be included in the software and it must be distributed freely along with the compiled form. In the case where the source code is not distributed with the software, an easily reached alternative must be provided, at most with a minimum reproduction cost.
-Modifications and derived works must be allowed and distributes as freely as the software itself.
-Modification of the source code can be restricted by the license only in the case that the license allows "patch files" distribution along with the source code for program modification. Software built from modified source code must be allowed to be distributed. Works derived from the source code may be required to have a different name or version number.
-Discrimination against persons or groups is not allowed
-All fields of endeavor must be allowed to use the software, unrestricted by its license.
+The definition of Open Source is clearly set by the Open Source Initiative (OSI), making it possible to clearly define define which licenses actually are "Open Source". In addition to this, the OSI provides certification to these licenses to indicate that they follow the open-source principles and comply with the Open Source definition. This definition states the following:
+\begin{itemize}
+
+\item The license should allow the sale or gifting of the software as a part of software distribution along with programs from several different sources. For such sale no royalty or monetary compensation should be required. ("The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale".)
+\item The source code of the software should be included in the software and it must be distributed freely along with the compiled form. In the case where the source code is not distributed with the software, an easily reached alternative must be provided, at most with a minimum reproduction cost.
+\item Modifications and derived works must be allowed and distributes as freely as the software itself.
+\item Modification of the source code can be restricted by the license only in the case that the license allows "patch files" distribution along with the source code for program modification. Software built from modified source code must be allowed to be distributed. \item Works derived from the source code may be required to have a different name or version number.
+\item Discrimination against persons or groups is not allowed
+\item All fields of endeavor must be allowed to use the software, unrestricted by its license.
 In the case where the program is redistributed, the same rights must apply without the execution of an additional license from those parties.
-In the case where the program is part of a specific software distribution, parties to whom the program is redistributed should have the same rights with those to  whom the original program is distributed.
-Restrictions on other software, distributed with the licensed software must not be placed under restrictions.
-Access to the license must not be dependable on any individual technology pr interface
-The main reason open software exists is because the US Government, during the 1970ies and 1980ies implemented changes in the patent laws that allowed software and hardware companies to un-bundle software and hardware  and the source code for software was under restricted access. For the reasons stated above the Free Software Foundation (FSF) was created (Grassmuck, 2004).
-Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. The table below can provide with some insight on such categorization (table XXX). 
+\item In the case where the program is part of a specific software distribution, parties to whom the program is redistributed should have the same rights with those to  whom the original program is distributed.
+\item Restrictions on other software, distributed with the licensed software must not be placed under restrictions.
+\item Access to the license must not be dependable on any individual technology pr interface
+The main reason open software exists is because the US Government, during the 1970ies and 1980ies implemented changes in the patent laws that allowed software and hardware companies to unbundle software and hardware and the source code for software was under restricted access. For the reasons stated above the Free Software Foundation (FSF) was created (Grassmuck, 2004).
+\end{itemize}
+
+Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. The table below can provide with some insight on such categorization (table XXX).  
 
 Table 1: Categorization of GIS software. (Steiniger \& Hunter, 2012)
 Some of the most common desktop GIS Software are the following (table XXX).
@@ -46,99 +192,3 @@ Ames, Michaelis \& Dunsford, 2007
 gvSIG
 Anguix \& Diaz, 2008
 Table 2: Mature desktop GIS software (Steiniger \& Hunter, 2012).
-
-
-%----------------------------------------------------------------------------------------
-
-\section{GRASS}\label{sec:options}
-\subsection*{Functions}
-
-
-%----------------------------------------------------------------------------------------
-
-\section{Hydrology in GIS}\label{sec:custom}
-
-\subsection*{Water rise}
-
-\subsection*{Choke point / pour point}
-
-\subsection*{Watershed}
-
-\subsection*{MCDA}
-
-%----------------------------------------------------------------------------------------
-
-\section{Python}\label{sec:issues}
-
-Python is a high level low abstraction level programming language. Python emphasizes code readability. Python is compatible with all major operating systems, and usually comes pre-packaged with these. 
-All python releases are open source. 
-As a language, Python is highly extensible, which means that instead of coming prepackaged with all functionality built in, it has a certain amount built in, and expects the user to download / add necessary libraries as needed. 
-The most commonly used versions of Python are 2.7 and 3.x. These differ for various
-reasons. The 2.7 release is a so-called legacy release, which means that it is not the worked-upon version, and wont see major updates. The 3.x is the newest version, and will be updated regularly. When working with ''older'' software, and libraries, it is most likely best to use version 2.7 as there will likely be compatibility issues when using a newer version of Python.
-Python has become a very popular programming language, and as such the possibility of using it with a variety of software packages has expanded greatly. 
-Standard python syntax looks something like this:
-'' CODE SNIPPET ''
-
-\subsection*{GRASS}
-
-GRASS functions can be used and manipulated by python scripting. Python can easily be used within the main GRASS shell, but it is also possible to create Python scripts that can call GRASS functionality from outside the main shell.
-
-The functions and modules of GRASS, when used outside of an actual GRASS thingy, only work when a series of specific environment variables have been set. 
-
-GRASS session word should be used.
-
-\“ CODE SNIPPET \”
-
-\subsection*{PyWPS}
-
-A Web Processing Service (WPS) is a standard defined by the Open Geospatial Consortium defining how inputs and outputs (also called requests and responses) for geospatial processing services should be standardized. 
-
-WPS Version 1.0 was released in June 2007, and WPS version version 2.0 was approved and released in January 2015.
-
-The idea behind the standard is to standardize how inputs and outputs for geospatial processing services. It defines how a client can request the execution of a process, and how the output from the process is handled. Furthermore, it defines the interface that facilitates the publishing of geospatial processes and clients’ discovery of and binding to those processes. The data required by the WPS can be delivered across a network or they can be available at the server.
-
-In short, this should make it easier for people who want to publish custom geospatial calculations on the internet, using modern standards. 
-
-PyWPS connects the Web Browser, Desktop GIS, command line tools and working tool installed on the server. As working tool, GRASS GIS, GDAL, PROJ, R and other programs can be used.
-
-PyWPS does not process the data by it self.  PyWPS and GRASS can work together, but the setup has to initialize the above-mentioned variables throught some configurations set. 
-
-When requesting data from the server, the URL you send to the server, defines what kind of request you have made. 
-The WPS enables a user to Describe a Process, Execute a Process and to Get Capabilities of the server, and the instances available. Similar to other OGC Web Services (such as WMS, WFS or WCS), WPS has three basic request types. Namely GetCapabilities, DescribeProcess and Execute.
-
-Example strings for the three processes mentioned above:
-
-http://webaddress/pywps/?service=WPS\&request=GetCapablities 
-
-http://webaddress/pywps/?service=WPS\&version=1.0.0\&request=DescribeProcess\&identifier=all
-
-http://webaddress/pywps/?service=WPS\&version=1.0.0\&request=Execute\&identifier=<PROCESS>\&datainputs=[<INPUT1>=<VALUE>;<INPUT2>=<VALUE>]
-
-When an Execute request has been posted to the WPS, it will start processing on the server, and when it is done outputs will be provided encoded in XML. 
-
-The WPS standard actually requires the possibility for a user to keep track of how far along their process is, but as it is PyWPS isn't set up to this yet. 
-
-“CODE SNIPPET”
-
-
-\subsection*{Flask}
-
-Flask is a web application framework, written in Python and based on Werkzeug and the Jinja2 template engine. The framework is built around the idea of being as simple as possible. As such it only includes the bare-bone necessities, and expects the user to import third-party libraries that provide common functions. 
-
-Basically, this means that it is possible to create a dynamic web environment, by writing it in a combination of Python and HTML. 
-
-“CODE SNIPPET”
-
-MINIMAL APPLICATION
-
-%----------------------------------------------------------------------------------------
-
-\section{Digital Elevation Models}
-
-%----------------------------------------------------------------------------------------
-
-\section{Web Development}
-\subsection*{Web technologies}
-\paragraph{GNU General Public License:} This program is free software; you can 
-
-\subsection*{Server side technologies}
