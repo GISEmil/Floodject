@@ -6,14 +6,24 @@
 
 %----------------------------------------------------------------------------------------
 
-As mentioned previously the work was divided into a series of phases. It is important to note that the majority of the development was performed on machines running Ubuntu. The syntax and explanations will therefore reflect this fact.
+As mentioned previously the work was divided into a series of phases. Before these commenced, we wanted to decide on which tools we were going to use for the application. 
+We knew we wanted to make an online application that would enable a user to model the flooding of a provided area.  
+To model the flood we decided on using GRASS at it is a powerful Open Source software, with a history being used in a variety of professional settings – such as the american army corps of engineers. Furthermore, the application allows easy access to it's core functions through a Python interface. 
+GRASS is natively supported by the WPS called PyWPS. Therefore this seemed like a natural choice for our project. 
+To gain the online application of the project, a web server would obviously be needed, and for this hosting of some sort, and we ended up using the Amazon Elastic Compute Cloud (or EC2) for this purpose.
+The majority of the development was performed on machines running Ubuntu, so the syntax and explanations will therefore reflect this fact.
+Now that we were set on the tools we were going to use, we were starting the actual implementation, we decided to sketch out how we expected the application would end up looking, and functioning.\\
+\\
+
+IMAGE OF THIS\\
+\\
+
+Now that we have a rough idea of how the project would be working, we could get started on implementing these ideas into an actual solution.
 
 \section{Phase 1}
 This phase involved setting up all the necessary preliminary settings, such as our local and server-side GRASS installations, the needed environment variables, and setting up a server. \\
 
-\textsc{\textit{Setting up a local scripting environment}} \\
-
-Instead of working directly on the server, and working with PyWPS we decided to create a local working environment using GRASS with Python, on our own machines. This was done to simplify the workflow and make sure that  we didn't have to update the server whenever changes were made to the code. \\
+\paragraph{Setting up a local scripting environment:} Instead of working directly on the server, and working with PyWPS we decided to create a local working environment using GRASS with Python, on our own machines. This was done to simplify the workflow and make sure that  we didn't have to update the server whenever changes were made to the code. \\
 The syntax for running GRASS through Python and GRASS through the WPS differ, so it would have to be changed accordingly when porting it online, but this would allow us to get started immediately. \\
 When working with GRASS, but not explicitly starting a GRASS session, a variety of environment variables have to be set. 
 
@@ -34,18 +44,14 @@ os.environ['GISDBASE'] = gisdb
 
 When running the python script, it now initiates the GRASS environmental variables that are necessary for importing and using GRASS' functions.\\
 
-\textsc{\textit{Setting up the server}} \\
-
-Before being able to set up PyWPS, it is necessary to set up a server, capable of serving the processing service.  
+\paragraph{Setting up the server:}Before being able to set up PyWPS, it is necessary to set up a server, capable of serving the processing service.  
 As PyWPS was created with Linux in mind, and because the creators even specify that it works better on a Linux-based operating system, we wanted to make sure that the server was running this as well. Today there are a variety of different hosting services available, but for this project it was decided to use Amazon Web Services (AWS).\\
 
 The main reason for running the server on this service is because several members of the group have had previous experience with launching minor applications on this platform, but also because it is possible to launch a so-called micro instance, which is free for the first year. The free-tier provides a very basic server, with little processing power and hard drive space – but for a proof-of-concept project such as this, it would suffice. \\
 Initiating a server on Amazon's Elastic Compute Cloud (EC2) is easy, and only takes a couple of minutes. As several members of the group were already using the Linux-based operating system Ubuntu we decided to base the server this.\\
 Connecting to your server is done using SSL, and when using Ubuntu, can be performed with the terminal. The only situation where this would not be so, is when having to upload specific files, for this a FTP client software is used.
 
-\textsc{\textit{Setting up Apache}}\\
-
-Every instance set up with Amazon, is provided with an IP address which can be used to visit the server using a browser. The Ubuntu image installed on the server did not contain a pre-installed web server, so it was necessary to install and configure this first.
+\paragraph{Setting up Apache:}Every instance set up with Amazon, is provided with an IP address which can be used to visit the server using a browser. The Ubuntu image installed on the server did not contain a pre-installed web server, so it was necessary to install and configure this first.
 Installing software on a machine running Linux is, and Ubuntu uses the package manager aptitude. Using the following terminal command, the web server is installed:
 
 \begin{lstlisting}[language=Python]
@@ -61,9 +67,7 @@ The web server will serve the files that are placed in the following folder:
 
 So this is where most of our server-side changes would occur during the development of our application.\\
 
-\textsc{\textit{Installing GRASS}}\\
-
-The next step is setting up GRASS on the server. Version 6.4 was installed by using the following command:
+\paragraph{Installing GRASS:} The next step is setting up GRASS on the server. Version 6.4 was installed by using the following command:
 
 \begin{lstlisting}
 Sudo apt-get install grass
@@ -86,34 +90,43 @@ A thorough walkthrough of the installation of PyWPS can be found on our Github, 
 
 \subsection{Problems encountered}\\
 
-\textsc{\textit{Setting up GRASS scripting to run on a Windows machine}}\\
+\paragraph{Setting up GRASS scripting to run on a Windows machine:} It turned out that setting up the GRASS environment on a windows machine, was not very easy. This is because the GDAL and OGR bindings depend on a variety of specially created bindings when using them in a Windows environment, so this can cause trouble if you do not download the right ones.\\
 
-It turned out that setting up the GRASS environment on a windows machine, was not very easy. This is because the GDAL and OGR bindings depend on a variety of specially created bindings when using them in a Windows environment, so this can cause trouble if you do not download the right ones.\\
+\paragraph{Lack of documentation:} As the installation instructions of the PyWPS was not very well documented, and because a wide variety of settings have to be set correctly during installation, it was necessary to reinstall the server several times. This was both time consuming and frustrating, but the steps to install the service have now been documented greatly on our Github, so that hopefully someone else can now do it faster then we were possible at first. 
 
-\textsc{\textit{Lack of documentation}}\\
-
-As the installation instructions of the PyWPS was not very well documented, and because a wide variety of settings have to be set correctly during installation, it was necessary to reinstall the server several times. This was both time consuming and frustrating, but the steps to install the service have now been documented greatly on our Github, so that hopefully someone else can now do it faster then we were possible at first. 
-\textsc{\textit{GRASS64 vs GRASS7}}\\
-
-We actually started by installing the newest version of GRASS, GRASS7. It turned out that there were some  incompatibility issues when using PyWPS with GRASS7. This meant that we had to downgrade the server-side GRASS package to GRASS64.\\
+\paragraph{GRASS64 vs GRASS7:} We actually started by installing the newest version of GRASS, GRASS7. It turned out that there were some  incompatibility issues when using PyWPS with GRASS7. This meant that we had to downgrade the server-side GRASS package to GRASS64.\\
 
 \section{Phase 2}
 The model of this project is based on our previous project mentioned earlier. Since that project was developed in an ArcGIS environment, each functionality had to be converted to GRASS python modules. Some of the modules are not directly transferable between GRASS and ArcGIS, therefore we needed to find the best fitting functions that would also keep processing time at an acceptable level.\\
 
-IMAGE\\
-\\
+\begin{figure}[h!]
+\centering
+	{\includegraphics[width=.45\linewidth]{gfx/Phase_2/image.png}}
+\caption{Inputs for the flooding model.}
+\label{fig:inputs}
+\end{figure}\\
 
-As seen on Figure XXX, only one external data source is required, a DEM. According to the LOCATION used within GRASS, every imported DEM has to have a WGS 84 geographical projection. An important factor of the model, is that all web-mapping operations are done on Open Street Map, which uses a slight variant of WGS 84 as well. As is mentioned in theory, GRASS uses GDAL for importing several type of raster maps and OGR for importing vector datasets. Taking the advantage of these modules it is possible for the to use any raster, as long as it is project into WGS 84. Another input of the model is the maximum flood level and the water rise increments of flood. These numbers define the amount of loops necessary before the flooding is complete.\\
+As seen on \autoref{fig:inputs}, only one external data source is required, a DEM. According to the LOCATION used within GRASS, every imported DEM has to have a WGS 84 geographical projection. An important factor of the model, is that all web-mapping operations are done on Open Street Map, which uses a slight variant of WGS 84 as well. As is mentioned in theory, GRASS uses GDAL for importing several type of raster maps and OGR for importing vector datasets. Taking the advantage of these modules it is possible for the to use any raster, as long as it is project into WGS 84. Another input of the model is the maximum flood level and the water rise increments of flood. These numbers define the amount of loops necessary before the flooding is complete.\\
 To flood the DEM, the model extracts those areas that are below current level of the iterator (and therefore flood). The first iteration will always be the sea level, where the actual flood level is 0. This extracts every cell with a value of zero. \\
 This method will extract ALL areas that have a value of 0, which usually will generate several disconnected clumps of cells, located in different areas of the DEM. As our model has to generate a flood from one specific area (so as not to simulate that all streams and lakes in an area are filling with water) the model will require that the user interacts further. The user needs to choose from which source he/she would like flood the DEM from. The pre-selected point has a major role in this part of the model, as the flooding will be based on it. \\
 
 After extracting every cell that is below the actual flood level, the process runs a cost distance analysis using the point as a source. The returned raster shows only one continuous area, for that level of the flood. The output cost raster is then converted to a vector with the value of the flood level. Each iteration extracts the land from the raster which is below the current flood level and select the continuous area depicting the actual flood on the land from the preselected source. 
 
-The process is illustrated on Figure XXX. On the left image of the figure, the algorithm identifies every possible cell that is under the current water level, indicated by the pink color. After the r.cost module has finished, the process returns a layer indicating which cells are reachable, as seen on the image to the right.\\
-\\
-IMAGE\\
-\\
-Every complex module from the earlier project has been taken out, and it has been simplified by using basic geoprocessing tools such as rasterizing, vectorizing, raster calculator and cost analysis. After the python - GRASS conversion was done, additional functionality was created, which will be discussed in Phase 5.
+The process is illustrated on \autoref{fig:continuous}. On \autoref{fig:allflood}, the algorithm identifies every possible cell that is under the current water level, indicated by the pink color. After the r.cost module has finished, the process returns a layer indicating which cells are reachable, as seen on \autoref{fig:actualflood}.\\
+
+\begin{figure}[h!]
+  \myfloatalign
+  \subfloat[Every cell with a value less than the current flood level.]
+  {\label{fig:allflood}  
+  {\includegraphics[width=.45\linewidth]{gfx/Phase_2/image2.png}}} \quad
+  \subfloat[Cells reachable from the source point.]
+  {\label{fig:actualflood}%
+   \includegraphics[width=.45\linewidth]{gfx/Phase_2/image3.png}} \\
+ \caption{Figures indicating how r.cost is used to identify continuous areas}
+ \label{fig:continuous}
+\end{figure}
+
+Every complex module from the earlier project has been taken out, and it has been simplified by using basic geoprocessing tools such as rasterizing, vectorizing, raster calculator and cost analysis. After the python - GRASS conversion was done, additional functionality was created, which will be discussed in \autoref{ch:phase4}.
 
 \section{Phase 3}
 This section will focus on the back-end of our web server. We begin by initializing Flask on our server. It is important to keep in mind that we earlier installed the Apache web server. After extensive research online, several different sources suggested a universal process on how to install Flask on an Apache 2 server. To go on, before actually installing Flask, we need to initialize mod\_wsgi. Mod\_wsgi is a tool that specializes in serving python applications from Apache servers. Installing mod\_wsgi is quite easy, and only takes a few lines of command line scripting (figure XXX).\\
@@ -175,6 +188,8 @@ As presented above, we use Flask to create the back-end of our application. This
 What we managed by using Flask instead, was to exclude the use of PHP and thus reduce the complexity of the script by a great deal. Firstly because we do not have to worry about creating extra connections with various other scripts. In fact Flask, and the way it is designed to operate, simplified our development considerably. It allowed to have a central script of python that inherently interconnected with all our HTML scripts and supported other python functions at the same time.
 
 \section{Phase 4}
+\label{ch:phase4}
+
 To expand on the functionality of the application, we have additional functionalities and tools, which could be a tool used for flood or disaster management. 
 
 \subsection{Identifying critical areas}
@@ -183,30 +198,32 @@ During the development of the pour-point analysis, we encountered sine problems.
 
 \subsubsection{Pour point analysis}
 Only providing the a extent is not enough when wanting to prepare against the impact a disaster. We wanted to provide more information about the flood regarding areas that might be particularly dangerous. After monitoring the  spread of the flood using our simple model, we realized there were areas where a relatively large area got flooded immediately. This can occur when the flood steps over a natural barrier, with a lower elevation than the surrounding area. This is what we call a “pour-point”. One of our major challenge was how to identify this behaviour and to locate the actual position of these critical points automatically.// 
-Since these pour point phenomena are very dependent how the process is run; which increment the water is rising in; which output (raster or vector) are we working with. Firstly, we realized that to give an accurate flooding the increments would have to with 1 cm water increments. By using this increment, this flood can be accurate enough to identify major changes between consecutive flood levels. //
+Since these pour point phenomena are very dependent how the process is run; which increment the water is rising in; which output (raster or vector) are we working with. Firstly, we realized that to give an accurate flooding the increments would have to with 1 cm water increments. By using this increment, this flood can be accurate enough to identify major changes between consecutive flood levels.
 
 \begin{figure}[h!]
 \centering
 	{\includegraphics[width=.45\linewidth]{gfx/Pourpoint.png}}
 \caption{Figure showing the pourpoint we are trying to identify.}
+\label{fig:pourpoint}
 \end{figure}
 
-Figure XXX shows two consecutive flood extents with 140cm(light blue) and 141 cm (dark blue) water rise. The red area indicated on the figure is what we needed to locate. Although it might seem to be a fairly easy procedure, we have to add that the large blue area on the image is not the only area that has increased in size between the two stage of flooding. Along the border of 140 cm (light blue) flood level, there are a relatively small areas or cells  which are flooded at the 141 cm. In order to avoid small or irrelevant pour point identification the following workflow was created. 
-As described in phase 2, after each flood extent the output is stored in both raster and vector format. In order to overcome the situation to identify pour points at each level, we implemented a condition which checks the size difference between each consecutive stage. We added an area field for each flood extent polygon, thereby we can built a decision analysis based on the flooded area. If the difference between two consecutive flood stages is larger than one percent of the investigated DEM, then the pour-point analysis workflow is triggered. The two investigated flood extents are subracted from each other, a selection based on its area field is conducted. By performing this subtraction, a lot of polygons are created. For each polygon the process calculates an area field and selects only those that are larger than 1000 square meters. This criteria is to avoid relatively small areas (indicated in grey on Figure XXX), which the pour point analysis would not make a reasonable investigation since their size is negligible compared to those area which have a larger impact on the advancing of the flood (indicated by the red color) . After the exclusion, only those areas which have a larger extent than the previously mentioned criteria are left.\\
+\autoref{fig:pourpoint} shows two consecutive flood extents with 140cm(light blue) and 141 cm (dark blue) water rise. The red area indicated on the figure is what we needed to locate. Although it might seem to be a fairly easy procedure, we have to add that the large blue area on the image is not the only area that has increased in size between the two stage of flooding. Along the border of 140 cm (light blue) flood level, there are a relatively small areas or cells  which are flooded at the 141 cm. In order to avoid small or irrelevant pour point identification the following workflow was created. 
+As described in phase 2, after each flood extent the output is stored in both raster and vector format. In order to overcome the situation to identify pour points at each level, we implemented a condition which checks the size difference between each consecutive stage. We added an area field for each flood extent polygon, thereby we can built a decision analysis based on the flooded area. If the difference between two consecutive flood stages is larger than one percent of the investigated DEM, then the pour-point analysis workflow is triggered. The two investigated flood extents are subracted from each other, a selection based on its area field is conducted. By performing this subtraction, a lot of polygons are created. For each polygon the process calculates an area field and selects only those that are larger than 1000 square meters. This criteria is to avoid relatively small areas (indicated in grey on \autoref{fig:twofloods}, which the pour point analysis would not make a reasonable investigation since their size is negligible compared to those area which have a larger impact on the advancing of the flood (indicated by the red color) . After the exclusion, only those areas which have a larger extent than the previously mentioned criteria are left.\\
 
 \begin{figure}[h!]
   \myfloatalign
   \subfloat[Showing two flood extents.]
-  {\includegraphics[width=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}} \quad
+  {\label{fig:twofloods}
+  {\includegraphics[width=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}}} \quad
   \subfloat[Showing line of pour points.]
-  {\label{fig:example-b}%
+  {\label{fig:allthepoints}
    \includegraphics[width=.45\linewidth]{gfx/Phase_4/Pourpoint3.png}} \\
-  \caption[Generated extra pixels]{Showing the concepts of finding the pourpoints.}\label{fig:example}
+  \caption{Showing the concepts of finding the pourpoints.}
+  \label{fig:pourpoints}
 \end{figure}
 
-
 The remaining polygon(s) are converted back to raster and merged with the previous raster extent of the flood, thereby a new raster map represents, the previous flood (blue) and the actual flood (red) with increments which are over the criteria. This raster has raster values where the flood extent exists and NULL values everywhere else.
-Afterwards a neighborhood analysis (r.neighbors) is conducted, based on the diversity method – which is based on the Moore-Neighborhood. This method is applied in order to find the location, where the raster changes values, since that place is where the flood enters into the new area. In Figure XXX, a black border can be seen, where the red and blue area touch. The process need to identify automatically only that border which connects the two different flood stage in the critical location – I.e the pour points. The diversity method can be used to identify only the border cells as it seen in Figure XXX.
+Afterwards a neighborhood analysis (r.neighbors) is conducted, based on the diversity method – which is based on the Moore-Neighborhood. This method is applied in order to find the location, where the raster changes values, since that place is where the flood enters into the new area. In \autoref{fig:twofloods} a black border can be seen, where the red and blue area touch. The process need to identify automatically only that border which connects the two different flood stage in the critical location – I.e the pour points. The diversity method can be used to identify only the border cells as it seen in \autoref{fig:allthepoints}.
 After the identifying the pour-point cells with the above-mentioned analysis, the algorithm then extracts those cells and converts them to vector points. \\
 
 To have the pour-points as vector points is partly because we can then easily store information about the necessary height of a barrier at this place, and so that they easily can be displayed and manipulated on our web map following the analysis procedure. 
@@ -216,72 +233,80 @@ For the better understanding and providing essential information of the critical
 An integral part of the application is allowing the user to implement barriers that will mitigate the effects of the flood. The user will be able to determine whether an area can be secured by the implementation of obstacles in the landscape or how the flood can be affected by installing a barrier in a given position. \\
 The general operation of having the barrier placement process available to the user starts after the flood simulation has been performed and completed. This is because the user has to have an overview of the overall situation of the flood and the location of the critical areas in the landscape, before starting placing barriers in random areas and in an arbitrary fashion. We believe that this would ensure that the entire process of finding a suitable solution to a flood situation is fast since performing the advanced simulation can take a lot of time.\\
 
-The process begins by getting the input from the webpage where the user draws a barrier on a web map. This results into the creation of a GeoJSON file that is then transferred to the python function that creates the does the modelling. Since the barrier is in GeoJSON format, we need to convert it to raster in order to hardcode it into the elevation model. Normally, converting the barrier to raster and then adding it to the elevation model would be enough. Unfortunately, we stumbled upon a quite unexpected problem. The sections of the barrier that are not completely vertical or horizontal are rasterized in an erroneous fashion. To be more specific, in these sections the cells are not connected with a shared side of cell. Instead, they are connected by sharing an edge. The figure below demonstrates the problem when the barrier is converted to raster (figure XXX).\\
+The process begins by getting the input from the webpage where the user draws a barrier on a web map. This results into the creation of a GeoJSON file that is then transferred to the python function that creates the does the modelling. Since the barrier is in GeoJSON format, we need to convert it to raster in order to hardcode it into the elevation model. Normally, converting the barrier to raster and then adding it to the elevation model would be enough. Unfortunately, we stumbled upon a quite unexpected problem. The sections of the barrier that are not completely vertical or horizontal are rasterized in an erroneous fashion. To be more specific, in these sections the cells are not connected with a shared side of cell. Instead, they are connected by sharing an edge. The figure below demonstrates the problem when the barrier is converted to raster, as can be seen in \autoref{fig:rasterize}.\\
 
 \begin{figure}[h!]
   \myfloatalign
   \subfloat[Rasterized barrier.]
-  {\includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier1.png}} \quad
+  {\label{fig:rasterize}
+  \includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier1.png}} \quad
   \subfloat[Problem areas.]
-  {\label{fig:example-b}%
+  {\label{fig:problemareas}%
    \includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier2.png}} \\
   \subfloat[Generating pixels in the designated areas.]
-  {\includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier3.png}} \quad
+  {\label{fig:barrier3}
+  \includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier3.png}} \quad
   \subfloat[Fixed barrier.]
-  {\includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier4.png}}
-  \caption[Generated extra pixels]{Tu duo titulo debitas
-  latente.}\label{fig:example}
+  {\label{fig:barrier4}
+  \includegraphics[width=.45\linewidth]{gfx/Phase_4/Barrier4.png}}
+  \caption[Generated extra pixels]{The process of fixing the rasterized barrier.}\label{fig:barriers}
 \end{figure}
 
 The problem depicted above is quite unexpected especially if we take note of that fact that the conversion ignores several cells that intersect with the barrier line and instead keeps only cells that are connected diagonally with each other. That leads to gaps on the barriers that would allow water to flow through them. In order to deal with that problem we have developed the following solution. \\
-Practically, we need to assign the pre-designated value of the barrier height to one of the cells per diagonal intersection to create a continuous raster of the barrier (figure XXX). 
+Practically, we need to assign the pre-designated value of the barrier height to one of the cells per diagonal intersection to create a continuous raster of the barrier, as indicated on \autoref{fig:problemareas}. 
 
-In order to do that, first we extract the edges of the non-vertical, non-horizontal sections of the barrier. In addition, we extend those cells by one cell in the northerly direction. That action is performed by the following part of the script (figure XXX).
+In order to do that, first we extract the edges of the non-vertical, non-horizontal sections of the barrier. In addition, we extend those cells by one cell in the northerly direction. That action is performed by the following part of the script, as seen on \autoref{fig:barrier3}.
 
 \begin{lstlisting}
 
 \end{lstlisting}
 
-As can be noted in the script above, we are using neighborhoods in order to extract the necessary cells. In fact, we are not using full neighborhoods (e.g. Moore Neighborhood) but specific cells that exist in the neighborhood of the cell mapcalc is actually querying. In order to query the correct cells, we are required to know their relative coordinates to the center cell that is queried. These relatives coordinates are displayed on the figure below (figure XXX).\\
+As can be noted in the script above, we are using neighborhoods in order to extract the necessary cells. In fact, we are not using full neighborhoods (e.g. Moore Neighborhood) but specific cells that exist in the neighborhood of the cell mapcalc is actually querying. In order to query the correct cells, we are required to know their relative coordinates to the center cell that is queried. These relatives coordinates are displayed on \autoref{tab:relcoord}.\\
 
 \begin{table}
-\caption{Relative cell coordinates to the center cell (0,0)}
+\centering
 \begin{tabular}{l | c | r}
 -1,-1 & -1,0 & -1,1 \\
+\hline \\
 0,-1 & 0,0 & 0,1 \\
+\hline \\
 1,-1 & 1,0 & 1,1 \\
 \end{tabular}
+\caption{Relative cell coordinates to the center cell (0,0)}
+\label{tab:relcoord}
 \end{table}\\
 
 The result of this edge selection is shown on the figure below (figure XXX).\\
 \\
 
 
-Since we have the edges of the barrier, we go on by expanding each one by one cell, as mentioned above, and merge the resulting raster with the initial barrier raster. That is done with the following script (figure XXX).\\
+Since we have the edges of the barrier, we go on by expanding each one by one cell, as mentioned above, and merge the resulting raster with the initial barrier raster. That is done with the following script:\\
 
 \begin{lstlisting}
 gscript.run_command('r.patch', inputs=['edges_1_1_ext','edges_11_ext','barr_raster'],output='merged)
 \end{lstlisting}\\
 
-The final step in order to complete the barrier correction and deployment to the landscape is to hardcode it to the elevation model. That is done with the following script (figure XXX).\\
+The final step in order to complete the barrier correction and deployment to the landscape is to hardcode it to the elevation model. Which is done with the following script: \\
 
 \begin{lstlisting}
 gscript.run_command('r.mapcalc', expression='original_b = if(isnull(merged),original,original+merged)')
 \end{lstlisting}
 
-This process results in the following elevation model (figure XXX).
+This process results in the elevation model shown on \autoref{fig:fixedbarrier}.
 
 \begin{figure}[h!]
 \centering
-	{\includegraphics[width=\linewidth]{gfx/Phase_4/Barrier5.png}}
+	{\includegraphics[width=0.75\linewidth]{gfx/Phase_4/Barrier5.png}}
 \caption{Figure showing important concepts when working with watersheds}
+\label{fig:fixedbarrier}
 \end{figure}
 
 By observing the result above, someone might think that it is difficult to observe the actual barrier and distinguish it from the elevation model. Unfortunately, this is the result of merging the two rasters together. It is logical that the results are not visually distinctive since they are in fact one raster represented by a sliding color scale.
 
 \subsection{Problems encountered}
-The main issue with the process of creating the barrier and performing the necessary correction was the necessity of actually performing the correction of it. That means that normally, the conversion of a linear vector file to raster should not behave the way we described above. we assumed that GIS software suits, such as QGIS and GRASS as well as ArcGIS, address issues as connectivity of cells in identical fashion. But unfortunately that was not the case. In fact, ArcGIS considers cells that share an edge (diagonal connection) as connecting cells and will include them in a raster to vector conversion. On the other hand, QGIS and GRASS does not. This lead us to dedicate a considerable amount of time in creating a solution.
-Being on the same page, another issue that we faced was the lack of documentation on the mapcalc function that we used in this process. Despite following the existing documentation closely, we ran into problems that should not have existed. Initially, the proposed solution to the barrier problem consisted of a much more compact script that performed a universal query on all the cells of the barrier raster in order to cover its gaps. Unfortunately, for reasons yet undiscovered, that solution did not produce any results. The script we used can be seen below at its final state before we decided to develop the solution that performed as expected.
+The main issue with the process of creating the barrier and performing the necessary correction was the necessity of actually performing the correction of it. That means that normally, the conversion of a linear vector file to raster should not behave the way we described above. we assumed that GIS software suits, such as QGIS and GRASS as well as ArcGIS, address issues as connectivity of cells in identical fashion. But unfortunately that was not the case. In fact, ArcGIS considers cells that share an edge (diagonal connection) as connecting cells and will include them in a raster to vector conversion. On the other hand, QGIS and GRASS does not. This lead us to dedicate a considerable amount of time in creating a solution.\\
+
+Another issue that we faced was the lack of documentation on the mapcalc function that we used in this process. Despite following the existing documentation closely, we ran into problems that should not have existed. Initially, the proposed solution to the barrier problem consisted of a much more compact script that performed a universal query on all the cells of the barrier raster in order to cover its gaps. Unfortunately, for reasons yet undiscovered, that solution did not produce any results. The script we used can be seen below at its final state before we decided to develop the solution that performed as expected.
 
 \begin{lstlisting}
 corr_barrier = if(isnull(barr_raster), if(barr_raster[0,-1] == 3 && (barr_raster[-1,0] == 3 || barr_raster[1,0] == 3) , barr_raster, null()) || if(barr_raster[0,1] == 3 &&  (barr_raster[-1,0] == 3 || barr_raster[1,0] == 3), barr_raster, null()), barr_raster)
@@ -290,8 +315,7 @@ corr_barrier = if(isnull(barr_raster), if(barr_raster[0,-1] == 3 && (barr_raster
 \section{Phase 5}
 This phase involves setting up the necessary website relevant elements. This means both HTML, Javascript, web mapping and the understanding of PyWPS.\\
 
-\subsection{PyWPS}
-As the the main functionality of our script was developed, we began porting the script to PyWPS syntax. 
+\paragraph{PyWPS:} As the the main functionality of our script was developed, we began porting the script to PyWPS syntax. 
 
 The output cannot be defined dynamically. 
 
@@ -311,9 +335,9 @@ The various settings we set up to be:
 \item title = "Flooding",
 \item abstract = "This process is used to flood a DEM with water",
 \item version = "1.0",
-\item grassLocation = "/home/ubuntu/grassdata/WGS_1984",
+\item grassLocation = "/home/ubuntu/grassdata/WGS\_1984",
 \item statusSupported = True,
-\item storeSupported = True)
+\item storeSupported = True
 \end{itemize}
 
 The most un-intuitive of these settings are the \textit{grassLocation}, \textit{statusSupported} and \textit{storeSupported}. 
@@ -348,7 +372,7 @@ self.outputVector=self.addComplexOutput(identifier="output2",title="output vecto
 By setting the setting \textit{asReference} to True, the output will not be delivered straight back to the user, but will be provided as a link to the location in which it is stored on the server. When returning images with PyWPS they get delivered as Base64 images, which means that they are returned as a long string of text. This can reduce the loading times significantly, and can for very large images also freeze the computer handling them. Furthermore it has the advantage, that if a user should lose connection, the images can still be recovered. 
 
 Now that the initialization settings have been defined, the execute method can be set up. In general the code looks very similar to the functions created earlier, so they will not be explained here further (and they can be found on the previously mentioned GitHub page). 
-After creating the service, they are placed in the processes folder on the server. Furthermore the __init__.py file is updated to now include the uploaded file. 
+After creating the service, they are placed in the processes folder on the server. Furthermore the \_\_init\_\_.py file is updated to now include the uploaded file. 
 After having set up the script in PyWPS, and transferring them to the server, they are reday to be called. This can be done through the web browser.
 In general it is possible to call either a GetCapabilities, Execute or DescribeProcess. For this project it will only be necessary to Execute a process, as this project is not meant to be accessed outside of our webapplication interface. 
 They way the WPS service is requested from the server, I.e a flooding service with the identifier “flooding”, is called like follows:
@@ -359,8 +383,7 @@ They way the WPS service is requested from the server, I.e a flooding service wi
 
 The server will process the request, and return a XML document with links to where the outputs of the process are stored. 
 
-\subsection{Setting up the design}
-Using the power of Flask as much as possible, we wanted to make the website have as small of a footprint as possible. 
+\paragraph{Setting up the design:} Using the power of Flask as much as possible, we wanted to make the website have as small of a footprint as possible. 
 The application would consist of a welcome page with a brief introduction which would link the user to the “actual” application, which would be followed by a multi-layered page, that would guide the user through the process of flooding. 
 IMAGE OF FRONTPAGE → IMAGE OF UPLOAD
 Using the free Twitter Bootstrap CSS theme, it is possible to quickly create some working HTML pages. 
@@ -549,11 +572,10 @@ When this is done it takes the outputs stored in the above mentioned array, and 
 \end{lstlisting}
 
 \subsection{Problems encountered}
-Currently does not work on Chrome
-The way the URL's are formed, with variables added to them, do not work well with Chrome- This is an issue that can probably easily be fixed, but during this process there was not time to discover how to solve this issue. 
+\paragraph{Currently does not work on Chrome:} The way the URL's are formed, with variables added to them, do not work well with Chrome- This is an issue that can probably easily be fixed, but during this process there was not time to discover how to solve this issue. 
 
-It is not possible to overlay a TIF
+\paragraph{It is not possible to overlay a TIF:}
 It is not possible to overlay a TIF onto the Webmap, and as such we had to also create a copy of the uploaded file, as a PNG. This does not take a long time, but makes it more tricky to make the entire process work the way we intend it to.  
 
-At the moment flooding can only occur from one place
+\paragraph{At the moment flooding can only occur from one place:}
 The way the GeoJSON creation is set up, and the way that the marker gets added to the map, the flooding can only occur from one spot. This should be relatively easily remedied, but at the time of creation, it was deemed satisfactory that the flood could only occur from one location.

@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  31 MAY 2015 11:55
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  31 MAY 2015 19:27
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -673,35 +673,16 @@ Package: listings 2013/08/26 1.5b (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2013/08/26 1.5b listings language file
-)
 
-! Package Listings Error: Couldn't load requested language.
+! Package keyval Error: procnamekeys undefined.
 
-See the Listings package documentation for explanation.
+See the keyval package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.145 }
-     
-The following languages weren't loadable:
-    ,tex$python
-This may cause errors in the sequel.
-
-
-! Package Listings Error: language python of tex undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.145 }
-     
-The language is not loadable. Try typing  <return>  to proceed.
+l.148         breaklines=true}
+                            
+Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -809,14 +790,25 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip60
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 174.
-Package hyperref Info: Option `linktocpage' set `true' on input line 174.
-Package hyperref Info: Option `breaklinks' set `true' on input line 174.
-Package hyperref Info: Option `pageanchor' set `true' on input line 174.
-Package hyperref Info: Option `plainpages' set `false' on input line 174.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 174.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 174.
-Package hyperref Info: Option `hypertexnames' set `true' on input line 174.
+Package hyperref Info: Option `colorlinks' set `true' on input line 177.
+Package hyperref Info: Option `linktocpage' set `true' on input line 177.
+Package hyperref Info: Option `breaklinks' set `true' on input line 177.
+Package hyperref Info: Option `pageanchor' set `true' on input line 177.
+Package hyperref Info: Option `plainpages' set `false' on input line 177.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 177.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 177.
+Package hyperref Info: Option `hypertexnames' set `true' on input line 177.
+
+! Undefined control sequence.
+<argument> \textcopyright \ \myName 
+                         , \myUni , \myFaculty 
+l.177 }
+     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1068,20 +1060,7 @@ LaTeX Warning: Label `ch:theory' multiply defined.
 
 LaTeX Warning: Label `ch:theory' multiply defined.
 
-
-LaTeX Warning: Label `fig:example-b' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:example-b' multiply defined.
-
-
-LaTeX Warning: Label `fig:example' multiply defined.
-
-) (./Chapters/Analysis.aux
-
-LaTeX Warning: Label `ch:introduction' multiply defined.
-
-) (./Chapters/Discussion.aux
+) (./Chapters/Analysis.aux) (./Chapters/Discussion.aux
 
 LaTeX Warning: Label `ch:introduction' multiply defined.
 
@@ -1171,12 +1150,6 @@ Package microtype Info: No adjustment of kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (./FrontBackMatter/Titlepage.tex
-<gfx/TFZsuperellipse_bw.pdf, id=212, 260.5755pt x 203.14595pt>
-File: gfx/TFZsuperellipse_bw.pdf Graphic file (type pdf)
-
-<use gfx/TFZsuperellipse_bw.pdf>
-Package pdftex.def Info: gfx/TFZsuperellipse_bw.pdf used on input line 20.
-(pdftex.def)             Requested size: 170.71652pt x 133.09721pt.
 LaTeX Font Info:    Try loading font information for T1+fvm on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
@@ -1193,12 +1166,19 @@ Package microtype Info: Loading generic settings for font family
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./gfx/TFZsuperellipse_bw.pd
-f>])
-(./FrontBackMatter/Titleback.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./FrontBackMatter/Titleb
+ack.tex
+! Undefined control sequence.
+l.9 \noindent\myName
+                  : \textit{\myTitle,} \mySubtitle, %\myDegree,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 LaTeX Font Info:    Try loading font information for OMS+pplj on input line 10.
 LaTeX Font Info:    No file OMSpplj.fd. on input line 10.
-
 
 LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead on input line 10.
@@ -1230,51 +1210,6 @@ Package natbib Warning: Citation `knuth:1974' on page v undefined on input line
 Package natbib Warning: Citation `knuth:1974' on page v undefined on input line 
 10.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-LaTeX Font Info:    Try loading font information for U+zeur on input line 29.
-(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
-File: uzeur.fd 2005/01/11 v4.0 (WaS)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
-File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
-)
-LaTeX Font Info:    Try loading font information for U+zeus on input line 29.
-
-(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
-File: uzeus.fd 2005/01/11 v4.0 (WaS)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
-File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-)
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 29.
-
-(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
-File: uzeuex.fd 2005/01/11 v4.0 (WaS)
-)
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 29.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
-File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-)
-Package microtype Info: Loading generic settings for font family
-(microtype)             `zplm' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-Overfull \hbox (8.78125pt too wide) in paragraph at lines 29--30
-\T1/pplj/m/n/10.95 Repp, Hin-rich Harms, Roland Win-kler, and the whole L[]T[]X
--community
- []
-
 ) [5
 
 ] [6
@@ -1288,13 +1223,43 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 13.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
+)
+\tf@toc=\write6
+LaTeX Font Info:    Try loading font information for U+zeur on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
+File: uzeur.fd 2005/01/11 v4.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
+File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
+)
+LaTeX Font Info:    Try loading font information for U+zeus on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
+File: uzeus.fd 2005/01/11 v4.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
+File: uzeuex.fd 2005/01/11 v4.0 (WaS)
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
  [7
 
 
 
-])
-\tf@toc=\write6
- [8]
+]
 Package tocbasic Info: character protrusion at lof deactivated on input line 33.
 
  (./main.lof
@@ -1315,40 +1280,53 @@ re []
  []
 
 
-Overfull \hbox (5.18906pt too wide) in paragraph at lines 21--21
+Overfull \hbox (9.35547pt too wide) in paragraph at lines 11--11
+ [][][] []\T1/pplj/m/n/10.95 Gantt-chart show-ing the over-lap of phases []  
+ []
+
+
+Overfull \hbox (37.4641pt too wide) in paragraph at lines 18--18
+ [][][] []\T1/pplj/m/n/10.95 Show-ing the con-cepts of find-ing the pour-points
+. []  
+ []
+
+
+Overfull \hbox (5.18906pt too wide) in paragraph at lines 26--26
  [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing im-por-tant con-cepts when work- 
 
  []
 
 )
 \tf@lof=\write7
- [9
+ [8
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 46.
 
  (./main.lot
-Overfull \hbox (26.54704pt too wide) in paragraph at lines 9--9
+Overfull \hbox (26.54704pt too wide) in paragraph at lines 10--10
  [][][] []\T1/pplj/m/n/10.95 Rel-a-tive cell co-or-di-nates to the cen-ter cell
  (0,0) []  
  []
 
 )
 \tf@lot=\write8
- [10] (./main.lol)
+ [9] (./main.lol)
 \tf@lol=\write9
- [11]
+ [10]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 76.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-) [12]
-(./Chapters/Introduction.tex
+) [11] [12
+
+
+
+] (./Chapters/Introduction.tex
 Chapter 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1371,15 +1349,28 @@ Class scrreprt Warning: \float@addtolists detected!
 
 
 
-
-
-
 ]) [2] (./Chapters/Theory.tex
 Chapter 2.
 
-Overfull \hbox (0.53595pt too wide) in paragraph at lines 11--20
+Overfull \hbox (0.53595pt too wide) in paragraph at lines 11--15
 []\T1/pplj/m/n/10.95 GRASS (Ge-o-graph-i-cal Re-sources Anal-y-sis Sup-port Sys
 -tem) is an open
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--15
+
+ []
+
+
+Overfull \hbox (3.56908pt too wide) in paragraph at lines 16--21
+\T1/pplj/m/it/10.95 grass-data\T1/pplj/m/n/10.95 (also known as GRASS' GIS-BASE
+). This is the di-rec-tory where
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
  []
 
 [3
@@ -1388,84 +1379,83 @@ Overfull \hbox (0.53595pt too wide) in paragraph at lines 11--20
 
 
 ]
-Overfull \hbox (2.672pt too wide) in paragraph at lines 28--29
+Overfull \hbox (2.672pt too wide) in paragraph at lines 29--30
 []\T1/pplj/m/n/10.95 The ac-cu-rate de-pic-tion of hy-dro-log-i-cal move-ments 
 and their re-sponses
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--29
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 
-Overfull \hbox (17.78658pt too wide) in paragraph at lines 42--43
+Overfull \hbox (17.78658pt too wide) in paragraph at lines 44--45
 [][]\T1/pplj/m/n/10.95 Both of these al-go-rithms are based on a so-called Moor
 e-Neighborhood.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
 
-<gfx/SFD_MFD.png, id=371, 762.85pt x 198.7425pt>
+<gfx/SFD_MFD.png, id=366, 762.85pt x 198.7425pt>
 File: gfx/SFD_MFD.png Graphic file (type png)
  <use gfx/SFD_MFD.png>
-Package pdftex.def Info: gfx/SFD_MFD.png used on input line 46.
+Package pdftex.def Info: gfx/SFD_MFD.png used on input line 48.
 (pdftex.def)             Requested size: 336.0pt x 87.5349pt.
  [4]
-<gfx/Watershed.png, id=377, 833.1125pt x 370.38374pt>
-File: gfx/Watershed.png Graphic file (type png)
- <use gfx/Watershed.png>
-Package pdftex.def Info: gfx/Watershed.png used on input line 61.
-(pdftex.def)             Requested size: 336.0pt x 149.37726pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--66
+Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-[5 <./gfx/SFD_MFD.png>] <gfx/COST.png, id=385, 843.15pt x 253.94875pt>
-File: gfx/COST.png Graphic file (type png)
+<gfx/Watershed.png, id=374, 833.1125pt x 370.38374pt>
+File: gfx/Watershed.png Graphic file (type png)
+ <use gfx/Watershed.png>
+Package pdftex.def Info: gfx/Watershed.png used on input line 66.
+(pdftex.def)             Requested size: 336.0pt x 149.37726pt.
 
-<use gfx/COST.png>
-Package pdftex.def Info: gfx/COST.png used on input line 77.
+[5 <./gfx/SFD_MFD.png>] [6 <./gfx/Watershed.png>]
+<gfx/COST.png, id=388, 843.15pt x 253.94875pt>
+File: gfx/COST.png Graphic file (type png)
+ <use gfx/COST.png>
+Package pdftex.def Info: gfx/COST.png used on input line 80.
 (pdftex.def)             Requested size: 336.0pt x 101.20183pt.
 
-Overfull \hbox (6.46066pt too wide) in paragraph at lines 85--86
+Overfull \hbox (6.46066pt too wide) in paragraph at lines 88--89
 []\T1/pplj/m/n/10.95 Python is a pro-gram-ming lan-guage used ex-ten-sively wit
 hin the geospa-
  []
 
-[6 <./gfx/Watershed.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--98
 
  []
 
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 96.
- [7 <./gfx/COST.png (PNG copy)>]
-Overfull \hbox (9.37337pt too wide) in paragraph at lines 126--129
+(Font)              scaled to size 9.30756pt on input line 99.
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 8.50006pt on input line 99.
+[7 <./gfx/COST.png (PNG copy)>]
+Overfull \hbox (9.37337pt too wide) in paragraph at lines 129--132
 \T1/pplj/m/n/10.95 called re-quests and re-sponses) for geospa-tial pro-cess-in
 g ser-vices should
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--129
+Underfull \hbox (badness 10000) in paragraph at lines 129--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--133
+Underfull \hbox (badness 10000) in paragraph at lines 133--136
 
  []
 
 [8]
 ! Misplaced alignment tab character &.
-l.134 \item http://webaddress/pywps/?service=WPS&
+l.137 \item http://webaddress/pywps/?service=WPS&
                                                request=GetCapablities
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1475,13 +1465,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (13.54536pt too wide) in paragraph at lines 134--135
+Overfull \hbox (13.54536pt too wide) in paragraph at lines 137--138
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WP-Sre-quest=Get-C
 a-pabli-ties 
  []
 
 ! Misplaced alignment tab character &.
-l.135 \item http://webaddress/pywps/?service=WPS&
+l.138 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Describ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1491,7 +1481,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.135 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.138 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=DescribeProcess&id...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1501,7 +1491,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.135 ...=WPS&version=1.0.0&request=DescribeProcess&
+l.138 ...=WPS&version=1.0.0&request=DescribeProcess&
                                                   identifier=all
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1511,13 +1501,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (21.57172pt too wide) in paragraph at lines 135--136
+Overfull \hbox (21.57172pt too wide) in paragraph at lines 138--139
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=De-
  []
 
 ! Misplaced alignment tab character &.
-l.136 \item http://webaddress/pywps/?service=WPS&
+l.139 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Execute...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1527,7 +1517,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.136 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.139 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=Execute&identifier...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1537,7 +1527,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.136 ...?service=WPS&version=1.0.0&request=Execute&
+l.139 ...?service=WPS&version=1.0.0&request=Execute&
                                                   identifier=<PROCESS>&datai...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1547,7 +1537,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.136 ...1.0.0&request=Execute&identifier=<PROCESS>&
+l.139 ...1.0.0&request=Execute&identifier=<PROCESS>&
                                                   datainputs=[<INPUT1>=<VALU...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1557,199 +1547,32 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (20.19202pt too wide) in paragraph at lines 136--137
+Overfull \hbox (20.19202pt too wide) in paragraph at lines 139--140
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=Ex-
  []
 
 
-Overfull \hbox (26.576pt too wide) in paragraph at lines 136--137
+Overfull \hbox (26.576pt too wide) in paragraph at lines 139--140
 \T1/pplj/m/n/10.95 e-cutei-den-ti-fier=<PRO-CESS>datain-puts=[<IN-PUT1>=<VALUE>
 ;<IN-
  []
 
-! Missing $ inserted.
-<inserted text> 
-$
-l.144 \item A function called _
-                             _init__:
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing { inserted.
-<to be read again> 
-_
-l.144 \item A function called __
-                              init__:
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-! Missing { inserted.
-<to be read again> 
-_
-l.144 \item A function called __init__
-                                    :
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-! Missing { inserted.
-<to be read again> 
-_
-l.145 def __
-          init__(self):
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-! Missing { inserted.
-<to be read again> 
-_
-l.145 def __init__
-                (self):
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-
-! LaTeX Error: Command \item invalid in math mode.
+! LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 \item
-          A function called execute:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 \item A
-            function called execute:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.146 \item A
-            function called execute:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Command \end{itemize} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.148 \end{itemize}
-                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.148 \end{itemize}
-                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.148 \end{itemize}
-                  \\
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.148 \end{itemize}
-                  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.148 \end{itemize}
-                  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.148 \end{itemize}
-                  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.148 \end{itemize}
-                  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.148 \end{itemize}
-                  \\
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--149
-
- []
+l.152 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Misplaced alignment tab character &.
-l.161 https://scholar.google.com/scholar?hl=fr&
+l.164 https://scholar.google.com/scholar?hl=fr&
                                              q=flask+microframework&btnG=&lr...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1759,7 +1582,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.161 ...e.com/scholar?hl=fr&q=flask+microframework&
+l.164 ...e.com/scholar?hl=fr&q=flask+microframework&
                                                   btnG=&lr= \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1769,7 +1592,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.161 ...scholar?hl=fr&q=flask+microframework&btnG=&
+l.164 ...scholar?hl=fr&q=flask+microframework&btnG=&
                                                   lr= \\
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1779,28 +1602,28 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (13.28711pt too wide) in paragraph at lines 159--164
+Overfull \hbox (13.28711pt too wide) in paragraph at lines 162--167
 \T1/pplj/m/n/10.95 and is easy to use. https://scholar.google.com/scholar?hl=fr
 q=flask+mi-
  []
 
 [9]
-Overfull \hbox (7.21638pt too wide) in paragraph at lines 188--189
+Overfull \hbox (7.21638pt too wide) in paragraph at lines 191--192
 [][]\T1/pplj/m/n/10.95 Mod-i-fi-ca-tions and de-rived works must be al-lowed an
 d dis-tributes
  []
 
-[10] <gfx/OS.png, id=433, 672.5125pt x 494.84875pt>
+[10] <gfx/OS.png, id=427, 672.5125pt x 494.84875pt>
 File: gfx/OS.png Graphic file (type png)
  <use gfx/OS.png>
-Package pdftex.def Info: gfx/OS.png used on input line 204.
+Package pdftex.def Info: gfx/OS.png used on input line 203.
 (pdftex.def)             Requested size: 336.0pt x 247.235pt.
-
-Overfull \hbox (43.5189pt too wide) in paragraph at lines 211--231
+ [11 <./gfx/OS.png>]
+Overfull \hbox (110.17128pt too wide) in paragraph at lines 217--237
 [][][] 
  []
 
-) [11] [12 <./gfx/OS.png>] (./Chapters/Methodology.tex
+) [12] (./Chapters/Methodology.tex
 Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
@@ -1853,34 +1676,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
  []
 
 [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--100
+! LaTeX Error: There's no line here to end.
 
- []
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96 
+   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-[17]
-Overfull \hbox (28.98175pt too wide) in paragraph at lines 135--136
+
+Overfull \hbox (18.09387pt too wide) in paragraph at lines 131--132
 [][][] 
  []
 
-) [18] (./Chapters/Implementation.tex
+) [17] [18] (./Chapters/Implementation.tex
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 9--17
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 9--17
 
  []
 
 
-Overfull \hbox (1.06245pt too wide) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Overfull \hbox (8.4376pt too wide) in paragraph at lines 26--29
+[][] []\T1/pplj/m/sc/10.95/80ls set-ting up a lo-cal script-ing en-vi-ron-ment:
+[] \T1/pplj/m/n/10.95 In-stead of work-
+ []
+
+[19
+
+
+
+
+]
+Overfull \hbox (1.06245pt too wide) in paragraph at lines 32--33
 [][]\T1/pplj/m/sc/10.95 GIS-D-BASE\T1/pplj/m/n/10.95 : GRASS' database lo-ca-ti
 on, usu-ally ini-ti-ated as grass-
  []
@@ -1892,49 +1749,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 
+l.35 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-[19
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--41
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
 
-Overfull \hbox (1.86629pt too wide) in paragraph at lines 72--73
+Overfull \hbox (1.86629pt too wide) in paragraph at lines 76--77
 \T1/pplj/m/n/10.95 in-put and out-put will be stored. In-stead of set-ting this
  up from scratch,
  []
@@ -1946,14 +1783,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77 
+l.81 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
@@ -1964,7 +1801,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.86 
+l.90 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1977,20 +1814,16 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88 
+l.92 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
-
+Overfull \hbox (2.32771pt too wide) in paragraph at lines 93--94
+[][] []\T1/pplj/m/sc/10.95/80ls set-ting up grass script-ing to run on a win-do
+ws ma-chine:[]
  []
 
 
@@ -1998,50 +1831,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
-
- []
-
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
+<gfx/Phase_2/image.png, id=496, 576.1525pt x 504.88625pt>
+File: gfx/Phase_2/image.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
-
- []
+<use gfx/Phase_2/image.png>
+Package pdftex.def Info: gfx/Phase_2/image.png used on input line 104.
+(pdftex.def)             Requested size: 151.19897pt x 132.49225pt.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -2050,27 +1855,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.126 
+l.108 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--130
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
+
+ []
+
+[22 <./gfx/Phase_2/image.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+<gfx/Phase_2/image2.png, id=506, 800.9925pt x 526.96875pt>
+File: gfx/Phase_2/image2.png Graphic file (type png)
+
+<use gfx/Phase_2/image2.png>
+Package pdftex.def Info: gfx/Phase_2/image2.png used on input line 121.
+(pdftex.def)             Requested size: 151.19897pt x 99.46574pt.
+
+<gfx/Phase_2/image3.png, id=507, 803.0pt x 527.9725pt>
+File: gfx/Phase_2/image3.png Graphic file (type png)
+
+<use gfx/Phase_2/image3.png>
+Package pdftex.def Info: gfx/Phase_2/image3.png used on input line 124.
+(pdftex.def)             Requested size: 151.19897pt x 99.41351pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
-
- []
-
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2078,99 +1901,124 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.168 
+l.139 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--174
+Underfull \hbox (badness 10000) in paragraph at lines 140--143
 
  []
 
-[25] [26] <gfx/Pourpoint.png, id=550, 541.02126pt x 519.9425pt>
+[24 <./gfx/Phase_2/image2.png> <./gfx/Phase_2/image3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--169
+
+ []
+
+[25]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--187
+
+ []
+
+[26] [27] <gfx/Pourpoint.png, id=566, 541.02126pt x 519.9425pt>
 File: gfx/Pourpoint.png Graphic file (type png)
 
 <use gfx/Pourpoint.png>
-Package pdftex.def Info: gfx/Pourpoint.png used on input line 190.
+Package pdftex.def Info: gfx/Pourpoint.png used on input line 205.
 (pdftex.def)             Requested size: 151.19897pt x 145.30522pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--196
+Underfull \hbox (badness 10000) in paragraph at lines 210--212
 
  []
 
-[27 <./gfx/Pourpoint.png>]
-<gfx/Phase_4/Pourpoint2.png, id=556, 545.03625pt x 407.5225pt>
+[28 <./gfx/Pourpoint.png>]
+<gfx/Phase_4/Pourpoint2.png, id=575, 545.03625pt x 407.5225pt>
 File: gfx/Phase_4/Pourpoint2.png Graphic file (type png)
 
 <use gfx/Phase_4/Pourpoint2.png>
-Package pdftex.def Info: gfx/Phase_4/Pourpoint2.png used on input line 200.
+Package pdftex.def Info: gfx/Phase_4/Pourpoint2.png used on input line 217.
 (pdftex.def)             Requested size: 151.19897pt x 113.0484pt.
 
-<gfx/Phase_4/Pourpoint3.png, id=557, 565.11125pt x 434.62375pt>
+<gfx/Phase_4/Pourpoint3.png, id=576, 565.11125pt x 434.62375pt>
 File: gfx/Phase_4/Pourpoint3.png Graphic file (type png)
 
 <use gfx/Phase_4/Pourpoint3.png>
-Package pdftex.def Info: gfx/Phase_4/Pourpoint3.png used on input line 203.
+Package pdftex.def Info: gfx/Phase_4/Pourpoint3.png used on input line 220.
 (pdftex.def)             Requested size: 151.19897pt x 116.28226pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--211
-
- []
-
-[28 <./gfx/Phase_4/Pourpoint2.png> <./gfx/Phase_4/Pourpoint3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 216--218
+Underfull \hbox (badness 10000) in paragraph at lines 229--231
+
+ []
+
+[29 <./gfx/Phase_4/Pourpoint2.png> <./gfx/Phase_4/Pourpoint3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 233--235
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 219--220
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
-<gfx/Phase_4/Barrier1.png, id=565, 798.985pt x 522.95375pt>
+<gfx/Phase_4/Barrier1.png, id=589, 798.985pt x 522.95375pt>
 File: gfx/Phase_4/Barrier1.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier1.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier1.png used on input line 224.
+Package pdftex.def Info: gfx/Phase_4/Barrier1.png used on input line 242.
 (pdftex.def)             Requested size: 151.19897pt x 98.96326pt.
 
-<gfx/Phase_4/Barrier2.png, id=566, 515.9275pt x 454.69875pt>
+<gfx/Phase_4/Barrier2.png, id=590, 515.9275pt x 454.69875pt>
 File: gfx/Phase_4/Barrier2.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier2.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier2.png used on input line 227.
+Package pdftex.def Info: gfx/Phase_4/Barrier2.png used on input line 245.
 (pdftex.def)             Requested size: 151.19897pt x 133.25381pt.
 
-<gfx/Phase_4/Barrier3.png, id=567, 713.66624pt x 524.96124pt>
+<gfx/Phase_4/Barrier3.png, id=591, 713.66624pt x 524.96124pt>
 File: gfx/Phase_4/Barrier3.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier3.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier3.png used on input line 229.
+Package pdftex.def Info: gfx/Phase_4/Barrier3.png used on input line 248.
 (pdftex.def)             Requested size: 151.19897pt x 111.21436pt.
 
-Underfull \hbox (badness 2073) in paragraph at lines 229--229
-[][][]|\T1/pplj/m/n/9 Gen-er-at-ing pix-els in the des-ig-
- []
-
-<gfx/Phase_4/Barrier4.png, id=568, 797.98125pt x 521.95pt>
+<gfx/Phase_4/Barrier4.png, id=592, 797.98125pt x 521.95pt>
 File: gfx/Phase_4/Barrier4.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier4.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier4.png used on input line 231.
+Package pdftex.def Info: gfx/Phase_4/Barrier4.png used on input line 251.
 (pdftex.def)             Requested size: 151.19897pt x 98.89278pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[29]
-Underfull \hbox (badness 10000) in paragraph at lines 245--246
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
@@ -2181,28 +2029,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.255 
+l.278 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--258
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
-[30 <./gfx/Phase_4/Barrier1.png> <./gfx/Phase_4/Barrier2.png> <./gfx/Phase_4/Bar
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
+
+ []
+
+[31 <./gfx/Phase_4/Barrier1.png> <./gfx/Phase_4/Barrier2.png> <./gfx/Phase_4/Bar
 rier3.png> <./gfx/Phase_4/Barrier4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-
- []
-
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2210,200 +2059,41 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.265 
+l.288 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
-<gfx/Phase_4/Barrier5.png, id=583, 712.6625pt x 525.965pt>
+<gfx/Phase_4/Barrier5.png, id=612, 712.6625pt x 525.965pt>
 File: gfx/Phase_4/Barrier5.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier5.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier5.png used on input line 276.
-(pdftex.def)             Requested size: 336.0pt x 247.97403pt.
+Package pdftex.def Info: gfx/Phase_4/Barrier5.png used on input line 299.
+(pdftex.def)             Requested size: 252.0pt x 185.9765pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 [32 <./gfx/Phase_4/Barrier5.png>]
-! Missing $ inserted.
-<inserted text> 
-$
-l.314 ...rassLocation = "/home/ubuntu/grassdata/WGS_
-                                                  1984",
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 \item
-          statusSupported = True,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 \item s
-           tatusSupported = True,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.315 \item s
-           tatusSupported = True,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.316 \item
-          storeSupported = True)
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.316 \item s
-           toreSupported = True)
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.316 \item s
-           toreSupported = True)
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (63.56989pt too wide) in paragraph at lines 314--316
-[][]\T1/pplj/m/n/10.95 grass-Lo-ca-tion = "/home/ubuntu/grassdata/WGS$[][]\U/ze
-ur/m/n/10.95 984\T1/pplj/m/n/10.95 ", \U/zeur/m/n/10.95 statusSupported \U/zeus
-/m/n/10.95 ½
- []
-
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.316 \item s
-           toreSupported = True)
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 [33]
-! Missing $ inserted.
-<inserted text> 
-$
-l.351 ...ses folder on the server. Furthermore the _
-                                                  _init__.py file is updated...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
-! Missing { inserted.
-<to be read again> 
-_
-l.351 ...es folder on the server. Furthermore the __
-                                                  init__.py file is updated ...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-! Missing { inserted.
-<to be read again> 
-_
-l.351 ...der on the server. Furthermore the __init__
-                                                  .py file is updated to now...
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-If you're confused by all this, try typing `I}' now.
-
-! Missing $ inserted.
-<inserted text> 
-$
-l.355 
-    
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.355 
-    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-}
-l.355 
-    
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Missing character: There is no “ (U+201C) in font pplr9d!
-Missing character: There is no ” (U+201D) in font pplr9d!
-Missing character: There is no ” (U+201D) in font pplr9d!
-
-Overfull \hbox (1611.73721pt too wide) in paragraph at lines 350--355
-\T1/pplj/m/n/10.95 the server. Fur-ther-more the $[][]$ 
  []
 
+[34]
 ! Misplaced alignment tab character &.
-l.357 ....144.192/cgi-bin/pywps.cgi?request=execute&
+l.381 ....144.192/cgi-bin/pywps.cgi?request=execute&
                                                   service=WPS&version=1.0.0&...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2413,7 +2103,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.357 ...-bin/pywps.cgi?request=execute&service=WPS&
+l.381 ...-bin/pywps.cgi?request=execute&service=WPS&
                                                   version=1.0.0&identifier=f...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2423,7 +2113,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.357 ...?request=execute&service=WPS&version=1.0.0&
+l.381 ...?request=execute&service=WPS&version=1.0.0&
                                                   identifier=flooding&datain...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2433,7 +2123,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.357 ...vice=WPS&version=1.0.0&identifier=flooding&
+l.381 ...vice=WPS&version=1.0.0&identifier=flooding&
                                                   datainputs=[rasterin=<LINK...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2443,20 +2133,20 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (50.96147pt too wide) in paragraph at lines 357--358
+Overfull \hbox (50.96147pt too wide) in paragraph at lines 381--382
 [][]\T1/pplj/m/n/10.95 http://52.17.144.192/cgi-bin/pywps.cgi?re-quest=ex-e-cut
 e-ser-vice=WPSver-
  []
 
 
-Overfull \hbox (44.93758pt too wide) in paragraph at lines 357--358
+Overfull \hbox (44.93758pt too wide) in paragraph at lines 381--382
 \T1/pplj/m/n/10.95 sion=1.0.0iden-ti-fier=flood-ing-datain-puts=[ras-terin=<LIN
 K TO DEM>;vec-
  []
 
-[34] [35]
+[35] [36]
 ! Misplaced alignment tab character &.
-l.409 \item http://52.17.144.192/upload?minx=COORD&
+l.432 \item http://52.17.144.192/upload?minx=COORD&
                                                  miny=COORD&maxx=COORD&maxy=...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2466,7 +2156,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.409 ...52.17.144.192/upload?minx=COORD&miny=COORD&
+l.432 ...52.17.144.192/upload?minx=COORD&miny=COORD&
                                                   maxx=COORD&maxy=COORD&file...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2476,7 +2166,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.409 ...92/upload?minx=COORD&miny=COORD&maxx=COORD&
+l.432 ...92/upload?minx=COORD&miny=COORD&maxx=COORD&
                                                   maxy=COORD&filename=FILENAME
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2486,7 +2176,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.409 ...inx=COORD&miny=COORD&maxx=COORD&maxy=COORD&
+l.432 ...inx=COORD&miny=COORD&maxx=COORD&maxy=COORD&
                                                   filename=FILENAME
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2496,19 +2186,19 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (32.72986pt too wide) in paragraph at lines 409--410
+Overfull \hbox (32.72986pt too wide) in paragraph at lines 432--433
 [][]\T1/pplj/m/n/10.95 http://52.17.144.192/u-pload?minx=CO-ORD-miny=CO-ORD-max
 x=CO-
  []
 
-[36] [37] [38]) [39] (./Chapters/Analysis.tex [40
-
-
-
-
-]
+[37] [38] [39]) [40] (./Chapters/Analysis.tex
 Chapter 5.
-) [41] (./Chapters/Discussion.tex [42
+) [41
+
+
+
+
+] (./Chapters/Discussion.tex [42
 
 
 
@@ -2547,10 +2237,7 @@ my, scelerisque
 
 ]) [48] (./FrontBackMatter/Bibliography.tex
 No file main.bbl.
-) (./FrontBackMatter/Colophon.tex
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 13.
-) [49
+) (./FrontBackMatter/Colophon.tex) [49
 
 
 
@@ -2580,12 +2267,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
 (./Chapters/Implementation.aux) (./Chapters/Analysis.aux)
 (./Chapters/Discussion.aux) (./Chapters/Chapter0A.aux)
 (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux)
-
-Package mparhack Warning: Marginpars may have changed.
-(mparhack)                Rerun to get them right.
-
-)
+(./FrontBackMatter/Declaration.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 
@@ -2595,8 +2277,8 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 4C2FCC0370B256E1579F8C4077DC9377;3084
-(rerunfilecheck)             After:  06806B297FB2281C0B65A279A7DB436F;3368.
+(rerunfilecheck)             Before: 9AEE97399D6EB829A50ADD9A51AED848;2959
+(rerunfilecheck)             After:  6B11AB5F6E6C58AF281418FC6CF73BB2;2813.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2607,31 +2289,33 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
  )
 
 Here is how much of LuaTeX's memory you used:
- 27771 strings out of 493803
- 244362,794899 words of node,token memory allocated
- 1318 words of node memory still in use:
-   17 hlist, 16 vlist, 7 rule, 34 glue, 2 kern, 11 penalty, 18 glyph, 105 glue_s
-pec, 3 write, 6 local_par, 10 pdf_colorstack nodes
-   avail lists: 1:8,2:45,3:641,4:4554,5:6126,6:3835,7:3770,8:47,9:6633,10:422
- 29287 multiletter control sequences out of 65536+600000
- 199 fonts using 7825275 bytes
- 82i,14n,77p,1613b,1573s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 27580 strings out of 493803
+ 244297,794899 words of node,token memory allocated
+ 1237 words of node memory still in use:
+   15 hlist, 14 vlist, 6 rule, 29 glue, 2 kern, 9 penalty, 17 glyph, 104 glue_sp
+ec, 1 action, 3 write, 5 local_par, 8 pdf_colorstack nodes
+   avail lists: 1:13,2:42,3:697,4:4898,5:6241,6:3836,7:4244,8:45,9:6749,10:433
+ 29178 multiletter control sequences out of 65536+600000
+ 152 fonts using 5979695 bytes
+ 82i,14n,77p,1613b,1540s stack positions out of 5000i,500n,10000p,200000b,100000s
+LuaTeX warning (dest): name{subsection.4.5.3} has been referenced but does not e
+xist, replaced by a fixed one
+
+LuaTeX warning (dest): name{subsection.4.5.2} has been referenced but does not e
+xist, replaced by a fixed one
+
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij8a.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (63 pages, 878294 bytes).
+st/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (63 pages, 1500817 bytes).
 
-PDF statistics: 864 PDF objects out of 1000 (max. 8388607)
- 762 compressed objects within 8 object streams
+PDF statistics: 874 PDF objects out of 1000 (max. 8388607)
+ 774 compressed objects within 8 object streams
  355 named destinations out of 1000 (max. 131072)
- 424 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 408 words of extra memory for PDF output out of 10000 (max. 10000000)
 

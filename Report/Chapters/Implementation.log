@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  31 MAY 2015 11:38
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  31 MAY 2015 18:04
  restricted \write18 enabled.
 **Implementation.tex
 (./Implementation.tex
@@ -38,17 +38,51 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.9 A
-   s mentioned previously the work was divided into a series of phases. It i...
+   s mentioned previously the work was divided into a series of phases. Befo...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 9--10
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--17
 [][]As
  []
 
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 I
+    MAGE OF THIS\\
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 18--20
+[][]IMAGE
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 N
+    ow that we have a rough idea of how the project would be working, we cou...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--22
+[][]Now
+ []
+
 ! Undefined control sequence.
-l.11 \section
+l.23 \section
            {Phase 1}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -63,16 +97,25 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.11 \section{P
+l.23 \section{P
              hase 1}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 11--13
+Overfull \hbox (20.0pt too wide) in paragraph at lines 23--25
 [][]Phase
  []
 
+! Undefined control sequence.
+l.26 \paragraph
+             {Setting up a local scripting environment:} Instead of working ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 ! LaTeX Error: Missing \begin{document}.
 
@@ -80,69 +123,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 ...t{Setting up a local scripting environment}}
-                                                   \\
+l.26 \paragraph{S
+               etting up a local scripting environment:} Instead of working ...
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (37.12209pt too wide) in paragraph at lines 14--15
-[][]\OT1/cmr/m/it/10 Set-
- []
-
-
-Overfull \hbox (16.611pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 ting
- []
-
-
-Overfull \hbox (10.47772pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 up
- []
-
-
-Overfull \hbox (5.11108pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 a
- []
-
-
-Overfull \hbox (11.24437pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 lo-
- []
-
-
-Overfull \hbox (11.75546pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 cal
- []
-
-
-Overfull \hbox (27.98312pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 script-
- []
-
-
-Overfull \hbox (13.2888pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 ing
- []
-
-
-Overfull \hbox (13.7999pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 en-
- []
-
-
-Overfull \hbox (11.24435pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 vi-
- []
-
-
-Overfull \hbox (18.01653pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 ron-
- []
-
-
-Overfull \hbox (22.67068pt too wide) in paragraph at lines 14--15
-\OT1/cmr/m/it/10 ment 
+Overfull \hbox (20.0pt too wide) in paragraph at lines 26--29
+[][]Setting
  []
 
 
@@ -152,60 +140,43 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 I
-    nstead of working directly on the server, and working with PyWPS we deci...
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 16--19
-[][]Instead
- []
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 \begin{itemize}
+l.30 \begin{itemize}
                   
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 20--20
+Overfull \hbox (20.0pt too wide) in paragraph at lines 30--30
 [][] 
  []
 
 
-Overfull \hbox (22.45808pt too wide) in paragraph at lines 21--22
+Overfull \hbox (22.45808pt too wide) in paragraph at lines 31--32
 \OT1/cmr/m/sc/10 GIS-
  []
 
 
-Overfull \hbox (29.37468pt too wide) in paragraph at lines 21--22
+Overfull \hbox (29.37468pt too wide) in paragraph at lines 31--32
 \OT1/cmr/m/sc/10 BASE\nullfont :
  []
 
 
-Overfull \hbox (22.45808pt too wide) in paragraph at lines 22--23
+Overfull \hbox (22.45808pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/sc/10 GIS-
  []
 
 
-Overfull \hbox (12.06934pt too wide) in paragraph at lines 22--23
+Overfull \hbox (12.06934pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/sc/10 D-
  []
 
 
-Overfull \hbox (29.37468pt too wide) in paragraph at lines 22--23
+Overfull \hbox (29.37468pt too wide) in paragraph at lines 32--33
 \OT1/cmr/m/sc/10 BASE\nullfont :
  []
 
 
-Overfull \hbox (29.80524pt too wide) in paragraph at lines 23--24
+Overfull \hbox (29.80524pt too wide) in paragraph at lines 33--34
 \OT1/cmr/m/sc/10 PATH\nullfont :
  []
 
@@ -216,14 +187,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.25 
+l.35 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 26--27
+Overfull \hbox (20.0pt too wide) in paragraph at lines 36--37
 [][]These
  []
 
@@ -234,7 +205,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.28 \begin{lstlisting}
+l.38 \begin{lstlisting}
                      [language=Python]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -247,80 +218,53 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 \end{lstlisting}
+l.43 \end{lstlisting}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 28--34
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--44
 [][][language=Python]
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 35--36
+Overfull \hbox (20.0pt too wide) in paragraph at lines 45--46
 [][]When
  []
 
+! Undefined control sequence.
+l.47 \paragraph
+             {Setting up the server:}Before being able to set up PyWPS, it i...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (37.12209pt too wide) in paragraph at lines 37--38
-[][]\OT1/cmr/m/it/10 Set-
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 47--49
+[][]Setting
  []
 
 
-Overfull \hbox (16.611pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/it/10 ting
- []
-
-
-Overfull \hbox (10.47772pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/it/10 up
- []
-
-
-Overfull \hbox (13.03323pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/it/10 the
- []
-
-
-Overfull \hbox (27.39838pt too wide) in paragraph at lines 37--38
-\OT1/cmr/m/it/10 server 
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--41
-[][]Before
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 42--45
+Overfull \hbox (20.0pt too wide) in paragraph at lines 50--53
 [][]The
  []
 
-
-Overfull \hbox (37.12209pt too wide) in paragraph at lines 46--47
-[][]\OT1/cmr/m/it/10 Set-
- []
-
-
-Overfull \hbox (16.611pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/it/10 ting
- []
-
-
-Overfull \hbox (10.47772pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/it/10 up
- []
+! Undefined control sequence.
+l.54 \paragraph
+             {Setting up Apache:}Every instance set up with Amazon, is provi...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (32.20673pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/it/10 Apache 
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 48--50
-[][]Every
+Overfull \hbox (20.0pt too wide) in paragraph at lines 54--56
+[][]Setting
  []
 
 
@@ -330,7 +274,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \begin{lstlisting}
+l.57 \begin{lstlisting}
                      [language=Python]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -343,19 +287,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 \end{lstlisting}
+l.59 \end{lstlisting}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 51--54
+Overfull \hbox (20.0pt too wide) in paragraph at lines 57--60
 [][][language=Python]
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 55--57
+Overfull \hbox (20.0pt too wide) in paragraph at lines 61--63
 [][]Now
  []
 
@@ -366,7 +310,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 \begin{lstlisting}
+l.64 \begin{lstlisting}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -379,40 +323,34 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \end{lstlisting}
+l.66 \end{lstlisting}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 59--61
+Overfull \hbox (20.0pt too wide) in paragraph at lines 65--67
 [][]/var/www/html/
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 62--63
+Overfull \hbox (20.0pt too wide) in paragraph at lines 68--69
 [][]So
  []
 
-
-Overfull \hbox (33.05547pt too wide) in paragraph at lines 64--65
-[][]\OT1/cmr/m/it/10 In-
- []
-
-
-Overfull \hbox (31.43314pt too wide) in paragraph at lines 64--65
-\OT1/cmr/m/it/10 stalling
- []
-
-
-Overfull \hbox (34.90536pt too wide) in paragraph at lines 64--65
-\OT1/cmr/m/it/10 GRASS 
- []
+! Undefined control sequence.
+l.70 \paragraph
+             {Installing GRASS:} The next step is setting up GRASS on the se...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 66--67
-[][]The
+Overfull \hbox (20.0pt too wide) in paragraph at lines 70--71
+[][]Installing
  []
 
 
@@ -422,7 +360,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \begin{lstlisting}
+l.72 \begin{lstlisting}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -435,19 +373,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.70 \end{lstlisting}
+l.74 \end{lstlisting}
                    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 69--71
+Overfull \hbox (20.0pt too wide) in paragraph at lines 73--75
 [][]Sudo
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 72--73
+Overfull \hbox (20.0pt too wide) in paragraph at lines 76--77
 [][]GRASS
  []
 
@@ -458,7 +396,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.74 \begin{lstlisting}
+l.78 \begin{lstlisting}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -471,39 +409,39 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.76 \end{lstlisting}
+l.80 \end{lstlisting}
                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 75--77
+Overfull \hbox (20.0pt too wide) in paragraph at lines 79--81
 [][]/home/ubuntu/ 
  []
 
 
-Overfull \hbox (33.05547pt too wide) in paragraph at lines 78--79
+Overfull \hbox (33.05547pt too wide) in paragraph at lines 82--83
 [][]\OT1/cmr/m/it/10 In-
  []
 
 
-Overfull \hbox (31.43314pt too wide) in paragraph at lines 78--79
+Overfull \hbox (31.43314pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/it/10 stalling
  []
 
 
-Overfull \hbox (15.21655pt too wide) in paragraph at lines 78--79
+Overfull \hbox (15.21655pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/it/10 Py-
  []
 
 
-Overfull \hbox (23.59154pt too wide) in paragraph at lines 78--79
+Overfull \hbox (23.59154pt too wide) in paragraph at lines 82--83
 \OT1/cmr/m/it/10 WPS 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 80--82
+Overfull \hbox (20.0pt too wide) in paragraph at lines 84--86
 [][]Now
  []
 
@@ -514,7 +452,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.83 \begin{lstlisting}
+l.87 \begin{lstlisting}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -527,19 +465,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.85 \end{lstlisting}
+l.89 \end{lstlisting}
                    \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 84--86
+Overfull \hbox (20.0pt too wide) in paragraph at lines 88--90
 [][]/var/www/html/pywps/ 
  []
 
 ! Undefined control sequence.
-l.87 \subsection
+l.91 \subsection
               {Problems encountered}\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -548,148 +486,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 87--88
+Overfull \hbox (20.0pt too wide) in paragraph at lines 91--92
 [][]Problems
  []
 
-
-Overfull \hbox (37.12209pt too wide) in paragraph at lines 89--90
-[][]\OT1/cmr/m/it/10 Set-
- []
-
-
-Overfull \hbox (16.611pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 ting
- []
-
-
-Overfull \hbox (10.47772pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 up
- []
-
-
-Overfull \hbox (33.70815pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 GRASS
- []
-
-
-Overfull \hbox (27.98312pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 script-
- []
-
-
-Overfull \hbox (13.2888pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 ing
- []
-
-
-Overfull \hbox (8.43327pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 to
- []
-
-
-Overfull \hbox (15.20546pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 run
- []
-
-
-Overfull \hbox (10.73328pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 on
- []
-
-
-Overfull \hbox (5.11108pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 a
- []
-
-
-Overfull \hbox (22.25542pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 Win-
- []
-
-
-Overfull \hbox (20.95544pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 dows
- []
-
-
-Overfull \hbox (16.86656pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 ma-
- []
-
-
-Overfull \hbox (23.75124pt too wide) in paragraph at lines 89--90
-\OT1/cmr/m/it/10 chine 
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 91--92
-[][]It
- []
-
-
-Overfull \hbox (40.07205pt too wide) in paragraph at lines 93--94
-[][]\OT1/cmr/m/it/10 Lack
- []
-
-
-Overfull \hbox (8.17773pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 of
- []
-
-
-Overfull \hbox (17.88875pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 doc-
- []
-
-
-Overfull \hbox (8.94438pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 u-
- []
-
-
-Overfull \hbox (21.97763pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 men-
- []
-
-
-Overfull \hbox (12.01102pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 ta-
- []
-
-
-Overfull \hbox (17.88925pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/it/10 tion 
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 95--97
-[][]As
- []
-
-
-Overfull \hbox (43.93031pt too wide) in paragraph at lines 95--97
-\OT1/cmr/m/it/10 GRASS64
- []
-
-
-Overfull \hbox (8.68883pt too wide) in paragraph at lines 95--97
-\OT1/cmr/m/it/10 vs
- []
-
-
-Overfull \hbox (40.17479pt too wide) in paragraph at lines 95--97
-\OT1/cmr/m/it/10 GRASS7 
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 98--99
-[][]We
- []
-
 ! Undefined control sequence.
-l.100 \section
-            {Phase 2}
+l.93 \paragraph
+             {Setting up GRASS scripting to run on a Windows machine:} It tu...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -697,32 +500,481 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 100--102
+Overfull \hbox (20.0pt too wide) in paragraph at lines 93--94
+[][]Setting
+ []
+
+! Undefined control sequence.
+l.95 \paragraph
+             {Lack of documentation:} As the installation instructions of th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 95--96
+[][]Lack
+ []
+
+! Undefined control sequence.
+l.97 \paragraph
+             {GRASS64 vs GRASS7:} We actually started by installing the newe...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 97--98
+[][]GRASS64
+ []
+
+! Undefined control sequence.
+l.99 \section
+           {Phase 2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 99--101
 [][]Phase
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 103--105
-[][]IMAGE 
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.102 \begin{figure}
+                  [h!]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.104 	{\includegraphics
+                      [width=.45\linewidth]{gfx/Phase_2/image.png}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.104 	{\includegraphics[width=.45\linewidth]
+                                           {gfx/Phase_2/image.png}}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.104 	{\includegraphics[width=.45\linewidth]
+                                           {gfx/Phase_2/image.png}}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.104 ...udegraphics[width=.45\linewidth]{gfx/Phase_
+                                                  2/image.png}}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 104.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 104.
+! Extra }, or forgotten $.
+l.104 ...width=.45\linewidth]{gfx/Phase_2/image.png}
+                                                  }
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.104 ...idth=.45\linewidth]{gfx/Phase_2/image.png}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.105 \caption
+            {Inputs for the flooding model.}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 \end{figure}
+                \\
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.107 \end{figure}
+                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.107 \end{figure}
+                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.107 \end{figure}
+                \\
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 102--108
+[][][h!]
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 106--109
+Overfull \hbox (183.67198pt too wide) in paragraph at lines 102--108
+[width=.45]gfx/Phase$[][]\OML/cmm/m/it/10 =image:png[][]$ 
+ []
+
+! Undefined control sequence.
+l.109 As seen on \autoref
+                       {fig:inputs}, only one external data source is requir...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 109--112
 [][]As
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 110--111
+Overfull \hbox (20.0pt too wide) in paragraph at lines 113--114
 [][]After
  []
 
+! Undefined control sequence.
+l.115 The process is illustrated on \autoref
+                                          {fig:continuous}. On \autoref{fig:...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 112--117
+! Undefined control sequence.
+l.115 ...ed on \autoref{fig:continuous}. On \autoref
+                                                  {fig:allflood}, the algori...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.115 ...ch cells are reachable, as seen on \autoref
+                                                  {fig:actualflood}.\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 115--116
 [][]The
  []
 
+
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 \begin{figure}
+                  [h!]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
 ! Undefined control sequence.
-l.118 \section
+l.118   \myfloatalign
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.119   \subfloat
+               [Every cell with a value less than the current flood level.]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.121   {\includegraphics
+                       [width=.45\linewidth]{gfx/Phase_2/image2.png}}} \quad
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.121   {\includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_2/image2.png}}} \quad
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.121   {\includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_2/image2.png}}} \quad
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.121 ...udegraphics[width=.45\linewidth]{gfx/Phase_
+                                                  2/image2.png}}} \quad
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+l.121 ...idth=.45\linewidth]{gfx/Phase_2/image2.png}
+                                                  }} \quad
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.121 ...dth=.45\linewidth]{gfx/Phase_2/image2.png}}
+                                                  } \quad
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.121 ...th=.45\linewidth]{gfx/Phase_2/image2.png}}}
+                                                   \quad
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.122   \subfloat
+               [Cells reachable from the source point.]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.124    \includegraphics
+                       [width=.45\linewidth]{gfx/Phase_2/image3.png}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+]
+l.124    \includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_2/image3.png}} \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+]
+l.124    \includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_2/image3.png}} \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.125  \caption
+             {Figures indicating how r.cost is used to identify continuous a...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \end{figure}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.127 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.127 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.127 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.127 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 117--128
+[][][h!]
+ []
+
+
+Overfull \hbox (393.10095pt too wide) in paragraph at lines 117--128
+[width=.45]gfx/Phase$[][]\OML/cmm/m/it/10 =image\OT1/cmr/m/n/10 2\OML/cmm/m/it/
+10 :png \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Cellsreachablefromthesourcepoint:\OT1
+/cmr/m/n/10 ][][] 
+ []
+
+
+Overfull \hbox (273.05823pt too wide) in paragraph at lines 117--128
+[][]$ 
+ []
+
+! Undefined control sequence.
+l.129 ...reated, which will be discussed in \autoref
+                                                  {ch:phase4}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 129--130
+[][]Every
+ []
+
+! Undefined control sequence.
+l.131 \section
             {Phase 3}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -731,7 +983,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 118--120
+Overfull \hbox (20.0pt too wide) in paragraph at lines 131--133
 [][]Phase
  []
 
@@ -742,7 +994,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.121 \begin{lstlisting}
+l.134 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -755,44 +1007,44 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.125 \end{lstlisting}
+l.138 \end{lstlisting}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 122--126
+Overfull \hbox (20.0pt too wide) in paragraph at lines 135--139
 [][]sudo
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 127--130
+Overfull \hbox (20.0pt too wide) in paragraph at lines 140--143
 [][]Following
  []
 
 
-Overfull \hbox (68.3607pt too wide) in paragraph at lines 127--130
+Overfull \hbox (68.3607pt too wide) in paragraph at lines 140--143
 \OT1/cmr/m/it/10 /var/www/html\nullfont ,
  []
 
 
-Overfull \hbox (159.66014pt too wide) in paragraph at lines 127--130
+Overfull \hbox (159.66014pt too wide) in paragraph at lines 140--143
 \OT1/cmr/m/it/10 /var/www/html/FlaskApp/FlaskApp\nullfont .
  []
 
 
-Overfull \hbox (48.68301pt too wide) in paragraph at lines 127--130
+Overfull \hbox (48.68301pt too wide) in paragraph at lines 140--143
 \OT1/cmr/m/it/10 app.route()\nullfont ,
  []
 
 
-Overfull \hbox (15.33324pt too wide) in paragraph at lines 127--130
+Overfull \hbox (15.33324pt too wide) in paragraph at lines 140--143
 \OT1/cmr/m/it/10 'in-
  []
 
 
-Overfull \hbox (39.64977pt too wide) in paragraph at lines 127--130
+Overfull \hbox (39.64977pt too wide) in paragraph at lines 140--143
 \OT1/cmr/m/it/10 dex.html'
  []
 
@@ -803,7 +1055,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 \begin{lstlisting}
+l.144 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -812,15 +1064,11 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.133 def hello_
+l.146 def hello_
               world():
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 133.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 133.
 
 ! LaTeX Error: \begin{document} ended by \end{lstlisting}.
 
@@ -828,7 +1076,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.135 \end{lstlisting}
+l.148 \end{lstlisting}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -837,7 +1085,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.135 \end{lstlisting}
+l.148 \end{lstlisting}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -846,23 +1094,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 132--136
+Overfull \hbox (20.0pt too wide) in paragraph at lines 145--149
 [][]@app.route('/')
  []
 
 
-Overfull \hbox (37.82874pt too wide) in paragraph at lines 132--136
+Overfull \hbox (37.82874pt too wide) in paragraph at lines 145--149
 hello$[][]\OML/cmm/m/it/10 orld\OT1/cmr/m/n/10 () :
  []
 
 
-Overfull \hbox (160.64006pt too wide) in paragraph at lines 132--136
+Overfull \hbox (160.64006pt too wide) in paragraph at lines 145--149
 \OML/cmm/m/it/10 returnrender[]emplate\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 index
 :html[]\OT1/cmr/m/n/10 )$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 137--138
+Overfull \hbox (20.0pt too wide) in paragraph at lines 150--151
 [][]The
  []
 
@@ -873,7 +1121,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 \begin{lstlisting}
+l.152 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -882,7 +1130,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.140 def upload_
+l.153 def upload_
                file():
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -890,25 +1138,25 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.141 
+l.154 
     
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 140--141
+Overfull \hbox (20.0pt too wide) in paragraph at lines 153--154
 [][]def
  []
 
 
-Overfull \hbox (29.79935pt too wide) in paragraph at lines 140--141
+Overfull \hbox (29.79935pt too wide) in paragraph at lines 153--154
 upload$[][]\OML/cmm/m/it/10 ile\OT1/cmr/m/n/10 () :$ 
  []
 
 ! Missing $ inserted.
 <inserted text> 
 $
-l.145 			filename = secure_
+l.158 			filename = secure_
                          filename(file.filename)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -920,7 +1168,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.153 \end{lstlisting}
+l.166 \end{lstlisting}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -929,7 +1177,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.153 \end{lstlisting}
+l.166 \end{lstlisting}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -938,12 +1186,12 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 142--154
+Overfull \hbox (20.0pt too wide) in paragraph at lines 155--167
 [][]if
  []
 
 
-Overfull \hbox (451.07927pt too wide) in paragraph at lines 142--154
+Overfull \hbox (451.07927pt too wide) in paragraph at lines 155--167
 secure$[][]\OML/cmm/m/it/10 ilename\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 file:filen
 ame\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 file:save\OT1/cmr/m/n/10 (\OML/cmm/m/it/10
  os:path:join\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 app:config\OT1/cmr/m/n/10 [[]\OM
@@ -952,7 +1200,7 @@ mr/m/n/10 ))\OML/cmm/m/it/10 src[]s \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (382.83229pt too wide) in paragraph at lines 142--154
+Overfull \hbox (382.83229pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 gdal:Open\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 os:path:join\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 app:config\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 UPLOAD
 []OLDER[]\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; filename\OT1/cmr/m/n/10 ))\OML/cmm
@@ -960,48 +1208,48 @@ r/m/n/10 (\OML/cmm/m/it/10 app:config\OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 UPLOAD
  []
 
 
-Overfull \hbox (73.44304pt too wide) in paragraph at lines 142--154
+Overfull \hbox (73.44304pt too wide) in paragraph at lines 155--167
 \OT1/cmr/m/n/10 "\OML/cmm/m/it/10 PNG\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 driver \
 OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (302.98703pt too wide) in paragraph at lines 142--154
+Overfull \hbox (302.98703pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 gdal:GetDriverByName\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 formatim
 age\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 fileName; fileExtension \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (173.36354pt too wide) in paragraph at lines 142--154
+Overfull \hbox (173.36354pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 os:path:splitext\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 filename\OT1
 /cmr/m/n/10 )\OML/cmm/m/it/10 finalloca \OT1/cmr/m/n/10 =[]
  []
 
 
-Overfull \hbox (254.54816pt too wide) in paragraph at lines 142--154
+Overfull \hbox (254.54816pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 =var=www=html=FlaskApp=FlaskApp=static=images=[] \OT1/cmr/m/n/
 10 +
  []
 
 
-Overfull \hbox (76.55063pt too wide) in paragraph at lines 142--154
+Overfull \hbox (76.55063pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 str\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 fileName\OT1/cmr/m/n/10 )
  +[]
  []
 
 
-Overfull \hbox (55.15477pt too wide) in paragraph at lines 142--154
+Overfull \hbox (55.15477pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 :png[]dst[]s \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (170.52608pt too wide) in paragraph at lines 142--154
+Overfull \hbox (170.52608pt too wide) in paragraph at lines 155--167
 \OML/cmm/m/it/10 driver:CreateCopy\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 finalloca; 
 src[]s; \OT1/cmr/m/n/10 0)$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 155--156
+Overfull \hbox (20.0pt too wide) in paragraph at lines 168--169
 [][]When
  []
 
@@ -1012,21 +1260,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 \begin{lstlisting}
+l.170 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 158--165
+Overfull \hbox (20.0pt too wide) in paragraph at lines 171--178
 [][]width
  []
 
 ! Missing $ inserted.
 <inserted text> 
 $
-l.166 			return redirect(url_
+l.179 			return redirect(url_
                            for('upload_file',filename=filename,minx=minx,min...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1038,7 +1286,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.167 \end{lstlisting}
+l.180 \end{lstlisting}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1047,7 +1295,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.167 \end{lstlisting}
+l.180 \end{lstlisting}
                     \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1056,48 +1304,48 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 166--168
+Overfull \hbox (20.0pt too wide) in paragraph at lines 179--181
 [][]return
  []
 
 
-Overfull \hbox (127.03992pt too wide) in paragraph at lines 166--168
+Overfull \hbox (127.03992pt too wide) in paragraph at lines 179--181
 redirect(url$[][]\OML/cmm/m/it/10 or\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 upload[
 ]ile[]; filename \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (80.92168pt too wide) in paragraph at lines 166--168
+Overfull \hbox (80.92168pt too wide) in paragraph at lines 179--181
 \OML/cmm/m/it/10 filename; minx \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (62.43202pt too wide) in paragraph at lines 166--168
+Overfull \hbox (62.43202pt too wide) in paragraph at lines 179--181
 \OML/cmm/m/it/10 minx; miny \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (63.9857pt too wide) in paragraph at lines 166--168
+Overfull \hbox (63.9857pt too wide) in paragraph at lines 179--181
 \OML/cmm/m/it/10 miny; maxx \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (65.53938pt too wide) in paragraph at lines 166--168
+Overfull \hbox (65.53938pt too wide) in paragraph at lines 179--181
 \OML/cmm/m/it/10 maxx; maxy \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (32.8207pt too wide) in paragraph at lines 166--168
+Overfull \hbox (32.8207pt too wide) in paragraph at lines 179--181
 \OML/cmm/m/it/10 maxy\OT1/cmr/m/n/10 ))$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 169--170
+Overfull \hbox (20.0pt too wide) in paragraph at lines 182--183
 [][]The
  []
 
 ! Undefined control sequence.
-l.171 \subsection
+l.184 \subsection
                {Problems encountered}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1106,17 +1354,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 171--174
+Overfull \hbox (20.0pt too wide) in paragraph at lines 184--187
 [][]Problems
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 175--176
+Overfull \hbox (20.0pt too wide) in paragraph at lines 188--189
 [][]What
  []
 
 ! Undefined control sequence.
-l.177 \section
+l.190 \section
             {Phase 4}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1125,12 +1373,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 177--179
+Overfull \hbox (20.0pt too wide) in paragraph at lines 190--192
 [][]Phase
  []
 
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 193--194
+[][]To
+ []
+
 ! Undefined control sequence.
-l.180 \subsection
+l.195 \subsection
                {Identifying critical areas}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1139,7 +1392,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.181 \subsubsection
+l.196 \subsubsection
                   {Outlet analysis}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1148,12 +1401,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 180--183
+Overfull \hbox (20.0pt too wide) in paragraph at lines 195--198
 [][]Identifying
  []
 
 ! Undefined control sequence.
-l.184 \subsubsection
+l.199 \subsubsection
                   {Pour point analysis}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1162,7 +1415,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 184--187
+Overfull \hbox (20.0pt too wide) in paragraph at lines 199--202
 [][]Pour
  []
 
@@ -1173,14 +1426,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.188 \begin{figure}
+l.203 \begin{figure}
                   [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.190 	{\includegraphics
+l.205 	{\includegraphics
                       [width=.45\linewidth]{gfx/Pourpoint.png}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1191,7 +1444,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.190 	{\includegraphics[width=.45\linewidth]
+l.205 	{\includegraphics[width=.45\linewidth]
                                            {gfx/Pourpoint.png}}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1200,7 +1453,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.190 	{\includegraphics[width=.45\linewidth]
+l.205 	{\includegraphics[width=.45\linewidth]
                                            {gfx/Pourpoint.png}}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1216,7 +1469,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.191 \caption
+l.206 \caption
             {Figure showing the pourpoint we are trying to identify.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1228,20 +1481,29 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.192 \end{figure}
+l.208 \end{figure}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 188--193
+Overfull \hbox (20.0pt too wide) in paragraph at lines 203--209
 [][][h!]
  []
 
+! Undefined control sequence.
+l.210 \autoref
+            {fig:pourpoint} shows two consecutive flood extents with 140cm(l...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 194--196
-[][]Figure
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 210--212
+[][]fig:pourpoint
  []
 
 
@@ -1251,14 +1513,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.197 \begin{figure}
+l.213 \begin{figure}
                   [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.198   \myfloatalign
+l.214   \myfloatalign
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1267,7 +1529,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.199   \subfloat
+l.215   \subfloat
                [Showing two flood extents.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1276,8 +1538,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.200   {\includegraphics
-                       [width=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}} \quad
+l.217   {\includegraphics
+                       [width=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}}} \...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1287,8 +1549,8 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.200   {\includegraphics[width=.45\linewidth]
-                                            {gfx/Phase_4/Pourpoint2.png}} \quad
+l.217   {\includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_4/Pourpoint2.png}}} \...
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
@@ -1296,8 +1558,8 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.200   {\includegraphics[width=.45\linewidth]
-                                            {gfx/Phase_4/Pourpoint2.png}} \quad
+l.217   {\includegraphics[width=.45\linewidth]
+                                            {gfx/Phase_4/Pourpoint2.png}}} \...
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
 I'll assume that you meant to say pt, for printer's points.
@@ -1308,13 +1570,22 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
 $
-l.200 ...udegraphics[width=.45\linewidth]{gfx/Phase_
-                                                  4/Pourpoint2.png}} \quad
+l.217 ...udegraphics[width=.45\linewidth]{gfx/Phase_
+                                                  4/Pourpoint2.png}}} \quad
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.200 ...=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}
+l.217 ...=.45\linewidth]{gfx/Phase_4/Pourpoint2.png}
+                                                  }} \quad
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.217 ....45\linewidth]{gfx/Phase_4/Pourpoint2.png}}
                                                   } \quad
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1323,7 +1594,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten $.
-l.200 ....45\linewidth]{gfx/Phase_4/Pourpoint2.png}}
+l.217 ...45\linewidth]{gfx/Phase_4/Pourpoint2.png}}}
                                                    \quad
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1332,7 +1603,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
-l.201   \subfloat
+l.218   \subfloat
                [Showing line of pour points.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1341,7 +1612,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.203    \includegraphics
+l.220    \includegraphics
                        [width=.45\linewidth]{gfx/Phase_4/Pourpoint3.png}} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1352,7 +1623,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.203    \includegraphics[width=.45\linewidth]
+l.220    \includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Pourpoint3.png}} \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1361,7 +1632,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.203    \includegraphics[width=.45\linewidth]
+l.220    \includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Pourpoint3.png}} \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1377,8 +1648,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.204   \caption
-              [Generated extra pixels]{Showing the concepts of finding the p...
+l.221   \caption
+              {Showing the concepts of finding the pourpoints.}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
@@ -1389,7 +1660,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.205 \end{figure}
+l.223 \end{figure}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1398,7 +1669,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.205 \end{figure}
+l.223 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1409,7 +1680,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.205 \end{figure}
+l.223 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1420,7 +1691,18 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.205 \end{figure}
+l.223 \end{figure}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.223 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1429,34 +1711,52 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 197--206
+Overfull \hbox (20.0pt too wide) in paragraph at lines 213--224
 [][][h!]
  []
 
 
-Overfull \hbox (389.9759pt too wide) in paragraph at lines 197--206
+Overfull \hbox (389.9759pt too wide) in paragraph at lines 213--224
 [width=.45]gfx/Phase$[][]\OML/cmm/m/it/10 =Pourpoint\OT1/cmr/m/n/10 2\OML/cmm/m
 /it/10 :png \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Showinglineofpourpoints:\OT1/cmr/
 m/n/10 ][][] 
  []
 
 
-Overfull \hbox (304.73923pt too wide) in paragraph at lines 197--206
-\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Generatedextrapixels\OT1/cmr/m/n/10 ][][]$ 
+Overfull \hbox (201.68489pt too wide) in paragraph at lines 213--224
+[][]$ 
  []
 
+! Undefined control sequence.
+l.226 ...flood enters into the new area. In \autoref
+                                                  {fig:twofloods} a black bo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 208--211
+! Undefined control sequence.
+l.226 ...nly the border cells as it seen in \autoref
+                                                  {fig:allthepoints}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 225--228
 [][]The
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 212--214
+Overfull \hbox (20.0pt too wide) in paragraph at lines 229--231
 [][]To
  []
 
 ! Undefined control sequence.
-l.215 \subsection
+l.232 \subsection
                {Barrier placement}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1465,12 +1765,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 215--218
+Overfull \hbox (20.0pt too wide) in paragraph at lines 232--235
 [][]Barrier
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 219--220
+Overfull \hbox (20.0pt too wide) in paragraph at lines 236--237
 [][]The
  []
 
@@ -1481,14 +1781,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.221 \begin{figure}
+l.238 \begin{figure}
                   [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.222   \myfloatalign
+l.239   \myfloatalign
                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1497,7 +1797,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.223   \subfloat
+l.240   \subfloat
                [Rasterized barrier.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1506,7 +1806,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.224   {\includegraphics
+l.241   {\includegraphics
                        [width=.45\linewidth]{gfx/Phase_4/Barrier1.png}} \quad
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1517,7 +1817,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.224   {\includegraphics[width=.45\linewidth]
+l.241   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier1.png}} \quad
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1526,7 +1826,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.224   {\includegraphics[width=.45\linewidth]
+l.241   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier1.png}} \quad
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1538,13 +1838,13 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
 $
-l.224 ...udegraphics[width=.45\linewidth]{gfx/Phase_
+l.241 ...udegraphics[width=.45\linewidth]{gfx/Phase_
                                                   4/Barrier1.png}} \quad
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.224 ...th=.45\linewidth]{gfx/Phase_4/Barrier1.png}
+l.241 ...th=.45\linewidth]{gfx/Phase_4/Barrier1.png}
                                                   } \quad
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1553,7 +1853,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten $.
-l.224 ...h=.45\linewidth]{gfx/Phase_4/Barrier1.png}}
+l.241 ...h=.45\linewidth]{gfx/Phase_4/Barrier1.png}}
                                                    \quad
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1562,7 +1862,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Undefined control sequence.
-l.225   \subfloat
+l.242   \subfloat
                [Problem areas.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1571,7 +1871,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.227    \includegraphics
+l.244    \includegraphics
                        [width=.45\linewidth]{gfx/Phase_4/Barrier2.png}} \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1582,7 +1882,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.227    \includegraphics[width=.45\linewidth]
+l.244    \includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier2.png}} \\
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1591,7 +1891,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.227    \includegraphics[width=.45\linewidth]
+l.244    \includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier2.png}} \\
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1603,7 +1903,7 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Undefined control sequence.
 <recently read> \subfloat 
           
-l.228   \subfloat
+l.245   \subfloat
                [Generating pixels in the designated areas.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1612,7 +1912,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.229   {\includegraphics
+l.246   {\includegraphics
                        [width=.45\linewidth]{gfx/Phase_4/Barrier3.png}} \quad
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1623,7 +1923,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.229   {\includegraphics[width=.45\linewidth]
+l.246   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier3.png}} \quad
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1632,7 +1932,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.229   {\includegraphics[width=.45\linewidth]
+l.246   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier3.png}} \quad
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1642,7 +1942,7 @@ delete the erroneous units; e.g., type `2' to delete
 two letters. (See Chapter 27 of The TeXbook.)
 
 ! Undefined control sequence.
-l.230   \subfloat
+l.247   \subfloat
                [Fixed barrier.]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1651,7 +1951,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.231   {\includegraphics
+l.248   {\includegraphics
                        [width=.45\linewidth]{gfx/Phase_4/Barrier4.png}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1662,7 +1962,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.231   {\includegraphics[width=.45\linewidth]
+l.248   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier4.png}}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -1671,7 +1971,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.231   {\includegraphics[width=.45\linewidth]
+l.248   {\includegraphics[width=.45\linewidth]
                                             {gfx/Phase_4/Barrier4.png}}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -1687,7 +1987,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.232   \caption
+l.249   \caption
               [Generated extra pixels]{Tu duo titulo debitas
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1699,7 +1999,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.234 \end{figure}
+l.251 \end{figure}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1708,7 +2008,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.234 \end{figure}
+l.251 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1719,7 +2019,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.234 \end{figure}
+l.251 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1730,7 +2030,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.234 \end{figure}
+l.251 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1739,31 +2039,31 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 221--235
+Overfull \hbox (20.0pt too wide) in paragraph at lines 238--252
 [][][h!]
  []
 
 
-Overfull \hbox (317.06277pt too wide) in paragraph at lines 221--235
+Overfull \hbox (317.06277pt too wide) in paragraph at lines 238--252
 [width=.45]gfx/Phase$[][]\OML/cmm/m/it/10 =Barrier\OT1/cmr/m/n/10 1\OML/cmm/m/i
 t/10 :png \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Problemareas:\OT1/cmr/m/n/10 ][][] 
 
  []
 
 
-Overfull \hbox (823.19475pt too wide) in paragraph at lines 221--235
+Overfull \hbox (823.19475pt too wide) in paragraph at lines 238--252
 \OT1/cmr/m/n/10 [\OML/cmm/m/it/10 Generatingpixelsinthedesignatedareas:\OT1/cmr
 /m/n/10 ][] [\OML/cmm/m/it/10 Fixedbarrier:\OT1/cmr/m/n/10 ][][\OML/cmm/m/it/10
  Generatedextrapixels\OT1/cmr/m/n/10 ][][]$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 236--238
+Overfull \hbox (20.0pt too wide) in paragraph at lines 253--255
 [][]The
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 239--240
+Overfull \hbox (20.0pt too wide) in paragraph at lines 256--257
 [][]In
  []
 
@@ -1774,7 +2074,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.241 \begin{lstlisting}
+l.258 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1787,14 +2087,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.243 \end{lstlisting}
+l.260 \end{lstlisting}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 245--246
+Overfull \hbox (20.0pt too wide) in paragraph at lines 262--263
 [][]As
  []
 
@@ -1805,7 +2105,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.247 \begin{table}
+l.264 \begin{table}
                  
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1818,7 +2118,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.248 \caption
+l.266 \caption
             {Relative cell coordinates to the center cell (0,0)}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1830,24 +2130,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.254 \end{table}
+l.274 \end{table}
                \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 248--255
-[][]Relative
- []
-
-
-Overfull \hbox (20.0pt too wide) in paragraph at lines 256--258
+Overfull \hbox (20.0pt too wide) in paragraph at lines 276--278
 [][]The
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 260--261
+Overfull \hbox (20.0pt too wide) in paragraph at lines 280--281
 [][]Since
  []
 
@@ -1858,7 +2153,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.262 \begin{lstlisting}
+l.282 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1867,18 +2162,18 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.263 gscript.run_
+l.283 gscript.run_
                 command('r.patch', inputs=['edges_1_1_ext','edges_11_ext','b...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Double subscript.
-l.263 ...pt.run_command('r.patch', inputs=['edges_1_
+l.283 ...pt.run_command('r.patch', inputs=['edges_1_
                                                   1_ext','edges_11_ext','bar...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
 ! Double subscript.
-l.263 ....run_command('r.patch', inputs=['edges_1_1_
+l.283 ....run_command('r.patch', inputs=['edges_1_1_
                                                   ext','edges_11_ext','barr_...
 I treat `x_1_2' essentially like `x_1{}_2'.
 
@@ -1889,7 +2184,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.264 \end{lstlisting}
+l.284 \end{lstlisting}
                     \\
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1898,7 +2193,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.264 \end{lstlisting}
+l.284 \end{lstlisting}
                     \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1907,25 +2202,25 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (147.0052pt too wide) in paragraph at lines 263--265
+Overfull \hbox (147.0052pt too wide) in paragraph at lines 283--285
 [][]gscript.run$[][]\OML/cmm/m/it/10 ommand\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 
 r:patch[]; inputs \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (218.33609pt too wide) in paragraph at lines 263--265
+Overfull \hbox (218.33609pt too wide) in paragraph at lines 283--285
 \OT1/cmr/m/n/10 [[]\OML/cmm/m/it/10 edges[][][][][]xt[];[] edges[]\OT1/cmr/m/n/
 10 1[]\OML/cmm/m/it/10 xt[];[] barr[]aster[]\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ;
  output \OT1/cmr/m/n/10 =[]
  []
 
 
-Overfull \hbox (37.10426pt too wide) in paragraph at lines 263--265
+Overfull \hbox (37.10426pt too wide) in paragraph at lines 283--285
 \OML/cmm/m/it/10 merged\OT1/cmr/m/n/10 )$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 266--267
+Overfull \hbox (20.0pt too wide) in paragraph at lines 286--287
 [][]The
  []
 
@@ -1936,7 +2231,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.268 \begin{lstlisting}
+l.288 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1945,7 +2240,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.269 gscript.run_
+l.289 gscript.run_
                 command('r.mapcalc', expression='original_b = if(isnull(merg...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -1957,7 +2252,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.270 \end{lstlisting}
+l.290 \end{lstlisting}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1966,7 +2261,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.270 \end{lstlisting}
+l.290 \end{lstlisting}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1975,30 +2270,30 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (182.02843pt too wide) in paragraph at lines 269--271
+Overfull \hbox (182.02843pt too wide) in paragraph at lines 289--291
 [][]gscript.run$[][]\OML/cmm/m/it/10 ommand\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 
 r:mapcalc[]; expression \OT1/cmr/m/n/10 =[]
  []
 
 
-Overfull \hbox (50.49953pt too wide) in paragraph at lines 269--271
+Overfull \hbox (50.49953pt too wide) in paragraph at lines 289--291
 \OML/cmm/m/it/10 original[] \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (169.43504pt too wide) in paragraph at lines 269--271
+Overfull \hbox (169.43504pt too wide) in paragraph at lines 289--291
 \OML/cmm/m/it/10 if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 isnull\OT1/cmr/m/n/10 (\OM
 L/cmm/m/it/10 merged\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; original; original \OT1
 /cmr/m/n/10 +
  []
 
 
-Overfull \hbox (43.79872pt too wide) in paragraph at lines 269--271
+Overfull \hbox (43.79872pt too wide) in paragraph at lines 289--291
 \OML/cmm/m/it/10 merged\OT1/cmr/m/n/10 )[])$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 272--273
+Overfull \hbox (20.0pt too wide) in paragraph at lines 292--293
 [][]This
  []
 
@@ -2009,14 +2304,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.274 \begin{figure}
+l.294 \begin{figure}
                   [h!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.276 	{\includegraphics
+l.296 	{\includegraphics
                       [width=\linewidth]{gfx/Phase_4/Barrier5.png}}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2027,7 +2322,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
 ]
-l.276 	{\includegraphics[width=\linewidth]
+l.296 	{\includegraphics[width=\linewidth]
                                         {gfx/Phase_4/Barrier5.png}}
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2036,7 +2331,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Illegal unit of measure (pt inserted).
 <to be read again> 
 ]
-l.276 	{\includegraphics[width=\linewidth]
+l.296 	{\includegraphics[width=\linewidth]
                                         {gfx/Phase_4/Barrier5.png}}
 Dimensions can be in units of em, ex, in, pt, pc,
 cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
@@ -2048,13 +2343,13 @@ two letters. (See Chapter 27 of The TeXbook.)
 ! Missing $ inserted.
 <inserted text> 
 $
-l.276 ...ncludegraphics[width=\linewidth]{gfx/Phase_
+l.296 ...ncludegraphics[width=\linewidth]{gfx/Phase_
                                                   4/Barrier5.png}}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Extra }, or forgotten $.
-l.276 ...width=\linewidth]{gfx/Phase_4/Barrier5.png}
+l.296 ...width=\linewidth]{gfx/Phase_4/Barrier5.png}
                                                   }
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2063,7 +2358,7 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 ! Extra }, or forgotten $.
-l.276 ...idth=\linewidth]{gfx/Phase_4/Barrier5.png}}
+l.296 ...idth=\linewidth]{gfx/Phase_4/Barrier5.png}}
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2078,7 +2373,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.277 \caption
+l.297 \caption
             {Figure showing important concepts when working with watersheds}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -2090,7 +2385,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.278 \end{figure}
+l.298 \end{figure}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2099,7 +2394,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.278 \end{figure}
+l.298 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2110,7 +2405,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.278 \end{figure}
+l.298 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2121,7 +2416,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing } inserted.
 <inserted text> 
 }
-l.278 \end{figure}
+l.298 \end{figure}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2130,23 +2425,23 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 274--279
+Overfull \hbox (20.0pt too wide) in paragraph at lines 294--299
 [][][h!]
  []
 
 
-Overfull \hbox (353.05115pt too wide) in paragraph at lines 274--279
+Overfull \hbox (353.05115pt too wide) in paragraph at lines 294--299
 [width=]gfx/Phase$[][]\OML/cmm/m/it/10 =Barrier\OT1/cmr/m/n/10 5\OML/cmm/m/it/1
 0 :png[]$ 
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 280--281
+Overfull \hbox (20.0pt too wide) in paragraph at lines 300--301
 [][]By
  []
 
 ! Undefined control sequence.
-l.282 \subsection
+l.302 \subsection
                {Problems encountered}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2155,7 +2450,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 282--285
+Overfull \hbox (20.0pt too wide) in paragraph at lines 302--305
 [][]Problems
  []
 
@@ -2166,7 +2461,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.286 \begin{lstlisting}
+l.306 \begin{lstlisting}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2175,13 +2470,13 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.287 corr_
+l.307 corr_
          barrier = if(isnull(barr_raster), if(barr_raster[0,-1] == 3 && (bar...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.287 ...l(barr_raster), if(barr_raster[0,-1] == 3 &
+l.307 ...l(barr_raster), if(barr_raster[0,-1] == 3 &
                                                   & (barr_raster[-1,0] == 3 ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2191,7 +2486,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.287 ...(barr_raster), if(barr_raster[0,-1] == 3 &&
+l.307 ...(barr_raster), if(barr_raster[0,-1] == 3 &&
                                                    (barr_raster[-1,0] == 3 |...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2201,7 +2496,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.287 ...ster, null()) || if(barr_raster[0,1] == 3 &
+l.307 ...ster, null()) || if(barr_raster[0,1] == 3 &
                                                   &  (barr_raster[-1,0] == 3...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2211,7 +2506,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.287 ...ter, null()) || if(barr_raster[0,1] == 3 &&
+l.307 ...ter, null()) || if(barr_raster[0,1] == 3 &&
                                                     (barr_raster[-1,0] == 3 ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2227,7 +2522,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.288 \end{lstlisting}
+l.308 \end{lstlisting}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2236,13 +2531,1650 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
 $
-l.288 \end{lstlisting}
+l.308 \end{lstlisting}
                     
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
 With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (62.32756pt too wide) in paragraph at lines 307--309
+[][]corr$[][]\OML/cmm/m/it/10 arrier \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (203.8404pt too wide) in paragraph at lines 307--309
+\OML/cmm/m/it/10 if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 isnull\OT1/cmr/m/n/10 (\OM
+L/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; if\OT1/cmr/m/n/10 
+(\OML/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OMS/cmsy/m/n
+/10  \OT1/cmr/m/n/10 1] ==
+ []
+
+
+Overfull \hbox (101.33693pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3(\OML/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10
+  \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0] ==
+ []
+
+
+Overfull \hbox (95.2258pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10
+ [1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0] ==
+ []
+
+
+Overfull \hbox (196.84592pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3)\OML/cmm/m/it/10 ; barr[]aster; null\OT1/cmr/m/n/10 ())\OMS/c
+msy/m/n/10 jj\OML/cmm/m/it/10 if\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 barr[]aster\O
+T1/cmr/m/n/10 [0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1] ==
+ []
+
+
+Overfull \hbox (101.33693pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3(\OML/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10
+  \OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0] ==
+ []
+
+
+Overfull \hbox (95.2258pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3\OMS/cmsy/m/n/10 jj\OML/cmm/m/it/10 barr[]aster\OT1/cmr/m/n/10
+ [1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 0] ==
+ []
+
+
+Overfull \hbox (147.98404pt too wide) in paragraph at lines 307--309
+\OT1/cmr/m/n/10 3)\OML/cmm/m/it/10 ; barr[]aster; null\OT1/cmr/m/n/10 ())\OML/c
+mm/m/it/10 ; barr[]aster\OT1/cmr/m/n/10 )$ 
+ []
+
+! Undefined control sequence.
+l.310 \section
+            {Phase 5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 310--312
+[][]Phase
+ []
+
+! Undefined control sequence.
+l.313 \subsection
+               {PyWPS}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 313--315
+[][]PyWPS
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 316--317
+[][]The
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 318--319
+[][]As
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 327--328
+[][]The
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 329--329
+[][] 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.334 ...rassLocation = "/home/ubuntu/grassdata/WGS_
+                                                  1984",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \item
+          statusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \item s
+           tatusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.335 \item s
+           tatusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.336 \item
+          storeSupported = True
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.336 \item s
+           toreSupported = True
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.336 \item s
+           toreSupported = True
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (112.69804pt too wide) in paragraph at lines 334--336
+"/home/ubuntu/grassdata/WGS$[][]\OT1/cmr/m/n/10 984"\OML/cmm/m/it/10 ; statusSu
+pported \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (26.84727pt too wide) in paragraph at lines 334--336
+\OML/cmm/m/it/10 True; [][]$ 
+ []
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.336 \item s
+           toreSupported = True
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 339--344
+[][]The
+ []
+
+
+Overfull \hbox (25.17203pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 grass-
+ []
+
+
+Overfull \hbox (14.44987pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Lo-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 tion\nullfont ,
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 sta-
+ []
+
+
+Overfull \hbox (16.35544pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 tus-
+ []
+
+
+Overfull \hbox (19.67766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Sup-
+ []
+
+
+Overfull \hbox (26.44978pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ported
+ []
+
+
+Overfull \hbox (24.40535pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 store-
+ []
+
+
+Overfull \hbox (19.67766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Sup-
+ []
+
+
+Overfull \hbox (26.44978pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ported\nullfont .
+ []
+
+
+Overfull \hbox (25.17203pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 grass-
+ []
+
+
+Overfull \hbox (14.44987pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Lo-
+ []
+
+
+Overfull \hbox (12.77766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ca-
+ []
+
+
+Overfull \hbox (17.12212pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 tion
+ []
+
+
+Overfull \hbox (16.09988pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 sta-
+ []
+
+
+Overfull \hbox (16.35544pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 tus-
+ []
+
+
+Overfull \hbox (19.67766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Sup-
+ []
+
+
+Overfull \hbox (26.44978pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ported
+ []
+
+
+Overfull \hbox (24.40535pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 store-
+ []
+
+
+Overfull \hbox (19.67766pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 Sup-
+ []
+
+
+Overfull \hbox (26.44978pt too wide) in paragraph at lines 339--344
+\OT1/cmr/m/it/10 ported
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.345 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 346--349
+[][]self.rasterin=self.addComplexInput(identifier='rasterin',
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 350--353
+[][]self.vectorin
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.354 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 356--357
+[][]After
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 360--361
+[][]self.outputImage0=self.addComplexOutput(identifier="output0",title="output
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 362--363
+[][]self.outputImage1=self.addComplexOutput(identifier="output1",title="output
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 364--365
+[][]self.outputVector=self.addComplexOutput(identifier="output2",title="output
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.366 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 368--369
+[][]By
+ []
+
+
+Overfull \hbox (12.7777pt too wide) in paragraph at lines 368--369
+\OT1/cmr/m/it/10 as-
+ []
+
+
+Overfull \hbox (18.02763pt too wide) in paragraph at lines 368--369
+\OT1/cmr/m/it/10 Ref-
+ []
+
+
+Overfull \hbox (12.39433pt too wide) in paragraph at lines 368--369
+\OT1/cmr/m/it/10 er-
+ []
+
+
+Overfull \hbox (18.91095pt too wide) in paragraph at lines 368--369
+\OT1/cmr/m/it/10 ence
+ []
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.371 ...ses folder on the server. Furthermore the _
+                                                  _init__.py file is updated...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+_
+l.371 ...es folder on the server. Furthermore the __
+                                                  init__.py file is updated ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+If you're confused by all this, try typing `I}' now.
+
+! Missing { inserted.
+<to be read again> 
+_
+l.371 ...der on the server. Furthermore the __init__
+                                                  .py file is updated to now...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+If you're confused by all this, try typing `I}' now.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.375 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.375 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.375 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no “ (U+201C) in font cmr5!
+Missing character: There is no ” (U+201D) in font cmr5!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 370--375
+[][]Now
+ []
+
+
+Overfull \hbox (1668.86688pt too wide) in paragraph at lines 370--375
+[][]$ 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 376--376
+[][] 
+ []
+
+! Misplaced alignment tab character &.
+l.377 ....144.192/cgi-bin/pywps.cgi?request=execute&
+                                                  service=WPS&version=1.0.0&...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.377 ...-bin/pywps.cgi?request=execute&service=WPS&
+                                                  version=1.0.0&identifier=f...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.377 ...?request=execute&service=WPS&version=1.0.0&
+                                                  identifier=flooding&datain...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.377 ...vice=WPS&version=1.0.0&identifier=flooding&
+                                                  datainputs=[rasterin=<LINK...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 380--381
+[][]The
+ []
+
+! Undefined control sequence.
+l.382 \subsection
+               {Setting up the design}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 382--387
+[][]Setting
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 388--389
+[][]As
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 390--391
+[][]To
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.398 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `macro parameter character #' in math mode.
+l.399 $.(#
+        step1).hide();
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.400 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (85.94295pt too wide) in paragraph at lines 399--400
+[][]$\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 step\OT1/cmr/m/n/10 1)
+\OML/cmm/m/it/10 :hide\OT1/cmr/m/n/10 ();$ 
+ []
+
+! You can't use `macro parameter character #' in math mode.
+l.401 $.(#
+        step2).show();
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.402 \end{lstlisting}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (89.59967pt too wide) in paragraph at lines 401--403
+[][]$\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 step\OT1/cmr/m/n/10 2)
+\OML/cmm/m/it/10 :show\OT1/cmr/m/n/10 ();$ 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 404--406
+[][]At
+ []
+
+
+Overfull \hbox (43.1776pt too wide) in paragraph at lines 407--409
+[][]\OT1/cmr/m/sc/10 Step
+ []
+
+
+Overfull \hbox (5.52773pt too wide) in paragraph at lines 407--409
+\OT1/cmr/m/sc/10 1
+ []
+
+
+Overfull \hbox (17.4943pt too wide) in paragraph at lines 407--409
+\OT1/cmr/m/sc/10 Up-
+ []
+
+
+Overfull \hbox (23.64435pt too wide) in paragraph at lines 407--409
+\OT1/cmr/m/sc/10 load
+ []
+
+
+Overfull \hbox (28.79135pt too wide) in paragraph at lines 407--409
+\OT1/cmr/m/sc/10 DEM:
+ []
+
+
+Overfull \hbox (43.1776pt too wide) in paragraph at lines 410--412
+[][]\OT1/cmr/m/sc/10 Step
+ []
+
+
+Overfull \hbox (5.52773pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/sc/10 2
+ []
+
+
+Overfull \hbox (15.46652pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/sc/10 Se-
+ []
+
+
+Overfull \hbox (22.53319pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/sc/10 lect
+ []
+
+
+Overfull \hbox (35.39421pt too wide) in paragraph at lines 410--412
+\OT1/cmr/m/sc/10 Ocean:
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 413--414
+[][]This
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 415--416
+[][]When
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.417 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 418--419
+[][]url
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 420--422
+[][]if
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.423 \end{lstlisting}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 425--427
+[][]As
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 428--428
+[][] 
+ []
+
+! Misplaced alignment tab character &.
+l.429 \item http://52.17.144.192/upload?minx=COORD&
+                                                 miny=COORD&maxx=COORD&maxy=...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.429 ...52.17.144.192/upload?minx=COORD&miny=COORD&
+                                                  maxx=COORD&maxy=COORD&file...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.429 ...92/upload?minx=COORD&miny=COORD&maxx=COORD&
+                                                  maxy=COORD&filename=FILENAME
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.429 ...inx=COORD&miny=COORD&maxx=COORD&maxy=COORD&
+                                                  filename=FILENAME
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 432--433
+[][]To
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.434 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.436 var findcorners2 = findcorners.split("&
+                                           ")
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 435--448
+[][]var
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.449 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 451--452
+[][]Lastly
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.459 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 455--460
+[][]imageBounds
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 461--462
+[][]As
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.463 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Try loading font information for +cmr on input line 465.
+LaTeX Font Info:    No file cmr.fd. on input line 465.
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `/cmr/m/n' instead on input line 465.
+
+! Corrupted NFSS tables.
+wrong@fontshape ...message {Corrupted NFSS tables}
+                                                  error@fontshape else let f...
+l.465 var imageaspng = imageuse.replace(/\.[
+                                          ^/.]+$/, ".png")
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+LaTeX Font Warning: Font shape `/cmr/m/n' undefined
+(Font)              using `OT1/cmr/m/n' instead on input line 465.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.465 var imageaspng = imageuse.replace(/\.[^
+                                           /.]+$/, ".png")
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.468 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 464--469
+[][]var
+ []
+
+
+Overfull \hbox (23.48618pt too wide) in paragraph at lines 464--469
+imageuse.replace(/\OT1/cmr/m/n/10 _\/cmr/m/n/10 [$[][]\OML/cmm/m/it/10 :\OT1/cm
+r/m/n/10 ]+$\nullfont /,
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 470--471
+[][]Now
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.472 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.481 		'marker-color': '#
+                        f86767'
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.484 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 473--485
+[][]//
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 486--487
+[][]To
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 488--489
+[][]The
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.491 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 492--494
+[][]map.on('click',
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 495--496
+[][]markercoords
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.511 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 497--512
+[][]geoj
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 513--515
+[][]We
+ []
+
+
+Overfull \hbox (43.1776pt too wide) in paragraph at lines 516--520
+[][]\OT1/cmr/m/sc/10 Step
+ []
+
+
+Overfull \hbox (5.52773pt too wide) in paragraph at lines 516--520
+\OT1/cmr/m/sc/10 3
+ []
+
+
+Overfull \hbox (20.00262pt too wide) in paragraph at lines 516--520
+\OT1/cmr/m/sc/10 Get
+ []
+
+
+Overfull \hbox (17.35541pt too wide) in paragraph at lines 516--520
+\OT1/cmr/m/sc/10 Re-
+ []
+
+
+Overfull \hbox (28.86092pt too wide) in paragraph at lines 516--520
+\OT1/cmr/m/sc/10 sults:
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.521 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Misplaced alignment tab character &.
+l.522 ....144.192/cgi-bin/pywps.cgi?request=execute&
+                                                  service=WPS&version=1.0.0&...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.522 ...-bin/pywps.cgi?request=execute&service=WPS&
+                                                  version=1.0.0&identifier=f...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.522 ...?request=execute&service=WPS&version=1.0.0&
+                                                  identifier=flooding&datain...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.522 ...vice=WPS&version=1.0.0&identifier=flooding&
+                                                  datainputs=[rasterin=http:...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.523 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 522--524
+[][]var
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 525--526
+[][]The
+ []
+
+
+Overfull \hbox (28.76651pt too wide) in paragraph at lines 525--526
+\OT1/cmr/m/sl/10 $\OT1/cmr/m/it/10 .get()\nullfont .
+ []
+
+
+Overfull \hbox (102.32585pt too wide) in paragraph at lines 525--526
+\OT1/cmr/m/sl/10 $\OT1/cmr/m/it/10 .when(\OT1/cmr/m/sl/10 $\OT1/cmr/m/it/10 .ge
+t()).done(); 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 527--529
+[][]This
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.530 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! You can't use `macro parameter character #' in math mode.
+l.533         $("#
+                overlay").hide();
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn''t ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.545 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (50.51514pt too wide) in paragraph at lines 531--546
+[][]$\OML/cmm/m/it/10 :when\OT1/cmr/m/n/10 ($\nullfont .get(xmlPath,
+ []
+
+
+Overfull \hbox (83.40598pt too wide) in paragraph at lines 531--546
+\OT1/cmr/m/n/10 ("\OML/cmm/m/it/10 overlay\OT1/cmr/m/n/10 ")\OML/cmm/m/it/10 :h
+ide\OT1/cmr/m/n/10 ();$\nullfont (".step2").hide();
+ []
+
+
+Overfull \hbox (340.41367pt too wide) in paragraph at lines 531--546
+\OT1/cmr/m/n/10 ("\OML/cmm/m/it/10 :step\OT1/cmr/m/n/10 3")\OML/cmm/m/it/10 :sh
+ow\OT1/cmr/m/n/10 (); \OML/cmm/m/it/10 ==FindtheelementsintheresponseXMlthatcon
+tainourdata$\nullfont ("wps 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 547--549
+[][]What
+ []
+
+
+! LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.550 \begin{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.555 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 551--555
+[][].done(
+ []
+
+
+Overfull \hbox (102.11203pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 ("\OML/cmm/m/it/10 :loading\OT1/cmr/m/n/10 ")\OML/cmm/m/it/10 :
+append\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (46.58054pt too wide) in paragraph at lines 551--555
+\OML/cmm/m/it/10 divclass \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (48.30281pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 map\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 id \OT1/
+cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (66.04988pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 map\OT1/cmr/m/n/10 1"\OML/cmm/m/it/10 style \
+OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (38.91965pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 height \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (61.19742pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 500\OML/cmm/m/it/10 px\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 width 
+\OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (59.9341pt too wide) in paragraph at lines 551--555
+\OT1/cmr/m/n/10 100\OML/cmm/m/it/10 varmap \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (346.95023pt too wide) in paragraph at lines 551--555
+\OML/cmm/m/it/10 L:mapbox:map\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 map\OT1/cmr/m/
+n/10 1[]\OML/cmm/m/it/10 ;[] piratosthegreat:i\OT1/cmr/m/n/10 7\OML/cmm/m/it/10
+ aeacaf[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :fitBounds\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 imageBounds\OT1/cmr/m/n/10 );$ 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 556--557
+[][]var
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 558--559
+[][]var
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 560--561
+[][]overlay.setOpacity(1.0); 
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 562--565
+[][]var
+ []
+
+! Extra }, or forgotten $.
+l.567              }
+                  );
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+l.568 }
+     );
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.569 \end{lstlisting}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.569 \end{lstlisting}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.569 \end{lstlisting}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (122.11203pt too wide) in paragraph at lines 566--570
+[][]$\OT1/cmr/m/n/10 ("\OML/cmm/m/it/10 :loading\OT1/cmr/m/n/10 ")\OML/cmm/m/it
+/10 :append\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (67.8057pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 formmethod \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (61.47066pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 get\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 action \
+OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (28.57057pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 http \OT1/cmr/m/n/10 :
+ []
+
+
+Overfull \hbox (152.12262pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 ==\OT1/cmr/m/n/10 52\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 17\OML/c
+mm/m/it/10 :\OT1/cmr/m/n/10 144\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 192\OML/cmm/m/
+it/10 =static=outputs=[] \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (102.3968pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 outputimagearray\OT1/cmr/m/n/10 [2] +[]
+ []
+
+
+Overfull \hbox (23.33333pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 " \OML/cmm/m/it/10 ><
+ []
+
+
+Overfull \hbox (60.81258pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 buttonclass \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (40.58806pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 btnbtn \OMS/cmsy/m/n/10  
+ []
+
+
+Overfull \hbox (54.78139pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 successbtn \OMS/cmsy/m/n/10  
+ []
+
+
+Overfull \hbox (29.99196pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 lgbtn \OMS/cmsy/m/n/10  
+ []
+
+
+Overfull \hbox (56.28362pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 block\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 type \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (51.09566pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 "\OML/cmm/m/it/10 submit\OT1/cmr/m/n/10 " \OML/cmm/m/it/10 >
+ []
+
+
+Overfull \hbox (78.07439pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 Downloaddata\OT1/cmr/m/n/10 ! \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (51.42137pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 =button ><
+ []
+
+
+Overfull \hbox (42.75008pt too wide) in paragraph at lines 566--570
+\OML/cmm/m/it/10 =form >[]
+ []
+
+
+Overfull \hbox (18.8889pt too wide) in paragraph at lines 566--570
+\OT1/cmr/m/n/10 )); );$ 
+ []
+
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.570 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1
+! Undefined control sequence.
+<write> \newlabel{ch:theory}{{}{\thepage 
+                                 }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{ch:theory}{{}{}}
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+! Undefined control sequence.
+<write> \newlabel{fig:inputs}{{}{\thepage 
+                                  }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:inputs}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:allflood}{{}{\thepage 
+                                    }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:allflood}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:actualflood}{{}{\thepage 
+                                       }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:actualflood}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:continuous}{{}{\thepage 
+                                      }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:continuous}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{ch:phase4}{{}{\thepage 
+                                 }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{ch:phase4}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:pourpoint}{{}{\thepage 
+                                     }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:pourpoint}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:twofloods}{{}{\thepage 
+                                     }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:twofloods}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:allthepoints}{{}{\thepage 
+                                        }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:allthepoints}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:pourpoints}{{}{\thepage 
+                                      }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:pourpoints}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:example-b}{{}{\thepage 
+                                     }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:example-b}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:example}{{}{\thepage 
+                                   }}
+l.570 
+    
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:example}{{}{}}
+]
+! Undefined control sequence.
+l.571 \subsection
+               {Problems encountered}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 571--574
+[][]Problems
+ []
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 575--577
+[][]It
+ []
 
 )
 ! Emergency stop.
@@ -2253,12 +4185,12 @@ my insertion and my current dilemma will both disappear.
 
 
 Here is how much of LuaTeX's memory you used:
- 35 strings out of 493803
- 195341,552014 words of node,token memory allocated 176476 words of node memory still in use:
-   464 hlist, 8 vlist, 16 rule, 23 disc, 22 math, 5284 glue, 304 kern, 317 penal
-ty, 24126 glyph, 713 glue_spec, 1 temp, 5 write, 78 local_par, 1 dir nodes
-   avail lists: 2:11,3:260,4:173,6:2,7:309,9:1,10:315
- 3945 multiletter control sequences out of 65536+600000
- 27 fonts using 1073399 bytes
- 18i,6n,12p,1589b,105s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 50 strings out of 493803
+ 305222,552014 words of node,token memory allocated 7023 words of node memory still in use:
+   25 hlist, 1 math, 227 glue, 16 kern, 20 penalty, 885 glyph, 66 glue_spec, 1 t
+emp, 3 local_par, 1 dir nodes
+   avail lists: 1:1,2:11,3:895,4:8719,5:492,6:35010,7:324,9:762,10:320
+ 3953 multiletter control sequences out of 65536+600000
+ 29 fonts using 1151863 bytes
+ 18i,6n,16p,1589b,115s stack positions out of 5000i,500n,10000p,200000b,100000s
 !  ==> Fatal error occurred, no output PDF file produced!
