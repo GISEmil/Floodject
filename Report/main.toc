@@ -49,12 +49,13 @@
 \contentsline {paragraph}{It is not possible to overlay a TIF:}{40}{subsection.4.5.1}
 \contentsline {paragraph}{At the moment flooding can only occur from one place:}{40}{subsection.4.5.1}
 \contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Analysis}}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}Architecture}{41}{section.5.1}
-\contentsline {section}{\numberline {5.2}User experience}{41}{section.5.2}
-\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Discussion}}{43}{chapter.6}
-\contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Appendix}}{45}{part.1}
-\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{47}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix Section Test}{47}{section.A.1}
-\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{48}{section.A.2}
+\contentsline {section}{\numberline {5.1}Installation structure}{41}{section.5.1}
+\contentsline {section}{\numberline {5.2}Architecture}{43}{section.5.2}
+\contentsline {section}{\numberline {5.3}User experience}{43}{section.5.3}
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Discussion}}{47}{chapter.6}
+\contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Appendix}}{49}{part.1}
+\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{51}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix Section Test}{51}{section.A.1}
+\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{52}{section.A.2}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{49}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{53}{dummy.6}
