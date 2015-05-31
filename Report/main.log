@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  30 MAY 2015 21:46
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  31 MAY 2015 11:55
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -679,27 +679,31 @@ File: lstlang2.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2013/08/26 1.5b listings language file
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2013/08/26 1.5b listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 }
+     
+The following languages weren't loadable:
+    ,tex$python
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language python of tex undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.145 }
+     
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
@@ -1064,6 +1068,15 @@ LaTeX Warning: Label `ch:theory' multiply defined.
 
 LaTeX Warning: Label `ch:theory' multiply defined.
 
+
+LaTeX Warning: Label `fig:example-b' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:example-b' multiply defined.
+
+
+LaTeX Warning: Label `fig:example' multiply defined.
+
 ) (./Chapters/Analysis.aux
 
 LaTeX Warning: Label `ch:introduction' multiply defined.
@@ -1158,18 +1171,6 @@ Package microtype Info: No adjustment of kerning.
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
 (./FrontBackMatter/Titlepage.tex
-
-! Package xcolor Error: Undefined color `Maroon'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \color{Maroon}
-                 \spacedallcaps{\myTitle} \\ \bigskip % Thesis title
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 <gfx/TFZsuperellipse_bw.pdf, id=212, 260.5755pt x 203.14595pt>
 File: gfx/TFZsuperellipse_bw.pdf Graphic file (type pdf)
 
@@ -1287,575 +1288,20 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 13.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
+ [7
 
 
-! Package xcolor Error: Undefined color `RoyalBlue'.
 
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.4 ...oduction \& problem statement}}{1}{chapter.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.5 ...numberline {1.1}Introduction}{1}{section.1.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...rline {1.2}Problem statement}{1}{section.1.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...numberline {1.3}Delimitation}{2}{section.1.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 ...on}{\numberline {1.4}License}{2}{section.1.4}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...2}\spacedlowsmallcaps {Theory}}{3}{chapter.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.10 ...ion}{\numberline {2.1}GRASS}{3}{section.2.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.11 ...2.1.1}Hydrology in GIS}{4}{subsection.2.1.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 ...on}{\numberline {2.2}Python}{7}{section.2.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...ion}{\numberline {2.3}GRASS}{7}{section.2.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.18 ...ion}{\numberline {2.4}PyWPS}{8}{section.2.4}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 ...ion}{\numberline {2.5}Flask}{9}{section.2.5}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 ...rline {2.6}Open Source GIS}{10}{section.2.6}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 ...edlowsmallcaps {Methodology}}{13}{chapter.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 ...line {3.1}Previous Project}{14}{section.3.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...{\numberline {3.2}Workflow}{15}{section.3.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ...erline {3.2.1}Phase 1}{15}{subsection.3.2.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 ...erline {3.2.2}Phase 2}{15}{subsection.3.2.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.26 ...erline {3.2.3}Phase 3}{16}{subsection.3.2.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.27 ...erline {3.2.4}Phase 4}{16}{subsection.3.2.4}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 ...erline {3.2.5}Phase 5}{16}{subsection.3.2.5}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 ...erline {3.2.6}Testing}{16}{subsection.3.2.6}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 ...erline {3.2.7}Writing}{16}{subsection.3.2.7}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.31 ...line {3.2.8}Finish up}{17}{subsection.3.2.8}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ...rline {3.2.9}Timeline}{17}{subsection.3.2.9}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 ...owsmallcaps {Implementation}}{19}{chapter.4}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 ...}{\numberline {4.1}Phase 1}{19}{section.4.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.35 ...}Problems encountered}{21}{subsection.4.1.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 ...}{\numberline {4.2}Phase 2}{22}{section.4.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 ...}{\numberline {4.3}Phase 3}{23}{section.4.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38 ...}Problems encountered}{25}{subsection.4.3.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.39 ...}{\numberline {4.4}Phase 4}{26}{section.4.4}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 ...4.1}Barrier placement}{26}{subsection.4.4.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.41 ...ine {4.4.2}Pour point}{26}{subsection.4.4.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ...4.4.3}Outlet analysis}{26}{subsection.4.4.3}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.43 ...pacedlowsmallcaps {Analysis}}{27}{chapter.5}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.44 ...cedlowsmallcaps {Discussion}}{29}{chapter.6}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `Maroon'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 ...}\spacedlowsmallcaps {Appendix}}{31}{part.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.45 ...}\spacedlowsmallcaps {Appendix}}{31}{part.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.46 ...owsmallcaps {Appendix Test}}{33}{appendix.A}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.47 ...{A.1}Appendix Section Test}{33}{section.A.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.48 ...ther Appendix Section Test}{34}{section.A.2}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[7
-
-
-
-]
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 ...cedlowsmallcaps {Bibliography}}{35}{dummy.6}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+])
 \tf@toc=\write6
  [8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 33.
 
  (./main.lof
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...rection methods\relax }}{5}{figure.caption.8}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 ...with watersheds\relax }}{6}{figure.caption.9}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Overfull \hbox (5.18906pt too wide) in paragraph at lines 7--7
  [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing im-por-tant con-cepts when work- 
 
  []
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.8 ...distance works\relax }}{7}{figure.caption.10}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
 
 
 Overfull \hbox (1.26341pt too wide) in paragraph at lines 8--8
@@ -1863,21 +1309,15 @@ Overfull \hbox (1.26341pt too wide) in paragraph at lines 8--8
  []
 
 
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ... GIS software\relax }}{12}{figure.caption.11}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Overfull \hbox (29.06462pt too wide) in paragraph at lines 9--9
  [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing cat-e-go-riza-tion of GIS soft-wa
 re []  
+ []
+
+
+Overfull \hbox (5.18906pt too wide) in paragraph at lines 21--21
+ [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing im-por-tant con-cepts when work- 
+
  []
 
 )
@@ -1888,50 +1328,19 @@ re []
 Package tocbasic Info: character protrusion at lot deactivated on input line 46.
 
  (./main.lot
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 ...s GIS software\relax }}{11}{table.caption.12}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.12 ...espaces Autem usu id}}{34}{table.caption.13}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \hbox (26.54704pt too wide) in paragraph at lines 9--9
+ [][][] []\T1/pplj/m/n/10.95 Rel-a-tive cell co-or-di-nates to the cen-ter cell
+ (0,0) []  
+ []
 
 )
 \tf@lot=\write8
- [10] (./main.lol
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.9 ...line {1}A floating example}{34}{lstlisting.1}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-)
+ [10] (./main.lol)
 \tf@lol=\write9
  [11]
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 76.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 Package microtype Info: Loading generic settings for font family
@@ -2000,13 +1409,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-<gfx/SFD_MFD.png, id=361, 762.85pt x 198.7425pt>
+<gfx/SFD_MFD.png, id=371, 762.85pt x 198.7425pt>
 File: gfx/SFD_MFD.png Graphic file (type png)
  <use gfx/SFD_MFD.png>
 Package pdftex.def Info: gfx/SFD_MFD.png used on input line 46.
 (pdftex.def)             Requested size: 336.0pt x 87.5349pt.
  [4]
-<gfx/Watershed.png, id=367, 833.1125pt x 370.38374pt>
+<gfx/Watershed.png, id=377, 833.1125pt x 370.38374pt>
 File: gfx/Watershed.png Graphic file (type png)
  <use gfx/Watershed.png>
 Package pdftex.def Info: gfx/Watershed.png used on input line 61.
@@ -2016,7 +1425,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--66
 
  []
 
-[5 <./gfx/SFD_MFD.png>] <gfx/COST.png, id=375, 843.15pt x 253.94875pt>
+[5 <./gfx/SFD_MFD.png>] <gfx/COST.png, id=385, 843.15pt x 253.94875pt>
 File: gfx/COST.png Graphic file (type png)
 
 <use gfx/COST.png>
@@ -2038,117 +1447,7 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 8.50006pt on input line 96.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 import 
-          random
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99 for 
-       element in randomarray:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.99 for element in 
-                  randomarray:
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 	print(
-           element)
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[7 <./gfx/COST.png (PNG copy)>]
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.118 import 
-           grass.script as gscript
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.119 import 
-           grass.script.setup as gsetup
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 gscript.run_command(“r.in.
-                                gdal”,flags=””,input=”input.tif”,o...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 ...command(“r.in.gdal”,flags=””,input=
-                                                  ”input.tif”,output=”...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.120 ...��r.in.gdal”,flags=””,input=”input.
-                                                  tif”,output=”output”
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
+ [7 <./gfx/COST.png (PNG copy)>]
 Overfull \hbox (9.37337pt too wide) in paragraph at lines 126--129
 \T1/pplj/m/n/10.95 called re-quests and re-sponses) for geospa-tial pro-cess-in
 g ser-vices should
@@ -2485,74 +1784,13 @@ Overfull \hbox (13.28711pt too wide) in paragraph at lines 159--164
 q=flask+mi-
  []
 
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 from 
-         flask import Flask
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.166 from flask import 
-                      Flask
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 [9]
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.170 def 
-        hello():
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.171     return 
-               "Hello World!"
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `RoyalBlue'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 if 
-       __name__ == "__main__":
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Overfull \hbox (7.21638pt too wide) in paragraph at lines 188--189
 [][]\T1/pplj/m/n/10.95 Mod-i-fi-ca-tions and de-rived works must be al-lowed an
 d dis-tributes
  []
 
-[10] <gfx/OS.png, id=423, 672.5125pt x 494.84875pt>
+[10] <gfx/OS.png, id=433, 672.5125pt x 494.84875pt>
 File: gfx/OS.png Graphic file (type png)
  <use gfx/OS.png>
 Package pdftex.def Info: gfx/OS.png used on input line 204.
@@ -2851,55 +2089,437 @@ Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+[25] [26] <gfx/Pourpoint.png, id=550, 541.02126pt x 519.9425pt>
+File: gfx/Pourpoint.png Graphic file (type png)
+
+<use gfx/Pourpoint.png>
+Package pdftex.def Info: gfx/Pourpoint.png used on input line 190.
+(pdftex.def)             Requested size: 151.19897pt x 145.30522pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
-) [26] (./Chapters/Analysis.tex
+[27 <./gfx/Pourpoint.png>]
+<gfx/Phase_4/Pourpoint2.png, id=556, 545.03625pt x 407.5225pt>
+File: gfx/Phase_4/Pourpoint2.png Graphic file (type png)
+
+<use gfx/Phase_4/Pourpoint2.png>
+Package pdftex.def Info: gfx/Phase_4/Pourpoint2.png used on input line 200.
+(pdftex.def)             Requested size: 151.19897pt x 113.0484pt.
+
+<gfx/Phase_4/Pourpoint3.png, id=557, 565.11125pt x 434.62375pt>
+File: gfx/Phase_4/Pourpoint3.png Graphic file (type png)
+
+<use gfx/Phase_4/Pourpoint3.png>
+Package pdftex.def Info: gfx/Phase_4/Pourpoint3.png used on input line 203.
+(pdftex.def)             Requested size: 151.19897pt x 116.28226pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
+
+ []
+
+[28 <./gfx/Phase_4/Pourpoint2.png> <./gfx/Phase_4/Pourpoint3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--218
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+<gfx/Phase_4/Barrier1.png, id=565, 798.985pt x 522.95375pt>
+File: gfx/Phase_4/Barrier1.png Graphic file (type png)
+
+<use gfx/Phase_4/Barrier1.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier1.png used on input line 224.
+(pdftex.def)             Requested size: 151.19897pt x 98.96326pt.
+
+<gfx/Phase_4/Barrier2.png, id=566, 515.9275pt x 454.69875pt>
+File: gfx/Phase_4/Barrier2.png Graphic file (type png)
+
+<use gfx/Phase_4/Barrier2.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier2.png used on input line 227.
+(pdftex.def)             Requested size: 151.19897pt x 133.25381pt.
+
+<gfx/Phase_4/Barrier3.png, id=567, 713.66624pt x 524.96124pt>
+File: gfx/Phase_4/Barrier3.png Graphic file (type png)
+
+<use gfx/Phase_4/Barrier3.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier3.png used on input line 229.
+(pdftex.def)             Requested size: 151.19897pt x 111.21436pt.
+
+Underfull \hbox (badness 2073) in paragraph at lines 229--229
+[][][]|\T1/pplj/m/n/9 Gen-er-at-ing pix-els in the des-ig-
+ []
+
+<gfx/Phase_4/Barrier4.png, id=568, 797.98125pt x 521.95pt>
+File: gfx/Phase_4/Barrier4.png Graphic file (type png)
+
+<use gfx/Phase_4/Barrier4.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier4.png used on input line 231.
+(pdftex.def)             Requested size: 151.19897pt x 98.89278pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.255 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+[30 <./gfx/Phase_4/Barrier1.png> <./gfx/Phase_4/Barrier2.png> <./gfx/Phase_4/Bar
+rier3.png> <./gfx/Phase_4/Barrier4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.265 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+<gfx/Phase_4/Barrier5.png, id=583, 712.6625pt x 525.965pt>
+File: gfx/Phase_4/Barrier5.png Graphic file (type png)
+
+<use gfx/Phase_4/Barrier5.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier5.png used on input line 276.
+(pdftex.def)             Requested size: 336.0pt x 247.97403pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+[32 <./gfx/Phase_4/Barrier5.png>]
+! Missing $ inserted.
+<inserted text> 
+$
+l.314 ...rassLocation = "/home/ubuntu/grassdata/WGS_
+                                                  1984",
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 \item
+          statusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 \item s
+           tatusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.315 \item s
+           tatusSupported = True,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 \item
+          storeSupported = True)
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.316 \item s
+           toreSupported = True)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.316 \item s
+           toreSupported = True)
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (63.56989pt too wide) in paragraph at lines 314--316
+[][]\T1/pplj/m/n/10.95 grass-Lo-ca-tion = "/home/ubuntu/grassdata/WGS$[][]\U/ze
+ur/m/n/10.95 984\T1/pplj/m/n/10.95 ", \U/zeur/m/n/10.95 statusSupported \U/zeus
+/m/n/10.95 ½
+ []
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.316 \item s
+           toreSupported = True)
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+[33]
+! Missing $ inserted.
+<inserted text> 
+$
+l.351 ...ses folder on the server. Furthermore the _
+                                                  _init__.py file is updated...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing { inserted.
+<to be read again> 
+_
+l.351 ...es folder on the server. Furthermore the __
+                                                  init__.py file is updated ...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+If you're confused by all this, try typing `I}' now.
+
+! Missing { inserted.
+<to be read again> 
+_
+l.351 ...der on the server. Furthermore the __init__
+                                                  .py file is updated to now...
+A left brace was mandatory here, so I've put one in.
+You might want to delete and/or insert some corrections
+so that I will find a matching right brace soon.
+If you're confused by all this, try typing `I}' now.
+
+! Missing $ inserted.
+<inserted text> 
+$
+l.355 
+    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.355 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+}
+l.355 
+    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no “ (U+201C) in font pplr9d!
+Missing character: There is no ” (U+201D) in font pplr9d!
+Missing character: There is no ” (U+201D) in font pplr9d!
+
+Overfull \hbox (1611.73721pt too wide) in paragraph at lines 350--355
+\T1/pplj/m/n/10.95 the server. Fur-ther-more the $[][]$ 
+ []
+
+! Misplaced alignment tab character &.
+l.357 ....144.192/cgi-bin/pywps.cgi?request=execute&
+                                                  service=WPS&version=1.0.0&...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...-bin/pywps.cgi?request=execute&service=WPS&
+                                                  version=1.0.0&identifier=f...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...?request=execute&service=WPS&version=1.0.0&
+                                                  identifier=flooding&datain...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.357 ...vice=WPS&version=1.0.0&identifier=flooding&
+                                                  datainputs=[rasterin=<LINK...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (50.96147pt too wide) in paragraph at lines 357--358
+[][]\T1/pplj/m/n/10.95 http://52.17.144.192/cgi-bin/pywps.cgi?re-quest=ex-e-cut
+e-ser-vice=WPSver-
+ []
+
+
+Overfull \hbox (44.93758pt too wide) in paragraph at lines 357--358
+\T1/pplj/m/n/10.95 sion=1.0.0iden-ti-fier=flood-ing-datain-puts=[ras-terin=<LIN
+K TO DEM>;vec-
+ []
+
+[34] [35]
+! Misplaced alignment tab character &.
+l.409 \item http://52.17.144.192/upload?minx=COORD&
+                                                 miny=COORD&maxx=COORD&maxy=...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.409 ...52.17.144.192/upload?minx=COORD&miny=COORD&
+                                                  maxx=COORD&maxy=COORD&file...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.409 ...92/upload?minx=COORD&miny=COORD&maxx=COORD&
+                                                  maxy=COORD&filename=FILENAME
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.409 ...inx=COORD&miny=COORD&maxx=COORD&maxy=COORD&
+                                                  filename=FILENAME
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Overfull \hbox (32.72986pt too wide) in paragraph at lines 409--410
+[][]\T1/pplj/m/n/10.95 http://52.17.144.192/u-pload?minx=CO-ORD-miny=CO-ORD-max
+x=CO-
+ []
+
+[36] [37] [38]) [39] (./Chapters/Analysis.tex [40
+
+
+
+
+]
 Chapter 5.
-) [27
-
-
-
-
-] (./Chapters/Discussion.tex [28
+) [41] (./Chapters/Discussion.tex [42
 
 
 
 
 ]
 Chapter 6.
-) [29] [30
+) [43] [44
 
 
 
-]
-
-! Package xcolor Error: Undefined color `Maroon'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \part{Appendix}
-                   % New part of the thesis for the appendix
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! Package xcolor Error: Undefined color `Black'.
-
-See the xcolor package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.97 \part{Appendix}
-                   % New part of the thesis for the appendix
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[31] [32] (./Chapters/Chapter0A.tex
+] [45] [46] (./Chapters/Chapter0A.tex
 Appendix A.
 
 Overfull \hbox (0.973pt too wide) in paragraph at lines 7--7
@@ -2921,16 +2541,16 @@ Overfull \hbox (16.78175pt too wide) in paragraph at lines 15--15
 my, scelerisque
  []
 
-[33
+[47
 
 
 
-]) [34] (./FrontBackMatter/Bibliography.tex
+]) [48] (./FrontBackMatter/Bibliography.tex
 No file main.bbl.
 ) (./FrontBackMatter/Colophon.tex
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 (Font)              scaled to size 9.30756pt on input line 13.
-) [35
+) [49
 
 
 
@@ -2939,11 +2559,11 @@ LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
 
 
 
-] [36
+] [50
 
 
 
-] (./FrontBackMatter/Declaration.tex) [37
+] (./FrontBackMatter/Declaration.tex) [51
 
 
 
@@ -2960,12 +2580,23 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
 (./Chapters/Implementation.aux) (./Chapters/Analysis.aux)
 (./Chapters/Discussion.aux) (./Chapters/Chapter0A.aux)
 (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux))
+(./FrontBackMatter/Declaration.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 60E6F0A00EC0D6CCE8DDA75066E736CE;3063.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 4C2FCC0370B256E1579F8C4077DC9377;3084
+(rerunfilecheck)             After:  06806B297FB2281C0B65A279A7DB436F;3368.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2976,30 +2607,31 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
  )
 
 Here is how much of LuaTeX's memory you used:
- 28710 strings out of 493803
- 156355,794899 words of node,token memory allocated
- 1268 words of node memory still in use:
+ 27771 strings out of 493803
+ 244362,794899 words of node,token memory allocated
+ 1318 words of node memory still in use:
    17 hlist, 16 vlist, 7 rule, 34 glue, 2 kern, 11 penalty, 18 glyph, 105 glue_s
 pec, 3 write, 6 local_par, 10 pdf_colorstack nodes
-   avail lists: 1:7,2:42,3:590,4:2776,5:3411,6:3835,7:2171,8:47,9:3686,10:307
- 30348 multiletter control sequences out of 65536+600000
+   avail lists: 1:8,2:45,3:641,4:4554,5:6126,6:3835,7:3770,8:47,9:6633,10:422
+ 29287 multiletter control sequences out of 65536+600000
  199 fonts using 7825275 bytes
- 82i,14n,77p,1530b,2016s stack positions out of 5000i,500n,10000p,200000b,100000s
+ 82i,14n,77p,1613b,1573s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/euler/eufm7.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (49 pages, 434478 bytes).
+1/public/amsfonts/euler/eurm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/euler/eurm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/fpl/fplrij8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (63 pages, 878294 bytes).
 
-PDF statistics: 642 PDF objects out of 1000 (max. 8388607)
- 566 compressed objects within 6 object streams
- 202 named destinations out of 1000 (max. 131072)
+PDF statistics: 864 PDF objects out of 1000 (max. 8388607)
+ 762 compressed objects within 8 object streams
+ 355 named destinations out of 1000 (max. 131072)
  424 words of extra memory for PDF output out of 10000 (max. 10000000)
 

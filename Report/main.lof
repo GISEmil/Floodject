@@ -9,6 +9,16 @@
 \contentsline {figure}{\numberline {4}{\ignorespaces Figure showing categorization of GIS software\relax }}{12}{figure.caption.11}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5}{\ignorespaces Figure showing the pourpoint we are trying to identify.\relax }}{27}{figure.caption.13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Generated extra pixels}}{28}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Showing two flood extents.}}}{28}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Showing line of pour points.}}}{28}{subfigure.6.2}
+\contentsline {figure}{\numberline {7}{\ignorespaces Generated extra pixels}}{30}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rasterized barrier.}}}{30}{subfigure.7.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Problem areas.}}}{30}{subfigure.7.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generating pixels in the designated areas.}}}{30}{subfigure.7.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Fixed barrier.}}}{30}{subfigure.7.4}
+\contentsline {figure}{\numberline {8}{\ignorespaces Figure showing important concepts when working with watersheds\relax }}{32}{figure.caption.17}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
