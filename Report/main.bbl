@@ -1,0 +1,156 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Awaida and Westervelt(2013)]{rcost}
+Antony Awaida and James Westervelt.
+\newblock r.cost.
+\newblock \url{http://grass.osgeo.org/grass64/manuals/r.cost.html}, 2013.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[Cepicky and Becchi(2007)]{pywps}
+Jachym Cepicky and Lorenzo Becchi.
+\newblock Geospatial processing via internet on remote servers.
+\newblock \emph{OSGeo Journal}, 1:\penalty0 1 -- 4, 2007.
+
+\bibitem[Echlschlaeger(2015)]{rwatershed}
+Charles Echlschlaeger.
+\newblock r.watershed.
+\newblock \url{http://grass.osgeo.org/grass71/manuals/r.watershed.html}, 2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[ESRI({\natexlab{a}})]{costdistance}
+ESRI.
+\newblock Cost distance (spatial analyst).
+\newblock \url{
+  http://help.arcgis.com/en/arcgisdesktop/10.0/help/index.html#//009z00000018000000.htm},
+  {\natexlab{a}}.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[ESRI({\natexlab{b}})]{watershed}
+ESRI.
+\newblock How watershed works.
+\newblock \url{
+  http://resources.arcgis.com/en/help/main/10.1/index.html#//009z00000068000000},
+  {\natexlab{b}}.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[{GRASS Development Team}(2015)]{grasswiki}
+{GRASS Development Team}.
+\newblock Working with grass without starting it explicitly.
+\newblock
+  \url{http://grasswiki.osgeo.org/wiki/Working_with_GRASS_without_starting_it_explicitly},
+  2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[Grassmuck(2004)]{osbookde}
+V.~Grassmuck.
+\newblock Freie software zwischen privat- und gemeineigentum.
+\newblock \emph{Budenszentrale für Bildung}, 2004.
+
+\bibitem[Grinberg(2014)]{flaskbook}
+Miguel Grinberg.
+\newblock \emph{Flask Web Development}.
+\newblock O'Reilly, 1005 Gravenstein Highway North, Sebastopol, CA 95472, 1st
+  edition, 2014.
+
+\bibitem[HTML.net(2015)]{htmlnet}
+HTML.net.
+\newblock Lesson 2: What is html?
+\newblock \url{http://html.net/tutorials/html/lesson2.php}, 2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[Knuth(1974)]{knuth:1974}
+Donald~E. Knuth.
+\newblock {C}omputer {P}rogramming as an {A}rt.
+\newblock \emph{Communications of the ACM}, 17\penalty0 (12):\penalty0
+  667--673, December 1974.
+
+\bibitem[Laurent(2004)]{osbook}
+Andrew M.~St. Laurent.
+\newblock \emph{Understanding Open Source and Free Software Licensing}.
+\newblock O'Reilly, 1005 Gravenstein Highway North, Sebastopol, CA 95472, 1st
+  edition, 2004.
+
+\bibitem[Lutz(2013)]{pybook}
+Mark Lutz.
+\newblock \emph{Python}.
+\newblock O'Reilly, 1005 Gravenstein Highway North, Sebastopol, CA 95472, 5th
+  edition, 2013.
+
+\bibitem[Neteler and Mitasova(2005)]{grassbook}
+Markus Neteler and Helena Mitasova.
+\newblock \emph{Open Source GIS: A GRASS GIS Approach}.
+\newblock Springer Science + Business Media Inc., Boston, MA, USA, 2nd edition,
+  2005.
+
+\bibitem[Neteler et~al.(2012)Neteler, Bowman, Landa, and Metz]{GRASSGIS}
+Markus Neteler, M.~Hamish Bowman, Martin Landa, and Markus Metz.
+\newblock Grass gis: A multi-purpose open source gis.
+\newblock \emph{Environmental Modelling & Software}, 31:\penalty0 124 -- 130,
+  2012.
+
+\bibitem[Network(2015)]{mozjava}
+Mozilla~Developer Network.
+\newblock What is javascript?
+\newblock
+  \url{https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction#What_is_JavaScript.3F},
+  2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[{Open Geospatial Consortium}(2015)]{ogcwps}
+{Open Geospatial Consortium}.
+\newblock Ogc® wps 2.0 interface standard.
+\newblock \url{http://www.opengeospatial.org/standards/wps}, 2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[{Python Software Foundation}(2015)]{python}
+{Python Software Foundation}.
+\newblock Should i use python 2 or python 3 for my development activity?
+\newblock \url{http://wiki.python.org/moin/Python2orPython3}, 2015.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[{PyWPS Development Team}(2009)]{pywpsweb}
+{PyWPS Development Team}.
+\newblock Python web processing service.
+\newblock \url{http://pywps.wald.intevation.org}, 2009.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[Ronacher(2014)]{flaskweb}
+Armin Ronacher.
+\newblock Flask.
+\newblock \url{http://flask.pocoo.org/}, 2014.
+\newblock Accessed: 2015-05-05.
+
+\bibitem[Steininger and Hunter(2012)]{osarticle}
+Stefan Steininger and Andrew J.~S. Hunter.
+\newblock 2012 free and open source gis software map - a guide to facilitate
+  research, development and adoption.
+\newblock \emph{Computer Environment and Urban Systems}, 2012.
+
+\bibitem[Toma et~al.(2001{\natexlab{a}})Toma, Wickremesinghe, Arge, Chase,
+  Vitter, Halpin, and Urban.]{sfdmfd}
+Laura Toma, Rajiv Wickremesinghe, Lars Arge, Jeffrey~S. Chase, Jeffrey~Scott
+  Vitter, Patrick~N. Halpin, and Dean Urban.
+\newblock Flow computation on massive grid.
+\newblock \emph{Proc. ACM Symposium on Advances in Geographic Information
+  Systems}, 2001{\natexlab{a}}.
+
+\bibitem[Toma et~al.(2001{\natexlab{b}})Toma, Wickremesinghe, Arge, Chase,
+  Vitter, Halpin, and Urban.]{sfdmfd2}
+Laura Toma, Rajiv Wickremesinghe, Lars Arge, Jeffrey~S. Chase, Jeffrey~Scott
+  Vitter, Patrick~N. Halpin, and Dean Urban.
+\newblock Flow computation on massive grid terrains.
+\newblock \emph{GeoInformatica, International Journal on Advances of Computer
+  Science for Geographic Information Systems}, 2001{\natexlab{b}}.
+
+\bibitem[W3Schools(2015)]{w3schools}
+W3Schools.
+\newblock Html introduction.
+\newblock \url{http://www.w3schools.com/html/html_intro.asp}, 2015.
+\newblock Accessed: 2015-05-05.
+
+\end{thebibliography}

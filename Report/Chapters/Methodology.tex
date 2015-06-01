@@ -37,8 +37,19 @@ Developing the software and writing the report did not occur in parallel fashion
 The main issue that occurred during the development phase of the project was that in some cases, code needed to be tested on the server to determine whether it performed without any errors. That fact, crippled the flexibility of the group on the occasions where we needed to test fixes for broken code. To be more specific, each time a fix was implemented, the server needed to be restarted in order to load the new script and test its new version. When restarting the server we had to make sure that no other group member was working on the server side, so a waiting gap existed between fixing and testing the code.\\
 
 \section{Previous Project}
-As mentioned in Chapter 1, this project is inspired by the work done during the second semester of our studies. In that project, we developed an ArcGIS toolbox which allowed the user to simulate a flood caused by stowage of sea water in the event of a storm. The toolbox we created, comprised of ArcGIS functionalities with the core being the Cost Distance tool. This tool made possible the simulation of water advancing through the landscape and covering parts of land that were below a certain predefined elevation and were directly connected to the source of the flood. \\
-Through the completion of that project, we were left wondering how this toolbox could be made available to an even greater amount of people. Also, another question that turned up was how we can make this tool available freely without any of the software limitations that using a proprietary licensed software, like the ArcGIS software suite, provides. \\
+As mentioned previously in this paper, this project is inspired by the work done during the second semester of our studies. In that project, we developed an ArcGIS toolbox which allowed the user to simulate a flood caused by the stowage of sea water. The aim of the project was to use ArcGIS geoprocessing modules to develop a user friendly model capable of modelling the mentioned phenomena. \\
+
+\begin{figure}[h!]
+\centering
+	{\includegraphics[width=\linewidth]{gfx/Methodology/old_project.png}}
+\caption{The old model.}
+\label{fig:inputs}
+\end{figure}\\
+
+The toolbox we created, comprised of ArcGIS functionalities with the core being the Cost Distance tool. The development was executed in with the built-in Model Builder. Model builder has the capability of invoking modules and algorithms through an easy-to-use Drag'N'Drop functionality. Although the preliminary model development is significantly easier due to the GUI, in order to apply more complex algorithm and connection between models models can quickly scale out of hand. 
+The final tool made it possible to simulat water advancing through the landscape and covering parts of land that were below a certain predefined elevation, and were connected to the source of the flood. \\
+
+After completing that project, we were left wondering how this toolbox could be made available to an even greater amount of people. Another question that arose was how this tool could be made available freely without any of the software limitations that using a proprietary licensed software, like the ArcGIS software suite, provide.
 In order to pursue such an endeavor, we must make sure that this new product has to offer at least the same functionalities as the one created before. In addition, the way it is developed has to provide us with greater distribution potential in order to ensure widespread availability to any interested organization or person. Keeping these ideas in mind, we reached the aforementioned problem statement and begun working on this project.
 
 \section{Workflow}
@@ -72,6 +83,8 @@ This phase involves defining exactly we wanted to attain with the project.
 \end{description}
 
 The phases of the project will be explained in detail on the next chapter. The way we will present the development of our work is aiming in a more understandable and logically segmented report. That being said, we think that firstly presenting the final product that serves the purpose of its creation and then documenting the other unsuccessful routes that we tried is, for us, the best way to communicate our work to the reader. To be more specific, the layout of the next section of the report will provide the reader with the process of creating a working prototype in detail. This means that the various tools and techniques that we use will be presented and explained along with arguments on why we think that this is the best available solution at the time of creation. After we are finished with documenting this part, we spend some time presenting the alternatives that we tested before reaching to that solution, if there are any, and provide the reason and thoughts that lead us to abandon that specific course of action. By separating these two phases of development, we want to make sure that the reader can easily locate what they are looking for, i.e. suggested course of action or courses better avoided. 
+
+\subsection{Founding the project in Denmark}
 
 \subsection{Timeline}
 We expected the various phases to take up approximately three weeks but with five weeks set aside for Phase 4 where the functions were developed, which would look something like \autoref{tab:phases}\\
