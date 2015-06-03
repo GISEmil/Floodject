@@ -104,9 +104,9 @@ The model of this project is based on our previous project mentioned earlier. Si
 \label{fig:inputs}
 \end{figure}\\
 
-As seen on \autoref{fig:inputs}, only one external data source is required, a DEM. According to the LOCATION used within GRASS, every imported DEM has to have a WGS 84 geographical projection. An important factor of the model, is that all web-mapping operations are done on Open Street Map, which uses a slight variant of WGS 84 as well. As is mentioned in theory, GRASS uses GDAL for importing several type of raster maps and OGR for importing vector datasets. Taking the advantage of these modules it is possible for the to use any raster, as long as it is project into WGS 84. Another input of the model is the maximum flood level and the water rise increments of flood. These numbers define the amount of loops necessary before the flooding is complete.\\
-To flood the DEM, the model extracts those areas that are below current level of the iterator (and therefore flood). The first iteration will always be the sea level, where the actual flood level is 0. This extracts every cell with a value of zero. \\
-This method will extract ALL areas that have a value of 0, which usually will generate several disconnected clumps of cells, located in different areas of the DEM. As our model has to generate a flood from one specific area (so as not to simulate that all streams and lakes in an area are filling with water) the model will require that the user interacts further. The user needs to choose from which source he/she would like flood the DEM from. The pre-selected point has a major role in this part of the model, as the flooding will be based on it. \\
+\autoref{fig:inputs} is an attempt at showing the inputs used for the previous project. As can be seen only one external data source is required - a DEM. According to the LOCATION used within GRASS, every imported DEM has to have a WGS 84 geographical projection. An important factor of the model, is that all web-mapping operations are done on Open Street Map, which uses a slight variant of WGS 84 as well. As is mentioned in theory, GRASS uses GDAL for importing several type of raster maps and OGR for importing vector datasets. Taking the advantage of these modules it is possible for the to use any raster, as long as it is project into WGS 84. Another input of the model is the maximum flood level and the water rise increments of flood. These numbers define the amount of loops necessary before the flooding is complete.\\
+To flood the DEM, the model extracts those areas that are below current level of the iterator (and therefore flood). The first iteration will always be the sea level, where the actual flood level is 0. This extracts every cell with a value of zero.  \\
+This method will extract \emph{ALL} areas that have a value of 0, which usually will generate several disconnected clumps of cells, located in different areas of the DEM. As our model has to generate a flood from one specific area (so as not to simulate that all streams and lakes in an area are filling with water) the model will require that the user interacts further. The user needs to choose from which source he/she would like flood the DEM from. The pre-selected point has a major role in this part of the model, as the flooding will be based on it. \\
 
 After extracting every cell that is below the actual flood level, the process runs a cost distance analysis using the point as a source. The returned raster shows only one continuous area, for that level of the flood. The output cost raster is then converted to a vector with the value of the flood level. Each iteration extracts the land from the raster which is below the current flood level and select the continuous area depicting the actual flood on the land from the preselected source. 
 
@@ -125,6 +125,44 @@ The process is illustrated on \autoref{fig:continuous}. On \autoref{fig:allflood
 \end{figure}
 
 Every complex module from the earlier project has been taken out, and it has been simplified by using basic geoprocessing tools such as rasterizing, vectorizing, raster calculator and cost analysis. After the python - GRASS conversion was done, additional functionality was created, which will be discussed in \autoref{ch:phase4}.
+
+\subsection{Problems encountered}
+
+From the very beginning we were planning on using cost distance as the basis of our flood model, but we developed a different solution for the flooding algorithm, which turned out to be problematic – a problem we will address later in this section. The intent was to substitute the cost distance function with a more simple, and significantly faster, method. The procedure entailed spatially selecting only the extent which is connected to the source vector feature. The process is mostly the same, however instead of running the cost distance function, the extracted areas are converted to vector polygons and by using an intersect tool (v.select), only the polygon which is intersected with the pre-selected vector point is selected, this can be seen from \autoref{fig:phase2_prob1}\\
+It can be seen, the red polygons represented all areas, which can be a possibly flooded with a 1.2 meter water level, however these areas are widely spread along the investigated area. The selection is  based on the user's pre-selected the flood source, which is the yellow cross in the figure. The GRASS module select the intersecting flood polygon, which represents only that stage of flood, which have the connection to the source, illustrated by the blue polygon on \autoref{phase2_prob2}. 
+
+\begin{figure}[h!]
+  \myfloatalign
+  \subfloat[Every cell with a value less than the current flood level.]
+  {\label{fig:phase2_prob1}  
+  {\includegraphics[width=.45\linewidth]{gfx/Phase_2/problem1.png}}} \quad
+  \subfloat[Cells reachable from the source point.]
+  {\label{fig:phase2_prob2}%
+   \includegraphics[width=.45\linewidth]{gfx/Phase_2/problem2.png}} \\
+ \caption{Figures indicating how r.cost is used to identify continuous areas}
+ \label{fig:phase2_prob12}
+\end{figure}
+
+\paragraph{Cost Distance vs Spatial Selection}
+
+Comparing the cost distance and the spatial vector selection methods, the following problems and drawbacks appeared. According to our tests with the two process, we realized that the processing time was significantly greater with the cost distance function, because of it's cell by cell calculation. So larger grids imported to the process will increase the processing even more, due the increased amount of cells. At the end of the development stage we realized that the spatial selection did not behave in the same was as the r.cost functionality does. As it described earlier, the spatial selection selects only the polygon connected with the source. Since the vectorizing is done based on the cell resolution, if a cell is only diagonally connected to the “coherent” area, than it will be allocated as a different polygon, as presented on \autoref{fig:phase2_prob3}.
+
+\begin{figure}[h!]
+\centering
+	{\includegraphics[width=0.8\linewidth]{gfx/Phase_2/problem3.png}}
+\caption{Inputs for the flooding model.}
+\label{fig:phase2_prob3}
+\end{figure}\\
+
+Therefore every cell, which is diagonally connected to a coherent flood surface will be disregarded, even though they, according to the flow direction and accumulation theory, would be the part of the flood extent. 
+We tested both functions have confirmed a significant impact on the results of the process. For example, comparing a flood scenario of 3 meter flood rise with 10 cm increments, it can be seen that at stage 1,20m, the flood extent is significantly different, as seen on \autoref{fig:phase2_prob4}
+
+\begin{figure}[h!]
+\centering
+	{\includegraphics[width=\linewidth]{gfx/Phase_2/problem4.png}}
+\caption{Inputs for the flooding model.}
+\label{fig:phase2_prob4}
+\end{figure}\\
 
 \section{Phase 3}
 This section will focus on the back-end of our web server. We begin by initializing Flask on our server. It is important to keep in mind that we earlier installed the Apache web server. After extensive research online, several different sources suggested a universal process on how to install Flask on an Apache 2 server. To go on, before actually installing Flask, we need to initialize mod\_wsgi. Mod\_wsgi is a tool that specializes in serving python applications from Apache servers. Installing mod\_wsgi is quite easy, and only takes a few lines of command line scripting (figure XXX).\\
@@ -200,7 +238,7 @@ Since these pour point phenomena are very dependent how the process is run; whic
 
 \begin{figure}[h!]
 \centering
-	{\includegraphics[width=.45\linewidth]{gfx/Pourpoint.png}}
+	{\includegraphics[width=0.80\linewidth]{gfx/Pourpoint.png}}
 \caption{Figure showing the pourpoint we are trying to identify.}
 \label{fig:pourpoint}
 \end{figure}

@@ -24,8 +24,8 @@
 \contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Methodology}}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Previous Project}{16}{section.3.1}
 \contentsline {section}{\numberline {3.2}Workflow}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Founding the project in Denmark}{19}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Timeline}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.1}Founding the project in Denmark}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Calendar timeline}{20}{subsection.3.2.2}
 \contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Implementation}}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}Phase 1}{21}{section.4.1}
 \contentsline {paragraph}{Setting up a local scripting environment:}{21}{section.4.1}
@@ -38,26 +38,32 @@
 \contentsline {paragraph}{Lack of documentation:}{24}{subsection.4.1.1}
 \contentsline {paragraph}{GRASS64 vs GRASS7:}{24}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}Phase 2}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Phase 3}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Problems encountered}{28}{subsection.4.3.1}
-\contentsline {section}{\numberline {4.4}Phase 4}{29}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Identifying critical areas}{29}{subsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.1.1}Outlet analysis}{29}{subsubsection.4.4.1.1}
-\contentsline {subsubsection}{\numberline {4.4.1.2}Pour point analysis}{29}{subsubsection.4.4.1.2}
-\contentsline {subsection}{\numberline {4.4.2}Barrier placement}{32}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Problems encountered}{34}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Phase 5}{35}{section.4.5}
-\contentsline {paragraph}{PyWPS:}{35}{section.4.5}
-\contentsline {paragraph}{Setting up the design:}{37}{lstnumber.-22.6}
-\contentsline {subsection}{\numberline {4.5.1}Problems encountered}{42}{subsection.4.5.1}
-\contentsline {paragraph}{Currently does not work on Chrome:}{42}{subsection.4.5.1}
-\contentsline {paragraph}{It is not possible to overlay a TIF:}{42}{subsection.4.5.1}
-\contentsline {paragraph}{At the moment flooding can only occur from one place:}{42}{subsection.4.5.1}
-\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Analysis}}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}Installation structure}{43}{section.5.1}
-\contentsline {section}{\numberline {5.2}Architecture}{45}{section.5.2}
-\contentsline {section}{\numberline {5.3}User experience}{45}{section.5.3}
-\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Discussion}}{49}{chapter.6}
-\contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Appendix}}{51}{part.1}
+\contentsline {subsection}{\numberline {4.2.1}Problems encountered}{26}{subsection.4.2.1}
+\contentsline {paragraph}{Cost Distance vs Spatial Selection}{26}{figure.caption.18}
+\contentsline {section}{\numberline {4.3}Phase 3}{28}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Problems encountered}{30}{subsection.4.3.1}
+\contentsline {section}{\numberline {4.4}Phase 4}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Identifying critical areas}{31}{subsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Outlet analysis}{31}{subsubsection.4.4.1.1}
+\contentsline {subsubsection}{\numberline {4.4.1.2}Pour point analysis}{31}{subsubsection.4.4.1.2}
+\contentsline {subsection}{\numberline {4.4.2}Barrier placement}{34}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Problems encountered}{37}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Phase 5}{37}{section.4.5}
+\contentsline {paragraph}{PyWPS:}{37}{section.4.5}
+\contentsline {paragraph}{Setting up the design:}{39}{lstnumber.-22.6}
+\contentsline {subsection}{\numberline {4.5.1}Problems encountered}{44}{subsection.4.5.1}
+\contentsline {paragraph}{Currently does not work on Chrome:}{44}{subsection.4.5.1}
+\contentsline {paragraph}{It is not possible to overlay a TIF:}{44}{subsection.4.5.1}
+\contentsline {paragraph}{At the moment flooding can only occur from one place:}{44}{subsection.4.5.1}
+\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Analysis}}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Installation structure}{45}{section.5.1}
+\contentsline {paragraph}{Debugging:}{45}{section.5.1}
+\contentsline {paragraph}{PyWPS installation:}{45}{figure.caption.26}
+\contentsline {paragraph}{Flask installation:}{46}{figure.caption.27}
+\contentsline {paragraph}{GRASS Installation:}{46}{figure.caption.28}
+\contentsline {section}{\numberline {5.2}Architecture}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}User experience}{47}{section.5.3}
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Discussion}}{51}{chapter.6}
+\contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Appendix}}{53}{part.1}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{53}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{55}{dummy.6}

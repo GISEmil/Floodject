@@ -19,14 +19,14 @@ The most important of these is the \textsc{LOCATION}. This is where the critical
 GRASS does not have reprojecting on-the-fly functionality – as ArcGIS or QGIS are capable of. Using the \textsc{LOCATION} folder properly is therefore necessary. 
 The \textsc{MAPSET} is a way of separating different projects, or phases of processes, and a LOCATION can contain several \textsc{MAPSETS}\citep{grassbook}. 
 
-GRASS can be operated by a variety of ways. The most commonly used method is by accessing the modules through the GRASS GUI (Graphical User Interface), but it can also be achieved purely through scripting – such as with Python. GRASS is able to handle most of the vector and raster formats which are supported by GDAL (Geospatial Data Abstraction Library), such as GeoTIFF, ArcGRID, ERDAS, USGS SDTS DEM, etc \citep{GRASSGIS}. \\
+GRASS can be operated by a variety of ways. The most commonly used method is by accessing the modules through the GRASS GUI (Graphical User Interface), but it can also be achieved purely through scripting – such as with Python. GRASS is able to handle most of the vector and raster formats which are supported by GDAL (Geospatial Data Abstraction Library), such as GeoTIFF, ArcGRID, ERDAS, USGS SDTS DEM, etc \citep{GRASSGIS}.\\
 
 The way GRASS handles region and resolution settings differs from most other GIS software. Since different datasets can have different extents, it is possible to set the current processing region allowing the user to run a specific process on a subset of a raster or the location and not necessarily run a process on the entire image. 
 The lack of on-the-fly reprojection makes GRASS less user-friendly than other similar products. Furthermore it does not allow drag and drop import, and most functions must be invoked using the built-in GRASS commandline-like utilities \citep{grassbook}.
 
 \subsection{Hydrology in GIS}
 
-The accurate depiction of hydrological movements and their responses to the land cover has been the objective of hydrological scientists for many decades. As advances in IT have progressed, the calculations and algorithms possible have become more sophisticated, accurate and faster. \\
+The accurate depiction of hydrological movements and their responses to the land cover has been the objective of hydrological scientists for many decades. As advances in IT have progressed, the calculations and algorithms possible have become more sophisticated, accurate and faster.\\
 
 When investigating hydrological conditions, DEM (Digital Elevation Models) are used. Because of this, the results are dependent on the quality of the model being used. Most major GIS software have some built-in hydrology tools, capable of being incorporated into various workflows. To give an example of the application of hydrology in GRASS, this section will include a description of some of the main hydrology tools from GRASS' libraries.
 
@@ -42,19 +42,18 @@ or
 \end{itemize}
  
 Both of these algorithms are based on a so-called Moore-Neighborhood. This neighborhood involves the eight cells surrounding a specific cell on a raster. The basis of the flow direction is that the water flows to a cell with a lower value then the current one, but it is in this regard that MFD and SFD differ from each other. As can be seen from \autoref{fig:flowdirect}, the SFD method assigns a single flow direction to the lowest downslope neighboring cell, whilst MFD assigns flow direction to all downslope neighboring cells \citep{grassbook}. \\
-
 \begin{figure}[t]
 \centering
 	{\includegraphics[width=\linewidth]{gfx/SFD_MFD.png}}
 \caption{Example of two different flow direction methods \citep{sfdmfd}.}
 \label{fig:flowdirect}
 \end{figure}
-
 Both methods have the criteria, that the flow direction cannot contribute to cells with the same height as the central cell or cells which have no downslope neighbors \citep{sfdmfd2}.
 Pits or so called depressions or sinks, are areas which are surrounded by higher elevation values. It is also an internal drainage area, although some of the time it is a real natural feature such as a karst, but usually it is an imperfection of the digital elevation model.  The GRASS Terraflow module fills the sinks and then assign a Flow Direction on the filled terrain, thereby the flow direction will not be ruined by a DEM full of depressions \citep{sfdmfd}. 
 
 \subsubsection{Flow accumulation}
-Another important hydrology tool is Flow Accumulation. This tool is capable of calculating the flow running through the the terrain, such as the accumulation of water \citep{sfdmfd}. As input, the module needs a raster indicating flow directions. It should be noted that flow accumulation is highly dependent on the previous described phenomenas and computational methods. For example MFD would provide a significantly different flow accumulation than SFD, as MFD provides more accumulation possibilities. Also, a depressionless DEM will have a different accumulation than one with depressions \citep{sfdmfd}. Analyzing the direction of the flow can give a limited insight about cell behaviors, however flow accumulation allows the investigation of main stream lines, and how they contribute to the stream system, as well as providing the an output of stream lines.
+Another important hydrology tool is Flow Accumulation. This tool is capable of calculating the flow running through the the terrain, such as the accumulation of water \citep{sfdmfd}. As input, the module needs a raster indicating flow directions. \\ 
+It should be noted that flow accumulation is highly dependent on the previous described phenomenas and computational methods. For example MFD would provide a significantly different flow accumulation than SFD, as MFD provides more accumulation possibilities. Also, a depressionless DEM will have a different accumulation than one with depressions \citep{sfdmfd}. Analyzing the direction of the flow can give a limited insight about cell behaviors, however flow accumulation allows the investigation of main stream lines, and how they contribute to the stream system, as well as providing the an output of stream lines.
 
 \subsubsection{Watershed}
 A Watershed is an area where all streams end up in a common outlet. This can also be called a basin or a catchment area, however in this paper it will be referred to as a watershed.\\
@@ -66,11 +65,12 @@ A Watershed is an area where all streams end up in a common outlet. This can als
 \caption{Figure showing important concepts when working with watersheds \citep{watershed}.}
 \end{figure}
 
-A watershed is a relative term, as it depends on the scale at which you look at them – practically all streams have their own watershed. Therefore to determine the watersheds of a DEM, it is necessary to know a variety of factors, such as flow accumulation, flow direction or slope aspect of the terrain \citep{rwatershed}. \\
+A watershed is a relative term, as it depends on the scale at which you look at them – practically all streams have their own watershed. Therefore to determine the watersheds of a DEM, it is necessary to know a variety of factors, such as flow accumulation, flow direction or slope aspect of the terrain \citep{rwatershed}.\\
+
 In  GRASS there is a watershed algorithm, which considers every aspect of the previously mentioned procedure. The watershed (r.watershed) module has watershed output which is created by the output of the flow direction and the derived flow accumulation output of the DEM. As mentioned earlier, watershed sizes are relative to the scale of the investigation. A threshold value can be set the to delineate the minimum size of the resultant watershed, based on the scale of interest \citep{grassbook} \citep{rwatershed}. Setting this value should be based on the horizontal resolution of the raster being worked on. For instance, setting the value to 1000 setup on a raster with 10mx10m resolution, would define, that the smallest watershed area has to be larger than 1000*10m*10m = 0,1km2.
 
 \subsubsection{Cost Distance}
-The Cost Distance analysis is used to calculate the route that will “cost” the least when traveling across a given surface \citep{grassbook}. This tool uses a cost surface to determine the weighted shortest path to the nearest source cells or source vector feature, and as such does not calculate distance in geographical units, but shows the distance by cost surface units \citep{rcost}. The cost can include several criteria, factors and weights depending on the specific analysis. For example, the cost surface of a hiking route can be established by taking into account the steepness, the type of the area or even the recommendations of which area should be visited.
+The Cost Distance analysis is used to calculate the route that will “cost” the least when traveling across a given surface \citep{grassbook}. This tool uses a cost surface to determine the weighted shortest path to the nearest source cells or source vector feature, and as such does not calculate distance in geographical units, but shows the distance by cost surface units \citep{rcost}. The cost can include several criteria, factors and weights depending on the specific analysis. For example, the cost surface of a hiking route can be established by taking into account the steepness, the type of the area or even the recommendations of which area should be visited.\\
 Each of the factors chosen should be reclassified in order to put them on a common scale, so that they can be compared in spite of their different nature. 
 The cost distance module of GRASS (r.cost) is based on the previously explained method \citep{rcost}. In order to get the cost distance output raster, the user needs to provide a cost raster.
 
@@ -234,43 +234,41 @@ A website written in Flask consists of a variety of templates that change conten
 
 The definition of Open Source is clearly set by the Open Source Initiative (OSI), making it possible to clearly define define which licenses actually are "Open Source". In addition to this, the OSI provides certification to these licenses to indicate that they follow the open-source principles and comply with the Open Source definition. This definition states the following \citep{osbook}:
 \begin{itemize}
-
 \item The license should allow the sale or gifting of the software as a part of software distribution along with programs from several different sources. For such sale no royalty or monetary compensation should be required. ("The license shall not restrict any party from selling or giving away the software as a component of an aggregate software distribution containing programs from several different sources. The license shall not require a royalty or other fee for such sale".)
 \item The source code of the software should be included in the software and it must be distributed freely along with the compiled form. In the case where the source code is not distributed with the software, an easily reached alternative must be provided, at most with a minimum reproduction cost.
 \item Modifications and derived works must be allowed and distributes as freely as the software itself.
-\item Modification of the source code can be restricted by the license only in the case that the license allows "patch files" distribution along with the source code for program modification. Software built from modified source code must be allowed to be distributed. \item Works derived from the source code may be required to have a different name or version number.
-\item Discrimination against persons or groups is not allowed
-\item All fields of endeavor must be allowed to use the software, unrestricted by its license.
-In the case where the program is redistributed, the same rights must apply without the execution of an additional license from those parties.
-\item In the case where the program is part of a specific software distribution, parties to whom the program is redistributed should have the same rights with those to  whom the original program is distributed.
-\item Restrictions on other software, distributed with the licensed software must not be placed under restrictions.
-\item Access to the license must not be dependable on any individual technology pr interface
-\end{itemize}
+\item Modification of the source code can be restricted by the license only in the case that the license allows "patch files" distribution along with the source code for program modification. Software built from modified source code must be allowed to be distributed. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
 	{\includegraphics[width=\linewidth]{gfx/OS.png}}
 \caption{Figure showing categorization of GIS software \citep{osarticle}}
 \label{fig:giscategory}
 \end{figure}
 
+\item Works derived from the source code may be required to have a different name or version number.
+\item Discrimination against persons or groups is not allowed
+\item All fields of endeavor must be allowed to use the software, unrestricted by its license. In the case where the program is redistributed, the same rights must apply without the execution of an additional license from those parties.
+\item In the case where the program is part of a specific software distribution, parties to whom the program is redistributed should have the same rights with those to  whom the original program is distributed.
+\item Restrictions on other software, distributed with the licensed software must not be placed under restrictions.
+\item Access to the license must not be dependable on any individual technology pr interface
+\end{itemize}
+
 Some of the most common desktop GIS Software can be seen from \autoref{fig:giscategory}.
 The main reason open software exists is because the US Government, during the 1970ies and 1980ies implemented changes in the patent laws that allowed software and hardware companies to unbundle software and hardware and the source code for software was under restricted access. For the reasons stated above the Free Software Foundation (FSF) was created \citep{osbookde}.
 
-
-Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. \autoref{tab:gissoftware} below can provide with some insight on such categorization.  
-
-
-\begin{table}[h]
+\begin{table}[H]
 \caption{GIS software}
-\begin{tabular}{l | r}
+\begin{tabular}{ l | p{0.55\linewidth} }
 Desktop GIS Software & Developer \\ 
 \hline
-GRASS GIS & Neteler \& Mitasova, 2008; Neteler, Bowman, Landa \& Metz 2012 \\ 
+GRASS GIS & Neteler \& Mitasova, 2008 \newline
+Neteler, Bowman, Landa \& Metz 2012 \\ 
 \hline
 QGIS & Hugentobler, 2008 \\ 
 \hline
-ILWIS / ILWIS Open & Valenzuela, 1988; Hengl, Gruber \& Shrestha, 2003 \\ 
+ILWIS / ILWIS Open & Valenzuela, 1988 \newline
+Hengl, Gruber \& Shrestha, 2003 \\ 
 \hline
 uDig & Ramsey, 2006 \\ 
 \hline
@@ -286,3 +284,6 @@ gvSIG & Anguix \& Diaz, 2008 \\
 \caption*{Categorization of GIS software \citep{osarticle}.}
 \label{tab:gissoftware}
 \end{table}
+
+Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. \autoref{tab:gissoftware} below can provide with some insight on such categorization. 
+
