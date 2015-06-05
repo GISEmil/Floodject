@@ -287,3 +287,18 @@ gvSIG & Anguix \& Diaz, 2008 \\
 
 Due to their widespread need, Geographic Information Systems software are also available to the public under the "Open Source" label. These software include a wide variety of open source examples that can be divided based on the functionalities the offer. \autoref{tab:gissoftware} below can provide with some insight on such categorization. 
 
+\section{Digital Elevation Models}
+A Digital Elevation Model (DEM) is a collection of three-dimensional points (X, Y, Z)that describe the Earth's ground elevation. Often stored in raster format, these models hold a very important role in the fields of photogrammetry, remote sensing and mapping. They also are a valuable component in the process of orthophoto creation along with aerial and satellite imagery. There are many ways someone can create a DEM \citep{dem}:
+
+\begin{enumerate}
+\item From surveying and topographic maps
+\item Using aerial imagery
+\item From LiDAR data
+\item Through satellite imagery
+\end{enumerate}
+
+Apart from the DEM, other elevation models can be created, using the same methods, that describe other aspects of the Earth's surface. One of the most widely used models is the Digital Surface Model (DSM). In this Elevation Model, the points that comprise it, describe the surface of the Earth and all the elements on it, either man-made or natural.
+
+\paragraph{Danish Elevation Models:} The Danish elevation models (DK-DEM) are created using LiDAR point clouds. The latest fully available elevation models and LiDAR point clouds were collected from 2005 to 2007, by two Danish companies (Blominfo and Scankort A/S). Responsible for the quality control of the elevation models was the Danish National Survey (KMS). The DK-DEM is using UTM32N/ETRS89 as horizontal reference system and DVR90 as vertical reference \citep{demdk}.
+In order to estimate the accuracy both vertical and horizontal, a number of control measurements were performed using sophisticated GPS instruments. As far as the vertical accuracy is concerned, the average Root Mean Square (RMS) error was 5.9cm while the standard error was 3.44cm. As far as the horizontal accuracy is concerned, the process in order to calculate it included using 568 corners of 142 buildings. The results from this process resulted in an average RMS error of 67cm \citep{demdk}.
+

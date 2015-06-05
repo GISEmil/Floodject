@@ -8,38 +8,41 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Figure showing how cost distance works \citep {costdistance}.\relax }}{7}{figure.caption.10}
 \contentsline {figure}{\numberline {4}{\ignorespaces Figure showing categorization of GIS software \citep {osarticle}\relax }}{12}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5}{\ignorespaces The old model.\relax }}{16}{figure.caption.13}
-\contentsline {figure}{\numberline {6}{\ignorespaces Gantt-chart showing the overlap of phases\relax }}{20}{figure.caption.15}
+\contentsline {figure}{\numberline {5}{\ignorespaces An example model built in ArcGIS modelbuilder.\relax }}{16}{figure.caption.14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Gantt-chart showing the overlap of phases\relax }}{21}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7}{\ignorespaces Inputs for the flooding model.\relax }}{24}{figure.caption.16}
-\contentsline {figure}{\numberline {8}{\ignorespaces Figures indicating how r.cost is used to identify continuous areas\relax }}{25}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Every cell with a value less than the current flood level.}}}{25}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cells reachable from the source point.}}}{25}{subfigure.8.2}
-\contentsline {figure}{\numberline {9}{\ignorespaces Figures indicating how r.cost is used to identify continuous areas\relax }}{26}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Every cell with a value less than the current flood level.}}}{26}{subfigure.9.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cells reachable from the source point.}}}{26}{subfigure.9.2}
-\contentsline {figure}{\numberline {10}{\ignorespaces Inputs for the flooding model.\relax }}{27}{figure.caption.19}
-\contentsline {figure}{\numberline {11}{\ignorespaces Inputs for the flooding model.\relax }}{27}{figure.caption.20}
-\contentsline {figure}{\numberline {12}{\ignorespaces Figure showing the pourpoint we are trying to identify.\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {13}{\ignorespaces Showing the concepts of finding the pourpoints.\relax }}{33}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Showing two flood extents.}}}{33}{subfigure.13.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Showing line of pour points.}}}{33}{subfigure.13.2}
-\contentsline {figure}{\numberline {14}{\ignorespaces Generated extra pixels}}{35}{figure.caption.23}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rasterized barrier.}}}{35}{subfigure.14.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Problem areas.}}}{35}{subfigure.14.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generating pixels in the designated areas.}}}{35}{subfigure.14.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Fixed barrier.}}}{35}{subfigure.14.4}
-\contentsline {figure}{\numberline {15}{\ignorespaces Figure showing important concepts when working with watersheds\relax }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {7}{\ignorespaces Inputs for the flooding model.\relax }}{26}{figure.caption.17}
+\contentsline {figure}{\numberline {8}{\ignorespaces Figures indicating how r.cost is used to identify continuous areas\relax }}{28}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Every cell with a value less than the current flood level.}}}{28}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cells reachable from the source point.}}}{28}{subfigure.8.2}
+\contentsline {figure}{\numberline {9}{\ignorespaces Figures indicating how r.cost is used to identify continuous areas\relax }}{28}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Every cell with a value less than the current flood level.}}}{28}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Cells reachable from the source point.}}}{28}{subfigure.9.2}
+\contentsline {figure}{\numberline {10}{\ignorespaces Image illustrating problem with the intersection method\relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {11}{\ignorespaces Figure showing the pourpoint we are trying to identify.\relax }}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {12}{\ignorespaces Showing the concepts of finding the pourpoints.\relax }}{35}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Showing two flood extents.}}}{35}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Showing line of pour points.}}}{35}{subfigure.12.2}
+\contentsline {figure}{\numberline {13}{\ignorespaces Generated extra pixels}}{37}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Rasterized barrier.}}}{37}{subfigure.13.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Problem areas.}}}{37}{subfigure.13.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Generating pixels in the designated areas.}}}{37}{subfigure.13.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Fixed barrier.}}}{37}{subfigure.13.4}
+\contentsline {figure}{\numberline {14}{\ignorespaces Showing the barrier hardcoded into the DEM.\relax }}{38}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {16}{\ignorespaces The architecture of the software\relax }}{47}{figure.caption.30}
-\contentsline {figure}{\numberline {17}{\ignorespaces Overall workflow of the application\relax }}{48}{figure.caption.31}
-\contentsline {figure}{\numberline {18}{\ignorespaces Frontpage of the web application, tentatively dubbed \textit {flooding}.\relax }}{49}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Banner.}}}{49}{subfigure.18.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Banner}}}{49}{subfigure.18.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Middle.}}}{49}{subfigure.18.3}
-\contentsline {figure}{\numberline {19}{\ignorespaces Accessing the possibility of uploading a DEM.\relax }}{49}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Page describing the coming process.}}}{49}{subfigure.19.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Uploading a DEM.}}}{49}{subfigure.19.2}
-\contentsline {figure}{\numberline {20}{\ignorespaces Step 2 display uploaded elevation model and insert point to designate origin of flood\relax }}{50}{figure.caption.34}
-\contentsline {figure}{\numberline {21}{\ignorespaces Results of the simple flood option\relax }}{50}{figure.caption.35}
+\contentsline {figure}{\numberline {15}{\ignorespaces Location of the error logs.\relax }}{48}{figure.caption.26}
+\contentsline {figure}{\numberline {16}{\ignorespaces Installation structure of Flask\relax }}{49}{figure.caption.28}
+\contentsline {figure}{\numberline {17}{\ignorespaces Installation folder structure of GRASS\relax }}{50}{figure.caption.29}
+\contentsline {figure}{\numberline {18}{\ignorespaces The architecture of the software\relax }}{50}{figure.caption.30}
+\contentsline {figure}{\numberline {19}{\ignorespaces Overall workflow of the application\relax }}{51}{figure.caption.31}
+\contentsline {figure}{\numberline {20}{\ignorespaces Frontpage of the web application, tentatively dubbed \textit {flooding}.\relax }}{52}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Banner.}}}{52}{subfigure.20.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Banner}}}{52}{subfigure.20.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Middle.}}}{52}{subfigure.20.3}
+\contentsline {figure}{\numberline {21}{\ignorespaces Accessing the possibility of uploading a DEM.\relax }}{52}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Page describing the coming process.}}}{52}{subfigure.21.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Uploading a DEM.}}}{52}{subfigure.21.2}
+\contentsline {figure}{\numberline {22}{\ignorespaces Step 2 display uploaded elevation model and insert point to designate origin of flood\relax }}{53}{figure.caption.34}
+\contentsline {figure}{\numberline {23}{\ignorespaces Results of the simple flood option\relax }}{53}{figure.caption.35}
+\contentsline {figure}{\numberline {24}{\ignorespaces Image showing NoData values in tiff image.\relax }}{55}{figure.caption.36}
 \addvspace {10\p@ }

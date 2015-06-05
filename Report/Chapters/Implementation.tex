@@ -2,12 +2,13 @@
 
 \chapter{Implementation} % Chapter title
 
-\label{ch:theory} % For referencing the chapter elsewhere, use \autoref{ch:introduction} 
+\label{ch:implementation} % For referencing the chapter elsewhere, use \autoref{ch:introduction} 
 
 %----------------------------------------------------------------------------------------
 
 As mentioned previously the work was divided into a series of phases. Before these commenced, we wanted to decide on which tools we were going to use for the application. 
-We knew we wanted to make an online application that would enable a user to model the flooding of a provided area.  
+We knew we wanted to make an online application that would enable a user to model the flooding of a provided area.\\
+
 To model the flood we decided on using GRASS at it is a powerful Open Source software, with a history being used in a variety of professional settings – such as the american army corps of engineers. Furthermore, the application allows easy access to it's core functions through a Python interface. 
 GRASS is natively supported by the WPS called PyWPS. Therefore this seemed like a natural choice for our project. 
 To gain the online application of the project, a web server would obviously be needed, and for this hosting of some sort, and we ended up using the Amazon Elastic Compute Cloud (or EC2) for this purpose.
@@ -149,23 +150,23 @@ Comparing the cost distance and the spatial vector selection methods, the follow
 
 \begin{figure}[h!]
 \centering
-	{\includegraphics[width=0.8\linewidth]{gfx/Phase_2/problem3.png}}
-\caption{Inputs for the flooding model.}
+	{\includegraphics[width=0.75\linewidth]{gfx/Phase_2/problem3.png}}
+\caption{Image illustrating problem with the intersection method}
 \label{fig:phase2_prob3}
 \end{figure}\\
 
 Therefore every cell, which is diagonally connected to a coherent flood surface will be disregarded, even though they, according to the flow direction and accumulation theory, would be the part of the flood extent. 
 We tested both functions have confirmed a significant impact on the results of the process. For example, comparing a flood scenario of 3 meter flood rise with 10 cm increments, it can be seen that at stage 1,20m, the flood extent is significantly different, as seen on \autoref{fig:phase2_prob4}
 
-\begin{figure}[h!]
+\begin{figure}[H!]
 \centering
 	{\includegraphics[width=\linewidth]{gfx/Phase_2/problem4.png}}
-\caption{Inputs for the flooding model.}
+\caption{Difference of flood extent, based on model used.}
 \label{fig:phase2_prob4}
 \end{figure}\\
 
 \section{Phase 3}
-This section will focus on the back-end of our web server. We begin by initializing Flask on our server. It is important to keep in mind that we earlier installed the Apache web server. After extensive research online, several different sources suggested a universal process on how to install Flask on an Apache 2 server. To go on, before actually installing Flask, we need to initialize mod\_wsgi. Mod\_wsgi is a tool that specializes in serving python applications from Apache servers. Installing mod\_wsgi is quite easy, and only takes a few lines of command line scripting (figure XXX).\\
+This section will focus on the back-end of our web server. We begin by initializing Flask on our server. It is important to keep in mind that we earlier installed the Apache web server. After extensive research online, several different sources suggested a universal process on how to install Flask on an Apache 2 server. To go on, before actually installing Flask, we need to initialize mod\_wsgi. Mod\_wsgi is a tool that specializes in serving python applications from Apache servers. Installing mod\_wsgi is quite easy, and only takes a few lines of command line code: \\
 
 \begin{lstlisting}
 sudo apt-get install apache2 apache2-base apache2-mpm-prefork apache2-utils libexpat1 -ssl-cert
@@ -175,7 +176,7 @@ pip install flask
 
 Following this installation we need to create an application.wsgi file. This is basically a file that contains code that initializes the application and comes with the .wsgi file extension. 
 Now that Flask and prerequisites have been set up, it is time to look at what the backbone of the application looks like. At first, it is important to mention that the initial setup of the application will use Flask. To start with, and keeping in mind the way Flask actually works, we need a main Flask script that can initialize the application and connect various functions with its main core. In addition, that main script will also be connected to various html pages depending on where the user wants to navigate in our application.
-The first action we took was to change the default path of our application in the server. Instead of using \textit{/var/www/html}, we started using \textit{/var/www/html/FlaskApp/FlaskApp}. This path will be referred to as the root url. After doing that, we create the script that will perform the functionalities of the application. That script is named \_\_init\_\_.py. Using Flask allows us to connect to various html scripts by using  only one main script. Depending on the URL of the page the user wants to get to, the corresponding HTML script is called and displayed on the user's screen. For example, as shown below (figure XXX), if the user visits our homepage, which is set by the \textit{\@app.route()}, then the \textit{'index.html'} will be initialized and displayed on his screen.\\
+The first action we took was to change the default path of our application in the server. Instead of using \textit{/var/www/html}, we started using \textit{/var/www/html/FlaskApp/FlaskApp}. This path will be referred to as the root url. After doing that, we create the script that will perform the functionalities of the application. That script is named \_\_init\_\_.py. Using Flask allows us to connect to various html scripts by using  only one main script. Depending on the URL of the page the user wants to get to, the corresponding HTML script is called and displayed on the user's screen. For example, if the user visits our homepage, which is set by the \textit{\@app.route()}, then the \textit{'index.html'} will be initialized and displayed on his screen:\\
 
 \begin{lstlisting}
 @app.route('/')
@@ -230,10 +231,10 @@ To expand on the functionality of the application, we have additional functional
 
 \subsection{Identifying critical areas}
 \subsubsection{Outlet analysis}
-During the development of the pour-point analysis, we encountered sine problems. At the beginning, we tried to derive this problem from a watershed analysis, based on the identification of watershed's outlet. Our hypothesis was , that the flood  would flow backwards through the flow accumulation and flow stream model to the source cells and when the water enters through an outlet, to a new watershed, than that area would become flooded. Therefore we created a workflow which extracts only the outlet of the watershed. As it presented in the theory part, we used the watershed(r.watershed) and flow accumulation module (r.terraflow) in order to determine the inlet-outlet location of the watershed. We tried to establish an algorithm for relative watershed determination based on the investigated DEM. We set up, the minimum threshold size of a watershed, has to be at least the ten percent of the DEM. After the workflow run the previously used neighborhood analysis(r.neighbor) with diversity method with we could extract the watershed borders on a raster. Using the terraflow module with single flow direction setup, we created the a flow accumulation raster. This is important to determine the inlet/outlet location. Using the single flow direction method, every outlets will be located on the border of a watershed where the flow accumulation is the maximum. With this approach we though we got can a relatively good result to determine where the flood flow will enter to new area, however the testing of the algorithm showed its failure of our planned purpose.
+During the development of the pour-point analysis, we encountered some problems. At the beginning, we tried to derive this problem from a watershed analysis, based on the identification of watershed's outlet. Our hypothesis was, that the flood  would flow backwards through the flow accumulation and flow stream model to the source cells and when the water enters through an outlet, to a new watershed, then that area would become flooded. Therefore we created a workflow which extracts only the outlet of the watershed. As it presented in the theory part, we used the watershed(r.watershed) and flow accumulation module (r.terraflow) in order to determine the inlet-outlet location of the watershed. We tried to establish an algorithm for relative watershed determination based on the investigated DEM. We set up, the minimum threshold size of a watershed, has to be at least the ten percent of the DEM. After the workflow run the previously used neighborhood analysis(r.neighbor) with diversity method with we could extract the watershed borders on a raster. Using the terraflow module with single flow direction setup, we created the a flow accumulation raster. This is important to determine the inlet/outlet location. Using the single flow direction method, every outlets will be located on the border of a watershed where the flow accumulation is the maximum. With this approach we though we got can a relatively good result to determine where the flood flow will enter to new area, however the testing of the algorithm showed its failure of our planned purpose.
 
 \subsubsection{Pour point analysis}
-Only providing the a extent is not enough when wanting to prepare against the impact a disaster. We wanted to provide more information about the flood regarding areas that might be particularly dangerous. After monitoring the  spread of the flood using our simple model, we realized there were areas where a relatively large area got flooded immediately. This can occur when the flood steps over a natural barrier, with a lower elevation than the surrounding area. This is what we call a “pour-point”. One of our major challenge was how to identify this behaviour and to locate the actual position of these critical points automatically.// 
+Only providing the extent is not enough when wanting to prepare against the impact of a disaster. We wanted to provide more information about the flood regarding areas that might be particularly dangerous. After monitoring the  spread of the flood using our simple model, we realized there were areas where a relatively large area got flooded immediately. This can occur when the flood steps over a natural barrier, with a lower elevation than the surrounding area. This is what we call a “pour-point”. One of our major challenge was how to identify this behaviour and to locate the actual position of these critical points automatically.// 
 Since these pour point phenomena are very dependent how the process is run; which increment the water is rising in; which output (raster or vector) are we working with. Firstly, we realized that to give an accurate flooding the increments would have to with 1 cm water increments. By using this increment, this flood can be accurate enough to identify major changes between consecutive flood levels.
 
 \begin{figure}[h!]
@@ -312,7 +313,7 @@ As can be noted in the script above, we are using neighborhoods in order to extr
 \label{tab:relcoord}
 \end{table}\\
 
-The result of this edge selection is shown on the figure below (figure XXX).\\
+The result of this edge selection is shown on the figure below:\\
 \\
 
 
@@ -333,7 +334,7 @@ This process results in the elevation model shown on \autoref{fig:fixedbarrier}.
 \begin{figure}[h!]
 \centering
 	{\includegraphics[width=0.75\linewidth]{gfx/Phase_4/Barrier5.png}}
-\caption{Figure showing important concepts when working with watersheds}
+\caption{Showing the barrier hardcoded into the DEM.}
 \label{fig:fixedbarrier}
 \end{figure}
 
@@ -414,7 +415,7 @@ In general it is possible to call either a GetCapabilities, Execute or DescribeP
 They way the WPS service is requested from the server, I.e a flooding service with the identifier “flooding”, is called like follows:
 
 \begin{itemize}
-\item http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin=<LINK TO DEM>;vectorin=<GEOJSON AS STRING>]
+\item http://52.17.144.192/cgi-bin/pywps.cgi?request=execute\&service=WPS\&version=1.0.0\&identifier=flooding\&datainputs=[rasterin=<LINK TO DEM>;vectorin=<GEOJSON AS STRING>]
 \end{itemize}
 
 The server will process the request, and return a XML document with links to where the outputs of the process are stored. 
@@ -441,12 +442,12 @@ $.(#step2).show();
 \end{lstlisting}
 
 At most of the stages, asynchronous requests or operations will be performed. As they can take some time, we want to give the user some feedback that the page is loading. This is done by creating an overlay that takes up the entire screen, and includes a loading icon. The icon is hidden, but gets shown when a request is performed, in the same manner as above.
-To describe how the outlined stages work we will go through them below. 
+To describe how the outlined stages work we will go through them below. \\
 
-\textsc{Step 1 – Upload DEM:}
-In this step the user uploads a DEM. Most of the functionality here is dependant on the functionality of Flask. So the only thing necessary to add here, is a HTML form with the capability of letting the user browse his computer for a DEM, and then clicking a button to upload it. 
+\paragraph{Step 1 - Upload DEM:}
+In this step the user uploads a DEM. Most of the functionality here is dependant on the functionality of Flask. So the only thing necessary to add here, is a HTML form with the capability of letting the user browse his computer for a DEM, and then clicking a button to upload it. \\
 
-\textsc{Step 2 – Select Ocean:}
+\paragraph{Step 2 – Select Ocean:}
 In this step we want the user to select from where the flooding will occur. 
 
 This entails showing the uploaded image on a webmap, making the user able to place a marker on the map, and then sending this information to the server.
@@ -465,7 +466,7 @@ As mentioned, we want the DEM to be uploaded to a webmap. To do this a copy of t
 The format of this is something like:
 
 \begin{itemize}
-\item http://52.17.144.192/upload?minx=COORD&miny=COORD&maxx=COORD&maxy=COORD&filename=FILENAME
+\item http://52.17.144.192/upload?minx=COORD\&miny=COORD\&maxx=COORD\&maxy=COORD\&filename=FILENAME
 \end{itemize}
 
 To extract the relevant data the following JavaScript code is executed:
@@ -550,9 +551,9 @@ The final thing is to add the onClick functionality of adding a point when click
 \end{lstlisting}
 
 We decided to add the possiblity for the user to choose between two different types of flooding at this stage. Either to do a quick flooding simulation, or a more advanced flood.
-As soon as the relevant button is clicked, an asynchronous request is sent to the relevant PyWPS service.
+As soon as the relevant button is clicked, an asynchronous request is sent to the relevant PyWPS service.\\
 
-\textsc{Step 3 – Get Results:}
+\paragraph{Step 3 – Get Results:}
 Because of the response document from the PyWPS service being the same for either call, the structure and functionality of the asynchronous request performed will be (mostly) the same for both requests. So therefore only one request will be described here. 
 The buttons used to send the request have been marked with either a advancedflood or simpleflood ID. In this instance we wil look at the advanced flood async request.
 We have stored the relevant PyWPS URL in a variable in our script, and we have replaced relevant input with the data uploaded by the user 

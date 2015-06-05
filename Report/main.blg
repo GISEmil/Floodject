@@ -11,6 +11,7 @@ A level-1 auxiliary file: Chapters/Theory.aux
 A level-1 auxiliary file: Chapters/Methodology.aux
 A level-1 auxiliary file: Chapters/Implementation.aux
 A level-1 auxiliary file: Chapters/Analysis.aux
+A level-1 auxiliary file: Chapters/SWOT.aux
 A level-1 auxiliary file: Chapters/Discussion.aux
 A level-1 auxiliary file: FrontBackMatter/Bibliography.aux
 The style file: plainnat.bst
@@ -19,45 +20,45 @@ A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
 Warning--empty year in costdistance
 Warning--empty year in watershed
-You've used 23 entries,
+You've used 27 entries,
             2773 wiz_defined-function locations,
-            718 strings with 8037 characters,
-and the built_in function-call counts, 8291 in all, are:
-= -- 723
-> -- 415
-< -- 20
-+ -- 151
-- -- 126
-* -- 524
-:= -- 1316
-add.period$ -- 81
-call.type$ -- 23
-change.case$ -- 111
-chr.to.int$ -- 21
-cite$ -- 48
-duplicate$ -- 399
-empty$ -- 754
-format.name$ -- 157
-if$ -- 1744
+            739 strings with 8659 characters,
+and the built_in function-call counts, 9580 in all, are:
+= -- 847
+> -- 455
+< -- 25
++ -- 167
+- -- 138
+* -- 588
+:= -- 1524
+add.period$ -- 94
+call.type$ -- 27
+change.case$ -- 129
+chr.to.int$ -- 25
+cite$ -- 56
+duplicate$ -- 471
+empty$ -- 874
+format.name$ -- 173
+if$ -- 2021
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 15
-newline$ -- 135
-num.names$ -- 92
-pop$ -- 278
+missing$ -- 16
+newline$ -- 156
+num.names$ -- 108
+pop$ -- 311
 preamble$ -- 1
-purify$ -- 88
+purify$ -- 100
 quote$ -- 0
-skip$ -- 298
+skip$ -- 354
 stack$ -- 0
-substring$ -- 113
-swap$ -- 28
-text.length$ -- 0
+substring$ -- 141
+swap$ -- 37
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 233
+type$ -- 277
 warning$ -- 2
-while$ -- 73
+while$ -- 87
 width$ -- 0
-write$ -- 318
+write$ -- 371
 (There were 2 warnings)

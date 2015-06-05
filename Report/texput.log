@@ -1,10 +1,10 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  1 JUN 2015 14:32
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  5 JUN 2015 16:34
  restricted \write18 enabled.
-**Bibliography.tex
+**classicthesis.tex
 
 ! Emergency stop.
-<*> Bibliography.tex
-                 
+<*> classicthesis.tex
+                  
 *** (job aborted, file error in nonstop mode)
 
 

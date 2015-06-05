@@ -7,18 +7,20 @@
 %----------------------------------------------------------------------------------------
 
 The project startup was officially set to be the 2nd of February with an expected turn-in date on the 10th of June. This time-span provided the group with approximately four months to complete the development of this project and the accompanying report.\\
-The four months of official working time were divided into three overarching stages, in which we expected various parts of the project to have progressed a certain amount.\\ 
+The four months of official working time were divided into three overarching stages, in which we expected various parts of the project to have progressed a certain amount.\\
 
-Here there will be a graph of how we used our time. \\
+As far as the working schedule is concerned, we decided as a group on a fixed set of days each week, where the group would meet and work on the project. The rest of the days, each member of the group would work individually on pre-assigned tasks that would be discussed among the group in the next available meeting. Taking the above into account, we set a weekly schedule that was followed throughout the completion of this project as seen in \autoref{tab:weeklywork}.\\
 
-As far as the working schedule is concerned, we decided as a group on a fixed set of days each week, where the group would meet and work on the project. The rest of the days, each member of the group would work individually on pre-assigned tasks that would be discussed among the group in the next available meeting. Taking the above into account, we set a weekly schedule that was followed throughout the completion of this project (table XXX).\\
-
+\begin{table}
+\centering
 \begin{tabular}{ l | l | c | c | c | r | r }
 Monday & Tuesday & Wednesday & Thursday & Friday & Saturday & Sunday \\
 Meet & -- & -- & Meet & Meet & -- & Flex
 
-\end{tabular} \\
-\\
+\end{tabular} 
+\caption{Planned weekly working schedule.}
+\label{tab:weeklywork}
+\end{table}
 
 In an effort to maximize productivity and collaboration between group members, we decided to follow a classic software methodology, called SCRUM. This choice was made due to the fact that this project includes significant amount of programming work and most of the members have experience working under this method. \\
 Being a sub-version of the Agile methodology, SCRUM adheres to a specific routine:
@@ -37,25 +39,25 @@ Developing the software and writing the report did not occur in parallel fashion
 The main issue that occurred during the development phase of the project was that in some cases, code needed to be tested on the server to determine whether it performed without any errors. That fact, crippled the flexibility of the group on the occasions where we needed to test fixes for broken code. To be more specific, each time a fix was implemented, the server needed to be restarted in order to load the new script and test its new version. When restarting the server we had to make sure that no other group member was working on the server side, so a waiting gap existed between fixing and testing the code.\\
 
 \section{Previous Project}
-As mentioned previously in this paper, this project is inspired by the work done during the second semester of our studies. In that project, we developed an ArcGIS toolbox which allowed the user to simulate a flood caused by the stowage of sea water. The aim of the project was to use ArcGIS geoprocessing modules to develop a user friendly model capable of modelling the mentioned phenomena. \\
+This project is inspired by the work done during the second semester of our studies. In that project, we developed an ArcGIS toolbox providing a user with tools enabling them to simulate a flood caused by the stowage of sea water. The aim of the project was to use ArcGIS geoprocessing modules to develop a user friendly model capable of modelling the mentioned phenomena. \\
 
 \begin{figure}[h!]
 \centering
 	{\includegraphics[width=\linewidth]{gfx/Methodology/old_project.png}}
-\caption{The old model.}
+\caption{An example model built in ArcGIS modelbuilder.}
 \label{fig:inputs}
 \end{figure}\\
 
-The toolbox we created, comprised of ArcGIS functionalities with the core being the Cost Distance tool. The development was executed in with the built-in Model Builder. Model builder has the capability of invoking modules and algorithms through an easy-to-use Drag'N'Drop functionality. Although the preliminary model development is significantly easier due to the GUI, in order to apply more complex algorithm and connection between models models can quickly scale out of hand. 
-The final tool made it possible to simulat water advancing through the landscape and covering parts of land that were below a certain predefined elevation, and were connected to the source of the flood. \\
+The toolbox we created, comprised of ArcGIS functionalities with the core being the Cost Distance tool. The development was executed in with the built-in Model Builder. Model builder has the capability of invoking modules and algorithms through an easy-to-use Drag'N'Drop functionality. Although the preliminary model-development is significantly easier due to the GUI, applying more complex algorithms and connections between models and submodels, can quickly become unmanageable. 
+The final tool made it possible to simulate water advancing through the landscape, covering the parts of land that were below a certain predefined elevation, and connected to the source of the flood. \\
 
 After completing that project, we were left wondering how this toolbox could be made available to an even greater amount of people. Another question that arose was how this tool could be made available freely without any of the software limitations that using a proprietary licensed software, like the ArcGIS software suite, provide.
-In order to pursue such an endeavor, we must make sure that this new product has to offer at least the same functionalities as the one created before. In addition, the way it is developed has to provide us with greater distribution potential in order to ensure widespread availability to any interested organization or person. Keeping these ideas in mind, we reached the aforementioned problem statement and begun working on this project.
+In order to pursue such an endeavour, we must make sure that this new product has to offer at least the same functionalities as the one created before. In addition, the way it is developed has to provide us with greater distribution potential in order to ensure widespread availability to any interested organization or person. Keeping these ideas in mind, we reached the aforementioned problem statement and begun working on this project.
 
 \section{Workflow}
-In order to be in accordance with the goals that we set, before working on the technical aspects of the project, we decided to split the project into several distinct phases. These phases comprise the general technical process we would have to go through when completing the project. They are created in such a way that they divide our work into parts that split our work into logical subparts. This division will also serve the purpose of making this report easier to read and more understandable to the reader.   
-Based on this, we divided the project into a series of phases. Each phase describes a different process of the project from setting up its foundations to the final, fully working prototype. \\
-The phases will be described as being distinctive from each other. In reality this is not the case. Since this is a product of group work, it made a lot sense to divide the workload among the different members of the group. This would save a significant amount of time since not all different phases required more than one member working on that specific part. That being said, the way the work unfolded, it resulted in overlapping phases. This simultaneous development of parts of the application ensured that constant communication among the group members was a high priority, this also made sure that changes on existing and fundamental parts were not too time consuming. For example, tweaking of the PyWPS  in order to connect and enable specific functions as they get developed to the server setup was a constant task throughout the entire project.\\
+In order to be in accordance with the goals that we set, before working on the technical aspects of the project, we decided to split the project into several distinct phases. These phases comprise the general technical processes we would have to go through when completing the project. They are created in such a way that they divide our work into parts splitting the work into logical sub-parts. This division will also serve the purpose of making this report easier and more understandable.   
+Each phase describes a different process of the project from setting up its foundations to the final, fully working prototype. \\
+The phases will be described as being distinctive from each other. In reality this is not the case. Since this is a product of group work, it made a lot sense to divide the workload among the different members of the group. This would save a significant amount of time since not all different phases required more than one member working on that specific part. That being said, the way the work unfolded, it resulted in overlapping phases. This simultaneous development of parts of the application ensured that constant communication among the group members was a high priority, and also made sure that changes on existing and fundamental parts were not too time consuming. For example, tweaking of the PyWPS  in order to connect and enable specific functions as they get developed and deployed to the server, was a task that was worked on throughout the entire project.\\
 
 Below, is a quick sketch of how the phases were planned to look:
 
@@ -77,10 +79,10 @@ This phase involves defining exactly we wanted to attain with the project.
   
   \item[Writing:]As the project would become more and more finished, we will start the writing part. As mentioned we will keep notes, and write various parts that are important to memorize down as the project progresses, but the writing will occur mostly when the project is fully finished. This is done because some aspects of the project might change during the course of the development, and we don't want to have to redo various written parts, or we might even forget that they got changed, and forget to include the change in the project. 
   
-  \item[Finishing up:]The final step is to make sure everything works, and to put a nice knot on the loose ends, as well as make sure that there is a red thread going through the project. Making sure that there is time to actually go through all the parts of the project is essential when doing a project such as this. 
+  \item[Finishing up:]The final step is to make sure everything works, and to tie a knot on loose ends, as well as make sure that there is a red thread going through the project. Making sure that there is time to actually go through all the parts of the project is essential when doing a project such as this. 
 \end{description}
 
-We expected the various phases to take up approximately three weeks but with five weeks set aside for Phase 4 where the functions were developed, which would look something like \autoref{tab:phases}\\
+We expected the various phases to take up approximately three weeks but with five weeks set aside for Phase 4 where the functions were developed, a table of the estimated time for each phase is provided in \autoref{tab:phases}.\\
 
 \begin{table}[h!]
 \centering
@@ -100,16 +102,28 @@ Finishing up & 03/06/2015 & 10/03/2015 & 7
 \label{tab:phases}
 \end{table}\\
 
+The phases of the project will be explained in detail on the next chapter. The way we will present the development of our work is aiming towards a more understandable and logically segmented report. That being said, we think that firstly presenting the final product that serves the purpose of its creation and then documenting the other unsuccessful routes that we tried is, for us, the best way to communicate our work to the reader. To be more specific, the layout of the next section of the report will provide the reader with the process of creating a working prototype in detail. This means that the various tools and techniques that we use will be presented and explained along with arguments on why we think that this is the best available solution at the time of creation. After we are finished with documenting this part, we spend some time presenting the alternatives that we tested before reaching to that solution, if there are any, and provide the reason and thoughts that lead us to abandon that specific course of action. By separating these two phases of development, we want to make sure that the reader can easily locate what they are looking for, i.e. suggested course of action or courses better avoided. 
 
-The phases of the project will be explained in detail on the next chapter. The way we will present the development of our work is aiming in a more understandable and logically segmented report. That being said, we think that firstly presenting the final product that serves the purpose of its creation and then documenting the other unsuccessful routes that we tried is, for us, the best way to communicate our work to the reader. To be more specific, the layout of the next section of the report will provide the reader with the process of creating a working prototype in detail. This means that the various tools and techniques that we use will be presented and explained along with arguments on why we think that this is the best available solution at the time of creation. After we are finished with documenting this part, we spend some time presenting the alternatives that we tested before reaching to that solution, if there are any, and provide the reason and thoughts that lead us to abandon that specific course of action. By separating these two phases of development, we want to make sure that the reader can easily locate what they are looking for, i.e. suggested course of action or courses better avoided. 
+\subsection{The practical foundation}
+We decided to base the project, on a well-known location. This would make sure that the project would be grounded in reality, and make it easier to test the project consistently.
+We decided on using Denmark as our reference country. This was first of all done, because the (previously mentioned) last project was based on working within Denmark as well, and this would give us a logical starting point for our model, and would provide a point of comparison for the results of the new application. 
 
-\subsection{Founding the project in Denmark}
+Furthermore, the data standard for Denmark is very high. There are a variety of different DEM's that can be used, and they are created for a variety of purposes, as well as span a broad swathe of different resolutions. Additionally, they are free to use, and can be easily accessed from the Danish Geodata Agencies website \url{http//:www.kortforsyningen.dk}{Kortforsyningen}. 
+
+Additionally, the landscape and weather in Denmark do not suffer from being very extreme. What this means is that the landscape as such is relatively uniform and does not experience sudden extreme highs or lows, and  the weather is also very consistent, and never experiences such extreme phenomena such as Tsunamis. 
+
+Some of the highest water levels ever recorded were between 4,3 meters (in Esbjerg) and around 5 meters (in Ribe around 1919). As mentioned, these were extremes, and the historical heights of floodings caused by storm water, have been in the area of 200 centimeters \citep{kyst}.
+
+Towards the year 2050, DMI expects that there will be an increase in the water level between 10 and 50 centimeters in the internal areas of Denmark. \citep{dmi}
+
+For this reason we decide to model floods in our application based on a water rise of 300 centimeters. The reason for this, is because it will reflect an “extreme” situation in Denmark, based on the heights provided by the historical records. Furthermore, it will also, to some degree, describe the expected water rise in Denmark.
 
 \subsection{Calendar timeline}
 Each phase has a weeks overlap with the previous phase. This is done to indicate that as one phase is slowly finishing up, the next one will slowly start up. This also shows how dynamic the creation of a project such as this is. \\
 To give an overview of how we were expecting to progress with our project, we sketched the phases above into a so-called Gantt diagram. This gives a nice overview of this overlapping of the phases as mentioned above, and can be seen on \autoref{fig:gantt}.
 
 \begin{figure}[h!]
+\centering
 \begin{ganttchart}[y unit title=0.4cm,
 y unit chart=0.5cm,
 vgrid,hgrid, 

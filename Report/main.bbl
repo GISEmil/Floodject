@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,10 +11,23 @@ Antony Awaida and James Westervelt.
 \newblock \url{http://grass.osgeo.org/grass64/manuals/r.cost.html}, 2013.
 \newblock Accessed: 2015-05-05.
 
+\bibitem[Birgitte~Rosenkrantz(2011)]{demdk}
+Poul~Frederiksen Birgitte~Rosenkrantz.
+\newblock Quality assessment of the danish elevation model (dk-dem).
+\newblock Technical report, National Survey and Cadastre - Denmark, 2011.
+
 \bibitem[Cepicky and Becchi(2007)]{pywps}
 Jachym Cepicky and Lorenzo Becchi.
 \newblock Geospatial processing via internet on remote servers.
 \newblock \emph{OSGeo Journal}, 1:\penalty0 1 -- 4, 2007.
+
+\bibitem[{DMI}(2015)]{dmi}
+{DMI}.
+\newblock Stormfloder i fremtidens klima.
+\newblock
+  \url{http://www.dmi.dk/laer-om/temaer/hav/fremtidens-vandstand/stormfloder-i-fremtidens-klima/},
+  2015.
+\newblock Accessed: 2015-05-05.
 
 \bibitem[Echlschlaeger(2015)]{rwatershed}
 Charles Echlschlaeger.
@@ -69,11 +82,23 @@ Donald~E. Knuth.
 \newblock \emph{Communications of the ACM}, 17\penalty0 (12):\penalty0
   667--673, December 1974.
 
+\bibitem[{Kystdirektoratet}(2011)]{kyst}
+{Kystdirektoratet}.
+\newblock Forslag til udpegning af risikoområder på baggrund af en foreløbig
+  vurdering af oversvømmelsesrisikoen fra havet, fjorde eller andre dele af
+  søterritoriet.
+\newblock Technical report, Kystdirektoratet, 2011.
+
 \bibitem[Laurent(2004)]{osbook}
 Andrew M.~St. Laurent.
 \newblock \emph{Understanding Open Source and Free Software Licensing}.
 \newblock O'Reilly, 1005 Gravenstein Highway North, Sebastopol, CA 95472, 1st
   edition, 2004.
+
+\bibitem[Liu(2008)]{dem}
+X~Liu.
+\newblock Airborne lidar for dem generation: Some critical issues.
+\newblock \emph{Progress in Physical Geography}, pages 31--49, 2008.
 
 \bibitem[Lutz(2013)]{pybook}
 Mark Lutz.

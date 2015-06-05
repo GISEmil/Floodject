@@ -1,0 +1,20 @@
+
+
+\documentclass{article}
+\usepackage{pgfplots}
+\begin{document}
+
+\newcommand\gauss[2]{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))} % Gauss function, parameters mu and sigma
+
+\begin{tikzpicture}
+\begin{axis}[every axis plot post/.append style={
+  mark=none,domain=0:1,samples=50,smooth}, % All plots: from -2:2, 50 samples, smooth, no marks
+axis x line*=bottom, % no box around the plot, only x and y axis
+axis y line*=left, % the * suppresses the arrow tips
+enlargelimits=upper] % extend the axes a bit to the right and top
+\addplot [domain=0:1, y domain=0:5]{\gauss{0}{0.5}};
+\addplot {\gauss{1}{0.75}};
+\end{axis}
+\end{tikzpicture}
+\end{document}
+
