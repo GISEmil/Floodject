@@ -4,7 +4,7 @@ This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasm
 
 ## PyPWS
 
-### Installation
+## Installation
 
 Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, as they are old and your server setup might differ. They are found in the links below:
 

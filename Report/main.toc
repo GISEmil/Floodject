@@ -41,13 +41,13 @@
 \contentsline {paragraph}{GRASS64 vs GRASS7:}{26}{subsection.4.1.1}
 \contentsline {section}{\numberline {4.2}Phase 2}{26}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Problems encountered}{28}{subsection.4.2.1}
-\contentsline {paragraph}{Cost Distance vs Spatial Selection}{29}{figure.caption.19}
+\contentsline {paragraph}{Cost Distance vs Spatial Selection}{29}{figure.caption.18}
 \contentsline {section}{\numberline {4.3}Phase 3}{29}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Problems encountered}{32}{subsection.4.3.1}
 \contentsline {section}{\numberline {4.4}Phase 4}{32}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}Identifying critical areas}{33}{subsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.1.1}Outlet analysis}{33}{subsubsection.4.4.1.1}
-\contentsline {subsubsection}{\numberline {4.4.1.2}Pour point analysis}{33}{subsubsection.4.4.1.2}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Pour point analysis}{33}{subsubsection.4.4.1.1}
+\contentsline {subsubsection}{\numberline {4.4.1.2}Outlet analysis}{35}{subsubsection.4.4.1.2}
 \contentsline {subsection}{\numberline {4.4.2}Barrier placement}{36}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Problems encountered}{38}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Phase 5}{39}{section.4.5}
@@ -64,15 +64,15 @@
 \contentsline {section}{\numberline {5.1}Audience}{47}{section.5.1}
 \contentsline {section}{\numberline {5.2}Installation structure}{48}{section.5.2}
 \contentsline {paragraph}{Debugging:}{48}{section.5.2}
-\contentsline {paragraph}{PyWPS installation:}{48}{figure.caption.26}
-\contentsline {paragraph}{Flask installation:}{49}{figure.caption.27}
-\contentsline {paragraph}{GRASS Installation:}{50}{figure.caption.28}
+\contentsline {paragraph}{PyWPS installation:}{48}{figure.caption.25}
+\contentsline {paragraph}{Flask installation:}{49}{figure.caption.26}
+\contentsline {paragraph}{GRASS Installation:}{50}{figure.caption.27}
 \contentsline {section}{\numberline {5.3}Architecture}{50}{section.5.3}
 \contentsline {section}{\numberline {5.4}User experience}{50}{section.5.4}
 \contentsline {section}{\numberline {5.5}Limitations}{53}{section.5.5}
 \contentsline {paragraph}{Extensions and filename:}{53}{section.5.5}
 \contentsline {paragraph}{Nodata box:}{54}{lstnumber.-35.2}
-\contentsline {paragraph}{Cell values for water:}{55}{figure.caption.36}
+\contentsline {paragraph}{Cell values for water:}{55}{figure.caption.35}
 \contentsline {section}{\numberline {5.6}SWOT}{56}{section.5.6}
 \contentsline {subsection}{\numberline {5.6.1}SWOT Matrix}{56}{subsection.5.6.1}
 \contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Discussion}}{57}{chapter.6}
@@ -86,4 +86,4 @@
 \contentsline {subsection}{\numberline {6.0.9}Conclusion}{57}{subsection.6.0.9}
 \contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Appendix}}{59}{part.1}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{61}{dummy.6}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliography}}{61}{dummy.5}
