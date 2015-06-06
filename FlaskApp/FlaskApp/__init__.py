@@ -7,7 +7,7 @@ from PIL import Image
 from osgeo import gdal
 
 UPLOAD_FOLDER = '/var/www/html/FlaskApp/FlaskApp/static/images'
-#ALLOWED_EXTENSIONS = set(['tif'])
+ALLOWED_EXTENSIONS = set(['tif'])
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -23,10 +23,9 @@ def hello_world():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_file():
-
 	if request.method == 'POST':
 		file = request.files['datafile']
-		if file:
+		if allowed_file(file.filename):
 			timename = time.strftime("%d%m%y%H%M")
 			filename = timename + '.tif'
 			filename = secure_filename(file.filename)
@@ -43,6 +42,25 @@ def upload_file():
 
 			dst_ds = driver.CreateCopy( finalloca, src_ds, 0)
 
+			#im = Image.open('/var/www/html/FlaskApp/FlaskApp/' + filename)
+			#im.save('test.jpeg')
+
+			#img = '/var/www/html/FlaskApp/FlaskApp/' + filename
+
+
+			#img = Image.open('/var/www/html/FlaskApp/FlaskApp/' + filename)
+			#img.save('output.jpg',"JPEG")
+
+			#png_filename = os.path.join(UPLOAD_FOLDER + timename + '.png')
+			#tif_im = Image.open(os.path.join(UPLOAD_FOLDER + filename))
+			#if tif_im.mode != 'RGB':
+			#	tif_im = tif_im.convert('RGB')
+			#tif_im.save(png_filename)
+			#f = open(png_file, 'w')
+			#writePng(f)
+
+			# Get the corners
+
 			ds = gdal.Open(os.path.join(app.config['UPLOAD_FOLDER'], filename))
 
 			width = ds.RasterXSize
@@ -53,8 +71,11 @@ def upload_file():
 			maxx = gt[0] + width*gt[1] + height*gt[2]
 			maxy = gt[3]
 
+			# We need minx,miny & maxx, maxy
+			southwest = str(minx) + "," + str(miny)
+			northeast = str(maxx) + "," + str(maxy)
+			#f.close()
 			return redirect(url_for('upload_file',filename=filename,minx=minx,miny=miny,maxx=maxx,maxy=maxy))
-
 	return render_template('upload.html')
 
 @app.route('/ajax')

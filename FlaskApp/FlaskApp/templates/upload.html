@@ -257,7 +257,13 @@
                     flooding a DEM with water. Overall the process consists of
                     three steps, which we have outlined to the right. The most
                     important part is to not panic!</p>
-
+		<h1>Important!</h1>    
+		<p>To succesfully flood a DEM a few things have to be true:
+                   <ul>
+		       <li>The image has to be in WGS 84 coordinate system</li> 
+                       <li> The image has to be a TIF</li>
+                       <li>The image cannot exceed 300 mb</li></ul> 
+                </p>
                    <input class="btn btn-default" id="introdleave" name="submit" type=
                   "submit" value="Commence flooding">
                 </div>
@@ -545,11 +551,14 @@
                var map = L.mapbox.map('map1', 'piratosthegreat.i7aeacaf')
                .fitBounds(imageBounds);
 
+
                var outputimagesimple = 'static/outputs/' + outputimagearray[1];
+
+               console.log(outputimagesimple)
 
                var overlay = L.imageOverlay(outputimagesimple, imageBounds).addTo(map);
 
-               overlay.setOpacity(0.5);
+               overlay.setOpacity(1.0);
 
               var featureLayer = L.mapbox.featureLayer()
               .loadURL('/static/outputs/' + outputimagearray[0])
@@ -563,6 +572,7 @@
                $("#overlay").show();
                var preconpath = 'http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=simpleflood&datainputs=[rasterin=http://52.17.144.192/static/images/' + imageuse + ';vectorin=' + JSON.stringify(geoj[0]) + ']';
                var xmlPath = preconpath
+               console.log(xmlPath)
 
                $.when(
 
@@ -577,6 +587,10 @@
                           var imagepath = value.getAttribute("href");
                           var imagepathbroken = imagepath.split("/");
                           outputimagearray.push(imagepathbroken[5])
+                          console.log(imagepath)
+                          console.log(imagepathbroken)
+                          console.log(outputimagearray)
+
                        });
                }, 'xml')
 
@@ -591,11 +605,17 @@
 
                  var overlay = L.imageOverlay(outputimagesimple, imageBounds).addTo(map);
 
+
                  overlay.setOpacity(0.5);
 
                  $(".loading").append('<button class="btn btn-success btn-lg btn-block" id="finaldownload" type="submit">Download data !</button>')
 
+                 $("#finaldownload").click(function(e) {
+                   e.preventDefault();
+                   window.location.href='static/outputs/' + outputimagearray[2]
+                   window.location.herf='static/outputs/' + outputimagearray[0]
 
+                 });
                });
            });
        } else // If the DEM has not been uploaded, we will show a regular map.
@@ -603,11 +623,6 @@
            var map = L.mapbox.map('map', 'piratosthegreat.i7aeacaf')
        }
 
-       $("#finaldownload").click(function(e) {
-         e.preventDefault();
-         window.location.href='static/outputs/' + outputimagearray[2]
-         window.location.href='static/outputs/' + outputimagearray[0]
-       });
     </script>
     {% endblock %}
 </body>
