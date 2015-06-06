@@ -144,19 +144,19 @@ Restart Apache:
 sudo service apache2 restart
 ```
 
-### Various URL strings for accessing the WPS service
-# Get capabilities
+# Various URL strings for accessing the WPS service
+#### Get capabilities
 http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
-# Execute a function
+### Execute a function
 http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
 
-# Describe process
+#### Describe process
 http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
 
 
-### Installations
-# Installation structure of PyWPS
+# Installations
+### Installation structure of PyWPS
 To give a better overview of where the files on the server have been installed, a file-tree of the location of all important files is provided below:
 
 ```
@@ -181,7 +181,7 @@ To give a better overview of where the files on the server have been installed, 
             └── 000-default.conf
 ```
 
-# GRASS installation on server
+### GRASS installation on server
 
 ```
 ~
@@ -210,7 +210,7 @@ To give a better overview of where the files on the server have been installed, 
             	    └── __init__.py
 ```
 
-# Debugging
+### Debugging
 
 When wanting to debug there are two important file locations, the first one is the pywps.log that we created above, the second one is the general server (apache) error log. These are found in these locations
 
@@ -248,9 +248,9 @@ export PYWPS_PROCESSES=/var/www/html/pywps/processes/
 /usr/local/bin/wps.py $1
 ```
 
-### Creating functions
+# Creating functions
 It is not the name of the python script, but the name of the "Class" defined within that determines the name of the service.
 
-### Setting up Flask
+# Setting up Flask with Apache
 
 http://alex.nisnevich.com/blog/2014/10/01/setting_up_flask_on_ec2.html
