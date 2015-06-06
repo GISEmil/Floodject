@@ -4,7 +4,7 @@ This is a project created by Ioannis Angelidis, David Nagy and Emil Møller Rasm
 
 ## PyPWS
 
-### Installation
+#### Installation
 
 Installing PyWPS can be a nightmare if trying to follow the instructions from the official documentation, as they are old and your server setup might differ. They are found in the links below:
 
@@ -24,7 +24,7 @@ http://gis.stackexchange.com/questions/83743/how-to-install-pywps-on-ubuntu
 
 The instructions from there are partly used below, but changed to fit with the individual server setup:
 
-### Actual installation
+#### Actual installation
 
 Install dependencies, clone the project from GitHub and install it:
 
@@ -38,7 +38,7 @@ cd ./PyWPS
 sudo python setup.py install
 ```
 
-### Create folders for PyWPS assets
+#### Create folders for PyWPS assets
 
 For convenience, in this example all PyWPS assets are stored in /var/www/html, a typical setup for a development environment. In a server setup it might be wiser to store processes in /srv and logs in /var/log.
 
@@ -81,7 +81,7 @@ Pass ownership to the www-data user (again, in a server setup you might want to 
 sudo chown -R www-data:www-data /var/www/html/pywps /var/www/html/wpsoutputs
 ```
 
-### Configure the web service
+#### Configure the web service
 
 Copy the PyWPS CGI to /usr/lib/cgi-bin:
 
@@ -148,7 +148,7 @@ sudo service apache2 restart
 #### Get capabilities
 http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
 
-### Execute a function
+#### Execute a function
 http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
 
 #### Describe process
