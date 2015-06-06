@@ -144,7 +144,19 @@ Restart Apache:
 sudo service apache2 restart
 ```
 
-## Installation structure
+### Various URL strings for accessing the WPS service
+# Get capabilities
+http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
+
+# Execute a function
+http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
+
+# Describe process
+http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
+
+
+### Installations
+# Installation structure of PyWPS
 To give a better overview of where the files on the server have been installed, a file-tree of the location of all important files is provided below:
 
 ```
@@ -167,6 +179,35 @@ To give a better overview of where the files on the server have been installed, 
     └── /apache2/
         └── /sites-available/
             └── 000-default.conf
+```
+
+# GRASS installation on server
+
+```
+~
+├── .grass6
+|     └── rc
+└── grassdata
+      └── <LOCATION>
+            └── <MAPSET>
+
+```
+
+
+### File structure of the webserver
+
+```
+/
+└── /var/
+    └── /www/
+        └── /html/
+            └── /FlaskApp/
+            	├── flaskapp.wsgi
+            	└── /FlaskApp/
+            	    ├── /templates/
+            	    ├── /static/
+            	    ├── /images
+            	    └── __init__.py
 ```
 
 # Debugging
@@ -207,45 +248,8 @@ export PYWPS_PROCESSES=/var/www/html/pywps/processes/
 /usr/local/bin/wps.py $1
 ```
 
-## Creating functions
+### Creating functions
 It is not the name of the python script, but the name of the "Class" defined within that determines the name of the service.
-
-## GRASS installation on server
-
-```
-~
-├── .grass6
-|     └── rc
-└── grassdata
-      └── <LOCATION>
-            └── <MAPSET>
-
-```
-
-## Various URL strings for accessing the WPS service
-### Get capabilities
-http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=getcapabilities
-
-### Execute a function
-http://52.17.144.192/cgi-bin/pywps.cgi?request=execute&service=WPS&version=1.0.0&identifier=flooding&datainputs=[rasterin%3Dhttp%3A%2F%2F52.16.38.28%2FNEWTIF.tif%3Bvectorin%3Dhttp%3A%2F%2F52.16.38.28%2Ftest.geojson]
-
-### Describe process
-http://52.17.144.192/cgi-bin/pywps.cgi?service=WPS&version=1.0.0&request=DescribeProcess&Identifier=flooding
-
-### File structure of the webserver
-
-```
-/
-└── /var/
-    └── /www/
-        └── html
-            ├── index.html
-            ├── /assets/
-            ├── /css/
-            ├── / /
-            └── /js/
-```
-
 
 ### Setting up Flask
 
