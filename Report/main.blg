@@ -20,45 +20,45 @@ A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
 Warning--empty year in costdistance
 Warning--empty year in watershed
-You've used 27 entries,
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            739 strings with 8659 characters,
-and the built_in function-call counts, 9580 in all, are:
-= -- 847
-> -- 455
-< -- 25
-+ -- 167
-- -- 138
-* -- 588
-:= -- 1524
-add.period$ -- 94
-call.type$ -- 27
-change.case$ -- 129
-chr.to.int$ -- 25
-cite$ -- 56
-duplicate$ -- 471
-empty$ -- 874
-format.name$ -- 173
-if$ -- 2021
+            745 strings with 8827 characters,
+and the built_in function-call counts, 10068 in all, are:
+= -- 892
+> -- 487
+< -- 26
++ -- 177
+- -- 147
+* -- 627
+:= -- 1598
+add.period$ -- 97
+call.type$ -- 28
+change.case$ -- 135
+chr.to.int$ -- 26
+cite$ -- 58
+duplicate$ -- 491
+empty$ -- 911
+format.name$ -- 187
+if$ -- 2126
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 156
-num.names$ -- 108
-pop$ -- 311
+missing$ -- 17
+newline$ -- 161
+num.names$ -- 112
+pop$ -- 320
 preamble$ -- 1
-purify$ -- 100
+purify$ -- 105
 quote$ -- 0
-skip$ -- 354
+skip$ -- 373
 stack$ -- 0
-substring$ -- 141
-swap$ -- 37
+substring$ -- 158
+swap$ -- 38
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 277
+type$ -- 288
 warning$ -- 2
-while$ -- 87
+while$ -- 91
 width$ -- 0
-write$ -- 371
+write$ -- 384
 (There were 2 warnings)

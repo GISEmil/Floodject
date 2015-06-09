@@ -1,48 +1,30 @@
 \section{SWOT}
+\subsection{Strengths}
+\paragraph{Open Source:} Before starting the development of the project, we decided as  a group to focus on creating an application using exclusively open source software. The idea behind that decision was that we wanted to create a tool that could be easily available to a great number of people without having to worry about copyright issues. In fact, the idea is that we want to create an application that can help in preventing natural disasters and thus affect a lot of people, and at the same time be freely distributable to any interested party without any limitations. We strongly believe that having achieved that is a great advantage to the application and the overall work we have put in this project. Anyone who is interested in performing flood modeling in any given area around the world can easily access the webpage we have created and execute the application.
+
+\paragraph{Extensible:} When we started developing the application and decided on the tools we would use, we spent a considerable  amount of time trying to familiarize ourselves with the tools we would ultimately use. Once we reached a satisfying level of familiarity we discovered that it is actually not quite difficult to expand on the functions that we have created or planned to create. That fact allows us to greatly expand the capabilities of the application and optimize the ones already existing. Keeping in mind that creating functions that already exist in the application took us very little time to complete towards the end of the project, one can conclude that extending these functions and creating new ones will be quite less time consuming than originally expected.
+
+\paragraph{Easy-to-use:} As far as the usability and the user-friendliness of the application, we believe that we created it with the notion of keeping it as simple as possible. We started developing the service with that idea in mind and we believe that we have achieved it. Firstly, the application needs minimal input to run. Surely, someone needs to have a specific type of elevation model and use the correct CRS which adds a certain complexity to the use, but other than that, the user is not required to perform any other technical manipulation. This fact is quite important as it encourages the user to utilize this application without forcing them to go through multiple demanding tasks in order to achieve what they were aiming for.
+
+\paragraph{Scalable:} A major strength of this project is the fact that it is scalable. By using the Amazon EC2 server architecture, we have been able to, relatively, easily create a proof-of-concept application deployed on the web. If this application would ever be deployed for production purposes, scaling the server to meet increased usage would be very easy. The scalability can furthermore be dependant on an as-needed basis, meaning that it arbitrarily can be scaled up or down, by the click of a button from the Amazon EC2 dashboard.
+
+\paragraph{Secure:} In any software development project, security is always an important issue that needs addressing. In this case, apart from the Secure Filename restriction that is a function built-in the Flask module, we have not taken any further action towards making this application more secure. Despite that fact, we believe that the security provided from using an Amazon server is more than sufficient.  The purpose of the service also strengthens this belief as we think that the information we are handling is not important enough that we should dedicate more time developing that specific aspect of the application.
+
+\subsection{Weaknesses}
+\paragraph{Browser dependent:} Towards the end of this project, we performed testing on the application in order to observe how it performs under different circumstances. Through that process we noted that the service's functionality is highly dependent on the browser the user runs it through. To be more specific, in the case where the user uses the application through Chrome browser, then the application produces an error when uploading the elevation model. This is a limitation that can be solved but in the time frame of this project, we decided it was not of critical importance to allocate time in order to solve it.
+
+\paragraph{Technically demanding:} Even though the application has been created to be as usable as possible, it is still not set up in a way that would enable the people not used to work with GIS to use it. As mentioned, it is still necessary to use a TIF with the WGS 84 coordinate reference system. Furthermore, the fact that the user has to provide the DEM makes it even harder for a layman to get started with the software.  These facts mean that a certain amount of technical knowledge is needed to successfully run the application.
+
+\paragraph{Proof-of-concept:} The application has been created as a proof-of-concept. As such the functionality has not been fully developed, and all situations have not been tested for. This is a weakness, as the application only works in some predetermined, and specific situations – that we the developers know about. Because of this, feedback to the user when stumbling on an error, is not provided, and they are left with a page, and no feedback as to why the application stopped working.
+This means that there can be a significant amount of unknown behaviour from the website, that will have to be thoroughly tested before it could be officially distributed.
+
+\paragraph{Open Source:} At the first stages of the development of the project we spent a great deal of our available time trying to set up the various tools we decided to use.  In addition, while trying to determine what is the best course of action in order to address various development problems, we came to realize that documentation of the open source modules we used was quite lacking. This is surely something that was not predicted beforehand. Since tools such as GRASS are created to be used freely and not to turn a profit to its creators, it seems reasonable to expect that the documentation of the tools offered is not extensive. That is a significant problem when trying to develop new functionalities or expand existing ones. It not only increases the amount of work someone needs to dedicate in order to develop a function but at the same time it is frustrating when trying to understand why a certain function does not work and not being able to find the reason or a solution from the developers or the community of that software.  
+
+\subsection{Opportunities}
+\paragraph{Different scenario simulation:} The algorithm, which is deployed on the amazon server is supported by PyWPS , this can be substitutable with other processes, which could be supported by GIS geoprocessing. This means, on our server we can deploy different GIS analysis processes, regardless their nature and their purpose.
+
+\paragraph{External developing:} By making sure that all the code and script are freely available to any interested party, we want to think that we encourage external feedback on the way we implemented the various aspects of our project. Asides from that, we hope that this process and its elements might reach out to other GI developers that might be willing to take our work further or even use it to develop another project. We are welcoming such opportunities and hope that we might receive feedback, advice or propositions from other specialists of the field, in order to expand, optimize and improve this current application or observe how parts of it can be implemented on other projects.
 
 
-\subsection{SWOT Matrix}
-The above-mentioned strengths, weaknesses, opportunities and threats can be inserted into a so-called SWOT-matrix to give an easier overview of them. 
-
-\colorlet{helpful}{lime!70}
-\colorlet{harmful}{red!30}
-\colorlet{internal}{yellow!20}
-\colorlet{external}{cyan!30}
-\colorlet{S}{helpful!50!internal}
-\colorlet{W}{harmful!50!internal}
-\colorlet{O}{helpful!50!external}
-\colorlet{T}{harmful!50!external}
-
-\newcommand{\texta}{Helpful\\ \tiny (to achieve the objective)\par}
-\newcommand{\textb}{Harmful\\ \tiny (to achieve the objective)\par}
-\newcommand{\textcn}{Internal origin\\ \tiny (product\slash company attributes)\par}
-\newcommand{\textdn}{External origin\\ \tiny (environment\slash market attributes)\par}
-
-\newcommand{\back}[1]{\fontsize{60}{70}\selectfont #1}
-
-\begin{tikzpicture}[
-    any/.style={minimum width=3cm,minimum height=3cm,%
-                 text width=2.5cm,align=center,outer sep=0pt},
-    header/.style={any,minimum height=1cm,fill=black!10},
-    leftcol/.style={header,rotate=90},
-    mycolor/.style={fill=#1, text=#1!60!black}
-]
-
-\matrix (SWOT) [matrix of nodes,nodes={any,anchor=center},%
-                column sep=-\pgflinewidth,%
-                row sep=-\pgflinewidth,%
-                row 1/.style={nodes=header},%
-                column 1/.style={nodes=leftcol},
-                inner sep=0pt]
-{
-          &|[fill=helpful]| {\texta} & |[fill=harmful]| {\textb} \\
-|[fill=internal]| {\textcn} & |[mycolor=S]| \back{S} & |[mycolor=W]| \back{W} \\
-|[fill=external]| {\textdn} & |[mycolor=O]| \back{O} & |[mycolor=T]| \back{T} \\
-};
-
-\node[any, anchor=center] at (SWOT-2-2) {Scalable \\ Open Source \\ Extensible};
-\node[any, anchor=center] at (SWOT-2-3) {Open Source \\ Many interoperating parts \\ DEM};
-\node[any, anchor=center] at (SWOT-3-2) {Adding functionality \\ Streamlining the work process and online software};
-\node[any, anchor=center] at (SWOT-3-3) {Lack of support for a module \\};
-
-\end{tikzpicture}
+\subsection{Threats}
+\paragraph{Lack of support breaking functionality:} When using a multitude of different software in conjunction with each other - where some are not necessarily created to be interoperable - an update of one of the parts can accidentally cause the disruption of the functionality of some other part in the software chain. This is a major threat to our software, as troubleshooting it could be impossible, which would make the application inoperable. In the development of our application, we had a situation where this situation occurred. As mentioned in the report, we had issues with using GRASS 7 vector functions through PyWPS. Luckily we solved the issue by downgrading to GRASS 6, but this could have had critical implications for our application if it was not fixed. 

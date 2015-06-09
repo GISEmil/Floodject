@@ -1,4 +1,4 @@
-\begin{thebibliography}{27}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,11 +10,6 @@ Antony Awaida and James Westervelt.
 \newblock r.cost.
 \newblock \url{http://grass.osgeo.org/grass64/manuals/r.cost.html}, 2013.
 \newblock Accessed: 2015-05-05.
-
-\bibitem[Birgitte~Rosenkrantz(2011)]{demdk}
-Poul~Frederiksen Birgitte~Rosenkrantz.
-\newblock Quality assessment of the danish elevation model (dk-dem).
-\newblock Technical report, National Survey and Cadastre - Denmark, 2011.
 
 \bibitem[Cepicky and Becchi(2007)]{pywps}
 Jachym Cepicky and Lorenzo Becchi.
@@ -75,6 +70,13 @@ HTML.net.
 \newblock Lesson 2: What is html?
 \newblock \url{http://html.net/tutorials/html/lesson2.php}, 2015.
 \newblock Accessed: 2015-05-05.
+
+\bibitem[Khatami and Khazaei(2014)]{hydrogis}
+Sina Khatami and Bahram Khazaei.
+\newblock Benefits of gis application in hydrological modelling: A brief
+  summary.
+\newblock \emph{VATTEN - Journal of Water Management and Research},
+  70:\penalty0 41--49, 2014.
 
 \bibitem[Knuth(1974)]{knuth:1974}
 Donald~E. Knuth.
@@ -149,6 +151,11 @@ Armin Ronacher.
 \newblock Flask.
 \newblock \url{http://flask.pocoo.org/}, 2014.
 \newblock Accessed: 2015-05-05.
+
+\bibitem[Rosenkrantz and Frederiksen(2011)]{demdk}
+Birgitte Rosenkrantz and Poul Frederiksen.
+\newblock Quality assessment of the danish elevation model (dk-dem).
+\newblock Technical report, National Survey and Cadastre - Denmark, 2011.
 
 \bibitem[Steininger and Hunter(2012)]{osarticle}
 Stefan Steininger and Andrew J.~S. Hunter.

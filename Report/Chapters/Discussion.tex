@@ -6,24 +6,166 @@
 
 %----------------------------------------------------------------------------------------
 
-\subsection{Usage}
+During the creation of the application, a variety of issues arose which were deemed fit to be covered in any of the previous chapters. These issues will therefore be addressed in this chapter.  
 
 
-\subsection{Open Source}
+\section{Digital Elevation Models}
+Reading through this report, it is clear that one of the most important elements of the tool created is the elevation model the user is providing. All the processes developed are performed on the elevation model and highly depend on it. 
+That being said, we must underline that the quality of the results produced and their accuracy and reliability are greatly influenced by the accuracy and reliability of the elevation model. This means that if the user decides to use and upload an elevation model that is of poor resolution or accuracy, then the results that will be produced are also going to be of poor quality.\\
 
+As far as the resolution is concerned, we believe that there has to be a limit on  the cell size of the uploaded elevation model. Even though using a large cell sized elevation model e.g. 30m cell size, might speed up the total process considerably, we cannot expect the results of that process to be reliable enough in order to result into successful decision making. Of course we consider that the cell size should be relevant to the area that the user wants to check. For example, it would make sense if a 30m resolution elevation model was used on a nationwide simulation. But in the case of a small area of a few square kilometers then that resolution is considered poor. The reason we believe that, is because all of the core functions we use in the application are highly dependent on the resolution. To be more specific, the better the surface of an area is described by the elevation model, the better the results we can expect from the application.\\
+The resolution also affects the mitigation of the flood. The barrier functionality we have created, (but not included) hardcodes the barrier into the elevation model. As a result, the barrier line inherits the cell size from the elevation model. In reality that means that if the elevation model has a cell size of 10 meters, then the barrier the user designs will have a width of 10 meters as well. That of course is not realistic and might affect the progress of the flood in an erroneous manner.
+For the reasons stated above we believe that the resolution of the elevation model is critical to the precision and accuracy of the results produced. On the other hand, we have no control on what the user uploads as far as resolution is concerned. For that reason, we believe that the user should be wary of using a low resolution elevation model. In addition, we stress the fact that this application performs better when a small testing area is uploaded with the best possible resolution available. Finally, we think that areas with great elevation fluctuations should not be used in this application. That is because in order to actually produce results that actually would be realistic, a very high resolution elevation model that represents the surface in the best way possible would be necessary. Because of this, we believe that a DEM with a 10m resolution is the minimum requirement. Furthermore, we think that the application is best suited for areas with mild contours. \\
 
-\subsection{GRASS}
+Mititigating some of these issues regarding DEM could be done by serving our own tileset of elevations, for instance by using GeoServer. By doing this we would ameliorate some of the issues mentioned above. This could be incorporated into the general workflow of our project by having a webmap showing these tiles at the "Upload DEM" step of the website. The user would be able to draw a square, indicating which area of the served tiles would be of interest. This selection would send a request to GeoServer which would return the DEM clipped to the user specified area. It would still be possible for a user to upload the DEM manually, but the standard option would be to select from our provided tiles. This would enable us to easily enforce our hypothesized minimum requirement of 10m resolution. Furthermore, doing this would bypass the stage at which the highest chance of error could occur; the user providing a DEM as tiff; the tiff having hardcoded WGS84 projection.
 
+\section{Open Source}
+The entire project was based on the usage of open source software, and as such we experienced the full extent of the advantages and disadvantages of working with these softwares.
 
-\subsection{PyWPS}
+Unless the particular software is widely adopted, and has a lot of contributors, the support when using the software can be lacking to say the least. One of the areas where this is observed is in the case of documentation. If unexpected behaviour occurs, it can be hard to track down what the issue is. For this reason sites like StackExchange are vital – but sometimes even these do not help you to the extent you need. This means that you have to search through developer mailinglists for an answer which might not even exist. 
 
+When using Open Source software, it cannot necessarily be expected that all the required functionality exists within the software used. As such it can be necessary to combine them in various ways – even software that has not been created for the purpose of working together – which adds another layer where possible issues can occur.
 
-\subsection{r.cost vs intersect}
+Furthermore, a lot of software is created using Open Source Software instead of on Windows machines, and as such they can be more difficult to install, and may act more erratically on these platforms. 
 
+\section{GRASS}
+Using this software, when used to using other GIS products, is not as intuitive as for instance QGIS is. This means that it has a certain amount of know-how if wanted to be used properly. So to mitigate this rather steep learning curve for others, we created this application. 
 
-\subsection{SWOT}
+GRASS has the advantage of having been developed a long time ago, and has a dedicated user group that works on it and makes sure that it is available and  functioning properly.
 
-\subsection{Perspectives}
+GRASS does not support projecting on-the-fly, and as such has a different way of working with projections. Working with different coordinate reference systems in general does not work as it does in other softwares. Here the data has to be imported into a folder with their current projection hardcoded, and then pulled into a folder with the required CRS defined. 
 
+We decided early on in this project that, to accommodate the usage with webmaps, the DEM would have to be referenced to WGS 84, for it to work properly with our application.
+Enabling a more dynamic approach to working with images in other coordinate reference systems has been created, but we have not had the time to implement it – or test it - properly into our application.
 
-\subsection{Conclusion}
+When creating a project in GRASS it is necessary to first set up a LOCATION then afterwards set up MAPSETS. This is not very intuitive when someone is used to working with software such as QGIS or ArcGIS.
+
+\paragraph{Installation:} Installing GRASS was not hard, on either Linux or Windows, but when accessing the functionality externally, it turned out to be a challenge.
+
+\paragraph{Modules:} There are numerous modules that are officially hosted by GRASS, but there is also the possibility of adding external functions. These are not officially hosted by GRASS, and therefore not quality-tested yet, but in total around 350 modules can be accessed through the software. This means that when creating an application such as ours, the potential for expanding it is huge. On the other hand, it can quickly become hard to have an overview, and when using the non-standard functions one has to be wary.
+
+Sometimes the functionality of modules used in other softwares, do not work the way it is expected to. An example from our process of this, is the rasterization of the barrier lines. This behavior can be problematic, as it makes the transitioning from one software to another unexpected, and can be a hindrance in the adoption, or the spread of the software.
+
+\paragraph{Using GRASS without starting it explicitly:} By accessing the functions of GRASS through scripting, we were hoping to easily be able to create the necessary workflow, so that the functions could be created and tested early. It was quickly discovered that doing this would not be as easy as hoped for. 
+
+Making this work on Windows turned out to be an even bigger issue, especially seeing as some binaries would have to be installed, to get it to work properly through the command line. Making it work on Ubuntu was significantly easier, but setting up the previously mentioned  environmental variables was tricky on both systems. 
+
+Furthermore, using the actual functionality was also a bit different from the way it is called from within the actual GRASS GUI. Having to call gscript.run\_command() for every function was another step, where an error could occur. To give a practical example of this, when setting the flags that can be activated for most GRASS functions, it was not immediately clear if they were set in a similar manner as they would be through command line, or if a setting had to be specified. As it turned out a special “flags” setting had to be specified. These options were not immediately obvious, and could take several hours of research to actually find the answer. 
+
+All of these issues meant that it actually took several weeks before we had set up the proper environment, and were completely comfortable with the process of accessing the GRASS functionality from outside of the software.
+
+\paragraph{Seeing the results:} 
+When wanting to actually validate the results created by our script, we stumbled upon the problem of the interface. When used to working with a streamlined Drag-N-Drop interface, the GRASS interface leaves a lot to be desired.
+
+\section{PyWPS}
+We use PyWPS to initiate and run the relevant processes for GRASS through the browser. 
+
+\paragraph{Installation: }When installing PyWPS, settings have to be changed and read/write access has to be managed for a variety of relevant folders and files. If one of these settings does not get set up properly, the software might not work at all. This can be an issue, if you do not have a lot of experience setting up such an environment, it will add to the complexity and a simple unfamiliar operation might result in abandoning the usage of PyWPS.
+The pywps installation was straightforward, but there are still some files that have to be added manually. Furthermore, if someone does not want to use the predefined locations for the files, they have to know where to change a certain reference, or else the software will not function.
+
+\paragraph{Debugging:} Furthermore, it could be relevant to know where error messages get displayed, as it can be hard to troubleshoot the issue otherwise. For instance, some errors get logged in the Apache error log, whilst others get sent to the manually set up pywps log. Knowing where these are, how to access them, and what errors can be expected to find from both of these, is critical if the set up of an advanced processing service is to be successful. 
+
+\paragraph{Conversion:} The syntax for working with GRASS through PyWPS or through a Python script are different. This creates the issue of having to rewrite parts of the local script, to make it work on the server. As mentioned in the previous part about this, some options could be hard to figure out how to specify – for instance setting the relevant flags for a command.
+
+\paragraph{Documentation:} PyWPS suffers from some very basic and not all-too-helpful documentation. This makes it hard to troubleshoot issues
+
+\paragraph{Executing:} When requesting a WPS service from the server, a URL is used. Setting the various relevant parameters here is critical, as just a minor error will make the request fail. 
+
+\paragraph{Response:} When getting data returned from the process, an XML document is returned. Data can either be set to be returned as a reference or as the actual data. In the beginning the data was set to be returned as the actual data, this means that an image gets sent back in Base64 format. This might be okay for small images, but for large tiffs, this can actually crash the browser trying to read the document. The function to set it as a reference is not obvious from the beginning, but it is essential for working with projects such as this.
+
+\paragraph{Compatibility:} A critical issue that was encountered with using PyWPS was the fact that it did not support manipulating vectors when using GRASS version 7.x. This could have proven fatal to the entire project, as it was not stated anywhere, but was luckily mitigated by downgrading to GRASS version 6.x. Luckily this downgrade did not prove to have any influence on the rest of the project's workflow, but could have been a critical issue if some of the functions we were dependent on did not work, or did not exist, in the 6.x version of GRASS. 
+Some functions have different names depending on the version of GRASS being used, and this also meant that we had to make sure that the version, or the inputs, were named the same. An example of this is the fact that inputs in grass 7.x for a lot of functions are called “input”, whilst in GRASS 6.x they are called dsn. These are some of the small changes that make the transition between these two versions unpredictable.
+
+\paragraph{OGC Standard:} The PyWPS version used in this software lives up to most of the specifications of the OGC standard, but is actually missing a functionality that provides the user with a URL from which they can check how far along the process is. This is obviously not a critical issue, but would have been informative when the user starts the advanced flooding, as it takes more than twenty minutes to complete. The team behind the PyWPS version used in this project are actually working on a new version, in which this functionality will be enabled.
+
+\paragraph{Deployment:} In general, the testing of new functionality turned out to be time consuming. As the advanced flood model takes more than twenty minutes to run, it would mean that any time something got changed, the process would have to be re-uploaded, and the service reinitialized. This meant that testing minor changes could take more than an hour per expected change. 
+
+\paragraph{Dynamic output problems:} As the data outputs are predefined, it is necessary to have a good idea of what you want to have exported. What this means is that when exporting the pour points, a function has to be created that merges all of the pour points instead of just assigning them as output as they get created. This means that it is essential to have a good overview of how the created process works. 
+
+\section{Website integration} 
+Having been using Python for a significant part of the project, it was hard to adjust to the different syntax required by JavaScript and jQuery used on the website.
+
+The asynchronous request is an essential part of the project, but if someone does not have a lot of experience with setting up such requests, it can be hard to know exactly how to make the script, wait until the request is fully done, until it goes on to manipulate the results.
+
+Furthermore, parsing the XML response document and finding the nodes containing the data from the document, turned out to be harder than expected.
+
+Using Flask made the setup significantly easier as the upload and extraction of coordinates from the uploaded DEM is handled easily by calling on GDAL functionality through this. Setting up templates and swapping content based on the user's behaviour is a good way of creating easy to set-up and fully functional websites.
+
+In order to offer the users with a more professional approach, we have considered in creating a feature of user accounts. The idea behind that comes from the fact that the application might have to deal with multiple users using it simultaneously. We have already stated that multiple uploads with the same name is an issue the application has, but using user accounts will change that. By creating folders based on a pre-designated user id, we can store each uploaded file to the respective folder and as a result organize the structure of the server in a more efficient manner.   
+
+\section{Extra functionalities}
+Several other modules have been created, but have not been implemented into the functionality of the application yet. The reason for this is because the overall set-up of inserting these functions, requires a lot of time making sure all the elements actually work together. Towards the end of this project, time was limited, thus preventing us from making sure the elements worked together properly.  
+
+The creation of new functionality has become significantly easier for all the members of the group, after having worked on the application for close to four months. Obviously, as mentioned above, it still takes time to make sure it works 100 percent, but the general implementation time has gone down from days to merely hours. 
+
+\paragraph{Cost Distance and Spatial Selection:} One of the major issues we stumbled upon in this project was whether to use either Cost Distance Analysis or the Spatial Selection method for flooding the landscape. The problem here is that the results from the two processes differ significantly from each other, and it could have real life consequences if they were to be used in “the real world”. On the one hand, the intersection method is significantly faster than the Cost Distance method, but the Cost Distance method what we have tested. It could be said that they differ in the way that they estimate the water in an area. The Cost Distance is more “pessimistic” in its approach, flooding larger tracts of land whilst the Spatial Selection method is a more “optimistic” approach, which floods less amounts of land. 
+
+Probably the different methods should be incorporated into an even larger workflow, where there are a significantly larger amount of methods to choose from, which might look some thing like: “SIMPLE FLOODS: Quick(Spatial Selection) and slower(Cost Distance)” and “ADVANCED FLOOD: Quick(Spatial Selection) and slower(Cost Distance)”. But in the end, it all depends on a significantly more thorough testing of the two methods.
+
+As mentioned previously in this report, the outlet points we started to try and identify, were not very useful, as they gave information that would be obvious from looking at the map. This illustrates the issue of starting to develop functionality that is expected to be helpful in a certain way, but turns out it is not. This was a necessary path to take, as it pointed us towards the actual solution of our pour point analysis method. 
+
+\section{Real-life}
+Even though the project as such was not created with the intent of being applicable in real-world situations, and more of a way of exploring how advanced geographic analysis could be made easily available, there are some obvious situations and usages it could be found to have in real life. 
+
+People working in Disaster Management might find good use for the software. The application can be used in three of the four stages of a disaster, as defined by the disaster cycle. 
+
+During the prevention/mitigation phase the possibility of using the application is apparent. When there is good time it could be argued that more in-depth modelling should be used, but if this is not possible for the relevant agency either because of a lack-of-money, or a lack of expertise, this application would provide adequate functionality.
+
+During the preparedness phase, the application's advanced functionality could be used to prepare the local disaster management agents on which areas they have to be especially wary of.
+
+During the response is where the application would fit the best. Being able to quickly remodel the spread of the water, dependant on the currently projected water level and area affected, would provide the involved agents with a semi-dynamic and up-to-date response background.
+
+By adding functionality, such as the calculation of expected amounts of water in the critical areas, or the area in general, would provide an excellent way for this project to become relevant in the recovery phase as well. 
+
+Adding more functionality, dependant on the situation needing a response, would provide disaster managers with a tool that could work fast and increase the likelihood of saving both human life and property, through the expeditious management of the response to a disaster.
+
+\section{Methodology}
+The overall schedule turned out to be appropriate for the various modules. Having defined each part as having a weeks overlap with the previous phase, turned out to be accurate.
+
+Founding the project in Denmark was a good step, as having to make sure the program would work anywhere in the world would have been complicated. The program will actually work anywhere, as long as the DEM is projected into WGS84 and is uploaded as a TIF. 
+
+Using it in areas, such as coastal areas, with high escarpment are problematic as the maximum flood level is hardcoded to be 300 centimetres. To successfully use it other areas, more research has to done, in order to apply the appropriate flood heights for the project.
+
+Using a code repository such as GitHub is a good way of making sure, that all the group members are up to date. Furthermore, it creates an easy way to restore the code to an earlier stage, if for some reason it has become corrupted by some unknown error, and it also keeps track of who has performed which changes. Additionally, having continuously updated the code throughout the process, and for instance noting the procedure involved in installing PyWPS, we have created,  a usable manual in the installation of the service for others, provide working examples and a working application skeleton that can easily be accessed, downloaded and changed for other purposes.
+
+\section{Usage on different computers}
+As the development computers used for the creation of this software, have not been bought with the original intent of using or developing a specific piece of software on them, it can create some compatibility issues. For various reasons a library might not be able to be installed on one computer, but work perfectly fine on the other one. An example of this is the installation of GDAL and OGR on a windows machine. One of the team members was running windows, and the GDAL/OGR installation, if wanted to be used with Python, is dependant on some packages, that have to be installed separately on this platform. This turned out to be very problematic, and for a long time it made the script unusable on this computer.
+
+Furthermore, the scripts expect that all the relevant packages are installed into the same relative paths, or else it will not work when trying it on other machines.
+
+\section{Server}
+Setting up an Amazon server is very easy, and can be done with a few clicks. The advantages of using Amazon is the fact that you can expect a high amount of uptime and support if needed. Furthermore, the capability of scaling the server hardware based on the current needs, or expected loads, is useful for a CPU intensive application such as this. This means that in periods where a high server load is expected, the server power can be turned up.
+
+\section{Pour points}
+The flooding area that defines how the pour points get distributed in the landscape is currently not set up to be dynamic, but has a hard-coded value indicating what size of area we consider to be critical. The actual size of a critical area should be calculated based on the size and resolution of the used DEM. Actually the capability for doing this has been developed, but when porting it to the web it turned out that this functionality had some issues in PyWPS, and there was no time to troubleshoot it properly..
+The way it has been set-up now, it can theoretically be possible to produce any pour points. The functionality has not been tested to see what happens in such situation, but there is a high likelihood that the process would break down and that there would not be any output to the user. It should be noted however that this situation is highly unlikely, and would require very specific conditions from the DEM. The only situation where it could plausibly occur is a situation where the DEM contains a very narrow corridor, with a very steep upwards going slope.
+
+\section{SWOT}
+\subsection{Strengths}
+\paragraph{Open Source:} Before starting the development of the project, we decided as  a group to focus on creating an application using exclusively open source software. The idea behind that decision was that we wanted to create a tool that could be easily available to a great number of people without having to worry about copyright issues. In fact, the idea is that we want to create an application that can help in preventing natural disasters and thus affect a lot of people, and at the same time be freely distributable to any interested party without any limitations. We strongly believe that having achieved that is a great advantage to the application and the overall work we have put in this project. Anyone who is interested in performing flood modeling in any given area around the world can easily access the webpage we have created and execute the application.
+
+\paragraph{Extensible:} When we started developing the application and decided on the tools we would use, we spent a considerable  amount of time trying to familiarize ourselves with the tools we would ultimately use. Once we reached a satisfying level of familiarity we discovered that it is actually not quite difficult to expand on the functions that we have created or planned to create. That fact allows us to greatly expand the capabilities of the application and optimize the ones already existing. Keeping in mind that creating functions that already exist in the application took us very little time to complete towards the end of the project, one can conclude that extending these functions and creating new ones will be quite less time consuming than originally expected.
+
+\paragraph{Easy-to-use:} As far as the usability and the user-friendliness of the application, we believe that we created it with the notion of keeping it as simple as possible. We started developing the service with that idea in mind and we believe that we have achieved it. Firstly, the application needs minimal input to run. Surely, someone needs to have a specific type of elevation model and use the correct CRS which adds a certain complexity to the use, but other than that, the user is not required to perform any other technical manipulation. This fact is quite important as it encourages the user to utilize this application without forcing them to go through multiple demanding tasks in order to achieve what they were aiming for.
+
+\paragraph{Scalable:} A major strength of this project is the fact that it is scalable. By using the Amazon EC2 server architecture, we have been able to, relatively, easily create a proof-of-concept application deployed on the web. If this application would ever be deployed for production purposes, scaling the server to meet increased usage would be very easy. The scalability can furthermore be dependant on an as-needed basis, meaning that it arbitrarily can be scaled up or down, by the click of a button from the Amazon EC2 dashboard.
+
+\paragraph{Secure:} In any software development project, security is always an important issue that needs addressing. In this case, apart from the Secure Filename restriction that is a function built-in the Flask module, we have not taken any further action towards making this application more secure. Despite that fact, we believe that the security provided from using an Amazon server is more than sufficient.  The purpose of the service also strengthens this belief as we think that the information we are handling is not important enough that we should dedicate more time developing that specific aspect of the application.
+
+\subsection{Weaknesses}
+\paragraph{Browser dependent:} Towards the end of this project, we performed testing on the application in order to observe how it performs under different circumstances. Through that process we noted that the service's functionality is highly dependent on the browser the user runs it through. To be more specific, in the case where the user uses the application through Chrome browser, then the application produces an error when uploading the elevation model. This is a limitation that can be solved but in the time frame of this project, we decided it was not of critical importance to allocate time in order to solve it.
+
+\paragraph{Technically demanding:} Even though the application has been created to be as usable as possible, it is still not set up in a way that would enable the people not used to work with GIS to use it. As mentioned, it is still necessary to use a TIF with the WGS 84 coordinate reference system. Furthermore, the fact that the user has to provide the DEM makes it even harder for a layman to get started with the software.  These facts mean that a certain amount of technical knowledge is needed to successfully run the application.
+
+\paragraph{Proof-of-concept:} The application has been created as a proof-of-concept. As such the functionality has not been fully developed, and all situations have not been tested for. This is a weakness, as the application only works in some predetermined, and specific situations – that we the developers know about. Because of this, feedback to the user when stumbling on an error, is not provided, and they are left with a page, and no feedback as to why the application stopped working.
+This means that there can be a significant amount of unknown behaviour from the website, that will have to be thoroughly tested before it could be officially distributed.
+
+\paragraph{Open Source:} At the first stages of the development of the project we spent a great deal of our available time trying to set up the various tools we decided to use.  In addition, while trying to determine what is the best course of action in order to address various development problems, we came to realize that documentation of the open source modules we used was quite lacking. This is surely something that was not predicted beforehand. Since tools such as GRASS are created to be used freely and not to turn a profit to its creators, it seems reasonable to expect that the documentation of the tools offered is not extensive. That is a significant problem when trying to develop new functionalities or expand existing ones. It not only increases the amount of work someone needs to dedicate in order to develop a function but at the same time it is frustrating when trying to understand why a certain function does not work and not being able to find the reason or a solution from the developers or the community of that software.  
+
+\subsection{Opportunities}
+\paragraph{Different scenario simulation:} The algorithm, which is deployed on the amazon server is supported by PyWPS , this can be substitutable with other processes, which could be supported by GIS geoprocessing. This means, on our server we can deploy different GIS analysis processes, regardless their nature and their purpose.
+
+\paragraph{External developing:} By making sure that all the code and script are freely available to any interested party, we want to think that we encourage external feedback on the way we implemented the various aspects of our project. Asides from that, we hope that this process and its elements might reach out to other GI developers that might be willing to take our work further or even use it to develop another project. We are welcoming such opportunities and hope that we might receive feedback, advice or propositions from other specialists of the field, in order to expand, optimize and improve this current application or observe how parts of it can be implemented on other projects.
+
+\subsection{Threats}
+\paragraph{Lack of support breaking functionality:} When using a multitude of different software in conjunction with each other - where some are not necessarily created to be interoperable - an update of one of the parts can accidentally cause the disruption of the functionality of some other part in the software chain. This is a major threat to our software, as troubleshooting it could be impossible, which would make the application inoperable. In the development of our application, we had a situation where this situation occurred. As mentioned in the report, we had issues with using GRASS 7 vector functions through PyWPS. Luckily we solved the issue by downgrading to GRASS 6, but this could have had critical implications for our application if it was not fixed. 

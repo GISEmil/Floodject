@@ -1,41 +1,40 @@
 % Chapter 1
-
-\chapter{Introduction \& problem statement} % Chapter title
-
+\chapter{Introduction \& Problem Statement} % Chapter title
 \label{ch:introduction} % For referencing the chapter elsewhere, use \autoref{ch:introduction} 
 
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
 
-Geographical Information Systems (GIS) are designed to manage and analyze geographic data. GIS used to be a niche product, but has over the last couple of decades become more widespread, and a plethora of products have become available. 
-This evolution has also culminated in the development of open sourced GIS software. Because of their open source nature they have evolved to such a extent, that Open Source GIS software now can provide functionality comparable to what is available from the established commercial products. 
-Using open source technologies as the back-end of your project, makes the cost of acquisition very low, enabling a whole new group of users access to these tools, and analysis methods. 
-Whilst a lot of GIS functionality exist as libraries to Python, and as simple stand-alone applications, some all-inclusive Open Source GIS applications exist, amongst these the most well-known are QGIS and GRASS. 
-One sector that historically has used GIS, is Hydrology. Performing geographical analysis on the movements, spread and aggregation of water in a landscape, is crucial to understanding the particular phenomena. 
-Understanding hydrological movement is complicated, and often requires advanced modelling. 
-Furthermore, “deciding” on what kind of inputs and outputs that can be provided by the user, will simplify the process extensively. “Hiding” the process from the user, makes the entire ordeal less complicated and more easily handled.
+Geographical Information Systems (GIS) are designed to manage and analyze geographic data. GIS used to be a niche product, but  over the last couple of decades they have become more widespread, and a plethora of products have become available. 
+This evolution has also culminated in the development of open sourced GIS software. Because of their open source nature they have evolved to such an extent, that Open Source GIS software now can provide functionalities comparable to what is available from the established commercial products. 
+Using open source technologies as the back-end of a project, makes the cost of acquisition very low, enabling a whole new group of users access to these tools, and analysis methods. \\
 
+Whilst a lot of GIS functionality exists as libraries to Python, and as simple stand-alone applications, some all-inclusive Open Source GIS applications exist, amongst these one of the most well-known is GRASS.
+One sector that historically has used GIS, is Hydrology. Performing geographical analysis on the movements, spread and aggregation of water in a landscape, is crucial to understanding the particular phenomena. One of these phenomena is flooding. Flooding can be caused by different events, such as sea water stowage.
+Understanding hydrological movement, in the event of a flood caused by sea water stowage, is complicated, and often requires advanced modeling. Deciding on what kind of inputs and outputs that can be provided by the user, will simplify the process extensively. Furthermore, relieving the weight of creating the process from the user, makes the task less complicated. \\
+
+Removing the burden of complexity from the user, could enable a new audience with the capability of performing advanced GIS analysis, such as flood modeling. This can be achieved by creating a thin client based web application using open source technologies.
 
 %----------------------------------------------------------------------------------------
+
+\section{Background}
+During the 2nd semester of our Master's studies, we developed a tool in ArcGIS using Model Builder, with the capability of modelling a flood caused by sea water stowage. The tool was based on a simple hydrological approach, focusing more on the geoinformatical aspect of the problem, since this is our area of expertise. Our experiences with this process lead us to wonder how this could be achieved by using other tools, and technologies.   
+When dealing with the distribution process we stumbled on the problem that the tool could not be used outside of an ArcGIS environment. We came to the conclusion that Open Source software offers the possibility of overcoming this constraint. Furthermore, using such tools would provide valuable experience in different applications of GIS.
+Basing the application on the same methodology as previously, we would be able to use the experiences already gained, as the foundation of a development for a new approach.
 
 \section{Problem statement}
-This project is inspired by our own work with flood modelling using ArcGIS in a previous semester of studies. 
-Combining a variety of Open Source technologies, it should be possible to create an application that will enable a user, who is not necessarily proficient with GIS, of performing a flooding analysis. As such our problem statement will be as follows:  
+Combining a variety of open source technologies, it should be possible to create an application that will enable a user, not proficient with GIS, of performing flood modeling. Through this development process we will document the necessary steps required in order to establish a working proof-of-concept. \\
+
+As such, our problem statement will be as follows: 
 
 \begin{itemize}
-\item Creation of a thin client based flood simulation and management tool using open source technologies
+\item How can we create an online application capable of performing simple flood modeling using open source technologies.
+\begin{itemize}
+\item How can we combine predetermined tools to create such a model?
+\item How can we make the application as easy to use as possible?
+\item How can we best document our progress in order to facilitate development of applications using the same technologies.
+\end{itemize}
 \end{itemize}
 
-\noindent This problem should enable us to do a ton of work in absolutely no time, motherfucker!.
-
-\section{Delimitation}
-To base the project on the real world, the variables and constants used within the project will be based on usage within Denmark.   
-There are several reasons for doing this. First of all, this is an area the project group has worked with before, and therefore all are comfortable with. This also creates a practical framework for the project – I.e we can create the product based on real-life values and data, instead of “making it up” as we go along. 
-All of these can be changed at a later state, but we fill it makes sense to create them with a foundation in Denmark
-
 %----------------------------------------------------------------------------------------
-
-\section{License}
-
-This project and all of it's items have been created as free and open source, and therefore follow the "GNU Software License".

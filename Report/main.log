@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  6 JUN 2015 18:02
+This is LuaTeX, Version beta-0.76.0-2013121407 (rev 4627)  (format=lualatex 2015.4.2)  9 JUN 2015 13:02
  restricted \write18 enabled.
 **main.tex
 (./main.tex
@@ -1136,18 +1136,12 @@ Using KOMA-command "deffootnote" for footnote setup
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrtime.sty
 Package: scrtime 2011/03/31 v3.08b KOMA-Script package (time of LaTeX run)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/ms/prelim2e.sty
-Package: prelim2e 2009/05/29 v1.3 prelim2e Package (MS)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty))) (./main.aux
-(./FrontBackMatter/Titlepage.aux) (./FrontBackMatter/Titleback.aux)
-(./FrontBackMatter/Abstract.aux) (./FrontBackMatter/Acknowledgments.aux)
+(./FrontBackMatter/Titlepage.aux) (./Chapters/front_thingy.aux)
+(./FrontBackMatter/Acknowledgments.aux) (./FrontBackMatter/Preface.aux)
 (./FrontBackMatter/Contents.aux) (./Chapters/Introduction.aux)
-(./Chapters/Theory.aux) (./Chapters/Methodology.aux
-
-LaTeX Warning: Label `ch:theory' multiply defined.
-
-) (./Chapters/Implementation.aux
+(./Chapters/Theory.aux) (./Chapters/Methodology.aux)
+(./Chapters/Implementation.aux
 
 LaTeX Warning: Label `fig:inputs' multiply defined.
 
@@ -1164,12 +1158,12 @@ LaTeX Warning: Label `fig:analysis_3' multiply defined.
 
 LaTeX Warning: Label `sub@fig:analysis_3' multiply defined.
 
-) (./Chapters/SWOT.aux) (./Chapters/Discussion.aux
+) (./Chapters/Discussion.aux
 
 LaTeX Warning: Label `ch:introduction' multiply defined.
 
-) (./FrontBackMatter/Bibliography.aux) (./FrontBackMatter/Colophon.aux)
-(./FrontBackMatter/Declaration.aux))
+) (./Chapters/Perspectives.aux) (./Chapters/Conclusion.aux)
+(./FrontBackMatter/Bibliography.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
 LaTeX Font Info:    ... okay on input line 39.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
@@ -1253,77 +1247,93 @@ Package microtype Info: No adjustment of kerning.
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-(./FrontBackMatter/Titlepage.tex
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 35.
+(./FrontBackMatter/Titlepage.tex [1
 
-(/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
-File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2
+
+
+
+] (./Chapters/front_thingy.tex
+<Chapters/aau_studentreport.pdf, id=280, 114.99461pt x 75.28325pt>
+File: Chapters/aau_studentreport.pdf Graphic file (type pdf)
+
+<use Chapters/aau_studentreport.pdf>
+Package pdftex.def Info: Chapters/aau_studentreport.pdf used on input line 10.
+(pdftex.def)             Requested size: 134.39795pt x 87.99257pt.
+LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplj/b/n' tried instead on input line 14.
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+[][]\T1/pplj/bx/n/10.95 Sub-ti-tle: \T1/pplj/m/n/10.95 An on-line open
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 16--17
+\T1/pplj/m/n/10.95 source ap-pli-ca-tion for flood
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+[][]\T1/pplj/m/n/10 Ge-o-graph-i-cal In-for-ma-tion Sys-
+ []
+
+
+Underfull \hbox (badness 2245) in paragraph at lines 49--49
+\T1/pplj/m/n/10 tems have be-come widespread
+ []
+
+
+Underfull \hbox (badness 2221) in paragraph at lines 49--49
+\T1/pplj/m/n/10 dur-ing the past decades. This
+ []
+
+
+Underfull \hbox (badness 2865) in paragraph at lines 49--49
+\T1/pplj/m/n/10 evo-lu-tion has also en-cour-aged
+ []
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 49--49
+\T1/pplj/m/n/10 way to com-bine var-i-ous open
+ []
+
+
+Underfull \hbox (badness 3240) in paragraph at lines 49--49
+\T1/pplj/m/n/10 of-fers the user the pos-si-bil-ity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--49
+
+ []
+
 )
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 7.65005pt on input line 35.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `fvm' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [1
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./FrontBackMatter/Titleb
-ack.tex
-! Undefined control sequence.
-l.9 \noindent\myName
-                  : \textit{\myTitle,} \mySubtitle, %\myDegree,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-LaTeX Font Info:    Try loading font information for OMS+pplj on input line 10.
-LaTeX Font Info:    No file OMSpplj.fd. on input line 10.
-
-LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead on input line 10.
-
-) [2
-
-
-] (./FrontBackMatter/Abstract.tex) [3
-
-
-
-
-] [4
-
-
-
-]
-(./FrontBackMatter/Acknowledgments.tex
-LaTeX Font Info:    Font shape `T1/pplj/m/sl' in size <10.95> not available
-(Font)              Font shape `T1/pplj/m/it' tried instead on input line 5.
-) [5
-
-] [6
-
-
-
-] (./FrontBackMatter/Contents.tex
-Package tocbasic Info: character protrusion at toc deactivated on input line 13.
-
-(./main.toc
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/pplj/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for U+zeur on input line 78.
+LaTeX Font Info:    Try loading font information for U+zeur on input line 64.
  (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeur.fd
 File: uzeur.fd 2005/01/11 v4.0 (WaS)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeus on input line 78.
+LaTeX Font Info:    Try loading font information for U+zeus on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeus.fd
 File: uzeus.fd 2005/01/11 v4.0 (WaS)
@@ -1331,12 +1341,12 @@ File: uzeus.fd 2005/01/11 v4.0 (WaS)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-eus.cfg
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 )
-LaTeX Font Info:    Try loading font information for U+zeuex on input line 78.
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/eulervm/uzeuex.fd
 File: uzeuex.fd 2005/01/11 v4.0 (WaS)
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 78.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 64.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -1345,17 +1355,66 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [7
+ [3
+
+ <./Chapters/aau_studentreport.pdf>] [4
+
+
+
+] (./FrontBackMatter/Acknowledgments.tex
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+) [5
+
+] [6
+
+
+
+] (./FrontBackMatter/Preface.tex
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 16.
+LaTeX Font Info:    No file OMSpplj.fd. on input line 16.
+
+
+LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for �symbol `textbullet' on input line 16.
+
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 22.
+(/usr/share/texlive/texmf-dist/tex/latex/bera/t1fvm.fd
+File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
+)
+LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 22.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `fvm' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+) [7
+
+] [8
+
+
+
+]
+(./FrontBackMatter/Contents.tex
+Package tocbasic Info: character protrusion at toc deactivated on input line 13.
+
+ (./main.toc
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/pplj/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+ [9
 
 
 
 ])
 \tf@toc=\write6
- [8]
+ [10]
 Package tocbasic Info: character protrusion at lof deactivated on input line 33.
 
-
-(./main.lof
+ (./main.lof
 Overfull \hbox (5.18906pt too wide) in paragraph at lines 7--7
  [][][] []\T1/pplj/m/n/10.95 Fig-ure show-ing im-por-tant con-cepts when work- 
 
@@ -1379,34 +1438,51 @@ Overfull \hbox (9.35547pt too wide) in paragraph at lines 12--12
  []
 
 
-Overfull \hbox (37.4641pt too wide) in paragraph at lines 23--23
+Overfull \hbox (37.59634pt too wide) in paragraph at lines 22--22
+ [][][] []\T1/pplj/m/n/10.95 Dif-fer-ence of flood ex-tent, based on model used
+. []  
+ []
+
+
+Overfull \hbox (37.4641pt too wide) in paragraph at lines 24--24
  [][][] []\T1/pplj/m/n/10.95 Show-ing the con-cepts of find-ing the pour-points
 . []  
  []
 
 
-Overfull \hbox (26.15282pt too wide) in paragraph at lines 31--31
+Overfull \hbox (26.15282pt too wide) in paragraph at lines 35--35
  [][][] []\T1/pplj/m/n/10.95 Show-ing the bar-rier hard-coded into the DEM. [] 
  
  []
 
 
-Overfull \hbox (28.14574pt too wide) in paragraph at lines 42--42
+Overfull \hbox (28.14574pt too wide) in paragraph at lines 47--47
  [][][] []\T1/pplj/m/n/10.95 Ac-cess-ing the pos-si-bil-ity of up-load-ing a DE
 M. []  
  []
 
 
-Overfull \hbox (17.22855pt too wide) in paragraph at lines 47--47
+Overfull \hbox (25.28696pt too wide) in paragraph at lines 52--52
+ [][][] []\T1/pplj/m/n/10.95 Ar-cGIS mod-el-builder work-flow of old model. [] 
+ 
+ []
+
+
+Overfull \hbox (22.10052pt too wide) in paragraph at lines 57--57
+ [][][] []\T1/pplj/m/n/10.95 Out-put of the GRASS mod-elling ap-proaches. []  
+ []
+
+
+Overfull \hbox (17.22855pt too wide) in paragraph at lines 60--60
  [][][] []\T1/pplj/m/n/10.95 Im-age show-ing No-Data val-ues in tiff im-age. []
   
  []
 
 )
 \tf@lof=\write7
- [9
+ [11
 
-]
+] [12]
 Package tocbasic Info: character protrusion at lot deactivated on input line 46.
 
  (./main.lot
@@ -1417,27 +1493,7 @@ Overfull \hbox (26.54704pt too wide) in paragraph at lines 11--11
 
 )
 \tf@lot=\write8
- [10]
-LaTeX Font Info:    Font shape `T1/pplj/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/pplj/b/n' tried instead on input line 76.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 76.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
-File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 76.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `phv' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 81.
-
-
-Package hyperref Warning: Ignoring empty anchor on input line 82.
-
-) [11] [12
+) [13] [14
 
 
 
@@ -1458,33 +1514,42 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--16
+
+ []
+
 [1
 
 
 
 
 
-]) [2] (./Chapters/Theory.tex
+]
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+) [2] (./Chapters/Theory.tex
 Chapter 2.
 
-Overfull \hbox (0.53595pt too wide) in paragraph at lines 11--15
+Overfull \hbox (0.53595pt too wide) in paragraph at lines 9--13
 []\T1/pplj/m/n/10.95 GRASS (Ge-o-graph-i-cal Re-sources Anal-y-sis Sup-port Sys
 -tem) is an open
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 11--15
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
 
  []
 
 
-Overfull \hbox (3.56908pt too wide) in paragraph at lines 16--21
-\T1/pplj/m/it/10.95 grass-data\T1/pplj/m/n/10.95 (also known as GRASS' GIS-BASE
-). This is the di-rec-tory where
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
@@ -1494,106 +1559,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
 
 ]
-Overfull \hbox (2.672pt too wide) in paragraph at lines 29--30
+Overfull \hbox (2.672pt too wide) in paragraph at lines 27--29
 []\T1/pplj/m/n/10.95 The ac-cu-rate de-pic-tion of hy-dro-log-i-cal move-ments 
 and their re-sponses
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-<gfx/SFD_MFD.png, id=491, 762.85pt x 198.7425pt>
+<gfx/SFD_MFD.png, id=529, 762.85pt x 198.7425pt>
 File: gfx/SFD_MFD.png Graphic file (type png)
  <use gfx/SFD_MFD.png>
-Package pdftex.def Info: gfx/SFD_MFD.png used on input line 47.
+Package pdftex.def Info: gfx/SFD_MFD.png used on input line 44.
 (pdftex.def)             Requested size: 336.0pt x 87.5349pt.
-
-Overfull \hbox (17.78658pt too wide) in paragraph at lines 44--53
-[][]\T1/pplj/m/n/10.95 Both of these al-go-rithms are based on a so-called Moor
-e-Neighborhood.
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 59--60
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-<gfx/Watershed.png, id=511, 833.1125pt x 370.38374pt>
+<gfx/Watershed.png, id=551, 833.1125pt x 370.38374pt>
 File: gfx/Watershed.png Graphic file (type png)
  <use gfx/Watershed.png>
-Package pdftex.def Info: gfx/Watershed.png used on input line 64.
+Package pdftex.def Info: gfx/Watershed.png used on input line 60.
 (pdftex.def)             Requested size: 336.0pt x 149.37726pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
 
-[5 <./gfx/SFD_MFD.png>] [6 <./gfx/Watershed.png>]
-<gfx/COST.png, id=547, 843.15pt x 253.94875pt>
+[5 <./gfx/SFD_MFD.png>] <gfx/COST.png, id=577, 843.15pt x 253.94875pt>
 File: gfx/COST.png Graphic file (type png)
- <use gfx/COST.png>
-Package pdftex.def Info: gfx/COST.png used on input line 79.
+
+<use gfx/COST.png>
+Package pdftex.def Info: gfx/COST.png used on input line 75.
 (pdftex.def)             Requested size: 336.0pt x 101.20183pt.
-
-Overfull \hbox (6.46066pt too wide) in paragraph at lines 87--88
-[]\T1/pplj/m/n/10.95 Python is a pro-gram-ming lan-guage used ex-ten-sively wit
-hin the geospa-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+ [6 <./gfx/Watershed.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 99.
-LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 99.
-[7 <./gfx/COST.png (PNG copy)>]
-Overfull \hbox (1.10994pt too wide) in paragraph at lines 108--109
+(Font)              scaled to size 8.50006pt on input line 95.
+
+Overfull \hbox (1.10994pt too wide) in paragraph at lines 103--104
 \T1/pplj/m/n/10.95 GRASS soft-ware. One of the lan-guages ca-pa-ble of do-ing t
 his is Python.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--109
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
-[8]
-Overfull \hbox (9.37337pt too wide) in paragraph at lines 178--181
+[7 <./gfx/COST.png (PNG copy)>] [8]
+Overfull \hbox (9.37337pt too wide) in paragraph at lines 172--175
 \T1/pplj/m/n/10.95 called re-quests and re-sponses) for geospa-tial pro-cess-in
 g ser-vices should
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--181
+Underfull \hbox (badness 10000) in paragraph at lines 172--175
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 182--184
+Underfull \hbox (badness 10000) in paragraph at lines 176--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 ! Misplaced alignment tab character &.
-l.187 \item http://webaddress/pywps/?service=WPS&
+l.181 \item http://webaddress/pywps/?service=WPS&
                                                request=GetCapablities
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1603,13 +1649,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (13.54536pt too wide) in paragraph at lines 187--188
+Overfull \hbox (13.54536pt too wide) in paragraph at lines 181--182
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WP-Sre-quest=Get-C
 a-pabli-ties 
  []
 
 ! Misplaced alignment tab character &.
-l.188 \item http://webaddress/pywps/?service=WPS&
+l.182 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Describ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1619,7 +1665,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.188 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.182 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=DescribeProcess&id...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1629,7 +1675,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.188 ...=WPS&version=1.0.0&request=DescribeProcess&
+l.182 ...=WPS&version=1.0.0&request=DescribeProcess&
                                                   identifier=all
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1639,13 +1685,13 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (21.57172pt too wide) in paragraph at lines 188--189
+Overfull \hbox (21.57172pt too wide) in paragraph at lines 182--183
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=De-
  []
 
 ! Misplaced alignment tab character &.
-l.189 \item http://webaddress/pywps/?service=WPS&
+l.183 \item http://webaddress/pywps/?service=WPS&
                                                version=1.0.0&request=Execute...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1655,7 +1701,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.189 ...ebaddress/pywps/?service=WPS&version=1.0.0&
+l.183 ...ebaddress/pywps/?service=WPS&version=1.0.0&
                                                   request=Execute&identifier...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1665,7 +1711,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.189 ...?service=WPS&version=1.0.0&request=Execute&
+l.183 ...?service=WPS&version=1.0.0&request=Execute&
                                                   identifier=<PROCESS>&datai...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1675,7 +1721,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.189 ...1.0.0&request=Execute&identifier=<PROCESS>&
+l.183 ...1.0.0&request=Execute&identifier=<PROCESS>&
                                                   datainputs=[<INPUT1>=<VALU...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1685,18 +1731,17 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (20.19202pt too wide) in paragraph at lines 189--190
+Overfull \hbox (20.19202pt too wide) in paragraph at lines 183--184
 [][]\T1/pplj/m/n/10.95 http://we-bad-dress/py-w-ps/?ser-vice=WPSver-sion=1.0.0r
 e-quest=Ex-
  []
 
 
-Overfull \hbox (26.576pt too wide) in paragraph at lines 189--190
+Overfull \hbox (26.576pt too wide) in paragraph at lines 183--184
 \T1/pplj/m/n/10.95 e-cutei-den-ti-fier=<PRO-CESS>datain-puts=[<IN-PUT1>=<VALUE>
 ;<IN-
  []
 
-[10]
 
 ! LaTeX Error: There's no line here to end.
 
@@ -1704,27 +1749,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.202 
+l.196 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[11]
-Overfull \hbox (7.21638pt too wide) in paragraph at lines 239--240
+[10] [11]
+Overfull \hbox (9.26404pt too wide) in paragraph at lines 231--232
 [][]\T1/pplj/m/n/10.95 Mod-i-fi-ca-tions and de-rived works must be al-lowed an
-d dis-tributes
+d dis-tributed
  []
 
-<gfx/OS.png, id=671, 672.5125pt x 494.84875pt>
+<gfx/OS.png, id=715, 672.5125pt x 494.84875pt>
 File: gfx/OS.png Graphic file (type png)
  <use gfx/OS.png>
-Package pdftex.def Info: gfx/OS.png used on input line 244.
+Package pdftex.def Info: gfx/OS.png used on input line 236.
 (pdftex.def)             Requested size: 336.0pt x 247.235pt.
  [12 <./gfx/OS.png>] [13]
-Overfull \hbox (0.71648pt too wide) in paragraph at lines 291--292
-\T1/pplj/m/n/10.95 points (X, Y, Z)that de-scribe the Earth's ground el-e-va-ti
-on. Of-ten stored
+Overfull \hbox (31.86467pt too wide) in paragraph at lines 292--294
+\T1/pplj/m/n/10.95 as hor-i-zon-tal ref-er-ence sys-tem and DVR90 as ver-ti-cal
+ ref-er-ence ([][]Rosenkrantz
  []
 
 ) [14] (./Chapters/Methodology.tex
@@ -1735,17 +1780,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-
-Overfull \hbox (44.80124pt too wide) in paragraph at lines 16--21
+Overfull \hbox (44.80124pt too wide) in paragraph at lines 15--19
  [][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--38
+Underfull \hbox (badness 10000) in paragraph at lines 32--36
 
  []
 
@@ -1755,20 +1795,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--38
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<gfx/Methodology/old_project.png, id=723, 699.61375pt x 231.86626pt>
+<gfx/Methodology/old_project.png, id=765, 699.61375pt x 231.86626pt>
 File: gfx/Methodology/old_project.png Graphic file (type png)
 
 <use gfx/Methodology/old_project.png>
-Package pdftex.def Info: gfx/Methodology/old_project.png used on input line 46.
+Package pdftex.def Info: gfx/Methodology/old_project.png used on input line 44.
 (pdftex.def)             Requested size: 336.0pt x 111.35822pt.
 
 
@@ -1778,32 +1818,45 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 
+l.48 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (21.95944pt too wide) in paragraph at lines 51--53
+Overfull \hbox (21.95944pt too wide) in paragraph at lines 49--51
 \T1/pplj/m/n/10.95 Drag'N'Drop func-tion-al-ity. Al-though the pre-lim-i-nary m
 odel-development
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 49--51
 
  []
 
 [16 <./gfx/Methodology/old_project.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 58--61
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
  []
 
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+[17]
+Overfull \hbox (8.03589pt too wide) in paragraph at lines 66--67
+[][]\T1/pplj/m/n/10.95 In this phase we per-formed the core setup
+ []
+
+
+Overfull \hbox (1.80862pt too wide) in paragraph at lines 72--73
+[][]\T1/pplj/m/n/10.95 All the added func-tion-al-i-ties
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -1812,49 +1865,21 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 
-    
+l.98 
+   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[19]
-Overfull \hbox (18.09387pt too wide) in paragraph at lines 157--158
+[18] [19]
+Overfull \hbox (18.09387pt too wide) in paragraph at lines 149--150
  [][][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [20] [21] (./Chapters/Implementation.tex [22
-
-
-
-
-]
+) [20] (./Chapters/Implementation.tex
 Chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
@@ -1869,7 +1894,12 @@ Overfull \hbox (8.4376pt too wide) in paragraph at lines 27--30
 [] \T1/pplj/m/n/10.95 In-stead of work-
  []
 
-[23]
+[21
+
+
+
+
+]
 Overfull \hbox (1.06245pt too wide) in paragraph at lines 33--34
 [][]\T1/pplj/m/sc/10.95 GIS-D-BASE\T1/pplj/m/n/10.95 : GRASS' database lo-ca-ti
 on, usu-ally ini-ti-ated as grass-
@@ -1893,20 +1923,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--47
 
  []
 
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
-
- []
-
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
-
- []
-
-
-Overfull \hbox (1.86629pt too wide) in paragraph at lines 77--78
-\T1/pplj/m/n/10.95 in-put and out-put will be stored. In-stead of set-ting this
- up from scratch,
  []
 
 
@@ -1916,7 +1935,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.82 
+l.81 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1929,7 +1948,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 
+l.88 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1942,38 +1961,38 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.91 
+l.92 
    
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (2.32771pt too wide) in paragraph at lines 92--93
+Overfull \hbox (2.32771pt too wide) in paragraph at lines 93--94
 [][] []\T1/pplj/m/sc/10.95/80ls set-ting up grass script-ing to run on a win-do
 ws ma-chine:[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
  []
 
-<gfx/Phase_2/image.png, id=796, 576.1525pt x 504.88625pt>
+<gfx/Phase_2/image.png, id=830, 576.1525pt x 504.88625pt>
 File: gfx/Phase_2/image.png Graphic file (type png)
 
 <use gfx/Phase_2/image.png>
-Package pdftex.def Info: gfx/Phase_2/image.png used on input line 103.
+Package pdftex.def Info: gfx/Phase_2/image.png used on input line 105.
 (pdftex.def)             Requested size: 151.19897pt x 132.49225pt.
 
 
@@ -1983,62 +2002,50 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107 
+l.109 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
-
- []
-
-[26 <./gfx/Phase_2/image.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
+[24 <./gfx/Phase_2/image.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-<gfx/Phase_2/image2.png, id=806, 800.9925pt x 526.96875pt>
+<gfx/Phase_2/image2.png, id=842, 800.9925pt x 526.96875pt>
 File: gfx/Phase_2/image2.png Graphic file (type png)
 
 <use gfx/Phase_2/image2.png>
-Package pdftex.def Info: gfx/Phase_2/image2.png used on input line 120.
+Package pdftex.def Info: gfx/Phase_2/image2.png used on input line 121.
 (pdftex.def)             Requested size: 151.19897pt x 99.46574pt.
 
-<gfx/Phase_2/image3.png, id=807, 803.0pt x 527.9725pt>
+<gfx/Phase_2/image3.png, id=843, 803.0pt x 527.9725pt>
 File: gfx/Phase_2/image3.png Graphic file (type png)
 
 <use gfx/Phase_2/image3.png>
-Package pdftex.def Info: gfx/Phase_2/image3.png used on input line 123.
+Package pdftex.def Info: gfx/Phase_2/image3.png used on input line 124.
 (pdftex.def)             Requested size: 151.19897pt x 99.41351pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `phase2_prob2' on page 27 undefined on input line 133.
-
-[27] <gfx/Phase_2/problem1.png, id=817, 710.655pt x 486.81876pt>
+ [25 <./gfx/Phase_2/image2.png> <./gfx/Phase_2/image3.png>] <gfx/Phase_2/proble
+m1.png, id=854, 710.655pt x 486.81876pt>
 File: gfx/Phase_2/problem1.png Graphic file (type png)
 
 <use gfx/Phase_2/problem1.png>
-Package pdftex.def Info: gfx/Phase_2/problem1.png used on input line 139.
+Package pdftex.def Info: gfx/Phase_2/problem1.png used on input line 140.
 (pdftex.def)             Requested size: 151.19897pt x 103.57204pt.
 
-<gfx/Phase_2/problem2.png, id=818, 787.94376pt x 519.9425pt>
+<gfx/Phase_2/problem2.png, id=855, 787.94376pt x 519.9425pt>
 File: gfx/Phase_2/problem2.png Graphic file (type png)
 
 <use gfx/Phase_2/problem2.png>
-Package pdftex.def Info: gfx/Phase_2/problem2.png used on input line 142.
+Package pdftex.def Info: gfx/Phase_2/problem2.png used on input line 143.
 (pdftex.def)             Requested size: 151.19897pt x 99.76595pt.
- [28 <./gfx/Phase_2/image2.png> <./gfx/Phase_2/image3.png> <./gfx/Phase_2/proble
-m1.png> <./gfx/Phase_2/problem2.png (PNG copy)>]
-<gfx/Phase_2/problem3.png, id=830, 529.98pt x 461.725pt>
+ [26 <./gfx/Phase_2/problem1.png> <./gfx/Phase_2/problem2.png (PNG copy)>]
+<gfx/Phase_2/problem3.png, id=865, 529.98pt x 461.725pt>
 File: gfx/Phase_2/problem3.png Graphic file (type png)
 
 <use gfx/Phase_2/problem3.png>
-Package pdftex.def Info: gfx/Phase_2/problem3.png used on input line 153.
+Package pdftex.def Info: gfx/Phase_2/problem3.png used on input line 154.
 (pdftex.def)             Requested size: 252.0pt x 219.5471pt.
 
 
@@ -2048,60 +2055,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.157 
+l.158 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+<gfx/Phase_2/problem4.png, id=867, 966.61125pt x 349.305pt>
+File: gfx/Phase_2/problem4.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:phase2_prob4' on page 29 undefined on input line 1
-59.
-
-Runaway argument?
-{figure}[H!]\caption@settype {figure} \centering {\includegraphics [w\ETC.
-! Paragraph ended before \@float@HH was complete.
-<to be read again> 
-\par 
-l.167 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
-
- []
-
-[29 <./gfx/Phase_2/problem3.png>]
-
-! LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.176 
-    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
+<use gfx/Phase_2/problem4.png>
+Package pdftex.def Info: gfx/Phase_2/problem4.png used on input line 164.
+(pdftex.def)             Requested size: 336.0pt x 121.42177pt.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -2110,95 +2075,264 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.218 
+l.168 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
-[31] [32] <gfx/Pourpoint.png, id=882, 541.02126pt x 519.9425pt>
+[27 <./gfx/Phase_2/problem3.png> <./gfx/Phase_2/problem4.png (PNG copy)>]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.180 ...he application. That script is named \texit
+                                                  {\_\_init\_\_.py}. Using F...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
+
+ []
+
+! Undefined control sequence.
+l.188 ...ing page, they get redirected to the \texit
+                                                  {root url/upload} section ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.188 ...he uploaded file and convert it from \texit
+                                                  {.tif} to \texit{.png}. Th...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.188 ... and convert it from \texit{.tif} to \texit
+                                                  {.png}. The reason behind ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.188 ...brary, then that object has to be of \texit
+                                                  {.png} or \texit{.jpeg} fo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.188 ... object has to be of \texit{.png} or \texit
+                                                  {.jpeg} format. All the af...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.219 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[29]
+! Undefined control sequence.
+l.224 ...nd use PHP to convert that file from \texit
+                                                  {.tiff} to \texit{.png}. T...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.224 ...vert that file from \texit{.tiff} to \texit
+                                                  {.png}. Then that PHP scri...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 223--225
+
+ []
+
+[30] <gfx/Pourpoint.png, id=919, 541.02126pt x 519.9425pt>
 File: gfx/Pourpoint.png Graphic file (type png)
 
 <use gfx/Pourpoint.png>
-Package pdftex.def Info: gfx/Pourpoint.png used on input line 240.
+Package pdftex.def Info: gfx/Pourpoint.png used on input line 236.
 (pdftex.def)             Requested size: 268.80103pt x 258.33627pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
-[33 <./gfx/Pourpoint.png>]
-<gfx/Phase_4/Pourpoint2.png, id=891, 545.03625pt x 407.5225pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+[31 <./gfx/Pourpoint.png>]
+<gfx/Phase_4/Pourpoint2.png, id=928, 545.03625pt x 407.5225pt>
 File: gfx/Phase_4/Pourpoint2.png Graphic file (type png)
 
 <use gfx/Phase_4/Pourpoint2.png>
-Package pdftex.def Info: gfx/Phase_4/Pourpoint2.png used on input line 252.
+Package pdftex.def Info: gfx/Phase_4/Pourpoint2.png used on input line 249.
 (pdftex.def)             Requested size: 151.19897pt x 113.0484pt.
 
-<gfx/Phase_4/Pourpoint3.png, id=892, 565.11125pt x 434.62375pt>
+<gfx/Phase_4/Pourpoint3.png, id=929, 565.11125pt x 434.62375pt>
 File: gfx/Phase_4/Pourpoint3.png Graphic file (type png)
 
 <use gfx/Phase_4/Pourpoint3.png>
-Package pdftex.def Info: gfx/Phase_4/Pourpoint3.png used on input line 255.
+Package pdftex.def Info: gfx/Phase_4/Pourpoint3.png used on input line 252.
 (pdftex.def)             Requested size: 151.19897pt x 116.28226pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--263
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
  []
 
-[34 <./gfx/Phase_4/Pourpoint2.png> <./gfx/Phase_4/Pourpoint3.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 264--266
+[32 <./gfx/Phase_4/Pourpoint2.png> <./gfx/Phase_4/Pourpoint3.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--273
+Overfull \hbox (4.02333pt too wide) in paragraph at lines 270--271
+[][] []\T1/pplj/m/sc/10.95/80ls out-let anal-y-sis:[] \T1/pplj/m/n/10.95 Dur-in
+g the de-vel-op-ment of the pour-point anal-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+[33] <gfx/Phase_4/outletanal.png, id=950, 1034.86626pt x 607.26875pt>
+File: gfx/Phase_4/outletanal.png Graphic file (type png)
+
+<use gfx/Phase_4/outletanal.png>
+Package pdftex.def Info: gfx/Phase_4/outletanal.png used on input line 278.
+(pdftex.def)             Requested size: 252.0pt x 147.86943pt.
+
+<gfx/Phase_4/outletanal2.png, id=951, 1036.87375pt x 609.27625pt>
+File: gfx/Phase_4/outletanal2.png Graphic file (type png)
+
+<use gfx/Phase_4/outletanal2.png>
+Package pdftex.def Info: gfx/Phase_4/outletanal2.png used on input line 281.
+(pdftex.def)             Requested size: 252.0pt x 148.07004pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
 
  []
 
-<gfx/Phase_4/Barrier1.png, id=910, 798.985pt x 522.95375pt>
+[34 <./gfx/Phase_4/outletanal.png> <./gfx/Phase_4/outletanal2.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+<gfx/Phase_4/Barrier1.png, id=962, 798.985pt x 522.95375pt>
 File: gfx/Phase_4/Barrier1.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier1.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier1.png used on input line 280.
+Package pdftex.def Info: gfx/Phase_4/Barrier1.png used on input line 298.
 (pdftex.def)             Requested size: 151.19897pt x 98.96326pt.
 
-<gfx/Phase_4/Barrier2.png, id=911, 515.9275pt x 454.69875pt>
+<gfx/Phase_4/Barrier2.png, id=963, 515.9275pt x 454.69875pt>
 File: gfx/Phase_4/Barrier2.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier2.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier2.png used on input line 283.
+Package pdftex.def Info: gfx/Phase_4/Barrier2.png used on input line 301.
 (pdftex.def)             Requested size: 151.19897pt x 133.25381pt.
 
-<gfx/Phase_4/Barrier3.png, id=912, 713.66624pt x 524.96124pt>
+<gfx/Phase_4/Barrier3.png, id=964, 713.66624pt x 524.96124pt>
 File: gfx/Phase_4/Barrier3.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier3.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier3.png used on input line 286.
+Package pdftex.def Info: gfx/Phase_4/Barrier3.png used on input line 304.
 (pdftex.def)             Requested size: 151.19897pt x 111.21436pt.
 
-<gfx/Phase_4/Barrier4.png, id=913, 797.98125pt x 521.95pt>
+<gfx/Phase_4/Barrier4.png, id=965, 797.98125pt x 521.95pt>
 File: gfx/Phase_4/Barrier4.png Graphic file (type png)
 
 <use gfx/Phase_4/Barrier4.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier4.png used on input line 289.
+Package pdftex.def Info: gfx/Phase_4/Barrier4.png used on input line 307.
 (pdftex.def)             Requested size: 151.19897pt x 98.89278pt.
+ [35 <./gfx/Phase_4/Barrier1.png> <./gfx/Phase_4/Barrier2.png> <./gfx/Phase_4/Ba
+rrier3.png> <./gfx/Phase_4/Barrier4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.350 
+    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
@@ -2210,29 +2344,263 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.316 
+l.358 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+<gfx/Phase_4/Barrier5.png, id=1002, 712.6625pt x 525.965pt>
+File: gfx/Phase_4/Barrier5.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+<use gfx/Phase_4/Barrier5.png>
+Package pdftex.def Info: gfx/Phase_4/Barrier5.png used on input line 365.
+(pdftex.def)             Requested size: 252.0pt x 185.9765pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+[37 <./gfx/Phase_4/Barrier5.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+
+ []
+
+[39]
+Overfull \hbox (67.99965pt too wide) in paragraph at lines 445--446
+[][]\T1/pplj/m/n/10.95 http://52.17.144.192/cgi-bin/pywps.cgi?re-quest=ex-e-cut
+e&ser-vice=WPS&ver-
+ []
+
+
+Overfull \hbox (6.99663pt too wide) in paragraph at lines 445--446
+\T1/pplj/m/n/10.95 sion=1.0.0&iden-ti-fier=flood-ing&datain-puts=[ras-terin=<LI
+NK TO
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 470--472
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 317--319
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
+Overfull \hbox (49.76804pt too wide) in paragraph at lines 495--496
+[][]\T1/pplj/m/n/10.95 http://52.17.144.192/u-pload?minx=CO-ORD&miny=CO-ORD&max
+x=CO-
+ []
+
+[41] [42]
+Underfull \hbox (badness 10000) in paragraph at lines 579--581
 
  []
 
-[37 <./gfx/Phase_4/Barrier1.png> <./gfx/Phase_4/Barrier2.png> <./gfx/Phase_4/Bar
-rier3.png> <./gfx/Phase_4/Barrier4.png>]
+! Undefined control sequence.
+l.591 ...xtit{\$.get()}. This is encased in a \texit
+                                                  {\$.when} and a \textit{\$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[43]
+! Undefined control sequence.
+l.594 The \texit
+              {\$.when} and async request code looks like the following:
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.613 ...esult, store it in a variable called \texit
+                                                  {outputimagearray}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[44]) [45] (./Chapters/Analysis.tex [46
+
+
+
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+[47]
+Overfull \hbox (6.18774pt too wide) in paragraph at lines 26--27
+\T1/pplj/m/n/10.95 which are fetched and parsed us-ing a com-bi-na-tion of jQue
+ry, JavaScript
+ []
+
+
+<gfx/Analysis_Architecture/grass_pywps.png, id=1172, 1134.2375pt x 451.6875pt>
+File: gfx/Analysis_Architecture/grass_pywps.png Graphic file (type png)
+
+<use gfx/Analysis_Architecture/grass_pywps.png>
+Package pdftex.def Info: gfx/Analysis_Architecture/grass_pywps.png used on input
+ line 32.
+(pdftex.def)             Requested size: 336.0pt x 133.80492pt.
+ [48 <./gfx/Analysis_Architecture/grass_pywps.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 111--113
+
+ []
+
+[50]
+! Undefined control sequence.
+l.115 The \texti
+              {.grassrc6} folder contains some settings that are needed for ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<gfx/Analysis_Website/1.jpg, id=1197, 612.2875pt x 570.13pt>
+File: gfx/Analysis_Website/1.jpg Graphic file (type jpg)
+
+<use gfx/Analysis_Website/1.jpg>
+Package pdftex.def Info: gfx/Analysis_Website/1.jpg used on input line 136.
+(pdftex.def)             Requested size: 236.0444pt x 219.7977pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<gfx/Analysis_Website/2.png, id=1201, 1347.0325pt x 625.33624pt>
+File: gfx/Analysis_Website/2.png Graphic file (type png)
+
+<use gfx/Analysis_Website/2.png>
+Package pdftex.def Info: gfx/Analysis_Website/2.png used on input line 147.
+(pdftex.def)             Requested size: 336.0pt x 155.98062pt.
+
+<gfx/Analysis_Website/3.png, id=1202, 781.92125pt x 611.28375pt>
+File: gfx/Analysis_Website/3.png Graphic file (type png)
+
+<use gfx/Analysis_Website/3.png>
+Package pdftex.def Info: gfx/Analysis_Website/3.png used on input line 150.
+(pdftex.def)             Requested size: 151.19897pt x 118.19714pt.
+
+<gfx/Analysis_Website/4.png, id=1203, 555.07375pt x 502.87875pt>
+File: gfx/Analysis_Website/4.png Graphic file (type png)
+
+<use gfx/Analysis_Website/4.png>
+Package pdftex.def Info: gfx/Analysis_Website/4.png used on input line 153.
+(pdftex.def)             Requested size: 151.19897pt x 136.98378pt.
+
+Overfull \hbox (3.18645pt too wide) in paragraph at lines 147--153
+ [][][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[51] [52 <./gfx/Analysis_Website/1.jpg> <./gfx/Analysis_Website/2.png> <./gfx/An
+alysis_Website/3.png> <./gfx/Analysis_Website/4.png>]
+<gfx/Analysis_Website/5.png, id=1222, 691.58376pt x 234.8775pt>
+File: gfx/Analysis_Website/5.png Graphic file (type png)
+
+<use gfx/Analysis_Website/5.png>
+Package pdftex.def Info: gfx/Analysis_Website/5.png used on input line 168.
+(pdftex.def)             Requested size: 336.0pt x 114.11615pt.
+
+<gfx/Analysis_Website/6.png, id=1223, 1065.9825pt x 219.82124pt>
+File: gfx/Analysis_Website/6.png Graphic file (type png)
+
+<use gfx/Analysis_Website/6.png>
+Package pdftex.def Info: gfx/Analysis_Website/6.png used on input line 171.
+(pdftex.def)             Requested size: 336.0pt x 69.28766pt.
+
+Overfull \hbox (3.18645pt too wide) in paragraph at lines 168--172
+ [][][] 
+ []
+
+
+Overfull \hbox (3.18645pt too wide) in paragraph at lines 168--172
+ [][] 
+ []
+
+<gfx/Analysis_Website/suckmycock.PNG, id=1226, 706.13812pt x 359.84438pt>
+File: gfx/Analysis_Website/suckmycock.PNG Graphic file (type png)
+
+<use gfx/Analysis_Website/suckmycock.PNG>
+Package pdftex.def Info: gfx/Analysis_Website/suckmycock.PNG used on input line 
+183.
+(pdftex.def)             Requested size: 268.80103pt x 136.97838pt.
+ [53 <./gfx/Analysis_Website/5.png> <./gfx/Analysis_Website/6.png> <./gfx/Analys
+is_Website/suckmycock.PNG>]
+<gfx/Analysis_Website/8.png, id=1235, 1183.42125pt x 551.05875pt>
+File: gfx/Analysis_Website/8.png Graphic file (type png)
+
+<use gfx/Analysis_Website/8.png>
+Package pdftex.def Info: gfx/Analysis_Website/8.png used on input line 193.
+(pdftex.def)             Requested size: 336.0pt x 156.45636pt.
+
+<gfx/Analysis_OldWork/1.png, id=1238, 874.26625pt x 677.53125pt>
+File: gfx/Analysis_OldWork/1.png Graphic file (type png)
+
+<use gfx/Analysis_OldWork/1.png>
+Package pdftex.def Info: gfx/Analysis_OldWork/1.png used on input line 209.
+(pdftex.def)             Requested size: 252.0pt x 195.29012pt.
+
+<gfx/Analysis_OldWork/2.png, id=1239, 607.26875pt x 538.01pt>
+File: gfx/Analysis_OldWork/2.png Graphic file (type png)
+
+<use gfx/Analysis_OldWork/2.png>
+Package pdftex.def Info: gfx/Analysis_OldWork/2.png used on input line 212.
+(pdftex.def)             Requested size: 252.0pt x 223.25357pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[54 <./gfx/Analysis_Website/8.png>] [55 <./gfx/Analysis_OldWork/1.png (PNG copy)
+> <./gfx/Analysis_OldWork/2.png>]
+<gfx/Analysis_OldWork/3.jpg, id=1255, 1118.1775pt x 401.5pt>
+File: gfx/Analysis_OldWork/3.jpg Graphic file (type jpg)
+
+<use gfx/Analysis_OldWork/3.jpg>
+Package pdftex.def Info: gfx/Analysis_OldWork/3.jpg used on input line 227.
+(pdftex.def)             Requested size: 336.0pt x 120.64696pt.
+
 
 ! LaTeX Error: There's no line here to end.
 
@@ -2240,275 +2608,72 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.326 
+l.231 
     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
+<gfx/Analysis_OldWork/COWI.jpg, id=1257, 1488.56125pt x 909.3975pt>
+File: gfx/Analysis_OldWork/COWI.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+<use gfx/Analysis_OldWork/COWI.jpg>
+Package pdftex.def Info: gfx/Analysis_OldWork/COWI.jpg used on input line 236.
+(pdftex.def)             Requested size: 336.0pt x 205.27167pt.
 
- []
+<gfx/Analysis_OldWork/4.png, id=1258, 690.58pt x 573.14125pt>
+File: gfx/Analysis_OldWork/4.png Graphic file (type png)
 
-<gfx/Phase_4/Barrier5.png, id=935, 712.6625pt x 525.965pt>
-File: gfx/Phase_4/Barrier5.png Graphic file (type png)
+<use gfx/Analysis_OldWork/4.png>
+Package pdftex.def Info: gfx/Analysis_OldWork/4.png used on input line 245.
+(pdftex.def)             Requested size: 151.19897pt x 125.47928pt.
 
-<use gfx/Phase_4/Barrier5.png>
-Package pdftex.def Info: gfx/Phase_4/Barrier5.png used on input line 337.
-(pdftex.def)             Requested size: 252.0pt x 185.9765pt.
+<gfx/Analysis_OldWork/5.png, id=1259, 691.58376pt x 573.14125pt>
+File: gfx/Analysis_OldWork/5.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
-
- []
-
-[38 <./gfx/Phase_4/Barrier5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 354--355
-
- []
-
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
-
- []
-
-[40]
-Overfull \hbox (67.99965pt too wide) in paragraph at lines 419--420
-[][]\T1/pplj/m/n/10.95 http://52.17.144.192/cgi-bin/pywps.cgi?re-quest=ex-e-cut
-e&ser-vice=WPS&ver-
- []
-
-
-Overfull \hbox (6.99663pt too wide) in paragraph at lines 419--420
-\T1/pplj/m/n/10.95 sion=1.0.0&iden-ti-fier=flood-ing&datain-puts=[ras-terin=<LI
-NK TO
- []
-
-[41]
-Underfull \hbox (badness 10000) in paragraph at lines 445--447
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
-
- []
-
-
-Overfull \hbox (49.76804pt too wide) in paragraph at lines 470--471
-[][]\T1/pplj/m/n/10.95 http://52.17.144.192/u-pload?minx=CO-ORD&miny=CO-ORD&max
-x=CO-
- []
-
-[42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 554--556
-
- []
-
-[44] [45]) [46] (./Chapters/Analysis.tex
-Chapter 5.
-
-Underfull \hbox (badness 10000) in paragraph at lines 13--16
-
- []
-
-[47
-
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
-
- []
-
-
-Package caption Warning: \label without proper \caption on input line 66.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:pywpsinstall' on page 48 undefined on input line 5
-0.
-
-! Undefined control sequence.
-l.65 \cation
-          {Structure of the PyWPS installation.}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[48]
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--95
-
- []
-
-[49]
-<gfx/Analysis_Architecture/grass_pywps.png, id=1118, 1134.2375pt x 451.6875pt>
-File: gfx/Analysis_Architecture/grass_pywps.png Graphic file (type png)
-
-<use gfx/Analysis_Architecture/grass_pywps.png>
-Package pdftex.def Info: gfx/Analysis_Architecture/grass_pywps.png used on input
- line 117.
-(pdftex.def)             Requested size: 336.0pt x 133.80492pt.
-
-<gfx/Analysis_Website/1.jpg, id=1120, 612.2875pt x 570.13pt>
-File: gfx/Analysis_Website/1.jpg Graphic file (type jpg)
-
-<use gfx/Analysis_Website/1.jpg>
-Package pdftex.def Info: gfx/Analysis_Website/1.jpg used on input line 128.
-(pdftex.def)             Requested size: 236.0444pt x 219.7977pt.
- [50 <./gfx/Analysis_Architecture/grass_pywps.png>] <gfx/Analysis_Website/2.png
-, id=1129, 1347.0325pt x 625.33624pt>
-File: gfx/Analysis_Website/2.png Graphic file (type png)
-
-<use gfx/Analysis_Website/2.png>
-Package pdftex.def Info: gfx/Analysis_Website/2.png used on input line 139.
-(pdftex.def)             Requested size: 336.0pt x 155.98062pt.
-
-<gfx/Analysis_Website/3.png, id=1130, 781.92125pt x 611.28375pt>
-File: gfx/Analysis_Website/3.png Graphic file (type png)
-
-<use gfx/Analysis_Website/3.png>
-Package pdftex.def Info: gfx/Analysis_Website/3.png used on input line 142.
-(pdftex.def)             Requested size: 151.19897pt x 118.19714pt.
-
-<gfx/Analysis_Website/4.png, id=1131, 555.07375pt x 502.87875pt>
-File: gfx/Analysis_Website/4.png Graphic file (type png)
-
-<use gfx/Analysis_Website/4.png>
-Package pdftex.def Info: gfx/Analysis_Website/4.png used on input line 145.
-(pdftex.def)             Requested size: 151.19897pt x 136.98378pt.
-
-Overfull \hbox (3.18645pt too wide) in paragraph at lines 139--145
- [][][] 
- []
-
-<gfx/Analysis_Website/5.png, id=1135, 691.58376pt x 234.8775pt>
-File: gfx/Analysis_Website/5.png Graphic file (type png)
-
-<use gfx/Analysis_Website/5.png>
-Package pdftex.def Info: gfx/Analysis_Website/5.png used on input line 161.
-(pdftex.def)             Requested size: 336.0pt x 114.11615pt.
-
-<gfx/Analysis_Website/6.png, id=1136, 1065.9825pt x 219.82124pt>
-File: gfx/Analysis_Website/6.png Graphic file (type png)
-
-<use gfx/Analysis_Website/6.png>
-Package pdftex.def Info: gfx/Analysis_Website/6.png used on input line 164.
-(pdftex.def)             Requested size: 336.0pt x 69.28766pt.
-
-Overfull \hbox (3.18645pt too wide) in paragraph at lines 161--165
- [][][] 
- []
-
-
-Overfull \hbox (3.18645pt too wide) in paragraph at lines 161--165
- [][] 
- []
-
-
-LaTeX Warning: Reference `fig:analysis_6' on page 51 undefined on input line 169
-.
-
-<gfx/Analysis_Website/7.png, id=1138, 1059.96pt x 602.25pt>
-File: gfx/Analysis_Website/7.png Graphic file (type png)
-
-<use gfx/Analysis_Website/7.png>
-Package pdftex.def Info: gfx/Analysis_Website/7.png used on input line 176.
-(pdftex.def)             Requested size: 336.0pt x 190.90439pt.
+<use gfx/Analysis_OldWork/5.png>
+Package pdftex.def Info: gfx/Analysis_OldWork/5.png used on input line 248.
+(pdftex.def)             Requested size: 151.19897pt x 125.30437pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[51 <./gfx/Analysis_Website/1.jpg>] [52 <./gfx/Analysis_Website/2.png> <./gfx/An
-alysis_Website/3.png> <./gfx/Analysis_Website/4.png> <./gfx/Analysis_Website/5.p
-ng> <./gfx/Analysis_Website/6.png>]
-<gfx/Analysis_Website/8.png, id=1156, 1183.42125pt x 551.05875pt>
-File: gfx/Analysis_Website/8.png Graphic file (type png)
+[56 <./gfx/Analysis_OldWork/3.jpg> <./gfx/Analysis_OldWork/COWI.jpg>] [57 <./gfx
+/Analysis_OldWork/4.png> <./gfx/Analysis_OldWork/5.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
-<use gfx/Analysis_Website/8.png>
-Package pdftex.def Info: gfx/Analysis_Website/8.png used on input line 186.
-(pdftex.def)             Requested size: 336.0pt x 156.45636pt.
- [53 <./gfx/Analysis_Website/7.png> <./gfx/Analysis_Website/8.png>]
+ []
 
-LaTeX Warning: Reference `analysis_nodata' on page 54 undefined on input line 22
-0.
-
-<gfx/Analysis_Specs/nodata.png, id=1162, 380.17032pt x 378.66469pt>
+<gfx/Analysis_Specs/nodata.png, id=1280, 380.17032pt x 378.66469pt>
 File: gfx/Analysis_Specs/nodata.png Graphic file (type png)
 
 <use gfx/Analysis_Specs/nodata.png>
-Package pdftex.def Info: gfx/Analysis_Specs/nodata.png used on input line 224.
+Package pdftex.def Info: gfx/Analysis_Specs/nodata.png used on input line 289.
 (pdftex.def)             Requested size: 268.80103pt x 267.74443pt.
- [54]) [55 <./gfx/Analysis_Specs/nodata.png>]
-(./Chapters/SWOT.tex
-Overfull \hbox (4.69922pt too wide) in paragraph at lines 5--6
-[]\T1/pplj/m/n/10.95 The above-mentioned strengths, weak-nesses, op-por-tu-ni-t
-ies and threats
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 299--301
+
  []
 
+[59 <./gfx/Analysis_Specs/nodata.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
-Overfull \hbox (6.4388pt too wide) in paragraph at lines 5--6
-\T1/pplj/m/n/10.95 can be in-serted into a so-called SWOT-matrix to give an eas
--ier overview
  []
 
-) [56
-
-
-] (./Chapters/Discussion.tex
+) [60] (./Chapters/Discussion.tex
 Chapter 6.
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 9.
+Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
-) [57
-
-
-
-
-] [58
-
-
-
-] [59] [60] (./FrontBackMatter/Bibliography.tex (./main.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 25--31
-[][]\T1/pplj/m/n/10.95 DMI.  Storm-floder i fremti-dens klima.  [][]$\T1/fvm/m/
-n/10.95 http : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 25--31
-\T1/fvm/m/n/10.95 dmi . dk / laer-[]om / temaer / hav / fremtidens-[]vandstand 
-/
- []
+Underfull \hbox (badness 10000) in paragraph at lines 16--19
 
-
-Underfull \hbox (badness 1418) in paragraph at lines 33--37
-[][]\T1/pplj/m/n/10.95 Charles Echlschlaeger.  r.wa-ter-shed.  [][]$\T1/fvm/m/n
-/10.95 http : / / grass . osgeo . org /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--45
-\T1/fvm/m/n/10.95 arcgisdesktop / 10 . 0 / help / index . html # / / 009z000000
-18000000 .
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 55--61
-\T1/pplj/m/n/10.95 ing it ex-plic-itly.  [][]$\T1/fvm/m/n/10.95 http : / / gras
-swiki . osgeo . org / wiki / Working _
  []
 
 [61
@@ -2516,12 +2681,133 @@ swiki . osgeo . org / wiki / Working _
 
 
 
+] [62]
+Overfull \hbox (0.6916pt too wide) in paragraph at lines 43--44
+\T1/pplj/m/n/10.95 or Win-dows, but when ac-cess-ing the func-tion-al-ity ex-te
+r-nally, it turned
+ []
+
+[63]
+Overfull \hbox (11.92615pt too wide) in paragraph at lines 63--65
+[][] []\T1/pplj/m/sc/10.95/80ls in-stal-la-tion:[] \T1/pplj/m/n/10.95 When in-s
+talling Py-WPS, set-tings have to be changed
+ []
+
+[64] [65] [66]
+Overfull \hbox (0.15353pt too wide) in paragraph at lines 103--104
+\T1/pplj/m/n/10.95 FLOODS: Quick(Spa-tial Se-lec-tion) and slower(Cost Dis-tanc
+e)” and “AD-
+ []
+
+
+Overfull \hbox (2.28802pt too wide) in paragraph at lines 103--104
+\T1/pplj/m/n/10.95 VANCED FLOOD: Quick(Spa-tial Se-lec-tion) and slower(Cost Di
+s-tance)”.
+ []
+
+[67]
+Overfull \hbox (3.13635pt too wide) in paragraph at lines 118--119
+[][]\T1/pplj/m/n/10.95 By adding func-tion-al-ity, such as the cal-cu-la-tion o
+f ex-pected amounts
+ []
+
+[68] [69] [70] [71]
+Overfull \hbox (4.5599pt too wide) in paragraph at lines 158--159
+[][] []\T1/pplj/m/sc/10.95/80ls tech-ni-cally de-mand-ing:[] \T1/pplj/m/n/10.95
+ Even though the ap-pli-ca-tion has been
+ []
+
+[72]) [73] (./Chapters/Perspectives.tex [74
+
+
+
+
+]
+Chapter 7.
+[75] [76]) [77] (./Chapters/Conclusion.tex [78
+
+
+
+
+]
+Chapter 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--3
+
+ []
+
+) [79] [80
+
+
+
+] (./FrontBackMatter/Bibliography.tex (./main.bbl
+Underfull \hbox (badness 5217) in paragraph at lines 20--26
+[][]\T1/pplj/m/n/10.95 DMI.  Storm-floder i fremti-dens klima.  [][]$\T1/fvm/m/
+n/10.95 http : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
+\T1/fvm/m/n/10.95 dmi . dk / laer-[]om / temaer / hav / fremtidens-[]vandstand 
+/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--26
+\T1/fvm/m/n/10.95 stormfloder-[]i-[]fremtidens-[]klima/$[][]\T1/pplj/m/n/10.95 
+, 2015.  Ac-cessed:
+ []
+
+
+Underfull \hbox (badness 1147) in paragraph at lines 28--32
+[][]\T1/pplj/m/n/10.95 Charles Echlschlaeger.  r.wa-ter-shed.  [][]$\T1/fvm/m/n
+/10.95 http : / / grass . osgeo .
+ []
+
+
+Underfull \hbox (badness 4967) in paragraph at lines 34--40
+[][]\T1/pplj/m/n/10.95 ESRI.  Cost dis-tance (spa-tial an-a-lyst).  [][]$\T1/fv
+m/m/n/10.95 http : / / help .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
+\T1/fvm/m/n/10.95 arcgis . com / en / arcgisdesktop / 10 . 0 / help / index . h
+tml #
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--48
+\T1/fvm/m/n/10.95 en / help / main / 10 . 1 / index . html # / / 009z0000006800
+0000$[][]\T1/pplj/m/n/10.95 , b.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--56
+\T1/fvm/m/n/10.95 Working _ with _ GRASS _ without _ starting _ it _ explicitly
+$[][]\T1/pplj/m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 58--61
+[][]\T1/pplj/m/n/10.95 V. Grass-muck.  Freie soft-ware zwis-chen privat- und
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 69--73
+[][]\T1/pplj/m/n/10.95 HTML.net.  Les-son 2: What is html?  [][]$\T1/fvm/m/n/10
+.95 http : / / html . net /
+ []
+
+[81
+
+
 
 ]
 ! Misplaced alignment tab character &.
 <argument> Environmental Modelling &
                           Software
-l.118 ...k \emph{Environmental Modelling & Software}
+l.120 ...k \emph{Environmental Modelling & Software}
                                                   , 31:\penalty0 124 -- 130,
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -2531,134 +2817,86 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 122--128
-[][]\T1/pplj/m/n/10.95 Mozilla De-vel-oper Net-work.  What is javascript?  [][]
-$\T1/fvm/m/n/10.95 https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
+Underfull \hbox (badness 10000) in paragraph at lines 124--130
 \T1/fvm/m/n/10.95 / / developer . mozilla . org / en-[]US / docs / Web / JavaSc
-ript / Guide /
+ript /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--128
-\T1/fvm/m/n/10.95 Introduction # What _ is _ JavaScript . 3F$[][]\T1/pplj/m/n/1
-0.95 , 2015.  Ac-cessed:
+Underfull \hbox (badness 3088) in paragraph at lines 124--130
+\T1/fvm/m/n/10.95 Guide / Introduction # What _ is _ JavaScript . 3F$[][]\T1/pp
+lj/m/n/10.95 , 2015.  Ac-
  []
 
-[62])) [63] [64
 
+Underfull \hbox (badness 1308) in paragraph at lines 144--148
+[][]\T1/pplj/m/n/10.95 Py-WPS De-vel-op-ment Team.  Python web pro-cess-ing ser
+-
+ []
 
+[82])) [83]
 
-] (./FrontBackMatter/Colophon.tex) [65
-
-] [66
-
-
-
-]
-(./FrontBackMatter/Declaration.tex) [67
-
-
-
-]
-
-! LaTeX Error: \begin{figure} on input line 161 ended by \end{document}.
+! LaTeX Error: \begin{itemize} on input line 7 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 \end{document}
+l.110 \end{document}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
-(./main.aux (./FrontBackMatter/Titlepage.aux) (./FrontBackMatter/Titleback.aux)
-(./FrontBackMatter/Abstract.aux) (./FrontBackMatter/Acknowledgments.aux)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
+(./main.aux (./FrontBackMatter/Titlepage.aux) (./Chapters/front_thingy.aux)
+(./FrontBackMatter/Acknowledgments.aux) (./FrontBackMatter/Preface.aux)
 (./FrontBackMatter/Contents.aux) (./Chapters/Introduction.aux)
 (./Chapters/Theory.aux) (./Chapters/Methodology.aux)
-(./Chapters/Implementation.aux) (./Chapters/Analysis.aux) (./Chapters/SWOT.aux)
-(./Chapters/Discussion.aux) (./FrontBackMatter/Bibliography.aux)
-(./FrontBackMatter/Colophon.aux) (./FrontBackMatter/Declaration.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
+(./Chapters/Implementation.aux) (./Chapters/Analysis.aux)
+(./Chapters/Discussion.aux) (./Chapters/Perspectives.aux)
+(./Chapters/Conclusion.aux) (./FrontBackMatter/Bibliography.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: FB2E36EC8E7073298FD2CDE728B9D863;4160.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 89C20D46DE606416864679A99D3479BA;3955
-(rerunfilecheck)             After:  4102C3018CF5D012B4208E399B1D2EA5;3915.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 114.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 161 (\begingroup)
+### semi simple group (level 1) entered at line 7 (\begingroup)
 ### bottom level
 
 Here is how much of LuaTeX's memory you used:
- 28306 strings out of 493803
- 244357,794899 words of node,token memory allocated
- 1031 words of node memory still in use:
-   9 hlist, 6 vlist, 4 rule, 12 glue, 1 kern, 4 penalty, 2 glyph, 101 glue_spec,
- 17 action, 3 write, 2 local_par, 4 pdf_colorstack nodes
-   avail lists: 1:9,2:51,3:792,4:4855,5:6317,6:3970,7:4668,8:49,9:6861,10:488
- 29715 multiletter control sequences out of 65536+600000
- 157 fonts using 6175895 bytes
- 73i,14n,95p,1612b,1628s stack positions out of 5000i,500n,10000p,200000b,100000s
-LuaTeX warning (dest): name{table.caption.24} has been referenced but does not e
-xist, replaced by a fixed one
-
-LuaTeX warning (dest): name{table.caption.15} has been referenced but does not e
-xist, replaced by a fixed one
-
-LuaTeX warning (dest): name{table.caption.13} has been referenced but does not e
-xist, replaced by a fixed one
-
-LuaTeX warning (dest): name{figure.caption.36} has been referenced but does not 
-exist, replaced by a fixed one
-
-LuaTeX warning (dest): name{figure.caption.23} has been referenced but does not 
-exist, replaced by a fixed one
-
-LuaTeX warning (dest): name{figure.caption.14} has been referenced but does not 
-exist, replaced by a fixed one
-
-LuaTeX warning (dest): name{figure.caption.11} has been referenced but does not 
-exist, replaced by a fixed one
-
-LuaTeX warning (dest): name{lol.1} has been referenced but does not exist, repla
-ced by a fixed one
-
+ 28194 strings out of 493803
+ 195340,794899 words of node,token memory allocated
+ 1258 words of node memory still in use:
+   11 hlist, 8 vlist, 5 rule, 17 glue, 1 kern, 6 penalty, 3 glyph, 106 glue_spec
+, 17 action, 1 shape, 3 write, 3 local_par, 6 pdf_colorstack nodes
+   avail lists: 1:1,2:35,3:879,4:4713,5:6237,6:3359,7:4781,8:46,9:6755,10:433
+ 29606 multiletter control sequences out of 65536+600000
+ 146 fonts using 5744039 bytes
+ 73i,14n,71p,1632b,1546s stack positions out of 5000i,500n,10000p,200000b,100000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/fpl/fplrij8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr
-8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (79 pages, 3388383 bytes).
+onts/type1/public/fpl/fplbj8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/fpl/fplrc8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fvmr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (97 pages, 6207684 bytes).
 
-PDF statistics: 1314 PDF objects out of 1440 (max. 8388607)
- 1166 compressed objects within 12 object streams
- 470 named destinations out of 1000 (max. 131072)
- 520 words of extra memory for PDF output out of 10000 (max. 10000000)
+PDF statistics: 1475 PDF objects out of 1728 (max. 8388607)
+ 1294 compressed objects within 13 object streams
+ 503 named destinations out of 1000 (max. 131072)
+ 536 words of extra memory for PDF output out of 10000 (max. 10000000)
 
